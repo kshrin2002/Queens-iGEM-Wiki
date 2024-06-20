@@ -45,13 +45,14 @@ export function Description() {
 
       <div className="row mt-4">
         <div className="col-lg-8">
-          <h2>Parkinson's Disease (PD)</h2>
+          <h2>Background</h2>
           <hr />
           <div>
-            <h3><em>Introduction</em></h3>
+            <h3><em>Alpha-Synuclein: Structure and Pathological Mechanisms</em></h3>
             <p>
-             Parkinson’s disease (PD) is a chronic and progressive neurodegenerative condition characterized by the degeneration of dopaminergic neurons in the brain. This disruption leads to a spectrum of motor symptoms including rigidity, bradykinesia, difficulty walking, and resting tremors. However, PD is not solely a movement disorder; it also encompasses a wide range of non-motor symptoms, including cognitive impairment, gastrointestinal dysfunction, and psychiatric disturbances. (Kouli et al., 2018)
+             Alpha-synuclein (α-Syn) is a protein predominantly localized in brain regions associated with motor control. Comprising of 140 amino acids, it exhibits a natively unfolded structure and is primarily concentrated at presynaptic terminals in the mammalian brain. (Vidović & Rikalovic, 2022)
             </p>
+             <img src="https://static.igem.wiki/teams/5079/alpha-syn-structure.png" alt="Figure 1: Characteristics of an alpha-syn monomer. Adapted from Schim et al." />
           </div>
           <div>
             <h3><em>Global Impact and Prevalence</em></h3>
