@@ -1,5 +1,5 @@
 export function Description() {
-  const links: InspirationLink[] = [
+  const links = [
     { year: 2022, teamName: "DTU-Denmark", pageName: "Description" },
     { year: 2019, teamName: "ITESO_Guadalajara", pageName: "Description" },
     { year: 2020, teamName: "Technion-Israel", pageName: "Description" },
