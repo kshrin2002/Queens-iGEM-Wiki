@@ -33,16 +33,18 @@ export function Description() {
         <div className="col-lg-8">
           <h2>Parkinson's Disease (PD)</h2>
           <hr />
-          <ul>
-            <li>Introduction</li>
-            <li>
+          <div>
+            <h3>Introduction</h3>
+            <p>
               Parkinson’s disease (PD) is a chronic and progressive neurodegenerative condition characterized by the degeneration of dopaminergic neurons in the brain. This disruption leads to a spectrum of motor symptoms including rigidity, bradykinesia, difficulty walking, and resting tremors. However, PD is not solely a movement disorder; it also encompasses a wide range of non-motor symptoms, including cognitive impairment, gastrointestinal dysfunction, and psychiatric disturbances. (Kouli et al., 2018)
-            </li>
-            <li>Prevalence and Global Impact</li>
-            <li>
+            </p>
+          </div>
+          <div>
+            <h3>Prevalence and Global Impact</h3>
+            <p>
               According to the World Health Organization, the prevalence of PD has doubled in the past 25 years. Global estimates in 2019 showed over 8.5 million individuals with PD. As the global population ages, the prevalence of PD is expected to rise, further amplifying the socio-economic impact of the disease. It is estimated that the number of individuals with PD will double by 2040, with the greatest increases projected to occur in low- and middle-income countries. 
-            </li>
-          </ul>
+            </p>
+          </div>
         </div>
         <Inspirations inspirationLinkList={links} />
       </div>
