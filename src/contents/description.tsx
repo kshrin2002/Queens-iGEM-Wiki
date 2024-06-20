@@ -31,7 +31,7 @@ export function Description() {
 
       <div className="row mt-4">
         <div className="col-lg-8">
-          <h2>What should this page contain?</h2>
+          <h2>Parkinson's Disease (PD)</h2>
           <hr />
           <ul>
             <li>A clear and concise description of your project.</li>
