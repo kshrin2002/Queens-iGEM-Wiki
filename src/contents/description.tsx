@@ -34,10 +34,9 @@ export function Description() {
           <h2>Parkinson's Disease (PD)</h2>
           <hr />
           <ul>
-            <li>A clear and concise description of your project.</li>
+            <li>Introduction</li>
             <li>
-              A detailed explanation of why your team chose to work on this
-              particular project.
+              Parkinson’s disease (PD) is a chronic and progressive neurodegenerative condition characterized by the degeneration of dopaminergic neurons in the brain. This disruption leads to a spectrum of motor symptoms including rigidity, bradykinesia, difficulty walking, and resting tremors. However, PD is not solely a movement disorder; it also encompasses a wide range of non-motor symptoms, including cognitive impairment, gastrointestinal dysfunction, and psychiatric disturbances. (Kouli et al., 2018)
             </li>
             <li>References and sources to document your research.</li>
             <li>
