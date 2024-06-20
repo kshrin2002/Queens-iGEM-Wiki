@@ -1,5 +1,3 @@
-import { Inspirations, InspirationLink } from "../components";
-
 export function Description() {
   const links: InspirationLink[] = [
     { year: 2022, teamName: "DTU-Denmark", pageName: "Description" },
@@ -51,9 +49,7 @@ export function Description() {
               Despite significant advancements in PD research and drug development, current therapies primarily focus on symptom management and fail to address disease progression. Levodopa, the gold standard treatment for PD, provides temporary symptomatic relief but does not address the underlying neurodegenerative process, while exacerbating non-motor symptoms. (Murakami et al., 2023) Therefore, there is an urgent need for a clinically feasible therapy that target the underlying pathophysiological mechanisms of PD. 
               </p>
           </div>
-          <div>
         </div>
-        <Inspirations inspirationLinkList={links} />
       </div>
 
       <div className="row mt-4">
