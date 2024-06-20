@@ -1,3 +1,4 @@
+
 export function Description() {
   return (
     <>
@@ -53,6 +54,9 @@ export function Description() {
              Alpha-synuclein (α-Syn) is a protein predominantly localized in brain regions associated with motor control. Comprising of 140 amino acids, it exhibits a natively unfolded structure and is primarily concentrated at presynaptic terminals in the mammalian brain. (Vidović & Rikalovic, 2022)
             </p>
              <img src="https://static.igem.wiki/teams/5079/alpha-syn-structure.png" alt="Figure 1: Characteristics of an alpha-syn monomer. Adapted from Schim et al." />
+            <p>
+             In PD, α-Syn undergoes misfolding, leading to the formation of toxic oligomers and fibrils that accumulate in dopaminergic neurons. This process involves nucleation, where initial misfolded proteins act as seeds for further aggregation, by forming stable nuclei that recruit additional monomers. (Jan et al., 2021; Vidović & Rikalovic, 2022) The aggregated forms of α-Syn contribute to the formation of Lewy bodies, intracellular inclusions found within neurons, which are a hallmark of PD. (Vidović & Rikalovic, 2022)
+            </p>
           </div>
           <div>
             <h3><em>Global Impact and Prevalence</em></h3>
