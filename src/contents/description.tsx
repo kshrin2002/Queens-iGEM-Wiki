@@ -109,6 +109,17 @@ export function Description() {
               alt="Figure 3:A modular protein switch platform with an input domain and Neurosin (red) as the output domain. The substrates for the different domains are shown as the green triangle and yellow star – both of which in this case represent a-syn. Adapted from Nicholes et al."
               style={{ maxWidth: '100%', height: 'auto', marginBottom: '20px' }}
             />
+            <p>
+              Such a design would solve two previously identified challenges:
+            </p>
+            <ul>
+              <li>
+                The proteins are fused in such a way that binding of the input domain to α-syn is necessary for KLK6 activity. Neurosin would only be activated upon CypD binding to the α-syn seeds – thereby reducing off-target effects of the protease.
+              </li>
+              <li>
+                CypD binding at the C-terminus will have a shielding effect that prevents cleavage by neurosin at these residues. As previously mentioned, C-terminal cleavage is associated with pathological reaggregation.
+              </li>
+            </ul>
           </div>
         </div>
       </div>
