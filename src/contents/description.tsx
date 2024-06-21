@@ -3,8 +3,8 @@ export function Description() {
   return (
     <div className="container">
       <div className="row mt-4">
-        <div className="col">
-          <div className="bd-callout bd-callout-info">
+        <div className="col-lg-8">
+          <div className="bd-callout bd-callout-info" style={{ backgroundColor: '#f0f0f0', padding: '20px', borderRadius: '5px' }}>
             <h4>Bronze Medal Criterion #3</h4>
             <p>Describe how and why you chose your iGEM project.</p>
             <hr />
