@@ -56,7 +56,7 @@ export function Description() {
              <img
             src="https://static.igem.wiki/teams/5079/alpha-syn-structure.png"
             alt="Figure 1: Characteristics of an alpha-syn monomer. Adapted from Schim et al."
-            style={{ maxWidth: '100%', height: 'auto' }}
+            style={{ maxWidth: '100%', height: 'auto', marginBottom: '20px'}}
              />
             <p>
              In PD, α-Syn undergoes misfolding, leading to the formation of toxic oligomers and fibrils that accumulate in dopaminergic neurons. This process involves nucleation, where initial misfolded proteins act as seeds for further aggregation, by forming stable nuclei that recruit additional monomers. (Jan et al., 2021; Vidović & Rikalovic, 2022) The aggregated forms of α-Syn contribute to the formation of Lewy bodies, intracellular inclusions found within neurons, which are a hallmark of PD. (Vidović & Rikalovic, 2022)
@@ -72,7 +72,8 @@ export function Description() {
             <h3><em>Neurosin (KLK-6)</em></h3>
             <p>
               Neurosin (AKA KLK-6) is a 244 aa serine protease capable of cleaving a-syn. In vitro studies show that KLK-6 prevents a-syn aggregation by reducing the number of monomers while also generating fragmented a-syns that themselves inhibit polymerization. (Bluhm et al., 2021; Kasai et al., 2008)
-            <p>
+            <p style={{ marginBottom: '20px' }}>
+             <p>
             The specific sites of α-syn cleavage by neurosin consists of one major cleavage product and three additional cleavage products. The    predominant cleavage site is located within the NAC domain of a-syn (specifically at aa K80 and T81). Residues 71-82 within the NAC region have propensity for folding into β-sheets which promote fibril formation – thereby their cleavage reduces a-syn aggregation. However, the other identified cleavage sites (K97/D98, E114/D115, and D121/N122) are found within the C-terminal region of the α-synuclein molecule. The C-terminal contains an intrinsically disordered region which upon cleavage by neurosin may promote further aggregation (rather than reduction). (Bluhm et al., 2021)
             </p>
              <img
