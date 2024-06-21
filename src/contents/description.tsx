@@ -70,17 +70,17 @@ export function Description() {
           </div>
           <div>
             <h3><em>Neurosin (KLK-6)</em></h3>
-            <p>
-              Neurosin (AKA KLK-6) is a 244 aa serine protease capable of cleaving a-syn. In vitro studies show that KLK-6 prevents a-syn aggregation by reducing the number of monomers while also generating fragmented a-syns that themselves inhibit polymerization. (Bluhm et al., 2021; Kasai et al., 2008)
-            <p style={{ marginBottom: '20px' }}>
              <p>
-            The specific sites of α-syn cleavage by neurosin consists of one major cleavage product and three additional cleavage products. The    predominant cleavage site is located within the NAC domain of a-syn (specifically at aa K80 and T81). Residues 71-82 within the NAC region have propensity for folding into β-sheets which promote fibril formation – thereby their cleavage reduces a-syn aggregation. However, the other identified cleavage sites (K97/D98, E114/D115, and D121/N122) are found within the C-terminal region of the α-synuclein molecule. The C-terminal contains an intrinsically disordered region which upon cleavage by neurosin may promote further aggregation (rather than reduction). (Bluhm et al., 2021)
-            </p>
-             <img
-            src="https://static.igem.wiki/teams/5079/klk6-cleavage-sites.jpg"
-            alt="Figure 2: Neurosin (KLK-6) cleavage sites shown in orange. Adapted from Bluhm et al."
-            style={{ maxWidth: '100%', height: 'auto' }}
-             />
+  Neurosin (AKA KLK-6) is a 244 aa serine protease capable of cleaving a-syn. In vitro studies show that KLK-6 prevents a-syn aggregation by reducing the number of monomers while also generating fragmented a-syns that themselves inhibit polymerization. (Bluhm et al., 2021; Kasai et al., 2008)
+</p>
+<p>
+  The specific sites of α-syn cleavage by neurosin consist of one major cleavage product and three additional cleavage products. The predominant cleavage site is located within the NAC domain of a-syn (specifically at aa K80 and T81). Residues 71-82 within the NAC region have a propensity for folding into β-sheets which promote fibril formation – thereby their cleavage reduces a-syn aggregation. However, the other identified cleavage sites (K97/D98, E114/D115, and D121/N122) are found within the C-terminal region of the α-synuclein molecule. The C-terminal contains an intrinsically disordered region which upon cleavage by neurosin may promote further aggregation (rather than reduction). (Bluhm et al., 2021)
+</p>
+<img
+  src="https://static.igem.wiki/teams/5079/klk6-cleavage-sites.jpg"
+  alt="Figure 2: Neurosin (KLK-6) cleavage sites shown in orange. Adapted from Bluhm et al."
+  style={{ maxWidth: '100%', height: 'auto', marginBottom: '20px' }}
+/>
             </p>
           </div>
         </div>
