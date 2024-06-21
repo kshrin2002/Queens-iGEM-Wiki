@@ -116,7 +116,7 @@ export function Description() {
             </ul>
           </div>
           <div className="content-block">
-            <h3><em>Spore-Based Probiotic Delivery System</em></h3>
+            <h3><em>Spore-Biotic Delivery</em></h3>
             <p>
               Our current research focuses on designing an innovative spore-based probiotic delivery system that uses bacterial spores to deliver therapeutic proteins precisely to EECs upon oral administration. This approach targets enteroendocrine cells (EECs) in the intestinal lining, where α-synuclein aggregates start propagating to enteric neurons. (Rodrigues et al., 2022)
             </p>
