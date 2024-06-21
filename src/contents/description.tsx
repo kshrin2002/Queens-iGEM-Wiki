@@ -1,7 +1,7 @@
 
 export function Description() {
   return (
-    <>
+    <div className="container">
       <div className="row mt-4">
         <div className="col">
           <div className="bd-callout bd-callout-info">
@@ -141,6 +141,6 @@ export function Description() {
           </div>
         </div>
       </div>
-    </>
+    </div>
   );
 }
