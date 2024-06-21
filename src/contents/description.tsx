@@ -20,7 +20,7 @@ export function Description() {
           <div style={{ backgroundColor: '#ffffff', padding: '20px', borderRadius: '5px', marginTop: '20px' }}>
             <h3><em>Current Treatments and Limitations</em></h3>
             <p>
-              Despite significant advancements in PD research and drug development, current therapies primarily focus on symptom management and fail to address disease progression. Levodopa, the gold standard treatment for PD, provides temporary symptomatic relief but does not address the underlying neurodegenerative process, while exacerbating non-motor symptoms. (Murakami et al., 2023) Therefore, there is an urgent need for a clinically feasible therapy that targets the underlying pathophysiological mechanisms of PD.
+              Despite significant advancements in PD research and drug development, current therapies primarily focus on symptom management and fail to address disease progression. Levodopa, the gold standard treatment for PD, provides temporary symptomatic relief but does not address the underlying neurodegenerative process, while exacerbating non-motor symptoms. (Murakami et al., 2023) Therefore, there is an urgent need for a clinically feasible therapy that targets the underlying pathophysiological mechanisms of PD. 
             </p>
           </div>
         </div>
@@ -73,7 +73,7 @@ export function Description() {
           <hr />
           <div style={{ backgroundColor: '#ffffff', padding: '20px', borderRadius: '5px' }}>
           <p>
-            We propose the first localized and specific delivery vector to target a-synuclein pathology within the GI tract. We aim to:
+            SynAxis proposes the first localized and specific delivery vector to target a-synuclein pathology within the GI tract. We aim to:
           </p>
             <ul>
               <li>Engineer a delivery system that:
@@ -91,7 +91,7 @@ export function Description() {
 
       <div className="row mt-4">
         <div className="col-lg-8">
-          <h2>Therapeutic Design</h2>
+          <h2>SynAxis:Therapeutic Design</h2>
           <hr />
           <div style={{ backgroundColor: '#ffffff', padding: '20px', borderRadius: '5px' }}>
             <h3><em>Modular Switch</em></h3>
