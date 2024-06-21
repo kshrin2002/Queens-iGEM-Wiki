@@ -3,7 +3,7 @@ export function Description() {
     <div className="container">
       <div className="row mt-4">
         <div className="col-lg-8">
-          <h2>Parkinson's Disease (PD)</h2>
+          <h2>Significance of Parkinson's Disease (PD)</h2>
           <hr />
           <div style={{ backgroundColor: '#ffffff', padding: '20px', borderRadius: '5px' }}>
             <h3><em>Introduction</em></h3>
@@ -18,7 +18,7 @@ export function Description() {
             </p>
           </div>
           <div style={{ backgroundColor: '#ffffff', padding: '20px', borderRadius: '5px', marginTop: '20px' }}>
-            <h3><em>Current Treatments and Limitations</em></h3>
+            <h3><em>Challenges in Current Treatments</em></h3>
             <p>
               Despite significant advancements in PD research and drug development, current therapies primarily focus on symptom management and fail to address disease progression. Levodopa, the gold standard treatment for PD, provides temporary symptomatic relief but does not address the underlying neurodegenerative process, while exacerbating non-motor symptoms. (Murakami et al., 2023) Therefore, there is an urgent need for a clinically feasible therapy that targets the underlying pathophysiological mechanisms of PD. 
             </p>
@@ -69,7 +69,7 @@ export function Description() {
 
       <div className="row mt-4">
         <div className="col-lg-8">
-          <h2>Objectives</h2>
+          <h2>Introducing SynAxis</h2>
           <hr />
           <div style={{ backgroundColor: '#ffffff', padding: '20px', borderRadius: '5px' }}>
           <p>
@@ -91,7 +91,7 @@ export function Description() {
 
       <div className="row mt-4">
         <div className="col-lg-8">
-          <h2>SynAxis:Therapeutic Design</h2>
+          <h2>A Novel Therapeutic Design</h2>
           <hr />
           <div style={{ backgroundColor: '#ffffff', padding: '20px', borderRadius: '5px' }}>
             <h3><em>Modular Switch</em></h3>
