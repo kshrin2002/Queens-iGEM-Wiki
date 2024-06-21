@@ -61,12 +61,15 @@ export function Description() {
             <p>
               The specific sites of α-syn cleavage by neurosin consist of one major cleavage product and three additional cleavage products. The predominant cleavage site is located within the NAC domain of α-syn (specifically at aa K80 and T81). Residues 71-82 within the NAC region have a propensity for folding into β-sheets which promote fibril formation – thereby their cleavage reduces α-syn aggregation. However, the other identified cleavage sites (K97/D98, E114/D115, and D121/N122) are found within the C-terminal region of the α-synuclein molecule. The C-terminal contains an intrinsically disordered region which upon cleavage by neurosin may promote further aggregation (rather than reduction). (Bluhm et al., 2021)
             </p>
-            <img
-              src="https://static.igem.wiki/teams/5079/klk6-cleavage-sites.jpg"
-              alt="Figure 2: Neurosin (KLK-6) cleavage sites shown in orange. Adapted from Bluhm et al."
-              style={{ maxWidth: '100%', height: 'auto', marginBottom: '20px' }}
-            />
-          </div>
+  <figure>
+    <img
+      src="https://static.igem.wiki/teams/5079/klk6-cleavage-sites.jpg"
+      alt="Figure 2: Neurosin (KLK-6) cleavage sites shown in orange. Adapted from Bluhm et al."
+      style={{ maxWidth: '100%', height: 'auto', marginBottom: '20px' }}
+    />
+    <figcaption>Figure 2: Neurosin (KLK-6) cleavage sites shown in orange. Adapted from Bluhm et al.</figcaption>
+  </figure>
+         </div>
         </div>
       </div>
 
@@ -107,12 +110,15 @@ export function Description() {
             <p>
               The input domain selected for this purpose is cyclophilin D (CypD), a peptidyl-prolyl isomerase. This enzyme’s ligand-binding pocket is known to interact directly with α-synuclein at its acidic proline-rich C-terminal region. (Torpey et al., 2020) 
             </p>
-            <img
-              src="https://static.igem.wiki/teams/5079/modular-switch-design.png"
-              alt="Figure 3:A modular protein switch platform with an input domain and Neurosin (red) as the output domain. The substrates for the different domains are shown as the green triangle and yellow star – both of which in this case represent a-syn. Adapted from Nicholes et al."
-              style={{ maxWidth: '100%', height: 'auto', marginBottom: '20px' }}
-            />
-            <p>
+  <figure>
+    <img
+      src="https://static.igem.wiki/teams/5079/modular-switch-design.png"
+      alt="Figure 3: A modular protein switch platform with an input domain and Neurosin (red) as the output domain. The substrates for the different domains are shown as the green triangle and yellow star – both of which in this case represent a-syn. Adapted from Nicholes et al."
+      style={{ maxWidth: '100%', height: 'auto', marginBottom: '20px' }}
+    />
+    <figcaption>Figure 3: A modular protein switch platform with an input domain and Neurosin (red) as the output domain. The substrates for the different domains are shown as the green triangle and yellow star – both of which in this case represent a-syn. Adapted from Nicholes et al.</figcaption>
+  </figure>
+</div>
               Such a design would solve two previously identified challenges:
             </p>
             <ul>
