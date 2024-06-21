@@ -69,7 +69,7 @@ export function Description() {
             <h2>Introducing SynAxis</h2>
             <hr />
             <p>
-              SynAxis proposes the first localized and specific delivery vector to target a-synuclein pathology within the GI tract. We aim to:
+              SynAxis proposes the first localized and specific delivery vector to target α-synuclein pathology within the GI tract. We aim to:
             </p>
             <ul>
               <li>Engineer a delivery system that:
@@ -79,7 +79,7 @@ export function Description() {
                   <li>Targets misfolded monomeric seeds at desired residues, as to ensure no reaggregation or toxic fragments.</li>
                 </ul>
               </li>
-              <li>Formulate a treatment with a dosage, frequency and duration that is clinically feasible.</li>
+              <li>Formulate a treatment with a dosage, frequency, and duration that is clinically feasible.</li>
             </ul>
           </div>
           <div className="content-block">
@@ -87,13 +87,13 @@ export function Description() {
             <hr />
             <h3><em>Modular Switch</em></h3>
             <p>
-              The ability of KLK6 to generate pathogenic products from C-terminal cleavage and the potential for off-target effects limits its potential in-vivo. To circumvent this, we aim to design a modular protein switch to ensure neurosin activation only in the presence of pathological a-synuclein monomeric seeds.  
+              The ability of KLK6 to generate pathogenic products from C-terminal cleavage and the potential for off-target effects limits its potential in-vivo. To circumvent this, we aim to design a modular protein switch to ensure neurosin activation only in the presence of pathological α-synuclein monomeric seeds.
             </p>
             <p>
               Modular protein switches are created by fusing protein domains in a way that their activities are interlinked. These fusions exhibit characteristic switch activities, controlled by specific ligands. (Nicholes et al., 2016) In our case, the switch will consist of an input domain that binds to the ligand (α-synuclein) and an output domain (neurosin) whose activity is modulated upon ligand binding in the input domain.
             </p>
             <p>
-              The input domain selected for this purpose is cyclophilin D (CypD), a peptidyl-prolyl isomerase. This enzyme’s ligand-binding pocket is known to interact directly with α-synuclein at its acidic proline-rich C-terminal region. (Torpey et al., 2020) 
+              The input domain selected for this purpose is cyclophilin D (CypD), a peptidyl-prolyl isomerase. This enzyme’s ligand-binding pocket is known to interact directly with α-synuclein at its acidic proline-rich C-terminal region. (Torpey et al., 2020)
             </p>
             <figure>
               <img
@@ -115,6 +115,43 @@ export function Description() {
               </li>
             </ul>
           </div>
+          <div className="content-block">
+            <h3><em>Spore-Based Probiotic Delivery System</em></h3>
+            <p>
+              Our current research focuses on designing an innovative spore-based probiotic delivery system that uses bacterial spores to deliver therapeutic proteins precisely to enteroendocrine cells (EECs) upon oral administration. This approach targets EECs in the intestinal lining, where α-synuclein aggregates start propagating to enteric neurons.
+            </p>
+            <p>
+              The system integrates a modular switch by releasing the PBSX prophage upon germination, ensuring targeted release of the therapeutic payload in response to gut germination signals. By genetically fusing the ligand of interest to spore surface proteins, we enhance specificity for EEC receptors. This innovative design aims to intervene early in Parkinson's disease progression through precise modulation of α-synuclein aggregation in the gut-brain axis, potentially offering a revolutionary treatment avenue for PD.
+            </p>
+            <figure>
+              <img
+                src="https://static.igem.wiki/teams/5079/spore-delivery-biorender.png"
+                alt="Figure 4: System for the expression and release of a modular switch expressed within the spore core. The synthetic KLK6-CypD gene is placed downstream of the sspB promoter (PsspB), which normally controls expression of SASP-β. SASP-β is one of the most abundant proteins in the spore core. A ligand is genetically fused to the cotB coat protein sequence. This allows expression of our ligand on the spore surface for specific binding to an EECs receptor. The pcf positive control factor is controlled by an inducible promoter that responds to germination signals received by the spore. RNAP-TR refers to RNA polymerase termination sites."
+                style={{ maxWidth: '100%', height: 'auto', marginBottom: '20px' }}
+              />
+              <figcaption>Figure 4: System for the expression and release of a modular switch expressed within the spore core. The synthetic KLK6-CypD gene is placed downstream of the sspB promoter (PsspB), which normally controls expression of SASP-β. SASP-β is one of the most abundant proteins in the spore core. A ligand is genetically fused to the cotB coat protein sequence. This allows expression of our ligand on the spore surface for specific binding to an EECs receptor. The pcf positive control factor is controlled by an inducible promoter that responds to germination signals received by the spore. RNAP-TR refers to RNA polymerase termination sites.</figcaption>
+            </figure>
+          </div>
+        </div>
+      </div>
+      {/* References Section */}
+      <div className="row mt-5">
+        <div className="col-lg-8 mx-auto">
+          <h2>References</h2>
+          <hr />
+          <ol>
+            <li>Chen, M., & Mor, D. E. (2023). Gut-to-Brain α-Synuclein Transmission in Parkinson’s Disease: Evidence for Prion-like Mechanisms. <em>International Journal of Molecular Sciences, 24</em>(8), 7205. https://doi.org/10.3390/ijms24087205</li>
+            <li>Kim, S., Kwon, S.-H., Kam, T.-I., Panicker, N., Karuppagounder, S. S., Lee, S., ... Ko, H. S. (2019). Transneuronal Propagation of Pathologic α-Synuclein from the Gut to the Brain Models Parkinson’s disease. <em>Neuron, 103</em>(4), 627-641.e7. https://doi.org/10.1016/j.neuron.2019.05.035</li>
+            <li>Kouli, A., Torsney, K. M., & Kuan, W.-L. (2018). Parkinson’s Disease: Etiology, Neuropathology, and Pathogenesis. In T. B. Stoker & J. C. Greenland (Eds.), <em>Parkinson’s Disease: Pathogenesis and Clinical Aspects</em>. Codon Publications. http://www.ncbi.nlm.nih.gov/books/NBK536722/</li>
+            <li>Mohamed, M. Y. H., & Christie, G. (2018). A system for the expression and release of heterologous proteins from the core of Bacillus subtilis spores. <em>FEMS Microbiology Letters, 365</em>(23), fny270. https://doi.org/10.1093/femsle/fny270</li>
+            <li>Murakami, H., Shiraishi, T., Umehara, T., Omoto, S., & Iguchi, Y. (2023). Recent Advances in Drug Therapy for Parkinson’s Disease. <em>Internal Medicine, 62</em>(1), 33–42. https://doi.org/10.2169/internalmedicine.8940-21</li>
+            <li>Nicholes, N., Date, A., Beaujean, P., Hauk, P., Kanwar, M., & Ostermeier, M. (2016). Modular protein switches derived from antibody mimetic proteins. <em>Protein Engineering, Design and Selection, 29</em>(2), 77–85. https://doi.org/10.1093/protein/gzv062</li>
+            <li>World Health Organization. (2023). <em>Parkinson Disease.</em> Retrieved April 1, 2024, from https://www.who.int/news-room/fact-sheets/detail/parkinson-disease</li>
+            <li>Rietdijk, C. D., Perez-Pardo, P., Garssen, J., van Wezel, R. J. A., & Kraneveld, A. D. (2017). Exploring Braak’s Hypothesis of Parkinson’s Disease. <em>Frontiers in Neurology, 8</em>, 37. https://doi.org/10.3389/fneur.2017.00037</li>
+            <li>Rodrigues, P. V., de Godoy, J. V. P., Bosque, B. P., Amorim Neto, D. P., Tostes, K., Palameta, S., ... de Castro Fonseca, M. (2022). Transcellular propagation of fibrillar α-synuclein from enteroendocrine to neuronal cells requires cell-to-cell contact and is Rab35-dependent. <em>Scientific Reports, 12</em>(1), 4168. https://doi.org/10.1038/s41598-022-08076-5</li>
+            <li>Torpey, J., Madine, J., Wood, A., & Lian, L.-Y. (2020). Cyclophilin D binds to the acidic C-terminus region of α-Synuclein and affects its aggregation characteristics. <em>Scientific Reports, 10</em>, 10159. https://doi.org/10.1038/s41598-020-66200-9</li>
+            <li>Vidović, M., & Rikalovic, M. G. (2022). Alpha-Synuclein Aggregation Pathway in Parkinson’s Disease: Current Status and Novel Therapeutic Approaches. <em>Cells, 11</em>(11), 1732. https://doi.org/10.3390/cells11111732</li>
+          </ol>
         </div>
       </div>
     </div>
