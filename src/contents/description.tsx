@@ -72,9 +72,9 @@ export function Description() {
           <h2>Objectives</h2>
           <hr />
           <div style={{ backgroundColor: '#ffffff', padding: '20px', borderRadius: '5px' }}>
-          <p>
-            We propose the first localized and specific delivery vector to target a-synuclein pathology within the GI tract. We aim to:
-          </p>
+            <p>
+              We propose the first localized and specific delivery vector to target a-synuclein pathology within the GI tract. We aim to:
+            </p>
             <ul>
               <li>Engineer a delivery system that:
                 <ul>
@@ -84,28 +84,13 @@ export function Description() {
                 </ul>
               </li>
               <li>Formulate a treatment with a dosage, frequency and duration that is clinically feasible.</li>
-            <</ul>
+            </ul>
           </div>
         </div>
       </div>
 
-          <div className="row mt-4">
+      <div className="row mt-4">
         <div className="col-lg-8">
           <h2>Therapeutic Design</h2>
           <hr />
-          <div style={{ backgroundColor: '#ffffff', padding: '20px', borderRadius: '5px' }}>
-            <h3><em>Modular Switch</em></h3>
-            <p>
-              The ability of KLK6 to generate pathogenic products from C-terminal cleavage and the potential for off-target effects limits its potential in vivo. To circumvent this, we aim to design a modular protein switch to ensure neurosin activation only in the presence of pathological α-synuclein monomeric seeds.
-            </p>
-            <p>
-              Modular protein switches are created by fusing protein domains in a way that their activities are interlinked. These fusions exhibit characteristic switch activities, controlled by specific ligands. (Nicholes et al., 2016) In our case, the switch will consist of an input domain that binds to the ligand (α-synuclein) and an output domain (neurosin) whose activity is modulated upon ligand binding in the input domain.
-            </p>
-            <p>
-              The input domain selected for this purpose is cyclophilin D (CypD), a peptidyl-prolyl isomerase. This enzyme’s ligand-binding pocket is known to interact directly with α-synuclein at its acidic proline-rich C-terminal region. (Torpey et al., 2020)
-            </
-
-
-
-
-
+          <div style={{ backgroundColor: '#ffffff', padding: '20px', borderRadius: '5
