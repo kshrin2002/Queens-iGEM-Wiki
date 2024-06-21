@@ -25,7 +25,6 @@ export function Description() {
           </div>
         </div>
       </div>
-
       <div className="row mt-4">
         <div className="col-lg-8">
           <h2>Background</h2>
@@ -36,13 +35,13 @@ export function Description() {
               Alpha-synuclein (α-Syn) is a protein predominantly localized in brain regions associated with motor control. Comprising of 140 amino acids, it exhibits a natively unfolded structure and is primarily concentrated at presynaptic terminals in the mammalian brain. (Vidović & Rikalovic, 2022)
             </p>
             <figure>
-    <img
-      src="https://static.igem.wiki/teams/5079/alpha-syn-structure.png"
-      alt="Figure 1: Characteristics of an alpha-syn monomer. Adapted from Schim et al."
-      style={{ maxWidth: '100%', height: 'auto', marginBottom: '20px' }}
-    />
-    <figcaption>Figure 1: Characteristics of an alpha-syn monomer. Adapted from Schim et al.</figcaption>
-  </figure>
+              <img
+                src="https://static.igem.wiki/teams/5079/alpha-syn-structure.png"
+                alt="Figure 1: Characteristics of an alpha-syn monomer. Adapted from Schim et al."
+                style={{ maxWidth: '100%', height: 'auto', marginBottom: '20px' }}
+              />
+              <figcaption>Figure 1: Characteristics of an alpha-syn monomer. Adapted from Schim et al.</figcaption>
+            </figure>
             <p>
               In PD, α-Syn undergoes misfolding, leading to the formation of toxic oligomers and fibrils that accumulate in dopaminergic neurons. This process involves nucleation, where initial misfolded proteins act as seeds for further aggregation, by forming stable nuclei that recruit additional monomers. (Jan et al., 2021; Vidović & Rikalovic, 2022) The aggregated forms of α-Syn contribute to the formation of Lewy bodies, intracellular inclusions found within neurons, which are a hallmark of PD. (Vidović & Rikalovic, 2022)
             </p>
@@ -61,40 +60,38 @@ export function Description() {
             <p>
               The specific sites of α-syn cleavage by neurosin consist of one major cleavage product and three additional cleavage products. The predominant cleavage site is located within the NAC domain of α-syn (specifically at aa K80 and T81). Residues 71-82 within the NAC region have a propensity for folding into β-sheets which promote fibril formation – thereby their cleavage reduces α-syn aggregation. However, the other identified cleavage sites (K97/D98, E114/D115, and D121/N122) are found within the C-terminal region of the α-synuclein molecule. The C-terminal contains an intrinsically disordered region which upon cleavage by neurosin may promote further aggregation (rather than reduction). (Bluhm et al., 2021)
             </p>
-  <figure>
-    <img
-      src="https://static.igem.wiki/teams/5079/klk6-cleavage-sites.jpg"
-      alt="Figure 2: Neurosin (KLK-6) cleavage sites shown in orange. Adapted from Bluhm et al."
-      style={{ maxWidth: '100%', height: 'auto', marginBottom: '20px' }}
-    />
-    <figcaption>Figure 2: Neurosin (KLK-6) cleavage sites shown in orange. Adapted from Bluhm et al.</figcaption>
-  </figure>
-         </div>
+            <figure>
+              <img
+                src="https://static.igem.wiki/teams/5079/klk6-cleavage-sites.jpg"
+                alt="Figure 2: Neurosin (KLK-6) cleavage sites shown in orange. Adapted from Bluhm et al."
+                style={{ maxWidth: '100%', height: 'auto', marginBottom: '20px' }}
+              />
+              <figcaption>Figure 2: Neurosin (KLK-6) cleavage sites shown in orange. Adapted from Bluhm et al.</figcaption>
+            </figure>
+          </div>
         </div>
       </div>
-
       <div className="row mt-4">
         <div className="col-lg-8">
           <h2>Introducing SynAxis</h2>
           <hr />
           <div style={{ backgroundColor: '#ffffff', padding: '20px', borderRadius: '5px' }}>
-          <p>
-            SynAxis proposes the first localized and specific delivery vector to target a-synuclein pathology within the GI tract. We aim to:
-          </p>
+            <p>
+              SynAxis proposes the first localized and specific delivery vector to target α-synuclein pathology within the GI tract. We aim to:
+            </p>
             <ul>
               <li>Engineer a delivery system that:
                 <ul>
                   <li>Survives while maintaining therapeutic effects in the gut.</li>
                   <li>Ensures minimal off-target effects.</li>
-                  <li>Targets misfolded monomeric seeds at desired residues, as to ensure no reaggregation or toxic fragments.</li>
+                  <li>Targets misfolded monomeric seeds at desired residues to prevent reaggregation or toxic fragments.</li>
                 </ul>
               </li>
-              <li>Formulate a treatment with a dosage, frequency and duration that is clinically feasible.</li>
+              <li>Formulate a treatment with a dosage, frequency, and duration that is clinically feasible.</li>
             </ul>
           </div>
         </div>
       </div>
-
       <div className="row mt-4">
         <div className="col-lg-8">
           <h2>A Novel Therapeutic Design</h2>
@@ -102,23 +99,23 @@ export function Description() {
           <div style={{ backgroundColor: '#ffffff', padding: '20px', borderRadius: '5px' }}>
             <h3><em>Modular Switch</em></h3>
             <p>
-              The ability of KLK6 to generate pathogenic products from C-terminal cleavage and the potential for off-target effects limits its potential in-vivo. To circumvent this, we aim to design a modular protein switch to ensure neurosin activation only in the presence of pathological a-synuclein monomeric seeds.  
+              The ability of KLK-6 to generate pathogenic products from C-terminal cleavage and the potential for off-target effects limits its potential in vivo. To circumvent this, we aim to design a modular protein switch to ensure neurosin activation only in the presence of pathological α-synuclein monomeric seeds.
             </p>
             <p>
               Modular protein switches are created by fusing protein domains in a way that their activities are interlinked. These fusions exhibit characteristic switch activities, controlled by specific ligands. (Nicholes et al., 2016) In our case, the switch will consist of an input domain that binds to the ligand (α-synuclein) and an output domain (neurosin) whose activity is modulated upon ligand binding in the input domain.
             </p>
             <p>
-              The input domain selected for this purpose is cyclophilin D (CypD), a peptidyl-prolyl isomerase. This enzyme’s ligand-binding pocket is known to interact directly with α-synuclein at its acidic proline-rich C-terminal region. (Torpey et al., 2020) 
+              The input domain selected for this purpose is cyclophilin D (CypD), a peptidyl-prolyl isomerase. This enzyme’s ligand-binding pocket is known to interact directly with α-synuclein at its acidic proline-rich C-terminal region. (Torpey et al., 2020)
             </p>
-  <figure>
-    <img
-      src="https://static.igem.wiki/teams/5079/modular-switch-design.png"
-      alt="Figure 3: A modular protein switch platform with an input domain and Neurosin (red) as the output domain. The substrates for the different domains are shown as the green triangle and yellow star – both of which in this case represent a-syn. Adapted from Nicholes et al."
-      style={{ maxWidth: '100%', height: 'auto', marginBottom: '20px' }}
-    />
-    <figcaption>Figure 3: A modular protein switch platform with an input domain and Neurosin (red) as the output domain. The substrates for the different domains are shown as the green triangle and yellow star – both of which in this case represent a-syn. Adapted from Nicholes et al.</figcaption>
-  </figure>
-</div>
+            <figure>
+              <img
+                src="https://static.igem.wiki/teams/5079/modular-switch-design.png"
+                alt="Figure 3: A modular protein switch platform with an input domain and Neurosin (red) as the output domain. The substrates for the different domains are shown as the green triangle and yellow star – both of which in this case represent α-syn. Adapted from Nicholes et al."
+                style={{ maxWidth: '100%', height: 'auto', marginBottom: '20px' }}
+              />
+              <figcaption>Figure 3: A modular protein switch platform with an input domain and Neurosin (red) as the output domain. The substrates for the different domains are shown as the green triangle and yellow star – both of which in this case represent α-syn. Adapted from Nicholes et al.</figcaption>
+            </figure>
+            <p>
               Such a design would solve two previously identified challenges:
             </p>
             <ul>
