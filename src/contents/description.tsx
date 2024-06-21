@@ -72,7 +72,6 @@ export function Description() {
           <h2>Objectives</h2>
           <hr />
           <div style={{ backgroundColor: '#ffffff', padding: '20px', borderRadius: '5px' }}>
-            <h3><em>We propose the first localized and specific delivery vector to target a-synuclein pathology within the GI tract. We aim to:</em></h3>
           <p>
             We propose the first localized and specific delivery vector to target a-synuclein pathology within the GI tract. We aim to:
           </p>
@@ -86,6 +85,30 @@ export function Description() {
               </li>
               <li>Formulate a treatment with a dosage, frequency and duration that is clinically feasible.</li>
             </ul>
+          </div>
+        </div>
+      </div>
+
+      <div className="row mt-4">
+        <div className="col-lg-8">
+          <h2>Therapeutic Design</h2>
+          <hr />
+          <div style={{ backgroundColor: '#ffffff', padding: '20px', borderRadius: '5px' }}>
+            <h3><em>Modular Switch</em></h3>
+            <p>
+              The ability of KLK6 to generate pathogenic products from C-terminal cleavage and the potential for off-target effects limits its potential in-vivo. To circumvent this, we aim to design a modular protein switch to ensure neurosin activation only in the presence of pathological a-synuclein monomeric seeds.  
+            </p>
+            <p>
+              Modular protein switches are created by fusing protein domains in a way that their activities are interlinked. These fusions exhibit characteristic switch activities, controlled by specific ligands. (Nicholes et al., 2016) In our case, the switch will consist of an input domain that binds to the ligand (α-synuclein) and an output domain (neurosin) whose activity is modulated upon ligand binding in the input domain.
+            </p>
+            <p>
+              The input domain selected for this purpose is cyclophilin D (CypD), a peptidyl-prolyl isomerase. This enzyme’s ligand-binding pocket is known to interact directly with α-synuclein at its acidic proline-rich C-terminal region. (Torpey et al., 2020) 
+            </p>
+            <img
+              src="https://static.igem.wiki/teams/5079/modular-switch-design.png"
+              alt="Figure 3:A modular protein switch platform with an input domain and Neurosin (red) as the output domain. The substrates for the different domains are shown as the green triangle and yellow star – both of which in this case represent a-syn. Adapted from Nicholes et al."
+              style={{ maxWidth: '100%', height: 'auto', marginBottom: '20px' }}
+            />
           </div>
         </div>
       </div>
