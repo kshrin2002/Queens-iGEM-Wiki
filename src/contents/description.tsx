@@ -118,10 +118,12 @@ export function Description() {
           <div className="content-block">
             <h3><em>Spore-Based Probiotic Delivery System</em></h3>
             <p>
-              Our current research focuses on designing an innovative spore-based probiotic delivery system that uses bacterial spores to deliver therapeutic proteins precisely to enteroendocrine cells (EECs) upon oral administration. This approach targets EECs in the intestinal lining, where α-synuclein aggregates start propagating to enteric neurons.
+              Our current research focuses on designing an innovative spore-based probiotic delivery system that uses bacterial spores to deliver therapeutic proteins precisely to EECs upon oral administration. This approach targets enteroendocrine cells (EECs) in the intestinal lining, where α-synuclein aggregates start propagating to enteric neurons. (Rodrigues et al., 2022)
             </p>
             <p>
-              The system integrates a modular switch by releasing the PBSX prophage upon germination, ensuring targeted release of the therapeutic payload in response to gut germination signals. By genetically fusing the ligand of interest to spore surface proteins, we enhance specificity for EEC receptors. This innovative design aims to intervene early in Parkinson's disease progression through precise modulation of α-synuclein aggregation in the gut-brain axis, potentially offering a revolutionary treatment avenue for PD.
+              The system integrates the modular switch by releasing the PBSX prophage upon germination, ensuring targeted release of the therapeutic payload in response to gut germination signals. By genetically fusing the ligand of interest to spore surface proteins, we enhance specificity for EEC receptors. (Mohamed & Christie, 2018) This innovative design aims to intervene early in Parkinson's disease progression through precise modulation of α-synuclein aggregation in the gut-brain axis, potentially offering a revolutionary treatment avenue for PD.
+
+
             </p>
             <figure>
               <img
