@@ -72,7 +72,9 @@ export function Description() {
           <h2>Objectives</h2>
           <hr />
           <div style={{ backgroundColor: '#ffffff', padding: '20px', borderRadius: '5px' }}>
-            <h3><em>We propose the first localized and specific delivery vector to target a-synuclein pathology within the GI tract. We aim to:</em></h3>
+          <p>
+            We propose the first localized and specific delivery vector to target a-synuclein pathology within the GI tract. We aim to:
+          </p>
             <ul>
               <li>Engineer a delivery system that:
                 <ul>
