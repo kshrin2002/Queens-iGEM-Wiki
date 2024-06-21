@@ -1,4 +1,3 @@
-
 export function Description() {
   return (
     <div className="container">
@@ -64,6 +63,26 @@ export function Description() {
               alt="Figure 2: Neurosin (KLK-6) cleavage sites shown in orange. Adapted from Bluhm et al."
               style={{ maxWidth: '100%', height: 'auto', marginBottom: '20px' }}
             />
+          </div>
+        </div>
+      </div>
+
+      <div className="row mt-4">
+        <div className="col-lg-8">
+          <h2>Objectives</h2>
+          <hr />
+          <div style={{ backgroundColor: '#ffffff', padding: '20px', borderRadius: '5px' }}>
+            <h3><em>We propose the first localized and specific delivery vector to target a-synuclein pathology within the GI tract. We aim to:</em></h3>
+            <ul>
+              <li>Engineer a delivery system that:
+                <ul>
+                  <li>Survives while maintaining therapeutic effects in the gut.</li>
+                  <li>Ensures minimal off-target effects.</li>
+                  <li>Targets misfolded monomeric seeds at desired residues, as to ensure no reaggregation or toxic fragments.</li>
+                </ul>
+              </li>
+              <li>Formulate a treatment with a dosage, frequency and duration that is clinically feasible.</li>
+            </ul>
           </div>
         </div>
       </div>
