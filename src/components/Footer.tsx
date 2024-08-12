@@ -10,40 +10,22 @@ export function Footer() {
       <div className="container">
         <div className="row mb-4">
           <div className="col-lg-6 col-xs-12">
-            <h4 className="mb-3">Heading</h4>
-            <p>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam ac
-              ante mollis quam tristique convallis
-            </p>
+            <h4 className="mb-3">Our Sponsors</h4>
+            <img src= "https://static.igem.wiki/teams/5079/bt-jpg-logo-86.jpg"/>
+            <img src= "https://static.igem.wiki/teams/5079/csi-bio-combined-logo-bio-bottom-w-maple-leaf-full-size-rgb.png"/>
+            <img src= "https://static.igem.wiki/teams/5079/idt-logo-thumb-800.png" />
+            <img src= "https://static.igem.wiki/teams/5079/logo-shaded-stacked-no-leaf-eps.pdf" />
+            <img src= "https://static.igem.wiki/teams/5079/neb-2024-50ans-475x335.png" />
+            <img src= "https://static.igem.wiki/teams/5079/qhs-stacked.png" />
+            <img src= "https://static.igem.wiki/teams/5079/smith-engineering-logo.png" />
+            <img src= "https://static.igem.wiki/teams/5079/snapgene-logo-2022-1.png" />
           </div>
-          <div className="col-lg-3 col-xs-12">
-            <h4 className="mt-lg-0 mt-sm-3">Links</h4>
-            <ul className="m-2 p-2">
-              <li>
-                <a href="#">Lorem ipsum</a>
-              </li>
-              <li>
-                <a href="#">Nam mauris velit</a>
-              </li>
-              <li>
-                <a href="#">Etiam vitae mauris</a>
-              </li>
-              <li>
-                <a href="#">Fusce scelerisque</a>
-              </li>
-              <li>
-                <a href="#">Sed faucibus</a>
-              </li>
-              <li>
-                <a href="#">Mauris efficitur nulla</a>
-              </li>
-            </ul>
-          </div>
+
           <div className="col-lg-3 col-xs-12">
             <h4 className="mt-lg-0 mt-sm-4 mb-3">Contact</h4>
-            <p>22, Lorem ipsum dolor, consectetur adipiscing</p>
-            <p className="mb-0">(541) 754-3010</p>
-            <p>info@hsdf.com</p>
+            <p>99 University Ave. Kingston, Ontario.</p>
+            <p className="mb-0">(613) - 533 - 2000</p>
+            <p>qgem@engsoc.queensu.ca</p>
           </div>
         </div>
         <hr />
