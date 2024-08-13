@@ -1,4 +1,3 @@
-import "./App.css";
 import "bootstrap/dist/css/bootstrap.min.css";
 import { Route, Routes } from "react-router-dom";
 import { Footer, Header, Navbar, NotFound } from "../../components";
@@ -23,8 +22,7 @@ const App = () => {
   return (
     <>
       {/* Navigation */}
-      <Navbar />
-
+      <Navbar/>
       {/* Header and PageContent */}
       <Routes>
         {Object.entries(pathMapping).map(
@@ -56,12 +54,11 @@ const App = () => {
           }
         />
       </Routes>
-
       {/* Footer */}
       {/* MUST mention license AND have a link to team wiki's repository on gitlab.igem.org */}
       <Footer />
     </>
   );
 };
-
+import "./App.css";
 export default App;
