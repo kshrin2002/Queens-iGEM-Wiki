@@ -73,7 +73,7 @@ export function Navbar() {
       <Container>
         <BootstrapNavbar.Brand>
           {import.meta.env.VITE_TEAM_NAME}
-          <img src="src/images/Logo.png" alt="Logo" />
+          <img src="https://static.igem.wiki/teams/5079/logo.png" alt="Logo" />
         </BootstrapNavbar.Brand>
         <BootstrapNavbar.Toggle aria-controls="basic-navbar-nav" />
         <BootstrapNavbar.Collapse id="basic-navbar-nav">
