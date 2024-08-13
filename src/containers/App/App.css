@@ -1,5 +1,5 @@
 body {
-  padding-top: 56px;
+  
 }
 
 .left-aligned {
@@ -7,13 +7,17 @@ body {
 }
 
 .bg-dark {
-  background-color: #343a40 !important;
+  background-color: #000000 !important;
 }
 
 .bg-hero {
-  background-color: #45b06cff;
+  background-color: rgb(179, 36, 0);
 }
-
+.bg-hero img{
+  width: 100vw;
+  position: top;
+}
+  
 /* CALLOUT */
 .bd-callout {
   padding: 1.25rem;
@@ -51,6 +55,35 @@ body {
 .bd-callout-danger {
   border-left-color: #d9534f;
 }
+
+
+/* Navbar */
+/* Drop down menus */
+#basic-nav-dropdown{
+  
+}
+/* Full navbar */
+.bg-body-tertiary {
+  background-color: rgba(49, 48, 48, 0.1) !important;
+  transition: background-color 0.5s ease-in-out;
+}
+
+.bg-body-tertiary.scrolled {
+  background-color: rgb(239, 239, 239, 1) !important;
+}
+
+.navbar-brand img {
+  height: 7vh;
+}
+.navbar-brand{
+  color: black;
+  font-weight: 700;
+}
+.nav-link{
+  color: rgb(255, 24, 55);
+  --bs-nav-link-hover-color: black;
+}
+
 
 /* footer */
 footer a {
