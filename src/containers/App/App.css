@@ -2,6 +2,10 @@
   margin-left: auto;
 }
 
+.bg-grey{
+  background-color:#D3D4D9;
+}
+
 .bg-dark {
   background-color: #000000 !important;
 }
@@ -90,7 +94,3 @@ footer a:hover {
   text-decoration: underline;
 }
 
-/* changing the footer colour */
-footer {
-  background-color: #D3D4D9;
-}
