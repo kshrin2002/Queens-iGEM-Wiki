@@ -12,7 +12,7 @@ export function Footer() {
           <div className="col-lg-6 col-xs-12">
             <h4 className="mb-3">Our Sponsors</h4>
             <img
-              src="https://static.igem.wiki/teams/5079/bt-jpg-logo-86.jpg"
+              src="https://static.igem.wiki/teams/5079/brandtech-transparent-logo.png"
               style={{ width: '50%', height: 'auto' }}
 
             />
@@ -22,7 +22,7 @@ export function Footer() {
             
             />
             <img
-              src="https://static.igem.wiki/teams/5079/idt-logo-thumb-800.png"
+              src="https://static.igem.wiki/teams/5079/idt-transparent-logo.png"
               style={{ width: '50%', height: 'auto' }}
               
             />
@@ -42,7 +42,7 @@ export function Footer() {
               
             />
             <img
-              src="https://static.igem.wiki/teams/5079/smith-engineering-logo.png"
+              src="https://static.igem.wiki/teams/5079/smith-engineering-transparent-logo.png"
               style={{ width: '50%', height: 'auto' }}
               
             />
