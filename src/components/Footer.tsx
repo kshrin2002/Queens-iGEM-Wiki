@@ -58,6 +58,8 @@ export function Footer() {
             <p>Address: 99 University Ave. Kingston, Ontario.</p>
             <p className="mb-0"> Phone Number: (613) - 533 - 2000</p>
             <p>Email: qgem@engsoc.queensu.ca</p>
+            <p>LinkedIn: https://www.linkedin.com/company/qgem/mycompany/</p>
+            <p>Instagram: queens_igem</p>
           </div>
         </div>
         <hr />
