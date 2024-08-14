@@ -27,7 +27,7 @@ export function Footer() {
               
             />
             <img
-              src="https://static.igem.wiki/teams/5079/logo-shaded-stacked-no-leaf-eps.pdf"
+              src="https://static.igem.wiki/teams/5079/agat-logo-1.png"
               style={{ width: '50%', height: 'auto' }}
               
             />
