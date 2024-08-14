@@ -27,12 +27,12 @@ export function Footer() {
               
             />
             <img
-              src="https://static.igem.wiki/teams/5079/agat-logo-1.png"
+              src="https://static.igem.wiki/teams/5079/agat-transparent-logo.png"
               style={{ width: '50%', height: 'auto' }}
               
             />
             <img
-              src="https://static.igem.wiki/teams/5079/neb-2024-50ans-475x335.png"
+              src="https://static.igem.wiki/teams/5079/new-england-biolabs-transparent.png"
               style={{ width: '50%', height: 'auto' }}
               
             />
