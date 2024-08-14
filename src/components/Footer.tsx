@@ -55,9 +55,9 @@ export function Footer() {
 
           <div className="col-lg-3 col-xs-12">
             <h4 className="mt-lg-0 mt-sm-4 mb-3">Contact</h4>
-            <p>99 University Ave. Kingston, Ontario.</p>
-            <p className="mb-0">(613) - 533 - 2000</p>
-            <p>qgem@engsoc.queensu.ca</p>
+            <p>Address: 99 University Ave. Kingston, Ontario.</p>
+            <p className="mb-0"> Phone Number: (613) - 533 - 2000</p>
+            <p>Email: qgem@engsoc.queensu.ca</p>
           </div>
         </div>
         <hr />
