@@ -89,3 +89,8 @@ footer a:hover {
   color: white;
   text-decoration: underline;
 }
+
+/* changing the footer colour */
+footer {
+  background-color: #D3D4D9;
+}
