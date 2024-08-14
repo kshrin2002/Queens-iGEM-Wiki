@@ -11,14 +11,46 @@ export function Footer() {
         <div className="row mb-4">
           <div className="col-lg-6 col-xs-12">
             <h4 className="mb-3">Our Sponsors</h4>
-            <img src= "https://static.igem.wiki/teams/5079/bt-jpg-logo-86.jpg"/>
-            <img src= "https://static.igem.wiki/teams/5079/csi-bio-combined-logo-bio-bottom-w-maple-leaf-full-size-rgb.png"/>
-            <img src= "https://static.igem.wiki/teams/5079/idt-logo-thumb-800.png" />
-            <img src= "https://static.igem.wiki/teams/5079/logo-shaded-stacked-no-leaf-eps.pdf" />
-            <img src= "https://static.igem.wiki/teams/5079/neb-2024-50ans-475x335.png" />
-            <img src= "https://static.igem.wiki/teams/5079/qhs-stacked.png" />
-            <img src= "https://static.igem.wiki/teams/5079/smith-engineering-logo.png" />
-            <img src= "https://static.igem.wiki/teams/5079/snapgene-logo-2022-1.png" />
+            <img
+              src="https://static.igem.wiki/teams/5079/bt-jpg-logo-86.jpg"
+              style={{ width: '50%', height: 'auto' }}
+
+            />
+            <img
+              src="https://static.igem.wiki/teams/5079/csi-bio-combined-logo-bio-bottom-w-maple-leaf-full-size-rgb.png"
+              style={{ width: '50%', height: 'auto' }}
+            
+            />
+            <img
+              src="https://static.igem.wiki/teams/5079/idt-logo-thumb-800.png"
+              style={{ width: '50%', height: 'auto' }}
+              
+            />
+            <img
+              src="https://static.igem.wiki/teams/5079/logo-shaded-stacked-no-leaf-eps.pdf"
+              style={{ width: '50%', height: 'auto' }}
+              
+            />
+            <img
+              src="https://static.igem.wiki/teams/5079/neb-2024-50ans-475x335.png"
+              style={{ width: '50%', height: 'auto' }}
+              
+            />
+            <img
+              src="https://static.igem.wiki/teams/5079/qhs-stacked.png"
+              style={{ width: '50%', height: 'auto' }}
+              
+            />
+            <img
+              src="https://static.igem.wiki/teams/5079/smith-engineering-logo.png"
+              style={{ width: '50%', height: 'auto' }}
+              
+            />
+            <img
+              src="https://static.igem.wiki/teams/5079/snapgene-logo-2022-1.png"
+              style={{ width: '50%', height: 'auto' }}
+              
+            />
           </div>
 
           <div className="col-lg-3 col-xs-12">
@@ -29,7 +61,6 @@ export function Footer() {
           </div>
         </div>
         <hr />
-        {/* The following MUST be on every page: license information and link to the repository on gitlab.igem.org */}
         <div className="row mt-4">
           <div className="col">
             <p className="mb-0">
