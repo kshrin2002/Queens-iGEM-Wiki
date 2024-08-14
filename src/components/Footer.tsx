@@ -51,10 +51,6 @@ export function Footer() {
               style={{ width: '50%', height: 'auto' }}
               
             />
-            <img
-              src="https://static.igem.wiki/teams/5079/dbmslogo.png"
-              style={{ width: '50%', height: 'auto' }}
-            />
           </div>
 
           <div className="col-lg-3 col-xs-12">
