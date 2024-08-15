@@ -22,7 +22,7 @@ export function Footer() {
             
             />
             <img
-              src="https://static.igem.wiki/teams/5079/idt-transparent-logo.png"
+              src="https://static.igem.wiki/teams/5079/idt-transparent-logo-cropped-version.png"
               style={{ width: '50%', height: 'auto' }}
               
             />
