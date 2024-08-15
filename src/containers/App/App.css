@@ -81,15 +81,25 @@
   --bs-nav-link-hover-color: black;
 }
 
-/* footer */
+/* Footer */
+footer {
+  color: #C30010; 
+}
+
 footer a {
-  color: white;
+  color: white; 
   font-weight: bold;
   text-decoration: none;
 }
 
 footer a:hover {
-  color: #C30010;
+  color: white;
   text-decoration: underline;
+}
+
+footer p,
+footer h4,
+footer small {
+  color: #C30010; 
 }
 
