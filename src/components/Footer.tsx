@@ -32,7 +32,7 @@ export function Footer() {
               
             />
             <img
-              src="https://static.igem.wiki/teams/5079/new-england-biolabs-transparent.png"
+              src="https://static.igem.wiki/teams/5079/new-england-biolabs-transparent-cropped-version.png"
               style={{ width: '50%', height: 'auto' }}
               
             />
