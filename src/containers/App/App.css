@@ -81,13 +81,9 @@
   --bs-nav-link-hover-color: black;
 }
 
-/* Footer */
-footer {
-  color: #C30010; 
-}
-
+/* footer */
 footer a {
-  color: white; 
+  color: white;
   font-weight: bold;
   text-decoration: none;
 }
