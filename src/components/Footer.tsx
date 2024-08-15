@@ -9,54 +9,48 @@ export function Footer() {
     <footer className="pt-5 pb-5 footer py-5 mt-5 bg-grey text-white">
       <div className="container">
         <div className="row mb-4">
-          <div className="col-lg-6 col-xs-12">
+          <div className="col-lg-9 col-xs-12">
             <h4 className="mb-3">Our Sponsors</h4>
-            <img
-              src="https://static.igem.wiki/teams/5079/brandtech-transparent-logo.png"
-              style={{ width: '50%', height: 'auto' }}
-
-            />
-            <img
-              src="https://static.igem.wiki/teams/5079/csi-bio-combined-logo-bio-bottom-w-maple-leaf-full-size-rgb.png"
-              style={{ width: '50%', height: 'auto' }}
-            
-            />
-            <img
-              src="https://static.igem.wiki/teams/5079/idt-transparent-logo-cropped-version.png"
-              style={{ width: '50%', height: 'auto' }}
-              
-            />
-            <img
-              src="https://static.igem.wiki/teams/5079/agat-transparent-logo.png"
-              style={{ width: '50%', height: 'auto' }}
-              
-            />
-            <img
-              src="https://static.igem.wiki/teams/5079/new-england-biolabs-transparent-cropped-version.png"
-              style={{ width: '50%', height: 'auto' }}
-              
-            />
-            <img
-              src="https://static.igem.wiki/teams/5079/qhs-stacked.png"
-              style={{ width: '50%', height: 'auto' }}
-              
-            />
-            <img
-              src="https://static.igem.wiki/teams/5079/smith-engineering-transparent-logo.png"
-              style={{ width: '50%', height: 'auto' }}
-              
-            />
-            <img
-              src="https://static.igem.wiki/teams/5079/snapgene-logo-2022-1.png"
-              style={{ width: '50%', height: 'auto' }}
-              
-            />
+            <div className="sponsor-images">
+              <img
+                src="https://static.igem.wiki/teams/5079/brandtech-transparent-logo.png"
+                style={{ width: '150px', height: 'auto' }}
+              />
+              <img
+                src="https://static.igem.wiki/teams/5079/csi-bio-combined-logo-bio-bottom-w-maple-leaf-full-size-rgb.png"
+                style={{ width: '150px', height: 'auto' }}
+              />
+              <img
+                src="https://static.igem.wiki/teams/5079/idt-transparent-logo-cropped-version.png"
+                style={{ width: '150px', height: 'auto' }}
+              />
+              <img
+                src="https://static.igem.wiki/teams/5079/agat-transparent-logo.png"
+                style={{ width: '150px', height: 'auto' }}
+              />
+              <img
+                src="https://static.igem.wiki/teams/5079/new-england-biolabs-transparent-cropped-version.png"
+                style={{ width: '150px', height: 'auto' }}
+              />
+              <img
+                src="https://static.igem.wiki/teams/5079/qhs-stacked.png"
+                style={{ width: '150px', height: 'auto' }}
+              />
+              <img
+                src="https://static.igem.wiki/teams/5079/smith-engineering-transparent-logo.png"
+                style={{ width: '150px', height: 'auto' }}
+              />
+              <img
+                src="https://static.igem.wiki/teams/5079/snapgene-logo-2022-1.png"
+                style={{ width: '150px', height: 'auto' }}
+              />
+            </div>
           </div>
 
           <div className="col-lg-3 col-xs-12">
             <h4 className="mt-lg-0 mt-sm-4 mb-3">Contact</h4>
             <p>Address: 99 University Ave. Kingston, Ontario.</p>
-            <p className="mb-0"> Phone Number: (613) - 533 - 2000</p>
+            <p className="mb-0">Phone Number: (613) - 533 - 2000</p>
             <p>Email: qgem@engsoc.queensu.ca</p>
             <p>LinkedIn: QGEM</p>
             <p>Instagram: @queens_igem</p>
