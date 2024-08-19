@@ -84,7 +84,7 @@ export function Footer() {
           </div>
           <div className="col text-right">
             <img
-              src="https://static.igem.wiki/teams/5079/queen-s-university-logo.png"
+              src="https://static.igem.wiki/teams/5079/queenslogo-colour.png"
               style={{ width: '300px', height: 'auto' }}
             />
           </div>
