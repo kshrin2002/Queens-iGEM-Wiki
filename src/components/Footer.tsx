@@ -82,6 +82,12 @@ export function Footer() {
               </small>
             </p>
           </div>
+          <div className="col text-right">
+            <img
+              src="https://static.igem.wiki/teams/5079/queen-s-university-logo.png"
+              style={{ width: '150px', height: 'auto' }}
+            />
+          </div>
         </div>
       </div>
     </footer>
