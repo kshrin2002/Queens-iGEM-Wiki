@@ -65,7 +65,7 @@ export function Navbar() {
     <BootstrapNavbar
       bg="dark"
       data-bs-theme="dark"
-      expand="lg"
+      expand='false'
       className={`bg-body-tertiary ${scrolled ? 'scrolled' : ''}`}
       fixed="top"
       id="navbar"
@@ -75,7 +75,7 @@ export function Navbar() {
           {import.meta.env.VITE_TEAM_NAME}
           <img src="https://static.igem.wiki/teams/5079/logo.png" alt="Logo" />
         </BootstrapNavbar.Brand>
-        <BootstrapNavbar.Toggle aria-controls="basic-navbar-nav" />
+        <BootstrapNavbar.Toggle aria-controls="basic-navbar-nav" className='custom-toggler' />
         <BootstrapNavbar.Collapse id="basic-navbar-nav">
           <Nav className="left-aligned">{pages}</Nav>
         </BootstrapNavbar.Collapse>
