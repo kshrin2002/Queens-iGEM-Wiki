@@ -6,6 +6,7 @@ interface HeaderProps {
 export function Header({ title, lead }: HeaderProps) {
   return (
     <header className="bg-hero mb-5">
+      <img src="https://static.igem.wiki/teams/5079/header.png" alt="" className="header-img"/>
       <div className="container h-100">
         <div className="row h-100 align-items-center">
           <div className="col-lg-12">
