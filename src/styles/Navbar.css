@@ -1,0 +1,18 @@
+.transparent-navbar {
+    background-color: transparent !important; /* Make the navbar background transparent */
+    border: none !important; /* Remove the border */
+    box-shadow: none !important; /* Remove any shadow */
+  }
+  
+  .custom-toggler {
+    border-color: rgba(231, 7, 7, 0.644); /* Make the hamburger menu border visible */
+  }
+  
+  .custom-toggler .navbar-toggler-icon {
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3E%3Cpath stroke='rgba%28255, 255, 255, 255%29' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3E%3C/svg%3E"); /* White hamburger icon */
+  }
+  
+  .navbar-collapse {
+    justify-content: flex-end; /* Align the collapsed menu to the right */
+  }
+  

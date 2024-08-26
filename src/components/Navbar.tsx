@@ -1,10 +1,10 @@
-import { useEffect, useState } from 'react';
-import Container from 'react-bootstrap/Container';
-import Nav from 'react-bootstrap/Nav';
-import BootstrapNavbar from 'react-bootstrap/Navbar';
-import NavDropdown from 'react-bootstrap/NavDropdown';
-import { Link } from 'react-router-dom';
-import Pages from '../pages.ts'; 
+import { useEffect, useState } from "react";
+import Container from "react-bootstrap/Container";
+import Nav from "react-bootstrap/Nav";
+import BootstrapNavbar from "react-bootstrap/Navbar";
+import NavDropdown from "react-bootstrap/NavDropdown";
+import { Link } from "react-router-dom";
+import Pages from "../pages.ts";
 
 export function Navbar() {
   const [scrolled, setScrolled] = useState(false);
@@ -18,16 +18,15 @@ export function Navbar() {
       }
     };
 
-    window.addEventListener('scroll', handleScroll);
+    window.addEventListener("scroll", handleScroll);
 
-    // Cleanup function
     return () => {
-      window.removeEventListener('scroll', handleScroll);
+      window.removeEventListener("scroll", handleScroll);
     };
-  }, []); // Empty dependency array means this effect runs once on mount
+  }, []);
 
   const pages = Pages.map((item, pageIndex) => {
-    if ('folder' in item && item.folder) {
+    if ("folder" in item && item.folder) {
       const folderItems = item.folder.map((subpage, subpageIndex) => {
         if (subpage.path) {
           return (
@@ -40,7 +39,7 @@ export function Navbar() {
             </NavDropdown.Item>
           );
         }
-        return null; // Return null to avoid rendering undefined elements
+        return null;
       });
       return (
         <NavDropdown
@@ -51,36 +50,35 @@ export function Navbar() {
           {folderItems}
         </NavDropdown>
       );
-    } else if ('path' in item && item.path) {
+    } else if ("path" in item && item.path) {
       return (
         <Nav.Link key={`page-${pageIndex}`} as={Link} to={item.path}>
           {item.name}
         </Nav.Link>
       );
     }
-    return null; // Return null to avoid rendering undefined elements
+    return null;
   });
 
   return (
     <BootstrapNavbar
-      bg="dark"
-      data-bs-theme="dark"
-      expand='false'
-      className={`bg-body-tertiary ${scrolled ? 'scrolled' : ''}`}
+      expand={false}
+      className={`transparent-navbar ${scrolled ? "scrolled" : ""}`}
       fixed="top"
       id="navbar"
     >
-      <Container>
-        <BootstrapNavbar.Brand>
-          {import.meta.env.VITE_TEAM_NAME}
-          <img src="https://static.igem.wiki/teams/5079/logo.png" alt="Logo" />
-        </BootstrapNavbar.Brand>
-        <BootstrapNavbar.Toggle aria-controls="basic-navbar-nav" className='custom-toggler' />
-        <BootstrapNavbar.Collapse id="basic-navbar-nav">
-          <Nav className="left-aligned">{pages}</Nav>
+      <Container fluid className="d-flex justify-content-end">
+        <BootstrapNavbar.Toggle
+          aria-controls="basic-navbar-nav"
+          className="custom-toggler"
+        />
+        <BootstrapNavbar.Collapse
+          id="basic-navbar-nav"
+          className="justify-content-end"
+        >
+          <Nav>{pages}</Nav>
         </BootstrapNavbar.Collapse>
       </Container>
     </BootstrapNavbar>
   );
 }
-

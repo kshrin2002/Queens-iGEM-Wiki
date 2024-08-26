@@ -1,4 +1,5 @@
 import { stringToSlug } from "../utils";
+import "../styles/Footer.css"; 
 
 export function Footer() {
   const teamYear = import.meta.env.VITE_TEAM_YEAR;
@@ -9,7 +10,7 @@ export function Footer() {
     <footer className="pt-5 pb-5 footer py-5 mt-5 bg-grey text-white">
       <div className="container">
         <div className="row mb-4">
-          <div className="col-lg-9 col-xs-12">
+          <div className="col-lg-12">
             <h4 className="mb-3">Our Sponsors</h4>
             <div className="sponsor-images">
               <img
@@ -46,8 +47,11 @@ export function Footer() {
               />
             </div>
           </div>
+        </div>
 
-          <div className="col-lg-3 col-xs-12">
+        {/* New Row for Contact Information */}
+        <div className="row mb-4">
+          <div className="col-lg-12">
             <h4 className="mt-lg-0 mt-sm-4 mb-3">Contact</h4>
             <p>Address: 99 University Ave. Kingston, Ontario.</p>
             <p className="mb-0">Phone Number: (613) - 533 - 2000</p>
@@ -56,6 +60,7 @@ export function Footer() {
             <p>Instagram: @queens_igem</p>
           </div>
         </div>
+
         <hr />
         <div className="row mt-4">
           <div className="col">
