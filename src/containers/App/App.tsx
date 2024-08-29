@@ -26,13 +26,13 @@ const App = () => {
       {/* Header and PageContent */}
       <Routes>
         {Object.entries(pathMapping).map(
-          ([path, { title, lead, component: Component }]) => (
+          ([path, {component: Component }]) => (
             <Route
               key={path}
               path={path}
               element={
                 <>
-                  <Header title={title || ""} lead={lead || ""} />
+                  {/* <Header title={title || ""} lead={lead || ""} /> */}
                   <div className="container">
                     <Component />
                   </div>
@@ -61,4 +61,5 @@ const App = () => {
   );
 };
 import "./App.css";
+import "../../components/Navbar.css"
 export default App;
