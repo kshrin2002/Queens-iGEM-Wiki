@@ -61,5 +61,4 @@ const App = () => {
   );
 };
 import "./App.css";
-import "../../components/Navbar.css"
 export default App;
