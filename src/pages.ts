@@ -18,7 +18,7 @@ import Attributions from "src\contents\Team\Attributions\attributions.tsx";
 import Experiments from "src\contents\Wet Lab\Experiments\experiments.tsx";
 import HumanPractices from "src\contents\Human Practices\Integrated Human Practices\human-practices.tsx";
 import Safety from "src\contents\Wet Lab\Safety\safety.tsx";
-import Team from "src\contents\Team\Team Members\team.tsx"
+import Team from "src\contents\Team\Team Members\team.tsx";
 import Education from "src\contents\Human Practices\Education\education.tsx";
 import Entrepreneurship from "src\contents\Human Practices\Entrepreneurs \entrepreneurship.tsx";
 
