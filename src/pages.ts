@@ -1,17 +1,9 @@
 import {
-  Attributions,
   Contribution,
   Description,
-  Engineering,
-  Experiments,
   Home,
-  HumanPractices,
   Notebook,
   Results,
-  Safety,
-  Team,
-  Education,
-  Entrepreneurship,
   Hardware,
   Inclusivity,
   Measurement,
@@ -20,6 +12,19 @@ import {
   Software,
   Sustainable,
 } from "./contents";
+
+import engineering from "./contents/Wet Lab/Engineering/";
+import attributions from "./contents/Team/Attributions/";
+import experiments from "./contents/Wet Lab/Experiments/";
+import humanpractices from "./contents/Human Practices/Integrated Human Practices/";
+import safety from "./contents/Wet Lab/Safety/";
+import team from "./contents/Team/Team Members/";
+import education from "./contents/Human Practices/Education/";
+import entrepreneurship from "./contents/Human Practices/Entrepreneurship/";
+
+
+
+
 
 interface Base {
   name: string | undefined;
