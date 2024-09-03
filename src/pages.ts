@@ -13,14 +13,14 @@ import {
   Sustainable,
 } from "./contents";
 
-import Engineering from ",/contents/Wet Lab/Experiments/experiments.tsx";
+import Engineering from "./contents/Wet Lab/Engineering/engineering.tsx";
 import Attributions from "./contents/Team/Attributions/attributions.tsx";
 import Experiments from "./contents/Wet Lab/Experiments/experiments.tsx";
 import HumanPractices from "./contents/Human Practices/Integrated Human Practices/human-practices.tsx";
 import Safety from "./contents/Wet Lab/Safety/safety.tsx";
 import Team from "./contents/Team/Team Members/team.tsx";
 import Education from "./contents/Human Practices/Education/education.tsx";
-import Entrepreneurship from "./ontents/Human Practices/Entrepreneurs/entrepreneurship.tsx";
+import Entrepreneurship from "./contents/Human Practices/Entrepreneurs/entrepreneurship.tsx";
 
 
 interface Base {
