@@ -1,4 +1,4 @@
-import { Inspirations, InspirationLink } from "../components";
+//import { Inspirations, InspirationLink } from "../components";
 
 export function Education() {
   const links: InspirationLink[] = [
