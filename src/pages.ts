@@ -13,14 +13,14 @@ import {
   Sustainable,
 } from "./contents";
 
-import engineering from "./contents/Wet Lab/Engineering/";
-import attributions from "./contents/Team/Attributions/";
-import experiments from "./contents/Wet Lab/Experiments/";
-import humanpractices from "./contents/Human Practices/Integrated Human Practices/";
-import safety from "./contents/Wet Lab/Safety/";
-import team from "./contents/Team/Team Members/";
-import education from "./contents/Human Practices/Education/";
-import entrepreneurship from "./contents/Human Practices/Entrepreneurship/";
+import engineering from "\queens-canada\src\contents\Wet Lab\Engineering\engineering.tsx";
+import attributions from "\queens-canada\src\contents\Team\Attributions\attributions.tsx";
+import experiments from "\queens-canada\src\contents\Wet Lab\Experiments\experiments.tsx";
+import humanpractices from "\queens-canada\src\contents\Human Practices\Integrated Human Practices\human-practices.tsx";
+import safety from "\queens-canada\src\contents\Wet Lab\Safety\safety.tsx";
+import team from "\queens-canada\src\contents\Team\Team Members\team.tsx";
+import education from "\queens-canada\src\contents\Human Practices\Education\education.tsx";
+import entrepreneurship from "\queens-canada\src\contents\Human Practices\Entrepreneurs \entrepreneurship.tsx";
 
 
 
