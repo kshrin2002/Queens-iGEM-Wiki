@@ -13,17 +13,14 @@ import {
   Sustainable,
 } from "./contents";
 
-import engineering from "\queens-canada\src\contents\Wet Lab\Engineering\engineering.tsx";
-import attributions from "\queens-canada\src\contents\Team\Attributions\attributions.tsx";
-import experiments from "\queens-canada\src\contents\Wet Lab\Experiments\experiments.tsx";
-import humanpractices from "\queens-canada\src\contents\Human Practices\Integrated Human Practices\human-practices.tsx";
-import safety from "\queens-canada\src\contents\Wet Lab\Safety\safety.tsx";
-import team from "\queens-canada\src\contents\Team\Team Members\team.tsx";
-import education from "\queens-canada\src\contents\Human Practices\Education\education.tsx";
-import entrepreneurship from "\queens-canada\src\contents\Human Practices\Entrepreneurs \entrepreneurship.tsx";
-
-
-
+import engineering from "/queens-canada/src/contents/Wet Lab/Engineering/engineering.tsx";
+import attributions from "/queens-canada/src/contents/Team/Attributions/attributions.tsx";
+import experiments from "/queens-canada/src/contents/Wet Lab/Experiments/experiments.tsx";
+import humanpractices from "/queens-canada/src/contents/Human Practices/Integrated Human Practices/human-practices.tsx";
+import safety from "/queens-canada/src/contents/Wet Lab/Safety/safety.tsx";
+import team from "/queens-canada/src/contents/Team/Team Members/team.tsx";
+import education from "/queens-canada/src/contents/Human Practices/Education/education.tsx";
+import entrepreneurship from "/queens-canada/src/contents/Human Practices/Entrepreneurs/entrepreneurship.tsx";
 
 
 interface Base {
