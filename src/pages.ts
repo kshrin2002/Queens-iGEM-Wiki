@@ -13,14 +13,14 @@ import {
   Sustainable,
 } from "./contents";
 
-import { Engineering } from "./contents/Wet Lab/Engineering";
-import { Attributions } from "./contents/Team/Attributions";
-import { Experiments } from "./contents/Wet Lab/Experiments";
-import { HumanPractices } from "./contents/Human Practices/Integrated Human Practices";
-import { Safety } from "./contents/Wet Lab/Safety";
-import { Team } from "./contents/Team/Team Members";
-import { Education } from "./contents/Human Practices/Education";
-import { Entrepreneurship } from "./contents/Human Practices/Entrepreneurs";
+import Engineering from "./contents/Wet Lab/Engineering";
+import Attributions from "./contents/Team/Attributions";
+import Experiments from "./contents/Wet Lab/Experiments";
+import HumanPractices from "./contents/Human Practices/Integrated Human Practices";
+import Safety from "./contents/Wet Lab/Safety";
+import Team from "./contents/Team/Team Members";
+import Education from "./contents/Human Practices/Education";
+import Entrepreneurship from "./contents/Human Practices/Entrepreneurs";
 
 
 interface Base {
