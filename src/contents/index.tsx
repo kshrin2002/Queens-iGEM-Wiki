@@ -1,7 +1,7 @@
 export * from "./home.tsx";
 // Team
 export * from "./Team/Team Members/team.tsx";
-export * from "./Team/Attributiuons/attributions.tsx";
+export * from "./Team/Attributions/attributions.tsx";
 // Project
 export * from "./contribution.tsx";
 export * from "./description.tsx";
@@ -15,7 +15,7 @@ export * from "./Wet Lab/Safety/safety.tsx";
 export * from "./Human Practices/Integrated Human Practices/human-practices.tsx";
 // Awards
 export * from "./Human Practices/Education/education.tsx";
-export * from "./Human Practices/Etrepreneurs/entrepreneurship.tsx";
+export * from "./Human Practices/Entrepreneurs/entrepreneurship.tsx";
 export * from "./hardware.tsx";
 export * from "./inclusivity.tsx";
 export * from "./measurement.tsx";
