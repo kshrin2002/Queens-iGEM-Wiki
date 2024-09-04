@@ -20,7 +20,7 @@ import {HumanPractices} from "./contents/Human Practices/Integrated Human Practi
 import {Safety} from "./contents/Wet Lab/Safety/safety";
 import {Team} from "./contents/Team/Team Members/team";
 import {Education} from "./contents/Human Practices/Education/education";
-import {Entrepreneurship} from "./contents/Human Practices/Entrepreneurs/entrepreneurship";
+import {Entrepreneurship} from "./contents/Human Practices/Entrepreneurs /entrepreneurship";
 
 
 interface Base {
