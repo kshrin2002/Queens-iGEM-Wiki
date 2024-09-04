@@ -15,7 +15,7 @@ import {
 
 import {Engineering} from "./contents/Wet Lab/Engineering/engineering";
 import {Attributions} from "./contents/Team/Attributions/attributions";
-import {Experiments} from "./contents/Wet Lab/Experiments/attributions";
+import {Experiments} from "./contents/Wet Lab/Experiments/experiments";
 import {HumanPractices} from "./contents/Human Practices/Integrated Human Practices/human-practices";
 import {Safety} from "./contents/Wet Lab/Safety/safety";
 import {Team} from "./contents/Team/Team Members/team";
