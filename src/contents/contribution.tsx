@@ -12,7 +12,7 @@ export function Contribution() {
         image={'https://static.igem.wiki/teams/5079/headshot-template-picture.png'} 
         borderColor={'blue'}
       />
-       <TitleSection 
+      <TitleSection 
         title={'SUBTITLE 2'} 
         subtitle1={'Section 1'} 
         description1={'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum'} 
@@ -63,7 +63,7 @@ const TitleSection: React.FC<TitleSectionProps> = ({title, subtitle1, descriptio
       <p>{description2}</p>
     </div>
     <div className="image-content" style={{ flex: 0 }}>
-      <img src={image} alt="section visual" style={{ width: '250px', height: '250px', borderRadius: '50%' }} />
+      <img src={image} alt="section visual" style={{ width: '250px', height: '150px' }} />
     </div>
   </div>
 );
