@@ -39,6 +39,12 @@ export function Contribution() {
         image={'https://static.igem.wiki/teams/5079/headshot-template-picture.png'} 
         borderColor={'blue'}
       />
+      
+      {/* Render the NavBar component */}
+      <NavBar />
+
+      {/* Attributions Heading */}
+      <AttributionsHeading />
     </>
   );
 }
@@ -68,4 +74,49 @@ const TitleSection: React.FC<TitleSectionProps> = ({title, subtitle1, descriptio
   </div>
 );
 
+const NavBar: React.FC = () => {
+  return (
+    <div style={{ display: 'flex', justifyContent: 'center', alignItems: 'center', padding: '20px' }}>
+      {/* Logo */}
+      <img
+        src="https://static.igem.wiki/teams/5079/rose-logo.png"
+        alt="Logo"
+        style={{ width: '50px', marginRight: '20px' }}
+      />
+
+      {/* Navigation Links */}
+      <div style={{ display: 'flex', gap: '20px' }}>
+        {['Project', 'Wet Lab', 'Dry Lab', 'Outreach', 'Team'].map((text, index) => (
+          <div
+            key={index}
+            style={{
+              backgroundColor: '#590000',
+              padding: '10px 20px',
+              borderRadius: '20px',
+              color: 'white',
+              textTransform: 'uppercase',
+              fontWeight: 'bold',
+              cursor: 'pointer',
+            }}
+          >
+            {text}
+          </div>
+        ))}
+      </div>
+    </div>
+  );
+};
+
+
+const ContributionHeading: React.FC = () => {
+  return (
+    <div style={{ textAlign: 'center', marginTop: '30px' }}>
+      <h1 style={{ fontSize: '5em', color: '#590000', fontWeight: 'bold', letterSpacing: '2px' }}>
+        CONTRIBUTIONS
+      </h1>
+    </div>
+  );
+};
+
+export default Header;
 export default Contribution;
