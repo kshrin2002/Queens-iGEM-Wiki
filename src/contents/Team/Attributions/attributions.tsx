@@ -28,7 +28,7 @@ export function Attributions() {
 
   const NavBar: React.FC = () => {
     return (
-      <div style={{ display: 'flex', alignItems: 'center', padding: '20px' }}>
+      <div style={{ display: 'flex', justifyContent: 'center', alignItems: 'center', padding: '20px' }}>
         {/* Logo */}
         <img
           src="https://static.igem.wiki/teams/5079/rose-logo.png"
@@ -55,6 +55,17 @@ export function Attributions() {
             </div>
           ))}
         </div>
+      </div>
+    );
+  };
+
+  // Updated Attributions Heading
+  const AttributionsHeading: React.FC = () => {
+    return (
+      <div style={{ textAlign: 'center', marginTop: '30px' }}>
+        <h1 style={{ fontSize: '5em', color: '#590000', fontWeight: 'bold', letterSpacing: '2px' }}>
+          ATTRIBUTIONS
+        </h1>
       </div>
     );
   };
@@ -256,9 +267,7 @@ const CardHP: React.FC<SingleImageProps> = ({ imageSrc, name, role }) => {
       <NavBar />
 
       {/* Attributions Heading */}
-      <div style={{ textAlign: 'center', marginTop: '30px' }}>
-        <h1 style={{ fontSize: '3em', color: '#590000' }}>Attributions</h1>
-      </div>
+      <AttributionsHeading />
 
       {/* Render the Card component properly */}
       <Card description={<span>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</span>} />
