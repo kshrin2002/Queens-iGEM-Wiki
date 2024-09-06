@@ -39,12 +39,12 @@ export function Contribution() {
         image={'https://static.igem.wiki/teams/5079/headshot-template-picture.png'} 
         borderColor={'blue'}
       />
-      
+
       {/* Render the NavBar component */}
       <NavBar />
 
       {/* Attributions Heading */}
-      <AttributionsHeading />
+      <ContributionHeadingHeading />
     </>
   );
 }
@@ -118,5 +118,4 @@ const ContributionHeading: React.FC = () => {
   );
 };
 
-export default Header;
 export default Contribution;
