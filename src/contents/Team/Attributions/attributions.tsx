@@ -59,17 +59,30 @@ export function Attributions() {
     );
   };
 
-  // Updated Attributions Heading
+  
   const AttributionsHeading: React.FC = () => {
     return (
       <div style={{ textAlign: 'center', marginTop: '30px' }}>
         <h1 style={{ fontSize: '5em', color: '#590000', fontWeight: 'bold', letterSpacing: '2px' }}>
           ATTRIBUTIONS
         </h1>
+        {/* External Contributions Heading with line */}
+        <div style={{ display: 'flex', justifyContent: 'center', alignItems: 'center', marginTop: '20px' }}>
+          <div style={{ borderBottom: '4px solid #590000', width: '25%' }}></div>
+          <h2 style={{ fontSize: '2em', color: '#590000', fontWeight: 'bold', margin: '0 10px' }}>
+            EXTERNAL CONTRIBUTIONS
+          </h2>
+          <div style={{ borderBottom: '4px solid #590000', width: '25%' }}></div>
+        </div>
+        {/* Blue underline */}
+        <div style={{ marginTop: '5px' }}>
+          <hr style={{ width: '220px', height: '3px', backgroundColor: 'blue', border: 'none', margin: '0 auto' }} />
+        </div>
       </div>
     );
   };
-  // Card component now typed correctly
+      
+  
   const Card: React.FC<CardProps> = ({ description }) => {
     const images = [
       "https://static.igem.wiki/teams/5079/headshot-template-picture.png",
