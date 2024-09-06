@@ -145,7 +145,7 @@ export function Attributions() {
   };
 
 
-const DryLab: React.FC<DryLabProps> = ({ description }) => {
+const DryLab: React.FC<CardProps> = ({ description }) => {
   // Separate the team lead and the other members
   const teamLead = "https://static.igem.wiki/teams/5079/headshot-template-picture.png";
   const teamMembers = [
