@@ -201,7 +201,7 @@ interface SingleImageProps {
   role: string;
 }
 
-const SingleImage: React.FC<SingleImageProps> = ({ imageSrc, name, role }) => {
+const CardHP: React.FC<SingleImageProps> = ({ imageSrc, name, role }) => {
   return (
     <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', marginTop: '20px' }}>
       <img
