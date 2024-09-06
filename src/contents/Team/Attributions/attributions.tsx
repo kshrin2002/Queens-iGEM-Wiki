@@ -33,22 +33,33 @@ export function Attributions() {
       "https://static.igem.wiki/teams/5079/headshot-template-picture.png",
       "https://static.igem.wiki/teams/5079/headshot-template-picture.png"
     ];
-
+  
     return (
       <>
         {images.length === 3 && (
           <>
-            <div style={{ display: 'flex', justifyContent: 'center', gap: '10px', flexWrap: 'wrap' }}>
+            {/* Row with 3 images and names */}
+            <div style={{ display: 'flex', justifyContent: 'center', gap: '30px', flexWrap: 'wrap', marginBottom: '20px' }}>
               {images.map((image, index) => (
-                <img
-                  key={index}
-                  src={image}
-                  alt={`Image ${index + 1}`}
-                  style={{ width: '150px', height: '150px', marginBottom: '10px' }}
-                />
+                <div key={index} style={{ textAlign: 'center' }}>
+                  <img
+                    src={image}
+                    alt={`Image ${index + 1}`}
+                    style={{ width: '150px', height: '150px', borderRadius: '50%', marginBottom: '10px' }}
+                  />
+                  {/* Name and Role under each image */}
+                  <p style={{ fontWeight: 'bold', margin: '5px 0' }}>NAME</p>
+                  <p style={{ fontSize: '14px', color: '#8B0000' }}>ROLE</p>
+                </div>
               ))}
             </div>
-            <p>{description}</p>
+  
+            {/* Description text centered under images */}
+            <div style={{ textAlign: 'center', marginTop: '20px' }}>
+              <p style={{ maxWidth: '600px', margin: '0 auto', lineHeight: '1.5' }}>
+                {description}
+              </p>
+            </div>
           </>
         )}
       </>
