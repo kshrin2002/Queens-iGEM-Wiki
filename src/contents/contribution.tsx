@@ -95,7 +95,6 @@ const TitleSection: React.FC<TitleSectionProps> = ({title, subtitle1, descriptio
 const NavBar: React.FC = () => {
   return (
     <div style={{ display: 'flex', justifyContent: 'center', alignItems: 'center', padding: '20px' }}>
-      {/* Logo */}
       <img
         src="https://static.igem.wiki/teams/5079/rose-logo.png"
         alt="Logo"
