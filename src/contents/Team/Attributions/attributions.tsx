@@ -6,7 +6,7 @@ interface CardProps {
 }
 
 export function Attributions() {
-  const teamID = import.meta.env.VITE_TEAM_ID;
+  // const teamID = import.meta.env.VITE_TEAM_ID;
 
   useEffect(() => {
     function listenToIframeHeight(e: MessageEvent) {
