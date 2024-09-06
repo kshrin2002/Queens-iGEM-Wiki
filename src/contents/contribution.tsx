@@ -1,3 +1,5 @@
+import React from 'react';
+
 export function Contribution() {
   return (
     <>
@@ -12,6 +14,15 @@ export function Contribution() {
       />
     </>
   );
+}
+interface TitleSectionProps {
+  title: string;
+  subtitle1: string;
+  description1: string;
+  subtitle2: string;
+  description2: string;
+  image: string;
+  borderColor: string;
 }
 
 const TitleSection: React.FC<TitleSectionProps> = ({title, subtitle1, description1, subtitle2, description2, image, borderColor }) => (
@@ -30,3 +41,5 @@ const TitleSection: React.FC<TitleSectionProps> = ({title, subtitle1, descriptio
     </div>
   </div>
 );
+
+export default Contribution;
