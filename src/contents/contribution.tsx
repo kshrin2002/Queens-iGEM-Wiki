@@ -64,9 +64,9 @@ const TitleSection: React.FC<TitleSectionProps> = ({title, subtitle1, descriptio
   <div className="card" style={{ borderColor: borderColor, display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
     <div className="text-content" style={{ flex: 1, paddingRight: '20px' }}>
       <h1 className="title">{title}</h1>
-      <h3>{subtitle1}</h3>
+      <h3 style={{ fontFamily: "'Open Sans Hebrew', sans-serif" }}>{subtitle1}</h3>
       <p>{description1}</p>
-      <h3>{subtitle2}</h3>
+      <h3 style={{ fontFamily: "'Open Sans Hebrew', sans-serif" }}>{subtitle2}</h3>
       <p>{description2}</p>
     </div>
     <div className="image-content" style={{ flex: 0 }}>
