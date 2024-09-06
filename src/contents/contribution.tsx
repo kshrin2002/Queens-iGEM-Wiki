@@ -9,12 +9,13 @@ export function Contribution() {
         description1={'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt.'} 
         subtitle2={'Section 2'} 
         description2={'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt.'} 
-        image={'/path-to-image'} 
+        image={'https://static.igem.wiki/teams/5079/headshot-template-picture.png'}
         borderColor={'blue'}
       />
     </>
   );
 }
+
 interface TitleSectionProps {
   title: string;
   subtitle1: string;
@@ -36,7 +37,7 @@ const TitleSection: React.FC<TitleSectionProps> = ({title, subtitle1, descriptio
         <p>{description2}</p>
       </div>
       <div className="image-content">
-        <img src="https://static.igem.wiki/teams/5079/headshot-template-picture.png" alt="section visual" />
+        <img src={image} alt="section visual" />
       </div>
     </div>
   </div>
