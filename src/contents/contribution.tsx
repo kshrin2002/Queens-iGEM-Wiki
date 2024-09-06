@@ -61,15 +61,15 @@ interface TitleSectionProps {
 }
 
 const TitleSection: React.FC<TitleSectionProps> = ({title, subtitle1, description1, subtitle2, description2, image, borderColor }) => (
-  <div className="card" style={{ borderColor: borderColor, display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
-    <div className="text-content" style={{ flex: 1, paddingRight: '20px' }}>
-      <h1 className="title">{title}</h1>
+  <div className="card" style={{ borderColor: borderColor, display: 'flex', flexDirection: 'column', alignItems: 'center', padding: '20px' }}>
+    <h1 className="title" style={{ textAlign: 'center' }}>{title}</h1>
+    <div className="text-content" style={{ textAlign: 'center', maxWidth: '800px' }}>
       <h3 style={{ fontFamily: "'Open Sans Hebrew', sans-serif" }}>{subtitle1}</h3>
       <p style={{ fontFamily: "'Open Sans Hebrew', sans-serif" }}>{description1}</p>
       <h3 style={{ fontFamily: "'Open Sans Hebrew', sans-serif" }}>{subtitle2}</h3>
       <p style={{ fontFamily: "'Open Sans Hebrew', sans-serif" }}>{description2}</p>
     </div>
-    <div className="image-content" style={{ flex: 0 }}>
+    <div className="image-content" style={{ marginTop: '20px' }}>
       <img src={image} alt="section visual" style={{ width: '250px', height: '150px' }} />
     </div>
   </div>
