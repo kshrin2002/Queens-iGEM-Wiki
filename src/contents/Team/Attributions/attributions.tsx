@@ -195,6 +195,27 @@ const Card_DryLab: React.FC<CardProps> = ({ description }) => {
   );
 };
 
+interface SingleImageProps {
+  imageSrc: string;
+  name: string;
+  role: string;
+}
+
+const SingleImage: React.FC<SingleImageProps> = ({ imageSrc, name, role }) => {
+  return (
+    <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', marginTop: '20px' }}>
+      <img
+        src={imageSrc}
+        alt="Single Image"
+        style={{ width: '150px', height: '150px', borderRadius: '50%' }}
+      />
+      <p style={{ margin: '10px 0 0 0', fontWeight: 'bold' }}>{name}</p>
+      <p style={{ margin: '5px 0 0 0', color: 'maroon' }}>{role}</p>
+    </div>
+  );
+};
+
+
 
 
   return (
@@ -204,6 +225,10 @@ const Card_DryLab: React.FC<CardProps> = ({ description }) => {
       <Card_team description={<span>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</span>} />
       <Card_WetLab description={<span>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</span>} />
       <Card_DryLab description={<span>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</span>} />
+      <CardHP imageSrc="https://static.igem.wiki/teams/5079/headshot-template-picture.png"
+      name="John Doe"
+      role="Team Lead" />
+
     </>
   );
 }
