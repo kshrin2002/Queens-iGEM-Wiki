@@ -26,6 +26,38 @@ export function Attributions() {
     };
   }, []);
 
+  const NavBar: React.FC = () => {
+    return (
+      <div style={{ display: 'flex', alignItems: 'center', padding: '20px' }}>
+        {/* Logo */}
+        <img
+          src="your-logo-url-here"
+          alt="Logo"
+          style={{ width: '50px', marginRight: '20px' }}
+        />
+
+        {/* Navigation Links */}
+        <div style={{ display: 'flex', gap: '20px' }}>
+          {['Project', 'Wet Lab', 'Dry Lab', 'Outreach', 'Team'].map((text, index) => (
+            <div
+              key={index}
+              style={{
+                backgroundColor: '#590000',
+                padding: '10px 20px',
+                borderRadius: '20px',
+                color: 'white',
+                textTransform: 'uppercase',
+                fontWeight: 'bold',
+                cursor: 'pointer',
+              }}
+            >
+              {text}
+            </div>
+          ))}
+        </div>
+      </div>
+    );
+  };
   // Card component now typed correctly
   const Card: React.FC<CardProps> = ({ description }) => {
     const images = [
@@ -220,6 +252,14 @@ const CardHP: React.FC<SingleImageProps> = ({ imageSrc, name, role }) => {
 
   return (
     <>
+      {/* Render the NavBar component */}
+      <NavBar />
+
+      {/* Attributions Heading */}
+      <div style={{ textAlign: 'center', marginTop: '30px' }}>
+        <h1 style={{ fontSize: '3em', color: '#590000' }}>Attributions</h1>
+      </div>
+      
       {/* Render the Card component properly */}
       <Card description={<span>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</span>} />
       <Card_team description={<span>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</span>} />
