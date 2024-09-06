@@ -59,22 +59,27 @@ export function Attributions() {
     const images = [
       "https://static.igem.wiki/teams/5079/headshot-template-picture.png"
     ];
-
+  
     return (
       <>
+        {/* First row with one image centered */}
         {images.length === 1 && (
           <>
-            <div style={{ display: 'flex', justifyContent: 'center', gap: '10px', flexWrap: 'wrap' }}>
-              {images.map((image, index) => (
-                <img
-                  key={index}
-                  src={image}
-                  alt={`Image ${index + 1}`}
-                  style={{ width: '150px', height: '150px', marginBottom: '10px' }}
-                />
-              ))}
+            <div style={{ display: 'flex', justifyContent: 'center', marginBottom: '20px' }}>
+              <img
+                src={images[0]}
+                alt="Team Member"
+                style={{ width: '150px', height: '150px', borderRadius: '50%', marginBottom: '10px' }}
+              />
             </div>
-            <p>{description}</p>
+  
+            {/* Name and description centered below the image */}
+            <p style={{ textAlign: 'center', fontWeight: 'bold' }}>NAME</p>
+  
+            {/* Custom description passed as prop */}
+            <div style={{ marginTop: '10px', textAlign: 'center' }}>
+              <p>{description}</p>
+            </div>
           </>
         )}
       </>
