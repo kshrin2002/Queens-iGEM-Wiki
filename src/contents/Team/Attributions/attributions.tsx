@@ -144,12 +144,66 @@ export function Attributions() {
     );
   };
 
+
+const DryLab: React.FC<DryLabProps> = ({ description }) => {
+  // Separate the team lead and the other members
+  const teamLead = "https://static.igem.wiki/teams/5079/headshot-template-picture.png";
+  const teamMembers = [
+    "https://static.igem.wiki/teams/5079/headshot-template-picture.png",
+    "https://static.igem.wiki/teams/5079/headshot-template-picture.png",
+    "https://static.igem.wiki/teams/5079/headshot-template-picture.png",
+    "https://static.igem.wiki/teams/5079/headshot-template-picture.png",
+    "https://static.igem.wiki/teams/5079/headshot-template-picture.png",
+    "https://static.igem.wiki/teams/5079/headshot-template-picture.png"
+  ];
+
+  return (
+    <>
+      {/* Team Lead Section */}
+      <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', marginBottom: '20px' }}>
+        <img
+          src={teamLead}
+          alt="Team Lead"
+          style={{ width: '150px', height: '150px', borderRadius: '50%', marginBottom: '10px' }}
+        />
+        <p style={{ fontWeight: 'bold', margin: '5px 0', textAlign: 'center' }}>NAME</p>
+        <p style={{ fontSize: '14px', color: '#8B0000', textAlign: 'center' }}>TEAM LEAD</p>
+      </div>
+
+      {/* Team Members Section */}
+      <div style={{ display: 'flex', justifyContent: 'center', flexWrap: 'wrap', gap: '20px', marginBottom: '20px' }}>
+        {teamMembers.map((member, index) => (
+          <div key={index} style={{ textAlign: 'center' }}>
+            <img
+              src={member}
+              alt={`Team Member ${index + 1}`}
+              style={{ width: '150px', height: '150px', borderRadius: '50%', marginBottom: '10px' }}
+            />
+            <p style={{ fontWeight: 'bold', margin: '5px 0' }}>NAME</p>
+            <p style={{ fontSize: '14px', color: '#8B0000' }}>ROLE</p>
+          </div>
+        ))}
+      </div>
+
+      {/* Dry Lab Description */}
+      <div style={{ textAlign: 'center', marginTop: '20px' }}>
+        <p style={{ maxWidth: '600px', margin: '0 auto', lineHeight: '1.5' }}>
+          {description}
+        </p>
+      </div>
+    </>
+  );
+};
+
+
+
   return (
     <>
       {/* Render the Card component properly */}
       <Card description={<span>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</span>} />
       <Card_team description={<span>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</span>} />
       <Card_WetLab description={<span>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</span>} />
+      <Card_DryLab description={<span>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</span>} />
     </>
   );
 }
