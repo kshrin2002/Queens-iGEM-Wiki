@@ -171,9 +171,9 @@ const Card_DryLab: React.FC<CardProps> = ({ description }) => {
       </div>
 
       {/* Team Members Section */}
-      <div style={{ display: 'flex', justifyContent: 'center', flexWrap: 'wrap', gap: '20px', marginBottom: '20px' }}>
+      <div style={{ display: 'flex', justifyContent: 'center', flexWrap: 'wrap', maxWidth: '500px', margin: '0 auto', gap: '20px' }}>
         {teamMembers.map((member, index) => (
-          <div key={index} style={{ textAlign: 'center' }}>
+          <div key={index} style={{ textAlign: 'center', width: '150px' }}>
             <img
               src={member}
               alt={`Team Member ${index + 1}`}
