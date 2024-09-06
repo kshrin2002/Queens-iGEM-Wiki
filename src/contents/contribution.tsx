@@ -3,6 +3,13 @@ import React from 'react';
 export function Contribution() {
   return (
     <>
+      {/* Render the NavBar component at the top */}
+      <NavBar />
+
+      {/* Attributions Heading at the top */}
+      <ContributionHeading />
+
+      {/* Title Sections */}
       <TitleSection 
         title={'SUBTITLE 1'} 
         subtitle1={'Section 1'} 
@@ -39,12 +46,6 @@ export function Contribution() {
         image={'https://static.igem.wiki/teams/5079/headshot-template-picture.png'} 
         borderColor={'blue'}
       />
-
-      {/* Render the NavBar component */}
-      <NavBar />
-
-      {/* Attributions Heading */}
-      <ContributionHeading />
     </>
   );
 }
