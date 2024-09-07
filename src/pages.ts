@@ -1,4 +1,5 @@
 import {
+  Contribution,
   Description,
   Home,
   Notebook,
@@ -20,7 +21,6 @@ import {Safety} from "./contents/Wet Lab/Safety/safety";
 import {Team} from "./contents/Team/Team Members/team";
 import {Education} from "./contents/Human Practices/Education/education";
 import {Entrepreneurship} from "./contents/Human Practices/Entrepreneurs/entrepreneurship";
-import {Contribution} from "./contents/Project/Contributions/contribution";
 
 
 interface Base {
