@@ -3,13 +3,10 @@ import React from 'react';
 export function Contribution() {
   return (
     <>
-      {/* Render the NavBar component at the top */}
       <NavBar />
 
-      {/* Attributions Heading at the top */}
       <ContributionHeading />
 
-      {/* Overview Section */}
       <OverviewSection />
 
       {/* Title Sections */}
