@@ -78,7 +78,7 @@ export function Attributions() {
         </h1>
         <hr
           style={{
-            width: '80px',
+            width: '180px',
             height: '4px',
             backgroundColor: '#590000',
             border: 'none',
