@@ -72,7 +72,7 @@ export function Attributions() {
 
   const ExternalContributionsHeading: React.FC = () => {
     return (
-      <div style={{ textAlign: 'center', marginTop: '30px' }}>
+      <div style={{ display: 'flex', justifyContent: 'center', alignItems: 'center', marginTop: '30px' }}>
         <h1 style={{ fontSize: '3.5em', color: '#590000', fontWeight: 'bold', letterSpacing: '2px' }}>
           EXTERNAL CONTRIBUTIONS
         </h1>
@@ -82,12 +82,13 @@ export function Attributions() {
             height: '4px',
             backgroundColor: '#590000',
             border: 'none',
-            margin: '10px auto 0',
+            marginLeft: '10px',
           }}
         />
       </div>
     );
   };
+  
   
   
   const Card: React.FC<CardProps> = ({ description }) => {
