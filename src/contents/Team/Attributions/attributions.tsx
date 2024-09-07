@@ -77,7 +77,7 @@ export function Attributions() {
         <h2 style={{ fontSize: '2.5em', color: '#590000', fontWeight: 'bold', letterSpacing: '2px', marginRight: '20px' }}>
           EXTERNAL CONTRIBUTIONS
         </h2>
-        <div style={{ borderTop: '2px solid #590000', width: '100px' }}></div>
+        <div style={{ borderTop: '2px solid #590000', width: '350px' }}></div>
       </div>
     );
   };
