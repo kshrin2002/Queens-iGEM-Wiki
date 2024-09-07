@@ -78,9 +78,9 @@ export function Attributions() {
         </h1>
         <hr
           style={{
-            width: '180px',
-            height: '4px',
-            backgroundColor: '#590000',
+            width: '350px',  // Adjusted width for a longer line
+            height: '3px',  // Slightly thinner line
+            backgroundColor: '#590000',  // Lighter maroon color
             border: 'none',
             marginLeft: '10px',
           }}
@@ -88,6 +88,7 @@ export function Attributions() {
       </div>
     );
   };
+  
   
   
   
