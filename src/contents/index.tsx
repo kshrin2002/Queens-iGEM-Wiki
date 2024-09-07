@@ -1,4 +1,4 @@
-export * from "./home.tsx";
+export * from "./Home/home.tsx";
 // Team
 export * from "./Team/Team Members/team.tsx";
 export * from "./Team/Attributions/attributions.tsx";
