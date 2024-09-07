@@ -1,5 +1,4 @@
 import {
-  Description,
   Home,
   Notebook,
   Results,
@@ -21,6 +20,7 @@ import {Team} from "./contents/Team/Team Members/team";
 import {Education} from "./contents/Human Practices/Education/education";
 import {Entrepreneurship} from "./contents/Human Practices/Entrepreneurs/entrepreneurship";
 import {Contribution} from "./contents/Project/Contributions/contribution";
+import {Description} from "./contents/Project/Description/description";
 
 interface Base {
   name: string | undefined;
