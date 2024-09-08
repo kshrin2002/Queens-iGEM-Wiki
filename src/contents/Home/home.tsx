@@ -6,7 +6,7 @@ export function Home() {
     <div className="App">
       <ReactFullpage
         debug={true}
-        anchors={["firstPage", "secondPage", "3rdPage"]}
+        anchors={["firstPage", "secondPage", "thirdPage"]}
         scrollBar={true}
         credits={{ enabled: false }}
         render={() => (
