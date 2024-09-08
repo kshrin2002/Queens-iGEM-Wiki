@@ -9,7 +9,7 @@ export function Home() {
         anchors={["firstPage", "secondPage", "3rdPage"]}
         scrollBar={true}
         licenseKey="xxxxxxxxxxxxxxxxxxxxxxxxx"
-        credits: false
+        credits={false}
         render={() => (
           <ReactFullpage.Wrapper>
             <div
