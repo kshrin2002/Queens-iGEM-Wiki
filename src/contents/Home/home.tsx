@@ -8,7 +8,7 @@ export function Home() {
         debug={true}
         anchors={["firstPage", "secondPage", "3rdPage"]}
         scrollBar={true}
-        licenseKey="xxxxxxxxxxxxxxxxxxxxxxxxx"
+        credits={{ enabled: false }}
         render={() => (
           <ReactFullpage.Wrapper>
             <div
