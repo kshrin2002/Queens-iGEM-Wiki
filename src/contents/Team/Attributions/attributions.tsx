@@ -277,6 +277,8 @@ const CardHP: React.FC<SingleImageProps> = ({ imageSrc, name, role }) => {
 
   return (
     <>
+
+      <Container>
       {/* Render the NavBar component */}
       <NavBar />
 
@@ -293,6 +295,7 @@ const CardHP: React.FC<SingleImageProps> = ({ imageSrc, name, role }) => {
       <CardHP imageSrc="https://static.igem.wiki/teams/5079/headshot-template-picture.png"
       name="John Doe"
       role="Team Lead" />
+      </Container>
 
     </>
   );
