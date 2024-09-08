@@ -5,10 +5,11 @@ export function Home() {
   return (
     <div className="App">
       <ReactFullpage
-        debug={true}
         anchors={["firstPage", "secondPage", "3rdPage"]}
         scrollBar={true}
         credits={{ enabled: false }}
+        scrollingSpeed={1000}
+        fitToSection={false}
         render={() => (
           <ReactFullpage.Wrapper>
             <div
@@ -29,8 +30,6 @@ export function Home() {
                   position: "absolute",
                   width: "100%",
                   height: "100%",
-                  top: 0,
-                  left: 0,
                   zIndex: -1,
                   objectFit: "cover",
                   pointerEvents: "none",
@@ -58,9 +57,9 @@ export function Home() {
                 alt="Flower"
                 style={{
                   maxWidth: "50%",
-                  height: "auto",
-                  marginBottom: "20px",
+                  height: "100vh",
                   float: "left",
+                  overflow: "hidden"
                 }}
               />
               <div>
