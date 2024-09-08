@@ -22,7 +22,8 @@ export function Home() {
             >
               {/* Video iframe as background */}
               <iframe
-                title="Queens-Canada: Vecteezy Molecule - Background for Science or Medical 3d rendering (2024)"
+                title="Queens-Canada: Vecteezy Molecule - Back
+                ground for Science or Medical 3d rendering (2024)"
                 src="https://video.igem.org/videos/embed/c7b24860-47ee-46bb-9373-684310fcf0a5?start=1s&amp;loop=1&amp;autoplay=1&amp;muted=1&amp;title=0&amp;warningTitle=0&amp;controlBar=0&amp;peertubeLink=0"
                 allowFullScreen
                 sandbox="allow-same-origin allow-scripts allow-popups allow-forms"
