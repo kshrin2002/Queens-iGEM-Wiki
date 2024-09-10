@@ -6,32 +6,30 @@
 
 h1 {
     position: absolute;
-    top: 50%;
+    top: 35%;
     left: 0;
     transform: translateY(-50%);
     margin-left: 20px;
-    font-size: 6em;
+    font-size: 20em;
     font-weight: bold;
   }
   
   p {
     position: absolute;
-    top: calc(50% + 60px);
-    left: 0;
+    top: calc(46%);
+    left: 1.5%;
     margin-left: 30px;
-    font-size: 1em;
+    font-size: 2em;
     font-weight: bold;
   }
 
   h2 {
     position: absolute;
-    top: 30%;                  /* Vertically center */
-    right: 0;                  /* Align to the right */
-    transform: translateY(-20%); /* Adjust vertical centering */
+    top: 30%;
     margin-left: 200px;
     font-size: 2.5em;
-    max-width: 25vw;            /* Limit width to 50% of the viewport width */
-    text-align: right;          /* Align the text to the right */
+    max-width: 25vw;
+    text-align: right;
   }
 
   h3 {

@@ -43,19 +43,17 @@ export function Home() {
                   border: "none",
                 }}
               />
-
-              {/* Content displayed on top of the video */}
               <div
                 style={{
                   minHeight: "100vh",
                   display: "flex",
                   justifyContent: "center",
                   alignItems: "center",
-                  position: "relative", // Ensure this stays above the video
-                  zIndex: 1, // Higher than -1 to appear above the iframe
+                  position: "relative",
+                  zIndex: 1,
                 }}
               >
-                <h1>Syn/axis</h1>
+                <h1>SYN/AXIS</h1>
                 <p>2024</p>
               </div>
             </div>
