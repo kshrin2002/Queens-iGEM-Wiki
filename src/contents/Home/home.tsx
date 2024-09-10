@@ -78,17 +78,17 @@ export function Home() {
             </div>
             <div className="section" style={{ backgroundColor: '#e9e9e9' }}>
               <div>
-              <img
-                src="https://static.igem.wiki/teams/5079/logo.png"
-                alt="Flower"
-                style={{
-                  maxWidth: "50%",
-                  float: "right",
-                  height: "30vh",
-                  overflow: "hidden",
-                  marginRight: "80px"
-                }}
-              />
+                <img
+                  src="https://static.igem.wiki/teams/5079/logo.png"
+                  alt="Flower"
+                  style={{
+                    maxWidth: "50%",
+                    float: "right",
+                    height: "25vh",
+                    overflow: "hidden",
+                    marginRight: "80px"
+                  }}
+                />
               </div>
               <h4>SynAxis is novel therapeutic approach to combat the gut pathology of Parkinson’s disease by harnessing Neurosin (KLK6), a natural enzyme with a remarkable ability to cleave alpha-synuclein pathological seeds. </h4>
             </div>
