@@ -5,7 +5,13 @@ export function Home() {
   return (
     <div className="App">
       <ReactFullpage
-        anchors={["firstPage", "secondPage", "thirdPage"]}
+        anchors={[
+          "firstPage",
+          "secondPage",
+          "thirdPage",
+          "fourthPage",
+          "fifthPage",
+        ]}
         scrollBar={true}
         autoScrolling={true}
         scrollOverflow={true}
@@ -54,7 +60,18 @@ export function Home() {
                 }}
               >
                 <h1>SYN/AXIS</h1>
-                <p>2024</p>
+                <p
+                  style={{
+                    position: "absolute",
+                    top: "46%",
+                    left: "1.5%",
+                    marginLeft: "30px",
+                    fontSize: "2em",
+                    fontWeight: "normal",
+                  }}
+                >
+                  2024
+                </p>
               </div>
             </div>
             <div className="section">
@@ -66,7 +83,7 @@ export function Home() {
                   height: "100vh",
                   marginLeft: "120px",
                   float: "left",
-                  overflow: "hidden"
+                  overflow: "hidden",
                 }}
               />
               <div>
@@ -77,7 +94,7 @@ export function Home() {
                 <h3>We are changing that.</h3>
               </div>
             </div>
-            <div className="section" style={{ backgroundColor: '#e9e9e9' }}>
+            <div className="section" style={{ backgroundColor: "#e9e9e9" }}>
               <div>
                 <img
                   src="https://static.igem.wiki/teams/5079/logo.png"
@@ -87,11 +104,72 @@ export function Home() {
                     float: "right",
                     height: "25vh",
                     overflow: "hidden",
-                    marginRight: "80px"
+                    marginRight: "80px",
                   }}
                 />
               </div>
-              <h4>SynAxis is novel therapeutic approach to combat the gut pathology of Parkinson’s disease by harnessing Neurosin (KLK6), a natural enzyme with a remarkable ability to cleave alpha-synuclein pathological seeds. </h4>
+              <p
+                style={{
+                  position: "absolute",
+                  textAlign: "left",
+                  left: "23%",
+                  top: "33%",
+                  fontSize: "4em",
+                  maxWidth: "50vw",
+                }}
+              >
+                SynAxis is a novel therapeutic approach to combat the gut
+                pathology of Parkinson’s disease by harnessing Neurosin (KLK6),
+                a natural enzyme with a remarkable ability to cleave
+                alpha-synuclein pathological seeds.
+              </p>
+            </div>
+            <div className="section" style={{ backgroundColor: "#ffffff" }}>
+              <p
+                style={{
+                  position: "absolute",
+                  textAlign: "right",
+                  left: "40%",
+                  top: "35%",
+                  fontSize: "4em",
+                  maxWidth: "50vw",
+                }}
+              >
+                Parkinson's Disease (PD) is a chronic and progressive
+                neurodegenerative disorder. PD results primarily from the death
+                of dopaminergic neurons. PD includes various motor and nonmotor
+                symptoms.
+              </p>
+            </div>
+            <div className="section" style={{ backgroundColor: "#e9e9e9" }}>
+              <p
+                style={{
+                  position: "absolute",
+                  textAlign: "justify",
+                  left: "20%",
+                  top: "26%",
+                  fontSize: "25em",
+                  maxWidth: "70vw",
+                  color: "var(--venetianred)",
+                  fontWeight: "bold",
+                }}
+              >
+                80%
+              </p>
+
+              <p
+                style={{
+                  position: "absolute",
+                  textAlign: "justify",
+                  left: "55%",
+                  top: "39%",
+                  fontSize: "4em",
+                  maxWidth: "40vw",
+                }}
+              >
+                of patients had gastrointestinal (GIT) that can precede the
+                onset of motor symptoms by decades
+              </p>
             </div>
           </ReactFullpage.Wrapper>
         )}
