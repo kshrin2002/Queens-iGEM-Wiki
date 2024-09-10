@@ -1,3 +1,5 @@
+@import url('../../containers/App/App.css');
+
 * {
     padding: 0;
     margin: 0;
@@ -16,7 +18,7 @@ h1 {
   
   p {
     position: absolute;
-    top: calc(46%);
+    top: 46%;
     left: 1.5%;
     margin-left: 30px;
     font-size: 2em;
@@ -25,20 +27,29 @@ h1 {
 
   h2 {
     position: absolute;
-    top: 30%;
-    margin-left: 200px;
-    font-size: 2.5em;
-    max-width: 25vw;
-    text-align: right;
+    top: 25%;
+    left: 30%;
+    font-size: 6em;
+    max-width: 60vw;
+    text-align: center;
+    color: var(--mexired);
   }
 
   h3 {
     position: absolute;
-    top: calc(30% + 5em);
-    right: 0;
-    margin-left: 200px;
-    font-size: 3em;
-    max-width: 25vw;
-    text-align: right;
+    top: 70%;
+    right: 10%;
+    font-size: 7em;
+    max-width: 50vw;
     font-weight: bold;
+    color: var(--venetianred);
+  }
+
+  h4 {
+    position: absolute;
+    text-align: left;
+    left: 16%;
+    top: 35%;
+    font-size: 4em;
+    max-width: 50vw;
   }

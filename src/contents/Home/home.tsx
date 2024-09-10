@@ -73,11 +73,24 @@ export function Home() {
                   There is currently no disease modifying treatment for
                   Parkinson’s Disease...{" "}
                 </h2>
-                <h3>We're changing that</h3>
+                <h3>We are changing that.</h3>
               </div>
             </div>
-            <div className="section">
-              <h1>Section 3</h1>
+            <div className="section" style={{ backgroundColor: '#e9e9e9' }}>
+              <div>
+              <img
+                src="https://static.igem.wiki/teams/5079/logo.png"
+                alt="Flower"
+                style={{
+                  maxWidth: "50%",
+                  float: "right",
+                  height: "30vh",
+                  overflow: "hidden",
+                  marginRight: "80px"
+                }}
+              />
+              </div>
+              <h4>SynAxis is novel therapeutic approach to combat the gut pathology of Parkinson’s disease by harnessing Neurosin (KLK6), a natural enzyme with a remarkable ability to cleave alpha-synuclein pathological seeds. </h4>
             </div>
           </ReactFullpage.Wrapper>
         )}

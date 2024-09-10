@@ -10,66 +10,6 @@
   --torchred: #ff1837;
 }
 
-.left-aligned {
- align-items: end;
-}
-
-.bg-grey{
-  background-color:#C1C2C7;
-}
-
-.bg-dark {
-  background-color: #000000 !important;
-}
-
-.bg-hero {
-  background-color: rgb(179, 36, 0);
-}
-.bg-hero img{
-  width: 100%;
-  position: top;
-  margin-top: 0;
-}
-  
-/* CALLOUT */
-.bd-callout {
-  padding: 1.25rem;
-  margin-top: 1.25rem;
-  margin-bottom: 1.25rem;
-  border: 1px solid #e9ecef;
-  border-left-width: 0.25rem;
-  border-radius: 0.25rem;
-}
-
-.bd-callout h4 {
-  margin-bottom: 0.25rem;
-}
-
-.bd-callout p:last-child {
-  margin-bottom: 0;
-}
-
-.bd-callout code {
-  border-radius: 0.25rem;
-}
-
-.bd-callout + .bd-callout {
-  margin-top: -0.25rem;
-}
-
-.bd-callout-info {
-  border-left-color: #5bc0de;
-}
-
-.bd-callout-warning {
-  border-left-color: #f0ad4e;
-}
-
-.bd-callout-danger {
-  border-left-color: #d9534f;
-}
-
-
 /* Navbar */
 /* Full navbar */
 .bg-body-tertiary {
@@ -78,7 +18,7 @@
 }
 
 .bg-body-tertiary.scrolled {
-  background-color: rgb(239, 239, 239, 1) !important;
+  background-color: rgb(54, 1, 1) !important;
 }
 
 /*Nav drop down icon*/
