@@ -59,11 +59,12 @@ export function Home() {
             </div>
             <div className="section">
               <img
-                src="https://static.igem.wiki/teams/5079/flower-1.png"
+                src="https://static.igem.wiki/teams/5079/img-0433.png"
                 alt="Flower"
                 style={{
                   maxWidth: "50%",
                   height: "100vh",
+                  marginLeft: "120px",
                   float: "left",
                   overflow: "hidden"
                 }}
@@ -80,7 +81,7 @@ export function Home() {
               <div>
                 <img
                   src="https://static.igem.wiki/teams/5079/logo.png"
-                  alt="Flower"
+                  alt="logo"
                   style={{
                     maxWidth: "50%",
                     float: "right",
