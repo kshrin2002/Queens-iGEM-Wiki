@@ -12,9 +12,14 @@ import {
 } from "./contents";
 
 // Wet Lab Folder
-import {Engineering} from "./contents/Wet Lab/Engineering/engineering";
+import {Design} from "./contents/Wet Lab/Design/design";
 import {Experiments} from "./contents/Wet Lab/Experiments/experiments";
+import {Engineering} from "./contents/Wet Lab/Engineering/engineering";
 import {Safety} from "./contents/Wet Lab/Safety/safety";
+import {Parts} from "./contents/Wet Lab/Parts/parts";
+
+
+// Dry Lab Folder
 
 // Team Folder
 import {Attributions} from "./contents/Team/Attributions/attributions";
@@ -58,6 +63,7 @@ const Pages: (Page | Folder)[] = [
     lead: "Welcome to iGEM 2024! Your team has been approved and you are ready to start the iGEM season!",
   },
   {
+    // this is the start of the folder for team
     name: "Team",
     folder: [
       {
@@ -76,6 +82,43 @@ const Pages: (Page | Folder)[] = [
       },
     ],
   },
+
+  {
+  // this is the start of the folder for wet lab
+  name: "Wet Lab",
+    folder: [
+      {
+        name: "Design",
+        title: "Design",
+        path: "/design",
+        component: Design,
+        lead: "test 123",
+      },
+      {
+        name: "Engineering",
+        title: "Engineering",
+        path: "/engineering",
+        component: Engineering,
+        lead: "test 123",
+      },
+      {
+        name: "Experiments",
+        title: "Experiments",
+        path: "/experiments",
+        component: Experiments,
+        lead: "test 123",
+      },
+      {
+        name: "Parts",
+        title: "Parts",
+        path: "/parts",
+        component: Parts,
+        lead: "test 123",
+      },
+    ],
+  },
+
+  // this is the end of the folder for wet lab
 
   // this is the start of the folder for project
   {
@@ -101,34 +144,6 @@ const Pages: (Page | Folder)[] = [
         path: "/implementation",
         component: Implementation,
         lead: "Testing 123",
-      },
-      {
-        name: "Engineering",
-        title: "Engineering Success",
-        path: "/engineering",
-        component: Engineering,
-        lead: "Demonstrate engineering success in a technical aspect of your project by going through at least one iteration of the engineering design cycle. This achievement should be distinct from your Contribution for Bronze.",
-      },
-      {
-        name: "Experiments",
-        title: "Experiments",
-        path: "/experiments",
-        component: Experiments,
-        lead: "Describe the research, experiments, and protocols you used in your iGEM project.",
-      },
-      {
-        name: "Notebook",
-        title: "Notebook",
-        path: "/notebook",
-        component: Notebook,
-        lead: "Document the dates you worked on your project. This should be a detailed account of the work done each day for your project.",
-      },
-      {
-        name: "Results",
-        title: "Results",
-        path: "/results",
-        component: Results,
-        lead: "You can describe the results of your project and your future plans here.",
       },
     ],
   },
