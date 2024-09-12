@@ -225,8 +225,8 @@ export function Home() {
                 style={{
                   position: "absolute",
                   textAlign: "center",
-                  left: "20%",
-                  top: "15%",
+                  left: "18%",
+                  top: "5%",
                   fontSize: "4em",
                   maxWidth: "70vw",
                   color: "var(--venetianred)",
@@ -235,6 +235,17 @@ export function Home() {
               >
                 How did we make it happen?
               </p>
+              <img
+                  src="https://static.igem.wiki/teams/5079/img-0422.png"
+                  alt="logo"
+                  style={{
+                    marginTop:"50px",
+                    marginLeft: "315px",
+                    maxWidth: "70%",
+                    height: "75vh",
+                    overflow: "hidden",
+                  }}
+                />
             </div>
           </ReactFullpage.Wrapper>
         )}
