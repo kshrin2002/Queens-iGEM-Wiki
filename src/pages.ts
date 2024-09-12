@@ -36,8 +36,7 @@ import {Judging} from "./contents/Project/Judging/judging";
 import {HumanPractices} from "./contents/Human Practices/Integrated Human Practices/human-practices";
 import {Education} from "./contents/Human Practices/Education/education";
 import {Entrepreneurship} from "./contents/Human Practices/Entrepreneurs/entrepreneurship";
-
-
+import {PatientConsultations} from "./contents/Human Practices/Patient Consultations/patientconsultations";
 
 interface Base {
   name: string | undefined;
@@ -188,31 +187,46 @@ const Pages: (Page | Folder)[] = [
 
   // this is the end of the folder for projects
 
+
+  // this is start of the folder for human practices
   {
     name: "Human Practices",
-    title: "Human Practices",
-    path: "/human-practices",
-    component: HumanPractices,
-    lead: "We ask every team to think deeply and creatively about whether their project is responsible and good for the world. Consider how the world affects your work and how your work affects the world.",
-  },
-  {
-    // this is the start of the folder for awards
-    name: "Awards",
     folder: [
       {
         name: "Education",
         title: "Education",
         path: "/education",
         component: Education,
-        lead: "Innovative educational tools and outreach activities have the ability to establish a two-way dialogue with new communities by discussing public values and the science behind synthetic biology.",
+        lead: "test 123",
       },
       {
-        name: "Entrepreneurship",
-        title: "Entrepreneurship",
+        name: "Entrepreneurs",
+        title: "Entrepreneurs",
         path: "/entrepreneurship",
         component: Entrepreneurship,
-        lead: "The entrepreneurship prize recognizes exceptional effort to build a business case and commercialize an iGEM project.",
+        lead: "test 123",
       },
+      {
+        name: "Integrated Human Practices",
+        title: "Integrated Human Practices",
+        path: "/human-practices",
+        component: HumanPractices,
+        lead: "Testing 123",
+      },
+      {
+        name: "Patient Consultations",
+        title: "Patient Consultations",
+        path: "/patientconsultations",
+        component: PatientConsultations,
+        lead: "Testing 123",
+      },
+    ],
+  },
+
+  {
+    // this is the start of the folder for awards
+    name: "Awards",
+    folder: [
       {
         name: "Hardware",
         title: "Hardware",
