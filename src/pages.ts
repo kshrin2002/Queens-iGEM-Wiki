@@ -21,7 +21,6 @@ import {Education} from "./contents/Human Practices/Education/education";
 import {Entrepreneurship} from "./contents/Human Practices/Entrepreneurs/entrepreneurship";
 import {Contribution} from "./contents/Project/Contributions/contribution";
 import {Description} from "./contents/Project/Description/description";
-import {PatientConsultations} from "./contents/Human Practices/Patient Consultations/patientconsultations";
 import {Implementation} from "./contents/Project/Implementation/implementation";
 
 
