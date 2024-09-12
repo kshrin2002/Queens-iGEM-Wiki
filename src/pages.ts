@@ -21,6 +21,9 @@ import {Education} from "./contents/Human Practices/Education/education";
 import {Entrepreneurship} from "./contents/Human Practices/Entrepreneurs/entrepreneurship";
 import {Contribution} from "./contents/Project/Contributions/contribution";
 import {Description} from "./contents/Project/Description/description";
+import {PatientConsultations} from "./contents/Human Practices/Patient Consultations/patientconsultations";
+import {Implementation} from "./contents/Project/Implementation/implementation";
+
 
 interface Base {
   name: string | undefined;
@@ -66,6 +69,8 @@ const Pages: (Page | Folder)[] = [
       },
     ],
   },
+
+  // this is the start of the folder for project
   {
     name: "Project",
     folder: [
@@ -82,6 +87,13 @@ const Pages: (Page | Folder)[] = [
         path: "/description",
         component: Description,
         lead: "Describe how and why you chose your iGEM project.",
+      },
+      {
+        name: "Implementation",
+        title: "Implementation",
+        path: "/implementation",
+        component: Implementation,
+        lead: "Testing 123",
       },
       {
         name: "Engineering",
@@ -113,6 +125,9 @@ const Pages: (Page | Folder)[] = [
       },
     ],
   },
+
+  // this is the end of the folder for projects
+
   {
     name: "Safety",
     title: "Safety",
@@ -120,6 +135,7 @@ const Pages: (Page | Folder)[] = [
     component: Safety,
     lead: "Describe all the safety issues of your project.",
   },
+
   {
     name: "Human Practices",
     title: "Human Practices",
@@ -128,6 +144,7 @@ const Pages: (Page | Folder)[] = [
     lead: "We ask every team to think deeply and creatively about whether their project is responsible and good for the world. Consider how the world affects your work and how your work affects the world.",
   },
   {
+    // this is the start of the folder for awards
     name: "Awards",
     folder: [
       {
