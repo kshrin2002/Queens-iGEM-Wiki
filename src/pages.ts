@@ -1,7 +1,5 @@
 import {
   Home,
-  Notebook,
-  Results,
   Hardware,
   Inclusivity,
   Measurement,
@@ -115,6 +113,13 @@ const Pages: (Page | Folder)[] = [
         component: Parts,
         lead: "test 123",
       },
+      {
+        name: "Safety",
+        title: "Safety",
+        path: "/safety",
+        component: Safety,
+        lead: "test 123",
+      }
     ],
   },
 
@@ -149,14 +154,6 @@ const Pages: (Page | Folder)[] = [
   },
 
   // this is the end of the folder for projects
-
-  {
-    name: "Safety",
-    title: "Safety",
-    path: "/safety",
-    component: Safety,
-    lead: "Describe all the safety issues of your project.",
-  },
 
   {
     name: "Human Practices",

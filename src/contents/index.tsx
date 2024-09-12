@@ -7,12 +7,14 @@ export * from "./Wet Lab/Design/design.tsx";
 export * from "./Wet Lab/Experiments/experiments.tsx";
 export * from "./Wet Lab/Engineering/engineering.tsx";
 export * from "./Wet Lab/Parts/parts.tsx";
+export * from "./Wet Lab/Safety/safety.tsx";
+
 // Project
 export * from "./Project/Contributions/contribution.tsx";
 export * from "./Project/Description/description.tsx";
 export * from "./Project/Implementation/implementation.tsx";
-// Safety
-export * from "./Wet Lab/Safety/safety.tsx";
+
+
 // Human Practices
 export * from "./Human Practices/Integrated Human Practices/human-practices.tsx";
 // Awards
