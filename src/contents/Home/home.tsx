@@ -11,6 +11,9 @@ export function Home() {
           "thirdPage",
           "fourthPage",
           "fifthPage",
+          "sixthPage",
+          "seventhPage",
+          "eigthPage",
         ]}
         scrollBar={true}
         autoScrolling={true}
@@ -156,7 +159,6 @@ export function Home() {
               >
                 80%
               </p>
-
               <p
                 style={{
                   position: "absolute",
@@ -169,6 +171,69 @@ export function Home() {
               >
                 of patients had gastrointestinal (GIT) that can precede the
                 onset of motor symptoms by decades
+              </p>
+            </div>
+            <div className="section" style={{ backgroundColor: "#ffffff" }}>
+              <p
+                style={{
+                  position: "absolute",
+                  textAlign: "justify",
+                  left: "10%",
+                  top: "15%",
+                  fontSize: "5em",
+                  maxWidth: "70vw",
+                  color: "var(--venetianred)",
+                  fontWeight: "bold",
+                }}
+              >
+                The Solution
+              </p>
+              <p
+                style={{
+                  position: "absolute",
+                  textAlign: "justify",
+                  left: "60%",
+                  top: "18%",
+                  fontSize: "2em",
+                  maxWidth: "24vw",
+                }}
+              >
+                Spore biotic containing molecular switch.......
+              </p>
+            </div>
+            <div className="section" style={{ backgroundColor: "#e9e9e9" }}>
+              <div
+                style={{
+                  display: "flex",
+                  justifyContent: "center",
+                  alignItems: "center",
+                  height: "100vh",
+                }}
+              >
+                <iframe
+                  title="Therapeutics Village"
+                  height="50%vh"
+                  width="55%vw"
+                  src="https://video.igem.org/videos/embed/01523f33-f02a-4d6c-8136-eef3a6730b75?subtitle=en"
+                  allowFullScreen
+                  sandbox="allow-same-origin allow-scripts allow-popups allow-forms"
+                ></iframe>
+              </div>
+            </div>
+            <div className="section" style={{ backgroundColor: "#ffffff" }}>
+              <p
+                style={{
+                  position: "absolute",
+                  textAlign: "center",
+                  left: "20%",
+                  top: "15%",
+                  fontSize: "4em",
+                  maxWidth: "70vw",
+                  color: "var(--venetianred)",
+                  fontWeight: "bold",
+                }}
+              >
+                How did we make it happen?
               </p>
             </div>
           </ReactFullpage.Wrapper>
