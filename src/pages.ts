@@ -24,6 +24,7 @@ import {Model} from "./contents/Dry Lab/Model/model";
 // Team Folder
 import {Attributions} from "./contents/Team/Attributions/attributions";
 import {Team} from "./contents/Team/Team Members/team";
+import {Collaborations} from "./contents/Team/Collaborations/collaborations";
 
 // Project Folder
 import {Contribution} from "./contents/Project/Contributions/contribution";
@@ -80,6 +81,13 @@ const Pages: (Page | Folder)[] = [
         path: "/attributions",
         component: Attributions,
         lead: "In the iGEM Competition, we celebrate student effort and achievement. The Attributions form helps the judges differentiate between what students accomplished from how their external collaborators supported them. Therefore, teams must clearly explain on the standard Project Attributions form what work they have conducted by themselves and what has been done by others.",
+      },
+      {
+        name: "Collaborations",
+        title: "Collaborations",
+        path: "/collaborations",
+        component: Collaborations,
+        lead: "test 123",
       },
     ],
   },

@@ -3,6 +3,7 @@ export * from "./Home/home.tsx";
 // Team
 export * from "./Team/Team Members/team.tsx";
 export * from "./Team/Attributions/attributions.tsx";
+export * from "./Team/Collaborations/collaborations.tsx";
 
 // Wet Lab
 export * from "./Wet Lab/Design/design.tsx";
