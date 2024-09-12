@@ -1,6 +1,6 @@
 import React from 'react';
 
-export function Contribution() {
+export function patientconsultations() {
     return (
       null
     );
