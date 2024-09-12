@@ -66,7 +66,7 @@ export function Home() {
                     top: "46%",
                     left: "1.5%",
                     marginLeft: "30px",
-                    fontSize: "2em",
+                    fontSize: "1.5em",
                     fontWeight: "normal",
                   }}
                 >
@@ -81,7 +81,7 @@ export function Home() {
                 style={{
                   maxWidth: "50%",
                   height: "100vh",
-                  marginLeft: "120px",
+                  marginLeft: "50px",
                   float: "left",
                   overflow: "hidden",
                 }}
@@ -114,8 +114,8 @@ export function Home() {
                   textAlign: "left",
                   left: "23%",
                   top: "33%",
-                  fontSize: "4em",
-                  maxWidth: "50vw",
+                  fontSize: "2em",
+                  maxWidth: "45vw",
                 }}
               >
                 SynAxis is a novel therapeutic approach to combat the gut
@@ -131,7 +131,7 @@ export function Home() {
                   textAlign: "right",
                   left: "40%",
                   top: "35%",
-                  fontSize: "4em",
+                  fontSize: "2em",
                   maxWidth: "50vw",
                 }}
               >
@@ -148,7 +148,7 @@ export function Home() {
                   textAlign: "justify",
                   left: "20%",
                   top: "26%",
-                  fontSize: "25em",
+                  fontSize: "15em",
                   maxWidth: "70vw",
                   color: "var(--venetianred)",
                   fontWeight: "bold",
@@ -161,10 +161,10 @@ export function Home() {
                 style={{
                   position: "absolute",
                   textAlign: "justify",
-                  left: "55%",
+                  left: "60%",
                   top: "39%",
-                  fontSize: "4em",
-                  maxWidth: "40vw",
+                  fontSize: "2em",
+                  maxWidth: "35vw",
                 }}
               >
                 of patients had gastrointestinal (GIT) that can precede the
