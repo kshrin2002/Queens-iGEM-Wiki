@@ -8,7 +8,7 @@ export * from "./Wet Lab/Experiments/experiments.tsx";
 export * from "./Wet Lab/Engineering/engineering.tsx";
 export * from "./Wet Lab/Parts/parts.tsx";
 export * from "./Wet Lab/Safety/safety.tsx";
-export * from "./Wet Lab/Proof of Concepts/proofofconcepts.tsx";
+//export * from "./Wet Lab/Proof of Concepts/proofofconcepts.tsx";
 
 // Project
 export * from "./Project/Contributions/contribution.tsx";
