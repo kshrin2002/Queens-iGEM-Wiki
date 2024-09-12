@@ -21,7 +21,7 @@ export * from "./Dry Lab/Model/model.tsx";
 export * from "./Project/Contributions/contribution.tsx";
 export * from "./Project/Description/description.tsx";
 export * from "./Project/Implementation/implementation.tsx";
-
+export * from "./Project/Judging/judging.tsx";
 
 // Human Practices
 export * from "./Human Practices/Integrated Human Practices/human-practices.tsx";

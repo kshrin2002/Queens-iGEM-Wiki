@@ -29,6 +29,7 @@ import {Team} from "./contents/Team/Team Members/team";
 import {Contribution} from "./contents/Project/Contributions/contribution";
 import {Description} from "./contents/Project/Description/description";
 import {Implementation} from "./contents/Project/Implementation/implementation";
+import {Judging} from "./contents/Project/Judging/judging";
 
 // Human Practice Folder
 import {HumanPractices} from "./contents/Human Practices/Integrated Human Practices/human-practices";
@@ -165,6 +166,13 @@ const Pages: (Page | Folder)[] = [
         title: "Implementation",
         path: "/implementation",
         component: Implementation,
+        lead: "Testing 123",
+      },
+      {
+        name: "Judging",
+        title: "Judging",
+        path: "/judging",
+        component: Judging,
         lead: "Testing 123",
       },
     ],
