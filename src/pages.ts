@@ -11,17 +11,25 @@ import {
   Sustainable,
 } from "./contents";
 
+// Wet Lab Folder
 import {Engineering} from "./contents/Wet Lab/Engineering/engineering";
-import {Attributions} from "./contents/Team/Attributions/attributions";
 import {Experiments} from "./contents/Wet Lab/Experiments/experiments";
-import {HumanPractices} from "./contents/Human Practices/Integrated Human Practices/human-practices";
 import {Safety} from "./contents/Wet Lab/Safety/safety";
+
+// Team Folder
+import {Attributions} from "./contents/Team/Attributions/attributions";
 import {Team} from "./contents/Team/Team Members/team";
-import {Education} from "./contents/Human Practices/Education/education";
-import {Entrepreneurship} from "./contents/Human Practices/Entrepreneurs/entrepreneurship";
+
+// Project Folder
 import {Contribution} from "./contents/Project/Contributions/contribution";
 import {Description} from "./contents/Project/Description/description";
 import {Implementation} from "./contents/Project/Implementation/implementation";
+
+// Human Practice Folder
+import {HumanPractices} from "./contents/Human Practices/Integrated Human Practices/human-practices";
+import {Education} from "./contents/Human Practices/Education/education";
+import {Entrepreneurship} from "./contents/Human Practices/Entrepreneurs/entrepreneurship";
+
 
 
 interface Base {
