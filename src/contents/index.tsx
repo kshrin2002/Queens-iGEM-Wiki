@@ -17,6 +17,7 @@ export * from "./Project/Implementation/implementation.tsx";
 
 // Human Practices
 export * from "./Human Practices/Integrated Human Practices/human-practices.tsx";
+
 // Awards
 export * from "./Human Practices/Education/education.tsx";
 export * from "./Human Practices/Entrepreneurs/entrepreneurship.tsx"; 
