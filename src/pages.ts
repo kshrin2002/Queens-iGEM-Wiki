@@ -3,7 +3,6 @@ import {
   Hardware,
   Inclusivity,
   Measurement,
-  Model,
   Plant,
   Software,
   Sustainable,
@@ -12,13 +11,15 @@ import {
 // Wet Lab Folder
 import {Design} from "./contents/Wet Lab/Design/design";
 import {Experiments} from "./contents/Wet Lab/Experiments/experiments";
-import {Engineering} from "./contents/Wet Lab/Engineering/engineering";
+//import {Engineering} from "./contents/Wet Lab/Engineering/engineering";
 import {Safety} from "./contents/Wet Lab/Safety/safety";
 import {Parts} from "./contents/Wet Lab/Parts/parts";
 //import {ProofOfConcepts} from "./contents/Wet Lab/Proof of Concepts/proofofconcepts";
 //import {ResultsAndAnalysis} from "./contents/Wet Lab/Results & Analysis/resultsandanalysis";
 
 // Dry Lab Folder
+import {Engineering} from "./contents/Dry Lab/Engineering/engineering";
+import {Model} from "./contents/Dry Lab/Model/model";
 
 // Team Folder
 import {Attributions} from "./contents/Team/Attributions/attributions";
@@ -94,13 +95,6 @@ const Pages: (Page | Folder)[] = [
         lead: "test 123",
       },
       {
-        name: "Engineering",
-        title: "Engineering",
-        path: "/engineering",
-        component: Engineering,
-        lead: "test 123",
-      },
-      {
         name: "Experiments",
         title: "Experiments",
         path: "/experiments",
@@ -124,8 +118,29 @@ const Pages: (Page | Folder)[] = [
       //add proof of concept here
     ],
   },
-
   // this is the end of the folder for wet lab
+
+  // this is the start of the folder for dry lab
+  {
+    name: "Dry Lab",
+    folder: [
+      {
+        name: "Engineering",
+        title: "Engineering",
+        path: "/engineering",
+        component: Engineering,
+        lead: "test 123",
+      },
+      {
+        name: "Model",
+        title: "Model",
+        path: "/model",
+        component: Model,
+        lead: "test 123",
+      },
+    ],
+  },
+  // this is the end of the folder for dry lab
 
   // this is the start of the folder for project
   {
@@ -202,13 +217,6 @@ const Pages: (Page | Folder)[] = [
         path: "/measurement",
         component: Measurement,
         lead: "Synthetic Biology needs great measurement approaches for characterizing parts, and efficient new methods for characterizing many parts at once. Describe your measurement approaches on this page.",
-      },
-      {
-        name: "Model",
-        title: "Model",
-        path: "/model",
-        component: Model,
-        lead: "Explain your model's assumptions, data, parameters, and results in a way that anyone could understand.",
       },
       {
         name: "Plant",
