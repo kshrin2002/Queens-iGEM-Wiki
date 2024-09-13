@@ -1,4 +1,5 @@
 import React from 'react';
+import './Timeline.css'; // This is for CSS
 
 export function PatientConsultations() {
   return (
@@ -64,6 +65,31 @@ const NavBar: React.FC = () => {
             {text}
           </div>
         ))}
+      </div>
+    </div>
+  );
+};
+
+// Timeline component
+const Timeline = () => {
+  return (
+    <div className="timeline">
+      <TimelineItem patientName="Patient Name" details="" />
+      <TimelineItem patientName="Patient Name" details="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum cursus ultricies augue, vitae tincidunt lorem." />
+      <TimelineItem patientName="Patient Name" details="" />
+      <TimelineItem patientName="Patient Name" details="" />
+    </div>
+  );
+};
+
+// Timeline Item component
+const TimelineItem: React.FC<{ patientName: string, details: string }> = ({ patientName, details }) => {
+  return (
+    <div className="timeline-item">
+      <div className="circle"></div>
+      <div className="content">
+        <h4>{patientName}</h4>
+        {details && <p>{details}</p>}
       </div>
     </div>
   );
