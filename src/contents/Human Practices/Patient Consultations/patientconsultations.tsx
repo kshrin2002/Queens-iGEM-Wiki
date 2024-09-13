@@ -1,5 +1,5 @@
 import React from 'react';
-import 'src/contents/Human Practices/Patient Consultations/consultations.css'; // This is for CSS
+import './consultations.css'; // This is for CSS
 
 export function PatientConsultations() {
   return (
