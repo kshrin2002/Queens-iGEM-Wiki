@@ -1,7 +1,9 @@
-// add export fuction from engineeringtsx
+import React from 'react';
+
 export function PatientConsultations() {
   return (
     <>
+      <NavBar />
       <div className="row mt-4">
         <div className="col">
           <div className="bd-callout bd-callout-info">
@@ -33,3 +35,36 @@ export function PatientConsultations() {
     </>
   );
 }
+
+const NavBar: React.FC = () => {
+  return (
+    <div style={{ display: 'flex', justifyContent: 'center', alignItems: 'center', padding: '20px' }}>
+      {/* Logo */}
+      <img
+        src="https://static.igem.wiki/teams/5079/rose-logo.png"
+        alt="Logo"
+        style={{ width: '50px', marginRight: '20px' }}
+      />
+
+      {/* Navigation Links */}
+      <div style={{ display: 'flex', gap: '20px' }}>
+        {['Project', 'Wet Lab', 'Dry Lab', 'Outreach', 'Team'].map((text, index) => (
+          <div
+            key={index}
+            style={{
+              backgroundColor: '#590000',
+              padding: '10px 20px',
+              borderRadius: '20px',
+              color: 'white',
+              textTransform: 'uppercase',
+              fontWeight: 'bold',
+              cursor: 'pointer',
+            }}
+          >
+            {text}
+          </div>
+        ))}
+      </div>
+    </div>
+  );
+};
