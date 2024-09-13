@@ -94,3 +94,5 @@ const TimelineItem: React.FC<{ patientName: string, details: string }> = ({ pati
     </div>
   );
 };
+
+export default Timeline;
