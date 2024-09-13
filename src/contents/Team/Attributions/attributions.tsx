@@ -277,7 +277,7 @@ const CardHP: React.FC<SingleImageProps> = ({ imageSrc, name, role }) => {
 
 
   return (
-    <container>
+    <Container>
 
       
       {/* Render the NavBar component */}
@@ -297,6 +297,6 @@ const CardHP: React.FC<SingleImageProps> = ({ imageSrc, name, role }) => {
       name="John Doe"
       role="Team Lead" />
       
-    </container>
+    </Container>
   );
 }
