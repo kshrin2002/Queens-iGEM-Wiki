@@ -28,6 +28,7 @@ export function Attributions() {
 
   const NavBar: React.FC = () => {
     return (
+      
       <div style={{ display: 'flex', justifyContent: 'center', alignItems: 'center', padding: '20px' }}>
         {/* Logo */}
         <img
@@ -277,7 +278,7 @@ const CardHP: React.FC<SingleImageProps> = ({ imageSrc, name, role }) => {
 
   return (
     <>
-
+      
       
       {/* Render the NavBar component */}
       <NavBar />

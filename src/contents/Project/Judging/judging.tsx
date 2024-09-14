@@ -1,5 +1,5 @@
-// got eport function from engineering.tsx
-export function Model() {
+// add export fuction from engineeringtsx
+export function Judging() {
     return (
       <>
         <div className="row mt-4">
