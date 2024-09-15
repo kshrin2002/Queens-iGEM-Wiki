@@ -200,8 +200,8 @@ const Pages: (Page | Folder)[] = [
         lead: "test 123",
       },
       {
-        name: "Entrepreneurs",
-        title: "Entrepreneurs",
+        name: "Entrepreneurship",
+        title: "Entrepreneurship",
         path: "/entrepreneurship",
         component: Entrepreneurship,
         lead: "test 123",
