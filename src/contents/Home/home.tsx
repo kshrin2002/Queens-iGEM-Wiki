@@ -62,7 +62,20 @@ export function Home() {
                   zIndex: 1,
                 }}
               >
-                <h1>SYN/AXIS</h1>
+                <p
+                  style={{
+                    position: "absolute",
+                    top: "35%",
+                    left: "0",
+                    transform: "translateY(-50%)",
+                    marginLeft: "20px",
+                    fontSize: "13em",
+                    fontWeight: "normal",
+                  }}
+                >
+                  SYN/AXIS
+                </p>
+
                 <p
                   style={{
                     position: "absolute",
@@ -90,11 +103,35 @@ export function Home() {
                 }}
               />
               <div>
-                <h2>
+                <p
+                  style={{
+                    position: "absolute",
+                    top: "25%",
+                    left: "28%",
+                    fontSize: "4em",
+                    maxWidth: "60vw",
+                    textAlign: "center",
+                    color: "var(--mexired)",
+                    fontWeight: "normal",
+                  }}
+                >
                   There is currently no disease modifying treatment for
-                  Parkinson’s Disease...{" "}
-                </h2>
-                <h3>We are changing that.</h3>
+                  Parkinson’s Disease...
+                </p>
+
+                <p
+                  style={{
+                    position: "absolute",
+                    top: "75%",
+                    right: "10%",
+                    fontSize: "4em",
+                    maxWidth: "50vw",
+                    color: "var(--venetianred)",
+                    fontWeight: "normal",
+                  }}
+                >
+                  We are changing that.
+                </p>
               </div>
             </div>
             <div className="section" style={{ backgroundColor: "#e9e9e9" }}>
@@ -236,16 +273,16 @@ export function Home() {
                 How did we make it happen?
               </p>
               <img
-                  src="https://static.igem.wiki/teams/5079/img-0422.png"
-                  alt="logo"
-                  style={{
-                    marginTop:"50px",
-                    marginLeft: "315px",
-                    maxWidth: "70%",
-                    height: "75vh",
-                    overflow: "hidden",
-                  }}
-                />
+                src="https://static.igem.wiki/teams/5079/img-0422.png"
+                alt="logo"
+                style={{
+                  marginTop: "50px",
+                  marginLeft: "315px",
+                  maxWidth: "70%",
+                  height: "75vh",
+                  overflow: "hidden",
+                }}
+              />
             </div>
           </ReactFullpage.Wrapper>
         )}

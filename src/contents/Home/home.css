@@ -5,33 +5,3 @@
     margin: 0;
     box-sizing: border-box;
 }
-
-h1 {
-    position: absolute;
-    top: 35%;
-    left: 0;
-    transform: translateY(-50%);
-    margin-left: 20px;
-    font-size: 13em;
-    font-weight: bold;
-  }
-
-  h2 {
-    position: absolute;
-    top: 25%;
-    left: 28%;
-    font-size: 4em;
-    max-width: 60vw;
-    text-align: center;
-    color: var(--mexired);
-  }
-
-  h3 {
-    position: absolute;
-    top: 75%;
-    right: 10%;
-    font-size: 4em;
-    max-width: 50vw;
-    font-weight: bold;
-    color: var(--venetianred);
-  }
