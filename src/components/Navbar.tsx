@@ -10,7 +10,10 @@ import "./Navbar.css";
 export function Navbar() {
   const [showNavbar, setShowNavbar] = useState(true);
   const [openDropdownIndex, setOpenDropdownIndex] = useState<number | null>(null);
+  const [isHamburgerOpen, setIsHamburgerOpen] = useState(false); // Track if the hamburger menu is open
+  const [isMouseInsideMenu, setIsMouseInsideMenu] = useState(false); // Track if mouse is inside the hamburger menu
   const dropdownRefs = useRef<(HTMLDivElement | null)[]>([]);
+  const menuRef = useRef<HTMLDivElement | null>(null); // Ref for hamburger menu
   const [dropdownStates, setDropdownStates] = useState<boolean[]>([]);
 
   useEffect(() => {
@@ -37,14 +40,45 @@ export function Navbar() {
     return false;
   };
 
+  const isMouseInsideMenuBox = (mouseX: number, mouseY: number) => {
+    if (!menuRef.current) return false;
+    const rect = menuRef.current.getBoundingClientRect();
+    return (
+      mouseX >= rect.left &&
+      mouseX <= rect.right &&
+      mouseY >= rect.top &&
+      mouseY <= rect.bottom
+    );
+  };
+
   useEffect(() => {
     const handleMouseMove = (e: MouseEvent) => {
       const isNearDropdown = isMouseNearDropdown(e.clientX, e.clientY);
-      const shouldShowNavbar = e.clientY <= 50 || isNearDropdown || openDropdownIndex !== null;
-      setShowNavbar(shouldShowNavbar);
+      const isInsideMenu = isMouseInsideMenuBox(e.clientX, e.clientY);
+      setIsMouseInsideMenu(isInsideMenu); // Set the state for mouse inside hamburger menu
 
-      if (!isNearDropdown && openDropdownIndex !== null) {
-        setDropdownStates(states => states.map((_, index) => index === openDropdownIndex ? false : states[index]));
+      // Handle navbar visibility for desktop and mobile view
+      const shouldShowNavbar =
+        e.clientY <= 50 || isNearDropdown || openDropdownIndex !== null || isHamburgerOpen;
+
+      if (!isHamburgerOpen) {
+        setShowNavbar(shouldShowNavbar);
+
+        if (!isNearDropdown && openDropdownIndex !== null) {
+          setDropdownStates((states) =>
+            states.map((_, index) => (index === openDropdownIndex ? false : states[index]))
+          );
+          setOpenDropdownIndex(null);
+        }
+      } else {
+        setShowNavbar(true); // Ensure the navbar is shown when hamburger is open
+      }
+
+      // Handle closing of hamburger menu and dropdowns if mouse moves outside
+      if (!isInsideMenu && isHamburgerOpen) {
+        setIsHamburgerOpen(false);
+        setShowNavbar(false);
+        setDropdownStates((states) => states.map(() => false)); // Close all dropdowns
         setOpenDropdownIndex(null);
       }
     };
@@ -54,15 +88,20 @@ export function Navbar() {
     return () => {
       window.removeEventListener("mousemove", handleMouseMove);
     };
-  }, [openDropdownIndex]);
+  }, [openDropdownIndex, isHamburgerOpen]);
 
   const handleDropdownToggle = (isOpen: boolean, index: number) => {
-    setDropdownStates(states => states.map((state, i) => i === index ? isOpen : state));
+    setDropdownStates((states) => states.map((state, i) => (i === index ? isOpen : state)));
     if (isOpen) {
       setOpenDropdownIndex(index);
     } else if (openDropdownIndex === index) {
       setOpenDropdownIndex(null);
     }
+  };
+
+  const handleHamburgerToggle = (isOpen: boolean) => {
+    setIsHamburgerOpen(isOpen);
+    setShowNavbar(isOpen); // Ensure navbar remains visible when hamburger is open
   };
 
   const pages = Pages.map((item, pageIndex) => {
@@ -116,9 +155,13 @@ export function Navbar() {
         expand="lg"
         className={`bg-body-tertiary full-navbar ${showNavbar ? "visible" : "hidden"}`}
         fixed="top"
+        ref={menuRef} // Ref for the hamburger menu
       >
         <Container>
-          <BootstrapNavbar.Toggle aria-controls="basic-navbar-nav" />
+          <BootstrapNavbar.Toggle
+            aria-controls="basic-navbar-nav"
+            onClick={() => handleHamburgerToggle(!isHamburgerOpen)} // Track hamburger menu state
+          />
           <BootstrapNavbar.Collapse className="justify-content-center" id="basic-navbar-nav">
             <Nav className="left-aligned">{pages}</Nav>
           </BootstrapNavbar.Collapse>
