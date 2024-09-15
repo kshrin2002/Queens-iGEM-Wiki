@@ -33,48 +33,49 @@
     font-weight: 500;
   }
 
-.full-navbar, .navbar-placeholder {
-    opacity: 0;
-    visibility: hidden;
-    transition: opacity 1s ease-in-out, visibility 0s 1s;
+/* Full Navbar */
+.full-navbar {
+opacity: 0;
+visibility: hidden;
+transition: opacity 1s ease-in-out, visibility 0s 1s;
 }
 
 .full-navbar.visible {
-    opacity: 1;
-    visibility: visible;
-    transition: opacity 1s ease-in-out;
+opacity: 1;
+visibility: visible;
+transition: opacity 1s ease-in-out;
 }
 
 .full-navbar.hidden {
-    opacity: 0;
-    visibility: hidden;
-    transition: opacity 1s ease-in-out, visibility 0s 1s;
+opacity: 0;
+visibility: hidden;
+transition: opacity 1s ease-in-out, visibility 0s 1s;
 }
 
-.navbar-placeholder.visible {
-    opacity: 1;
-    visibility: visible;
-    transition: opacity 1s ease-in-out;
-}
-
-.navbar-placeholder.hidden {
-    opacity: 0;
-    visibility: hidden;
-    transition: opacity 1s ease-in-out, visibility 0s 1s;
-}
-
+/* Placeholder Image */
 .navbar-placeholder {
-    position: fixed;
-    top: 10px;
-    left: 50%;
-    transform: translateX(-50px);
-    z-index: 1000;
-    cursor: pointer;
+position: fixed;
+top: 10px;
+left: 50%;
+transform: translateX(-50px);
+z-index: 1000;
+cursor: pointer;
+transition: transform 1s ease-in-out;
 }
 
 .navbar-placeholder img {
-    width: 50px; /* Adjust to your desired size */
-    height: 50px; /* Adjust to your desired size */
+width: 50px; /* Adjust size */
+height: 50px; /* Adjust size */
+}
+
+/* Slide the placeholder to the left when the navbar is visible */
+.navbar-placeholder.slide-left {
+transform: translateX(-40vw);
+}
+
+/* Return the placeholder to the center when the navbar is hidden */
+.navbar-placeholder.slide-center {
+transform: translateX(0);
 }
   
 

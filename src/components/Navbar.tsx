@@ -8,34 +8,32 @@ import Pages from "../pages.ts";
 import "./Navbar.css";
 
 export function Navbar() {
-  const [showNavbar, setShowNavbar] = useState(true); // Track whether to show the navbar
-  const [openDropdownIndex, setOpenDropdownIndex] = useState<number | null>(null); // Track the index of the currently open dropdown
+  const [showNavbar, setShowNavbar] = useState(true);
+  const [openDropdownIndex, setOpenDropdownIndex] = useState<number | null>(null);
   const dropdownRefs = useRef<(HTMLDivElement | null)[]>([]);
   const [dropdownStates, setDropdownStates] = useState<boolean[]>([]);
 
   useEffect(() => {
-    // Initialize dropdownStates based on the number of dropdowns
     setDropdownStates(Pages.map(() => false));
   }, [Pages]);
 
-  // Function to check if mouse is near the currently open dropdown
   const isMouseNearDropdown = (mouseX: number, mouseY: number) => {
     if (openDropdownIndex === null || dropdownRefs.current[openDropdownIndex] === null) {
       return false;
     }
 
     const ref = dropdownRefs.current[openDropdownIndex];
-  
+
     if (ref) {
       const rect = ref.getBoundingClientRect();
       const distance = Math.sqrt(
         Math.pow(mouseX - (rect.left + rect.width / 2), 2) +
         Math.pow(mouseY - (rect.top + rect.height / 2), 2)
       );
-  
+
       return distance < 200;
     }
-    
+
     return false;
   };
 
@@ -46,7 +44,6 @@ export function Navbar() {
       setShowNavbar(shouldShowNavbar);
 
       if (!isNearDropdown && openDropdownIndex !== null) {
-        // Close the currently open dropdown when mouse is far away
         setDropdownStates(states => states.map((_, index) => index === openDropdownIndex ? false : states[index]));
         setOpenDropdownIndex(null);
       }
@@ -89,8 +86,8 @@ export function Navbar() {
             title={item.name}
             id={`nav-dropdown-${pageIndex}`}
             onToggle={(isOpen) => handleDropdownToggle(isOpen, pageIndex)}
-            ref={(el: HTMLDivElement | null) => (dropdownRefs.current[pageIndex] = el)} // Store ref for each dropdown
-            show={dropdownStates[pageIndex]} // Controlled component to handle dropdown visibility
+            ref={(el: HTMLDivElement | null) => (dropdownRefs.current[pageIndex] = el)}
+            show={dropdownStates[pageIndex]}
           >
             {folderItems}
           </NavDropdown>
@@ -109,8 +106,8 @@ export function Navbar() {
 
   return (
     <>
-      {/* Placeholder image only visible when the navbar is hidden */}
-      <div className={`navbar-placeholder ${showNavbar ? "hidden" : "visible"}`}>
+      {/* Placeholder image that slides left when the navbar is visible */}
+      <div className={`navbar-placeholder ${showNavbar ? "slide-left" : "slide-center"}`}>
         <img src="https://static.igem.wiki/teams/5079/rose-logo.png" alt="Menu" />
       </div>
 
