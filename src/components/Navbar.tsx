@@ -11,7 +11,6 @@ export function Navbar() {
   const [showNavbar, setShowNavbar] = useState(true);
   const [openDropdownIndex, setOpenDropdownIndex] = useState<number | null>(null);
   const [isHamburgerOpen, setIsHamburgerOpen] = useState(false); // Track if the hamburger menu is open
-  const [isMouseInsideMenu, setIsMouseInsideMenu] = useState(false); // Track if mouse is inside the hamburger menu
   const dropdownRefs = useRef<(HTMLDivElement | null)[]>([]);
   const menuRef = useRef<HTMLDivElement | null>(null); // Ref for hamburger menu
   const hamburgerRef = useRef<HTMLButtonElement | null>(null); // Ref for hamburger button
@@ -55,8 +54,6 @@ export function Navbar() {
   useEffect(() => {
     const handleMouseMove = (e: MouseEvent) => {
       const isNearDropdown = isMouseNearDropdown(e.clientX, e.clientY);
-      const isInsideMenu = isMouseInsideMenuBox(e.clientX, e.clientY);
-      setIsMouseInsideMenu(isInsideMenu); // Set the state for mouse inside hamburger menu
 
       // Handle navbar visibility for desktop and mobile view
       const shouldShowNavbar =
@@ -76,7 +73,7 @@ export function Navbar() {
       }
 
       // Handle closing of hamburger menu and dropdowns if mouse moves outside
-      if (!isInsideMenu && isHamburgerOpen) {
+      if (!isMouseInsideMenuBox(e.clientX, e.clientY) && isHamburgerOpen) {
         if (hamburgerRef.current) {
           // Simulate a click on the hamburger icon to toggle it closed
           hamburgerRef.current.click();
