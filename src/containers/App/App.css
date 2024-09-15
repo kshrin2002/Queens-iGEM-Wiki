@@ -21,35 +21,6 @@
   background-color: rgb(54, 1, 1) !important;
 }
 
-/*Nav drop down icon*/
-.navbar-toggler-icon{
-  width: 3vw;
-  height: 5vh;
-  background-image: url("data:image/svg+xml;charset=utf-8,%3Csvg viewBox='0 0 30 30' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgba(255, 0, 0)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 7h22M4 15h22M4 23h22'/%3E%3C/svg%3E");
-  
-}
-
-.navbar-toggler{
-  border-color: rgb(0, 0, 0, 0);
-  width: 5vw;
-  height: 3vw;
-  color: red  ;
-}
-
-/* Nav branding (logo and team name) */
-.navbar-brand img {
-  height: 7vh;
-}
-.navbar-brand{
-  color: black;
-  font-weight: 700;
-}
-
-/* Nav links */
-.nav-link{
-  color: rgb(255, 24, 55);
-  --bs-nav-link-hover-color: black;
-}
 
 
 /* footer */
