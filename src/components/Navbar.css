@@ -1,6 +1,7 @@
 @import url('../containers/App/App.css');
 
-.items{
+/* Style for items in the navbar */
+.items {
     padding-left: 1.5rem;
     padding-right: 1.5rem;
     margin-inline: 1rem;
@@ -10,72 +11,70 @@
     background-color: var(--mexired);
 }
 
-/*Nav drop down icon*/
-.navbar-toggler-icon{
-    width: 3vw;
-    height: 5vh;
-    background-image: url("data:image/svg+xml;charset=utf-8,%3Csvg viewBox='0 0 30 30' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgba(255, 0, 0)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 7h22M4 15h22M4 23h22'/%3E%3C/svg%3E");
-    
-  }
-  
-  .navbar-toggler{
-    border-color: rgba(163, 158, 158, 0);
+/* Nav drop down icon */
+.navbar-toggler-icon {
     width: 5vw;
-    height: 3vw;
-    color: red  ;
-  }
+    height: 5vh;
+    background-image: url(https://static.igem.wiki/teams/5079/rose-logo.png);
+}
 
-  /* Nav links */
-  .nav-link{
+/* Nav links */
+.nav-link {
     color: rgb(252, 213, 213);
     --bs-nav-link-hover-color: rgb(250, 250, 250);
     font-size: large;
     font-weight: 500;
-  }
+}
 
 /* Full Navbar */
 .full-navbar {
-opacity: 0;
-visibility: hidden;
-transition: opacity 1s ease-in-out, visibility 0s 1s;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 1s ease-in-out, visibility 0s 1s;
 }
 
 .full-navbar.visible {
-opacity: 1;
-visibility: visible;
-transition: opacity 1s ease-in-out;
+    opacity: 1;
+    visibility: visible;
+    transition: opacity 1s ease-in-out;
 }
 
 .full-navbar.hidden {
-opacity: 0;
-visibility: hidden;
-transition: opacity 1s ease-in-out, visibility 0s 1s;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 1s ease-in-out, visibility 0s 1s;
 }
 
 /* Placeholder Image */
 .navbar-placeholder {
-position: fixed;
-top: 10px;
-left: 50%;
-transform: translateX(-50px);
-z-index: 1000;
-cursor: pointer;
-transition: transform 1s ease-in-out;
+    position: fixed;
+    top: 10px;
+    left: 50%;
+    transform: translateX(-50px);
+    z-index: 1000;
+    cursor: pointer;
+    transition: transform 1s ease-in-out;
 }
 
 .navbar-placeholder img {
-width: 50px; /* Adjust size */
-height: 50px; /* Adjust size */
+    width: 50px; /* Adjust size */
+    height: 50px; /* Adjust size */
 }
 
 /* Slide the placeholder to the left when the navbar is visible */
 .navbar-placeholder.slide-left {
-transform: translateX(-40vw);
+    transform: translateX(-40vw);   
 }
 
 /* Return the placeholder to the center when the navbar is hidden */
 .navbar-placeholder.slide-center {
-transform: translateX(0);
+    transform: translateX(0);   
 }
-  
 
+/* Media Query for Small Screens */
+@media (max-width: 1200px) {
+    /* Adjust placeholder visibility and position when in hamburger mode */
+    .navbar-placeholder.slide-left{
+        transform: translateX(-100vw); /* Move out of view */
+    }
+}
