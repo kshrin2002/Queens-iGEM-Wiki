@@ -25,13 +25,18 @@ export function Navbar() {
     }
 
     const ref = dropdownRefs.current[openDropdownIndex];
-    const rect = ref.getBoundingClientRect();
-    const distance = Math.sqrt(
-      Math.pow(mouseX - (rect.left + rect.width / 2), 2) +
-      Math.pow(mouseY - (rect.top + rect.height / 2), 2)
-    );
-
-    return distance < 200;
+  
+    if (ref) {
+      const rect = ref.getBoundingClientRect();
+      const distance = Math.sqrt(
+        Math.pow(mouseX - (rect.left + rect.width / 2), 2) +
+        Math.pow(mouseY - (rect.top + rect.height / 2), 2)
+      );
+  
+      return distance < 200;
+    }
+    
+    return false;
   };
 
   useEffect(() => {
