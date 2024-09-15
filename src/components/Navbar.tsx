@@ -14,6 +14,7 @@ export function Navbar() {
   const [isMouseInsideMenu, setIsMouseInsideMenu] = useState(false); // Track if mouse is inside the hamburger menu
   const dropdownRefs = useRef<(HTMLDivElement | null)[]>([]);
   const menuRef = useRef<HTMLDivElement | null>(null); // Ref for hamburger menu
+  const hamburgerRef = useRef<HTMLButtonElement | null>(null); // Ref for hamburger button
   const [dropdownStates, setDropdownStates] = useState<boolean[]>([]);
 
   useEffect(() => {
@@ -76,8 +77,10 @@ export function Navbar() {
 
       // Handle closing of hamburger menu and dropdowns if mouse moves outside
       if (!isInsideMenu && isHamburgerOpen) {
-        setIsHamburgerOpen(false);
-        setShowNavbar(false);
+        if (hamburgerRef.current) {
+          // Simulate a click on the hamburger icon to toggle it closed
+          hamburgerRef.current.click();
+        }
         setDropdownStates((states) => states.map(() => false)); // Close all dropdowns
         setOpenDropdownIndex(null);
       }
@@ -161,6 +164,7 @@ export function Navbar() {
           <BootstrapNavbar.Toggle
             aria-controls="basic-navbar-nav"
             onClick={() => handleHamburgerToggle(!isHamburgerOpen)} // Track hamburger menu state
+            ref={hamburgerRef} // Ref for the hamburger button
           />
           <BootstrapNavbar.Collapse className="justify-content-center" id="basic-navbar-nav">
             <Nav className="left-aligned">{pages}</Nav>
