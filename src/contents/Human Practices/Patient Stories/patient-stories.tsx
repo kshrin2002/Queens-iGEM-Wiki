@@ -35,4 +35,56 @@ const PatientStoriesHeading: React.FC = () => {
   );
 };
 
+// InfoBox Component
+const InfoBox: React.FC<{ patientName: string; details: string }> = ({
+  patientName,
+  details,
+}) => {
+  return (
+    <div
+      style={{
+        display: 'flex',
+        justifyContent: 'space-between',
+        alignItems: 'center',
+        padding: '1rem',
+        backgroundColor: '#f7f7f7', // Slight grey background for the container
+        borderRadius: '0.5rem',
+      }}
+    >
+      {/* Left Box */}
+      <div
+        style={{
+          backgroundColor: '#B22222', // Red background
+          color: 'white',
+          borderRadius: '0.5rem',
+          padding: '1.5rem',
+          width: '60%',
+        }}
+      >
+        <h2 style={{ fontSize: '1.5rem', fontWeight: 'bold' }}>{patientName}</h2>
+        {details && (
+          <p style={{ marginTop: '1rem' }}>
+            {details}
+          </p>
+        )}
+      </div>
+
+      {/* Right Text */}
+      <div
+        style={{
+          marginLeft: '1.5rem',
+          fontSize: '1.5rem',
+          fontWeight: 'bold',
+          color: 'black',
+          textAlign: 'right',
+          width: '20%',
+        }}
+      >
+        <p>BARBARA</p>
+        <p>ART</p>
+      </div>
+    </div>
+  );
+};
+
 export default PatientStories;
