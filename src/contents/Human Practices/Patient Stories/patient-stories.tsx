@@ -60,7 +60,7 @@ const InfoBox: React.FC<{ patientName: string; details: string }> = ({
           color: 'white',
           borderRadius: '0.5rem',
           padding: '1rem', // Adjusted padding for a more compact box
-          width: '70%', // Wider to match the box's proportions from the image
+          width: '10%', // Wider to match the box's proportions from the image
           lineHeight: '1.5',
         }}
       >
