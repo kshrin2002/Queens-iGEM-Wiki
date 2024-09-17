@@ -7,6 +7,7 @@ export function PatientStories() {
 
       <OverviewSection />
 
+      <InfoBox />
     </>
   );
 }
