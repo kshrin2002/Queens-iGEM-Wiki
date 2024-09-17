@@ -35,4 +35,4 @@ const EducationHeading: React.FC = () => {
   );
 };
 
-export default PatientStories;
+export default Education;
