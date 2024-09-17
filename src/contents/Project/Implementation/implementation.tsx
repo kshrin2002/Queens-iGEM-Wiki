@@ -3,8 +3,6 @@ import React from 'react';
 export function Implementation() {
   return (
     <>
-      {/* Render the NavBar component at the top */}
-      <NavBar />
 
       {/* Attributions Heading at the top */}
       <ImplementationHeading />
@@ -91,39 +89,6 @@ const TitleSection: React.FC<TitleSectionProps> = ({title, subtitle1, descriptio
     </div>
   </div>
 );
-
-const NavBar: React.FC = () => {
-  return (
-    <div style={{ display: 'flex', justifyContent: 'center', alignItems: 'center', padding: '20px' }}>
-      <img
-        src="https://static.igem.wiki/teams/5079/rose-logo.png"
-        alt="Logo"
-        style={{ width: '50px', marginRight: '20px' }}
-      />
-
-      {/* Navigation Links */}
-      <div style={{ display: 'flex', gap: '20px' }}>
-        {['Project', 'Wet Lab', 'Dry Lab', 'Outreach', 'Team'].map((text, index) => (
-          <div
-            key={index}
-            style={{
-              backgroundColor: '#590000',
-              padding: '10px 20px',
-              borderRadius: '20px',
-              color: 'white',
-              textTransform: 'uppercase',
-              fontWeight: 'bold',
-              cursor: 'pointer',
-            }}
-          >
-            {text}
-          </div>
-        ))}
-      </div>
-    </div>
-  );
-};
-
 
 const ImplementationHeading: React.FC = () => {
   return (
