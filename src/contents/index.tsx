@@ -28,6 +28,7 @@ export * from "./Project/Judging/judging.tsx";
 export * from "./Human Practices/Integrated Human Practices/human-practices.tsx";
 export * from "./Human Practices/Education/education.tsx";
 export * from "./Human Practices/Entrepreneurs/entrepreneurship.tsx"; 
+export * from "./Human Practices/Patient Stories/patient-stories.tsx";
 
 // Awards 
 export * from "./hardware.tsx";

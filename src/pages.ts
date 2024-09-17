@@ -36,7 +36,7 @@ import {Judging} from "./contents/Project/Judging/judging";
 import {HumanPractices} from "./contents/Human Practices/Integrated Human Practices/human-practices";
 import {Education} from "./contents/Human Practices/Education/education";
 import {Entrepreneurship} from "./contents/Human Practices/Entrepreneurs/entrepreneurship";
-import {PatientConsultations} from "./contents/Human Practices/Patient Consultations/patientconsultations";
+import {PatientStories} from "./contents/Human Practices/Patient Stories/patient-stories";
 
 interface Base {
   name: string | undefined;
@@ -214,10 +214,10 @@ const Pages: (Page | Folder)[] = [
         lead: "Testing 123",
       },
       {
-        name: "Patient Consultations",
-        title: "Patient Consultations",
-        path: "/patientconsultations",
-        component: PatientConsultations,
+        name: "Patient Stories",
+        title: "Patient Stories",
+        path: "/patient-stories",
+        component: PatientStories,
         lead: "Testing 123",
       },
     ],

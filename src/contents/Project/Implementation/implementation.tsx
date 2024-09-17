@@ -4,7 +4,6 @@ export function Implementation() {
   return (
     <>
 
-      {/* Attributions Heading at the top */}
       <ImplementationHeading />
 
       {/* Overview Section */}
