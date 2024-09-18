@@ -36,4 +36,4 @@ const IHPHeading: React.FC = () => {
 };
 
 export default HumanPractices;
-/////
+
