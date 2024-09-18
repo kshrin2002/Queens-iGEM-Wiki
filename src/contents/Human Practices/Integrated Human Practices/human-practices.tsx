@@ -1,4 +1,4 @@
-//import React from 'react';
+import React from "react"; // Ensure React is imported if you're using JSX/TSX
 
 export function HumanPractices() {
   return (
@@ -70,7 +70,12 @@ const InterviewsSection = () => {
   );
 };
 
-const PatientSection = ({ patientName }) => {
+// Explicitly typing the props for PatientSection
+interface PatientSectionProps {
+  patientName: string;
+}
+
+const PatientSection: React.FC<PatientSectionProps> = ({ patientName }) => {
   return (
     <div style={styles.patientSection}>
       <div style={styles.photoPlaceholder}></div>
