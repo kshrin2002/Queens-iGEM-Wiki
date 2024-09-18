@@ -90,7 +90,7 @@ const TitleSection: React.FC<TitleSectionProps> = ({title, subtitle1, descriptio
 
 const ContributionHeading: React.FC = () => {
   return (
-    <div style={{ textAlign: 'center', marginTop: '30px' }}>
+    <div style={{ textAlign: 'center', marginTop: '138px' }}>
       <h1 style={{ fontSize: '5em', color: '#590000', fontWeight: 'bold', letterSpacing: '2px' }}>
         CONTRIBUTIONS
       </h1>
