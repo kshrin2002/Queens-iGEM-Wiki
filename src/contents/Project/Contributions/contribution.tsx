@@ -73,20 +73,34 @@ const OverviewSection = () => {
   );
 };
 
-const TitleSection: React.FC<TitleSectionProps> = ({title, subtitle1, description1, subtitle2, description2, image, borderColor }) => (
-  <div className="card" style={{ borderColor: borderColor, display: 'flex', flexDirection: 'row', alignItems: 'flex-start', padding: '20px', justifyContent: 'space-between' }}>
-    <div className="text-content" style={{ textAlign: 'left', maxWidth: '600px' }}>
+const TitleSection: React.FC<TitleSectionProps> = ({ title, subtitle1, description1, subtitle2, description2, image, borderColor }) => (
+  <div className="card" 
+       style={{ 
+         borderColor: borderColor, 
+         borderRadius: '20px',      // Set the border radius
+         width: '105px',           // Set the width
+         height: '500px',          // Set the height
+         position: 'absolute',     // Use absolute positioning
+         left: '336px',            // Set the left positioning
+         display: 'flex', 
+         flexDirection: 'column',  // Adjust flex direction to column for better layout
+         padding: '20px',
+         boxSizing: 'border-box'   // Include border in the element's total width and height
+       }}
+  >
+    <div className="text-content" style={{ textAlign: 'left', maxWidth: '100%' }}>
       <h1 className="title" style={{ textAlign: 'center' }}>{title}</h1>
       <h3 style={{ fontFamily: "'Open Sans Hebrew', sans-serif" }}>{subtitle1}</h3>
       <p style={{ fontFamily: "'Open Sans Hebrew', sans-serif" }}>{description1}</p>
       <h3 style={{ fontFamily: "'Open Sans Hebrew', sans-serif" }}>{subtitle2}</h3>
       <p style={{ fontFamily: "'Open Sans Hebrew', sans-serif" }}>{description2}</p>
     </div>
-    <div className="image-content" style={{ marginTop: '20px' }}>
-      <img src={image} alt="section visual" style={{ width: '250px', height: '150px' }} />
+    <div className="image-content" style={{ marginTop: '20px', flex: '1', display: 'flex', justifyContent: 'center' }}>
+      <img src={image} alt="section visual" style={{ width: '100%', height: 'auto', borderRadius: '15px' }} />
     </div>
   </div>
 );
+
 
 const ContributionHeading: React.FC = () => {
   return (
