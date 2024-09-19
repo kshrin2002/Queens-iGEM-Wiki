@@ -35,4 +35,4 @@ const PartsHeading: React.FC = () => {
   );
 };
 
-export default Entrepreneurship;
+export default Parts;
