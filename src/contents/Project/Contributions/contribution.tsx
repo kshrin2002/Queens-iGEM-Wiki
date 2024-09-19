@@ -74,7 +74,15 @@ const OverviewSection = () => {
 };
 
 const TitleSection: React.FC<TitleSectionProps> = ({title, subtitle1, description1, subtitle2, description2, image, borderColor }) => (
-  <div className="card" style={{ borderColor: borderColor, display: 'flex', flexDirection: 'row', alignItems: 'flex-start', padding: '20px', justifyContent: 'space-between' }}>
+  <div className="card" style={{ 
+      border: `5px solid ${borderColor}`, 
+      borderRadius: '20px', 
+      display: 'flex', 
+      flexDirection: 'row', 
+      alignItems: 'flex-start', 
+      padding: '20px', 
+      justifyContent: 'space-between' 
+    }}>
     <div className="text-content" style={{ textAlign: 'left', maxWidth: '600px' }}>
       <h1 className="title" style={{ textAlign: 'center' }}>{title}</h1>
       <h3 style={{ fontFamily: "'Open Sans Hebrew', sans-serif" }}>{subtitle1}</h3>
@@ -87,6 +95,7 @@ const TitleSection: React.FC<TitleSectionProps> = ({title, subtitle1, descriptio
     </div>
   </div>
 );
+
 
 const ContributionHeading: React.FC = () => {
   return (
