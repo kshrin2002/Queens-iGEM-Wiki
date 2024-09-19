@@ -131,16 +131,9 @@ export function Team() {
     alignItems: 'center', // Center vertically
   };
 
-  const footerImageStyle: React.CSSProperties = {
-    width: '50%', // Adjust image size to fit nicely
-    height: 'auto', // Maintain aspect ratio
-    objectFit: 'contain', // Ensure the image fits inside the container without stretching
-  };
-
   // The image link provided by you
   const mainImageURL = 'https://static.igem.wiki/teams/5079/headshot-template-picture.png';
   const smallImageURL = 'https://static.igem.wiki/teams/5079/linkedin-logo-initials.png';
-  const footerImageURL = 'https://static.igem.wiki/teams/5079/rose-logo.png'; // Footer image
 
   return (
     <>
