@@ -13,7 +13,7 @@ export function Judging() {
         <img 
           src="https://static.igem.wiki/teams/5079/medal-picture.jpg" 
           alt="Medals"
-          style={{ width: '300px', height: 'auto' }} 
+          style={{ width: '600px', height: 'auto' }} 
         />
       </div>
 
