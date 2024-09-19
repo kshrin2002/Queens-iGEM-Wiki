@@ -81,7 +81,8 @@ const TitleSection: React.FC<TitleSectionProps> = ({title, subtitle1, descriptio
       flexDirection: 'row', 
       alignItems: 'flex-start', 
       padding: '20px', 
-      justifyContent: 'space-between' 
+      //justifyContent: 'space-between' 
+      marginBottom: '100px' 
     }}>
     <div className="text-content" style={{ textAlign: 'left', maxWidth: '600px' }}>
       <h1 className="title" style={{ textAlign: 'center' }}>{title}</h1>
