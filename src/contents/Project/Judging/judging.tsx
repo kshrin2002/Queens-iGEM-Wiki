@@ -3,48 +3,48 @@ import React from 'react';
 export function Judging() {
   return (
     <>
-
       <JudgingHeading />
 
       <OverviewSection />
 
-      {/* Title Sections */}
-      <TitleSection 
-        title={'SUBTITLE 1'} 
-        subtitle1={'Section 1'} 
-        description1={'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum'} 
-        subtitle2={'Section 2'} 
-        description2={'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum'} 
-        image={'https://static.igem.wiki/teams/5079/headshot-template-picture.png'} 
-        borderColor={'blue'}
-      />
-      <TitleSection 
-        title={'SUBTITLE 2'} 
-        subtitle1={'Section 1'} 
-        description1={'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum'} 
-        subtitle2={'Section 2'} 
-        description2={'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum'} 
-        image={'https://static.igem.wiki/teams/5079/headshot-template-picture.png'} 
-        borderColor={'blue'}
-      />
-      <TitleSection 
-        title={'SUBTITLE 3'} 
-        subtitle1={'Section 1'} 
-        description1={'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum'} 
-        subtitle2={'Section 2'} 
-        description2={'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum'} 
-        image={'https://static.igem.wiki/teams/5079/headshot-template-picture.png'} 
-        borderColor={'blue'}
-      />
-      <TitleSection 
-        title={'SUBTITLE 4'} 
-        subtitle1={'Section 1'} 
-        description1={'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum'} 
-        subtitle2={'Section 2'} 
-        description2={'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum'} 
-        image={'https://static.igem.wiki/teams/5079/headshot-template-picture.png'} 
-        borderColor={'blue'}
-      />
+      <div className="title-sections-container" style={{ display: 'flex', flexDirection: 'column', alignItems: 'flex-end', marginRight: '50px' }}>
+        <TitleSection 
+          title={'SUBTITLE 1'} 
+          subtitle1={'Section 1'} 
+          description1={'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum'} 
+          subtitle2={'Section 2'} 
+          description2={'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum'} 
+          image={'https://static.igem.wiki/teams/5079/headshot-template-picture.png'} 
+          borderColor={'#E55157'}
+        />
+        <TitleSection 
+          title={'SUBTITLE 2'} 
+          subtitle1={'Section 1'} 
+          description1={'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum'} 
+          subtitle2={'Section 2'} 
+          description2={'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum'} 
+          image={'https://static.igem.wiki/teams/5079/headshot-template-picture.png'} 
+          borderColor={'#E55157'}
+        />
+        <TitleSection 
+          title={'SUBTITLE 3'} 
+          subtitle1={'Section 1'} 
+          description1={'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum'} 
+          subtitle2={'Section 2'} 
+          description2={'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum'} 
+          image={'https://static.igem.wiki/teams/5079/headshot-template-picture.png'} 
+          borderColor={'#E55157'}
+        />
+        <TitleSection 
+          title={'SUBTITLE 4'} 
+          subtitle1={'Section 1'} 
+          description1={'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum'} 
+          subtitle2={'Section 2'} 
+          description2={'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum'} 
+          image={'https://static.igem.wiki/teams/5079/headshot-template-picture.png'} 
+          borderColor={'#E55157'}
+        />
+      </div>
     </>
   );
 }
@@ -61,7 +61,7 @@ interface TitleSectionProps {
 
 const OverviewSection = () => {
   return (
-    <section style={{ backgroundColor: 'maroon', color: 'white', padding: '20px' }}>
+    <section style={{ backgroundColor: '#FE9BA1', color: 'white', padding: '20px', marginTop: '100px', width: '1520px', height: '350px', marginBottom: '100px' }}>
       <h2>Overview</h2>
       <p>
         Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
@@ -74,7 +74,15 @@ const OverviewSection = () => {
 };
 
 const TitleSection: React.FC<TitleSectionProps> = ({title, subtitle1, description1, subtitle2, description2, image, borderColor }) => (
-  <div className="card" style={{ borderColor: borderColor, display: 'flex', flexDirection: 'row', alignItems: 'flex-start', padding: '20px', justifyContent: 'space-between' }}>
+  <div className="card" style={{ 
+      border: `5px solid ${borderColor}`, 
+      borderRadius: '20px', 
+      display: 'flex', 
+      flexDirection: 'row', 
+      alignItems: 'flex-start', 
+      padding: '20px', 
+      marginBottom: '100px' 
+    }}>
     <div className="text-content" style={{ textAlign: 'left', maxWidth: '600px' }}>
       <h1 className="title" style={{ textAlign: 'center' }}>{title}</h1>
       <h3 style={{ fontFamily: "'Open Sans Hebrew', sans-serif" }}>{subtitle1}</h3>
@@ -90,7 +98,7 @@ const TitleSection: React.FC<TitleSectionProps> = ({title, subtitle1, descriptio
 
 const JudgingHeading: React.FC = () => {
   return (
-    <div style={{ textAlign: 'center', marginTop: '30px' }}>
+    <div style={{ textAlign: 'center', marginTop: '138px' }}>
       <h1 style={{ fontSize: '5em', color: '#590000', fontWeight: 'bold', letterSpacing: '2px' }}>
         JUDGING
       </h1>
