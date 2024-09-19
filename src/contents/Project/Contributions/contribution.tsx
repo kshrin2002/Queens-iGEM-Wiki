@@ -7,7 +7,7 @@ export function Contribution() {
 
       <OverviewSection />
 
-      <div className="title-sections-container" style={{ display: 'flex', flexDirection: 'column', alignItems: 'flex-end', marginRight: '10px' }}>
+      <div className="title-sections-container" style={{ display: 'flex', flexDirection: 'column', alignItems: 'flex-end', marginRight: '50px' }}>
         <TitleSection 
           title={'SUBTITLE 1'} 
           subtitle1={'Section 1'} 
