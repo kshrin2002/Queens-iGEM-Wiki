@@ -92,17 +92,17 @@ export function Team() {
   };
 
   const imageContainerStyle: React.CSSProperties = {
-    position: 'relative', // Set relative to contain the absolutely positioned text
+    position: 'relative',
     display: 'flex', // Use flexbox to align items
-    flexDirection: 'column', // Stack portrait and LinkedIn logo vertically
-    alignItems: 'center', // Center the LinkedIn logo horizontally
+    flexDirection: 'column',
+    alignItems: 'center',
     width: '100%', // Match the image width
   };
 
   const mainImageStyle: React.CSSProperties = {
-    width: '95%', // Reduced width to make the portrait images slightly smaller
+    width: '90%',
     height: 'auto',
-    objectFit: 'cover', // Ensures the image covers the cell without stretching
+    objectFit: 'cover',
   };
 
   const smallImageStyle: React.CSSProperties = {
