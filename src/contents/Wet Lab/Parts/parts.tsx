@@ -1,36 +1,38 @@
-// added an export to parts from engineering
+//import React from 'react';
+
 export function Parts() {
-    return (
-      <>
-        <div className="row mt-4">
-          <div className="col">
-            <div className="bd-callout bd-callout-info">
-              <h4>Silver Medal Criterion #1</h4>
-              <p>
-                Demonstrate engineering success in a part of your project by going
-                through at least one iteration of the engineering design cycle.
-                This achievement should be distinct from your Contribution for
-                Bronze.
-              </p>
-              <p>
-                If you plan to show engineering success by creating a new Part
-                that has been shown to work as expected, you must document your
-                contribution on the Part's Main Page on the{" "}
-                <a href="https://parts.igem.org/Main_Page">Registry</a> for your
-                team to be eligible for this criteria.
-              </p>
-              <hr />
-              <p>
-                Please see the{" "}
-                <a href="https://competition.igem.org/judging/medals">
-                  2024 Medals Page
-                </a>{" "}
-                for more information.
-              </p>
-            </div>
-          </div>
-        </div>
-      </>
-    );
-  }
-  
+  return (
+    <>
+      <PartsHeading />
+
+      <OverviewSection />
+
+    </>
+  );
+}
+
+const OverviewSection = () => {
+  return (
+    <section style={{ backgroundColor: '#FE9BA1', color: 'white', padding: '20px', marginTop: '100px', width: '1520px', height: '350px', marginBottom: '100px' }}>
+      <h2>Overview</h2>
+      <p>
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+      </p>
+      <p>
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+      </p>
+    </section>
+  );
+};
+
+const PartsHeading: React.FC = () => {
+  return (
+    <div style={{ textAlign: 'center', marginTop: '138px' }}>
+      <h1 style={{ fontSize: '5em', color: '#590000', fontWeight: 'bold', letterSpacing: '2px' }}>
+        PARTS
+      </h1>
+    </div>
+  );
+};
+
+export default Entrepreneurship;
