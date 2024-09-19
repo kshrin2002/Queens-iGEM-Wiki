@@ -9,7 +9,7 @@ export function Judging() {
 
       <OverviewSection />
 
-      <div style={{ display: 'flex', justifyContent: 'center', marginTop: '25px', marginBottom: '50px' }}>
+      <div style={{ display: 'flex', justifyContent: 'center', marginTop: '25px', marginBottom: '25px' }}>
         <img 
           src="https://static.igem.wiki/teams/5079/medal-picture.jpg" 
           alt="Medals"
