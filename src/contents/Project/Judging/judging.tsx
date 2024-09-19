@@ -1,11 +1,21 @@
 import React from 'react';
 
+// https://static.igem.wiki/teams/5079/medal-picture.jpg
+
 export function Judging() {
   return (
     <>
       <JudgingHeading />
 
       <OverviewSection />
+
+      <div style={{ display: 'flex', justifyContent: 'center', marginTop: '50px', marginBottom: '50px' }}>
+        <img 
+          src="https://static.igem.wiki/teams/5079/medal-picture.jpg" 
+          alt="Medals"
+          style={{ width: '300px', height: 'auto' }} 
+        />
+      </div>
 
       <div className="title-sections-container" style={{ display: 'flex', flexDirection: 'column', alignItems: 'flex-end', marginRight: '50px' }}>
         <TitleSection 
