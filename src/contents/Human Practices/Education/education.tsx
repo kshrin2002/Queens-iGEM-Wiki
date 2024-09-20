@@ -7,21 +7,18 @@ export function Education() {
 
       <OverviewSection />
 
-      // student heading
       <StudentsHeading />
 
       <WorkshopSection />
 
       <APSC103Section />
 
-      // community heading
       <CommunityHeading />
 
       <PSWSection />
 
       <SocialMediaSection />
 
-      // researchers heading
       <ResearchersHeading />
 
       <PodcastSection />
