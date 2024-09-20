@@ -9,6 +9,8 @@ export function Education() {
 
       <StudentsHeading />
 
+      <WorkshopSection />
+
       <CommunityHeading />
 
       <ResearchersHeading />
