@@ -1,4 +1,4 @@
-//import React from 'react';
+import React, { useEffect } from "react";
 
 export function Education() {
   return (
@@ -7,11 +7,11 @@ export function Education() {
 
       <OverviewSection />
 
-      <EducationHeading />
-
       <StudentsHeading />
 
       <CommunityHeading />
+
+      <ResearchersHeading />
 
     </>
   );
