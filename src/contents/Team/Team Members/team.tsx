@@ -21,7 +21,7 @@ export function Team() {
           pin: true,
           scrub: 1,
           start: 'top top',
-          end: () => `+=${window.innerWidth * (numSections - 1.25)}`, // Account for extended Exec Team section
+          end: () => `+=${window.innerWidth * (numSections - 1.25)}`,
           onLeave: () => {
             ScrollTrigger.refresh();
           }
@@ -42,7 +42,7 @@ export function Team() {
 
   const sectionsStyle: React.CSSProperties = {
     display: 'flex',
-    width: `calc(100vw * 4 + 1.25 * 100vw)`, // Adjust width to account for the longer Exec Team section
+    width: `calc(100vw * 4 + 1.25 * 100vw)`,
   };
 
   const sectionStyle: React.CSSProperties = {
@@ -65,19 +65,19 @@ export function Team() {
 
   const headerStyle: React.CSSProperties = {
     position: 'absolute',
-    top: '70px',  // Lowered header in the first section
+    top: '70px',
     left: '30px',
-    fontSize: '3rem', // Increased header size for other sections
+    fontSize: '3rem',
     color: '#a6262e',
     fontWeight: 'bold',
   };
 
   const titleStyle: React.CSSProperties = {
     position: 'absolute',
-    top: '50px',  // Lowered the title in the first section
+    top: '50px',
     left: '30px',
-    fontSize: '6rem',  // Large font size for the heading
-    color: '#a6262e',  // Same color as other headers
+    fontSize: '6rem',
+    color: '#a6262e',
     fontWeight: 'bold',
   };
 
@@ -95,12 +95,7 @@ export function Team() {
     justifyContent: 'space-between',
     width: '50%',  // Width of the row
     position: 'absolute',
-    bottom: '30px',  // Aligned at the bottom of the section
-  };
-
-  const imageStyle: React.CSSProperties = {
-    width: '30%',  // Each image takes 30% of the row's width
-    height: 'auto',
+    bottom: '30px',
   };
 
   const imageContainerStyle: React.CSSProperties = {
@@ -166,7 +161,7 @@ export function Team() {
     <>
       <div style={containerStyle}>
         <div ref={sectionsRef} style={sectionsStyle}>
-          {/* First Section with a Large Heading, One Headshot Above, and Three Headshots at the Bottom */}
+            {/* PI section */}
           <section style={sectionStyle}>
             <h1 style={titleStyle}>Team Members</h1>
             <div style={{ display: 'flex', justifyContent: 'center', marginBottom: '100px' }}>
