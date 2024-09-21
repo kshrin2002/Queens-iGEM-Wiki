@@ -36,7 +36,36 @@ const OverviewSection = () => {
 };
 
 const CardSection: React.FC = () => {
-  const sections = ['Subtitle 1', 'Subtitle 2', 'Subtitle 3', 'Subtitle 4'];
+  const sections = [
+    {
+      title: 'Subtitle 1',
+      subtitle1: 'Section 1',
+      description1: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
+      subtitle2: 'Section 2',
+      description2: 'Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.',
+    },
+    {
+      title: 'Subtitle 2',
+      subtitle1: 'Section 1',
+      description1: 'Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.',
+      subtitle2: 'Section 2',
+      description2: 'Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.',
+    },
+    {
+      title: 'Subtitle 3',
+      subtitle1: 'Section 1',
+      description1: 'Curabitur pretium tincidunt lacus.',
+      subtitle2: 'Section 2',
+      description2: 'Sed eget nulla.',
+    },
+    {
+      title: 'Subtitle 4',
+      subtitle1: 'Section 1',
+      description1: 'Praesent lectus.',
+      subtitle2: 'Section 2',
+      description2: 'Curabitur sodales ligula in libero.',
+    },
+  ];
   const placeholderImage = "https://via.placeholder.com/150"; // Placeholder image for now
 
   return (
@@ -45,15 +74,16 @@ const CardSection: React.FC = () => {
         <div key={index} id={`section-${index}`} className="card-wrapper">
           <Card className="custom-card">
             <Card.Body>
-              <Card.Title className="center-title">{section}</Card.Title>
+              <Card.Title className="center-title">{section.title}</Card.Title>
               <Row>
                 <Col xs={8} className="text-container">
-                  <Card.Text>
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin vel mauris eros.
-                  </Card.Text>
+                  <h3>{section.subtitle1}</h3>
+                  <Card.Text>{section.description1}</Card.Text>
+                  <h3>{section.subtitle2}</h3>
+                  <Card.Text>{section.description2}</Card.Text>
                 </Col>
                 <Col xs={4}>
-                  <img src={placeholderImage} alt={`Image for ${section}`} style={{ width: '100%', height: 'auto' }} />
+                  <img src={placeholderImage} alt={`Image for ${section.title}`} style={{ width: '100%', height: 'auto' }} />
                 </Col>
               </Row>
             </Card.Body>
