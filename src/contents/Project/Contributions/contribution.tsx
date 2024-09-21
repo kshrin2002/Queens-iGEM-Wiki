@@ -1,6 +1,7 @@
 import React from 'react';
 import { useEffect, useState } from 'react';
 import { Button } from 'react-bootstrap';
+import './contributions.css';
 
 export function Contribution() {
   return (
