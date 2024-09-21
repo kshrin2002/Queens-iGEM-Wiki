@@ -68,44 +68,20 @@ const DesignHeading: React.FC = () => {
 
 const Sidebar: React.FC = () => {
   const sections = [
-    {
-      name: 'Subtitle 1',
-      image: 'https://static.igem.wiki/teams/5079/rose-logo.png',
-      subsections: ['Section 1', 'Section 2']
-    },
-    {
-      name: 'Subtitle 2',
-      image: 'https://static.igem.wiki/teams/5079/rose-logo.png',
-      subsections: ['Section 1', 'Section 2']
-    },
-    {
-      name: 'Subtitle 3',
-      image: 'https://static.igem.wiki/teams/5079/rose-logo.png',
-      subsections: ['Section 1', 'Section 2']
-    },
-    {
-      name: 'Subtitle 4',
-      image: 'https://static.igem.wiki/teams/5079/rose-logo.png',
-      subsections: ['Section 1', 'Section 2']
-    },
+    { name: 'Section 1', image: 'https://static.igem.wiki/teams/5079/rose-logo.png' },
+    { name: 'Section 2', image: 'https://static.igem.wiki/teams/5079/rose-logo.png' },
+    { name: 'Section 3', image: 'https://static.igem.wiki/teams/5079/rose-logo.png' },
+    { name: 'Section 4', image: 'https://static.igem.wiki/teams/5079/rose-logo.png' },
+    { name: 'Section 5', image: 'https://static.igem.wiki/teams/5079/rose-logo.png' },
   ];
 
   return (
     <div className="sidebar">
       <ul>
         {sections.map((section, index) => (
-          <li key={index}>
-            <div onClick={() => document.getElementById(`section-${index}`)?.scrollIntoView({ behavior: 'smooth' })}>
-              <img src={section.image} alt={section.name} className="section-image" />
-              <span>{section.name}</span>
-            </div>
-            <ul>
-              {section.subsections.map((subsection, subIndex) => (
-                <li key={`${index}-${subIndex}`} onClick={() => document.getElementById(`subsection-${index}-${subIndex}`)?.scrollIntoView({ behavior: 'smooth' })}>
-                  <span>{subsection}</span>
-                </li>
-              ))}
-            </ul>
+          <li key={index} onClick={() => document.getElementById(`section-${index}`)?.scrollIntoView({ behavior: 'smooth' })}>
+            <img src={section.image} alt={section.name} className="section-image" />
+            <span>{section.name}</span>
           </li>
         ))}
       </ul>
