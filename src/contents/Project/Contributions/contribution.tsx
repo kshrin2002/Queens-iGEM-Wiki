@@ -1,6 +1,6 @@
 import React from 'react';
 import { useEffect, useState } from 'react';
-import { Button } from 'react-bootstrap';
+import { Card, Row, Col, Container, Button } from 'react-bootstrap';
 import './contributions.css';
 
 export function Contribution() {
