@@ -44,6 +44,20 @@ const CardSection: React.FC = () => {
       subtitle2: 'Section 2',
       description2: 'Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.',
     },
+    {
+      title: 'Subtitle 3',
+      subtitle1: 'Section 1',
+      description1: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
+      subtitle2: 'Section 2',
+      description2: 'Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.',
+    },
+    {
+      title: 'Subtitle 4',
+      subtitle1: 'Section 1',
+      description1: 'Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.',
+      subtitle2: 'Section 2',
+      description2: 'Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.',
+    },
   ];
   const placeholderImage = "https://via.placeholder.com/150"; // Placeholder image for now
 
@@ -84,8 +98,10 @@ const ContributionHeading: React.FC = () => {
 
 const Sidebar: React.FC = () => {
   const sections = [
-    { name: 'Subtitle 1', image: 'https://static.igem.wiki/teams/5079/rose-logo.png' },
-    { name: 'Subtitle 2', image: 'https://static.igem.wiki/teams/5079/rose-logo.png' },
+    { name: 'Subtitle 1', image: 'https://static.igem.wiki/teams/5079/rose-logo.png', subSections: ['Section 1', 'Section 2'] },
+    { name: 'Subtitle 2', image: 'https://static.igem.wiki/teams/5079/rose-logo.png', subSections: ['Section 1', 'Section 2'] },
+    { name: 'Subtitle 3', image: 'https://static.igem.wiki/teams/5079/rose-logo.png', subSections: ['Section 1', 'Section 2'] },
+    { name: 'Subtitle 4', image: 'https://static.igem.wiki/teams/5079/rose-logo.png', subSections: ['Section 1', 'Section 2'] },
   ];
 
   return (
@@ -95,6 +111,13 @@ const Sidebar: React.FC = () => {
           <li key={index} onClick={() => document.getElementById(`section-${index}`)?.scrollIntoView({ behavior: 'smooth' })}>
             <img src={section.image} alt={section.name} className="section-image" />
             <span>{section.name}</span>
+            <ul className="sub-sections">
+              {section.subSections.map((subSection, subIndex) => (
+                <li key={subIndex} onClick={() => document.getElementById(`section-${index}-${subIndex}`)?.scrollIntoView({ behavior: 'smooth' })}>
+                  {subSection}
+                </li>
+              ))}
+            </ul>
           </li>
         ))}
       </ul>
