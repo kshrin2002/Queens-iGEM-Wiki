@@ -76,13 +76,15 @@ const CardSection: React.FC = () => {
             <Card.Body>
               <Card.Title className="center-title">{section.title}</Card.Title>
               <Row>
-                <Col xs={8} className="text-container">
+                <Col xs={12} md={8} className="text-container">
+                  {/* Section 1 */}
                   <Row>
                     <Col xs={12}>
                       <h3>{section.subtitle1}</h3>
                       <Card.Text>{section.description1}</Card.Text>
                     </Col>
                   </Row>
+                  {/* Section 2 (now below Section 1) */}
                   <Row>
                     <Col xs={12}>
                       <h3>{section.subtitle2}</h3>
@@ -90,7 +92,7 @@ const CardSection: React.FC = () => {
                     </Col>
                   </Row>
                 </Col>
-                <Col xs={4}>
+                <Col xs={12} md={4}>
                   <img src={placeholderImage} alt={`Image for ${section.title}`} style={{ width: '100%', height: 'auto' }} />
                 </Col>
               </Row>
