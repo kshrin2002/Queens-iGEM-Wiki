@@ -1,25 +1,21 @@
 import React from 'react';
 import { useEffect, useState } from 'react';
-import { Card, Row, Col, Container, Button } from 'react-bootstrap';
+import { Card, Col, Container, Button } from 'react-bootstrap';
 import './contributions.css';
 
 export function Contribution() {
   return (
     <>
       <ContributionHeading />
-
       <OverviewSection />
-
       <div className="main-content">
         <Sidebar />
         <CardSection />
       </div>
-    
       <BackToTopButton />
     </>
   );
 }
-
 
 const OverviewSection = () => {
   return (
@@ -75,27 +71,19 @@ const CardSection: React.FC = () => {
           <Card className="custom-card">
             <Card.Body>
               <Card.Title className="center-title">{section.title}</Card.Title>
-              <Row>
-                <Col xs={12} md={8} className="text-container">
-                  {/* Section 1 */}
-                  <Row>
-                    <Col xs={12}>
-                      <h3>{section.subtitle1}</h3>
-                      <Card.Text>{section.description1}</Card.Text>
-                    </Col>
-                  </Row>
-                  {/* Section 2 (now below Section 1) */}
-                  <Row>
-                    <Col xs={12}>
-                      <h3>{section.subtitle2}</h3>
-                      <Card.Text>{section.description2}</Card.Text>
-                    </Col>
-                  </Row>
-                </Col>
-                <Col xs={12} md={4}>
-                  <img src={placeholderImage} alt={`Image for ${section.title}`} style={{ width: '100%', height: 'auto' }} />
-                </Col>
-              </Row>
+              <Col xs={12} className="text-container">
+                {/* Section 1 */}
+                <h3>{section.subtitle1}</h3>
+                <Card.Text>{section.description1}</Card.Text>
+
+                {/* Section 2 (now below Section 1) */}
+                <h3>{section.subtitle2}</h3>
+                <Card.Text>{section.description2}</Card.Text>
+              </Col>
+
+              <Col xs={12} className="image-container">
+                <img src={placeholderImage} alt={`Image for ${section.title}`} style={{ width: '100%', height: 'auto' }} />
+              </Col>
             </Card.Body>
           </Card>
         </div>
@@ -141,7 +129,7 @@ const BackToTopButton: React.FC = () => {
   const [isVisible, setIsVisible] = useState(false);
 
   const handleScroll = () => {
-    if (window.scrollY > 300) { // Change this value as needed
+    if (window.scrollY > 300) {
       setIsVisible(true);
     } else {
       setIsVisible(false);
@@ -159,7 +147,7 @@ const BackToTopButton: React.FC = () => {
 
   return (
     <Button
-      className={`button ${isVisible ? 'visible' : ''}`} // Add the visible class
+      className={`button ${isVisible ? 'visible' : ''}`} 
       variant="primary"
       onClick={scrollToTop}
     >
