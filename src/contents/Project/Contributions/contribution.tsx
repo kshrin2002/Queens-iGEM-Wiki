@@ -20,15 +20,6 @@ export function Contribution() {
   );
 }
 
-interface TitleSectionProps {
-  title: string;
-  subtitle1: string;
-  description1: string;
-  subtitle2: string;
-  description2: string;
-  image: string;
-  borderColor: string;
-}
 
 const OverviewSection = () => {
   return (
