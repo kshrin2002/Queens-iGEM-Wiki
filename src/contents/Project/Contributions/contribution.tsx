@@ -34,6 +34,7 @@ const OverviewSection = () => {
     </section>
   );
 };
+
 const CardSection: React.FC = () => {
   const sections = [
     {
@@ -76,10 +77,18 @@ const CardSection: React.FC = () => {
               <Card.Title className="center-title">{section.title}</Card.Title>
               <Row>
                 <Col xs={8} className="text-container">
-                  <h3>{section.subtitle1}</h3>
-                  <Card.Text>{section.description1}</Card.Text>
-                  <h3>{section.subtitle2}</h3>
-                  <Card.Text>{section.description2}</Card.Text>
+                  <Row>
+                    <Col xs={12}>
+                      <h3>{section.subtitle1}</h3>
+                      <Card.Text>{section.description1}</Card.Text>
+                    </Col>
+                  </Row>
+                  <Row>
+                    <Col xs={12}>
+                      <h3>{section.subtitle2}</h3>
+                      <Card.Text>{section.description2}</Card.Text>
+                    </Col>
+                  </Row>
                 </Col>
                 <Col xs={4}>
                   <img src={placeholderImage} alt={`Image for ${section.title}`} style={{ width: '100%', height: 'auto' }} />
