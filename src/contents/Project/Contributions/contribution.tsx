@@ -45,6 +45,10 @@ export function Contribution() {
           borderColor={'#E55157'}
         />
       </div>
+      
+      <Sidebar />
+    
+      <BackToTopButton />
     </>
   );
 }
@@ -103,6 +107,60 @@ const ContributionHeading: React.FC = () => {
         CONTRIBUTIONS
       </h1>
     </div>
+  );
+};
+
+const Sidebar: React.FC = () => {
+  const sections = [
+    { name: 'Subtitle 1', image: 'https://static.igem.wiki/teams/5079/rose-logo.png' },
+    { name: 'Subtitle 2', image: 'https://static.igem.wiki/teams/5079/rose-logo.png' },
+    { name: 'Subtitle 3', image: 'https://static.igem.wiki/teams/5079/rose-logo.png' },
+    { name: 'Subtitle 4', image: 'https://static.igem.wiki/teams/5079/rose-logo.png' },
+  ];
+
+  return (
+    <div className="sidebar">
+      <ul>
+        {sections.map((section, index) => (
+          <li key={index} onClick={() => document.getElementById(`section-${index}`)?.scrollIntoView({ behavior: 'smooth' })}>
+            <img src={section.image} alt={section.name} className="section-image" />
+            <span>{section.name}</span>
+          </li>
+        ))}
+      </ul>
+    </div>
+  );
+};
+
+// Back to Top Button Component
+const BackToTopButton: React.FC = () => {
+  const [isVisible, setIsVisible] = useState(false);
+
+  const handleScroll = () => {
+    if (window.scrollY > 300) { // Change this value as needed
+      setIsVisible(true);
+    } else {
+      setIsVisible(false);
+    }
+  };
+
+  useEffect(() => {
+    window.addEventListener('scroll', handleScroll);
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, []);
+
+  const scrollToTop = () => {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  };
+
+  return (
+    <Button
+      className={`button ${isVisible ? 'visible' : ''}`} // Add the visible class
+      variant="primary"
+      onClick={scrollToTop}
+    >
+      ↑ Back to Top
+    </Button>
   );
 };
 
