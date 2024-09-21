@@ -1,6 +1,7 @@
 import React from 'react';
 import { BsArrowDownCircle } from "react-icons/bs";
 import { useEffect, useState } from 'react';
+import { Button } from 'react-bootstrap';
 
 export function Contribution() {
   return (
