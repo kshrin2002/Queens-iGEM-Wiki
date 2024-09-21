@@ -1,3 +1,76 @@
+.card-container {
+    width: 100%; /* Make the card container 60% of the screen width */
+    position: relative;
+    right: 0;
+    margin-left: 15vw; /* Align to the right side */
+}
+
+.custom-card {
+    border: 5px solid var(--mexired); /* Red border around the card */
+    border-radius: 20px;
+    margin-bottom: 20px; /* Space between the cards */
+    width: 100%; /* Make each card fill the container's width */
+    height: 70vh;
+    transition: transform 0.3s ease; /* Smooth transition for the hover effect */
+}
+
+.custom-card:hover {
+    transform: translateX(-10px);
+}
+
+.center-title {
+    text-align: center; /* Center the card title */
+    margin-bottom: 20px; /* Add some space below the title */
+}
+
+.text-container {
+    display: flex;
+    justify-content: center; /* Vertically center the text */
+    align-items: center;
+}
+
+.card-wrapper {
+    position: relative;
+}
+
+.scroll-arrow {
+    text-align: center;
+    font-size: 2em;
+    cursor: pointer;
+    color: #333;
+    margin-top: 10px;
+}
+
+.scroll-arrow:hover {
+    color: #000;
+}
+
+.button {
+    position: fixed;
+    bottom: 20px;
+    left: 20px; /* Adjust left value to align with the sidebar */
+    display: block; 
+    color: var(--mexired);
+    background-color: var(--pinksalmon);
+    border-color: black;
+    opacity: 0; /* Start hidden */
+    transition: opacity 0.3s ease, transform 0.3s ease; /* Smooth transition for opacity and position */
+    transform: translateY(20px); /* Start slightly below */
+
+    &:hover{
+        background-color: var(--mexired);
+        border-color: black;
+    }
+
+    
+}
+
+.button.visible {
+    opacity: 1; /* Fully visible */
+    transform: translateY(0); /* Move to original position */
+}
+
+
 
 .main-content {
     display: flex; /* Use flex to position sidebar and card section */
