@@ -1,7 +1,7 @@
 import React from 'react';
 import { Card, Row, Col, Container, Button } from 'react-bootstrap';
 import { BsArrowDownCircle } from "react-icons/bs";
-import './Design.css'; // Import the CSS file
+import './design.css'; // Import the CSS file
 import { useEffect, useState } from 'react';
 
 export function Design() {
