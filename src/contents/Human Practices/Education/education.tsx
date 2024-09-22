@@ -14,7 +14,6 @@ export function Education() {
 
       <APSC103Section />
 
-      <CommunityHeading />
     </>
   );
 }
@@ -45,39 +44,37 @@ const EducationHeading: React.FC = () => {
 
 const StudentsHeading: React.FC = () => {
   return (
-    <div style={{ 
-      display: 'flex', 
-      alignItems: 'center', 
-      justifyContent: 'flex-end', // Align everything to the right
-      width: 'calc(100% - 50px)', // Match width calculation
-      maxWidth: '1140px', // Match max-width
-      marginRight: '0', 
-      marginTop: '30px',
-      boxSizing: 'border-box', 
-      paddingRight: '20px' // Add some padding if needed
-    }}>
-      <h2 style={{ 
-        fontSize: '2.5em', 
-        color: '#590000', 
-        fontWeight: 'bold', 
-        letterSpacing: '2px', 
-        marginRight: '20px', // Add space between text and line
-        whiteSpace: 'nowrap' // Prevent text wrapping
-      }}>
+    <div
+      style={{
+        textAlign: 'center',
+        display: 'flex',
+        alignItems: 'center',
+        justifyContent: 'center',
+        position: 'absolute',
+        top: '1550px', 
+        right: '0', 
+      }}
+    >
+      <h2
+        style={{
+          fontSize: '2.5em',
+          color: '#590000',
+          fontWeight: 'bold',
+          letterSpacing: '2px',
+          marginRight: '20px',
+        }}
+      >
         Students
       </h2>
-      <div style={{ 
-        borderTop: '2px solid #590000', 
-        flexGrow: 1, // Allow the line to take up remaining space
-        maxWidth: '1000px' // You can control the maximum width of the line
-      }}></div>
+      <div
+        style={{
+          borderTop: '2px solid #590000',
+          width: '945px',
+        }}
+      ></div>
     </div>
   );
 };
-
-
-
-
 
 
 const WorkshopSection = () => {
@@ -106,39 +103,5 @@ const APSC103Section = () => {
   );
 };
 
-
-const CommunityHeading: React.FC = () => {
-  return (
-    <div
-      style={{
-        textAlign: 'center',
-        display: 'flex',
-        alignItems: 'center',
-        justifyContent: 'center',
-        position: 'absolute',
-        top: '1550px', 
-        right: '0', 
-      }}
-    >
-      <h2
-        style={{
-          fontSize: '2.5em',
-          color: '#590000',
-          fontWeight: 'bold',
-          letterSpacing: '2px',
-          marginRight: '20px',
-        }}
-      >
-        Community
-      </h2>
-      <div
-        style={{
-          borderTop: '2px solid #590000',
-          width: '945px',
-        }}
-      ></div>
-    </div>
-  );
-};
 
 export default Education;
