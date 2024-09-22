@@ -3,9 +3,6 @@ import {
   Hardware,
   Inclusivity,
   Measurement,
-  Plant,
-  Software,
-  Sustainable,
 } from "./contents";
 
 // Wet Lab Folder
