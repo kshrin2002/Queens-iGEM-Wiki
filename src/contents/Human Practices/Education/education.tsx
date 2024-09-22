@@ -48,7 +48,7 @@ const StudentsHeading: React.FC = () => {
     <div style={{ 
       display: 'flex', 
       alignItems: 'center', 
-      justifyContent: 'flex-end', // Align the content to the right
+      justifyContent: 'flex-end', // Align everything to the right
       width: 'calc(100% - 50px)', // Match width calculation
       maxWidth: '1140px', // Match max-width
       marginRight: '0', 
@@ -61,19 +61,20 @@ const StudentsHeading: React.FC = () => {
         color: '#590000', 
         fontWeight: 'bold', 
         letterSpacing: '2px', 
-        marginRight: '20px', // Space between heading and line
-        whiteSpace: 'nowrap' // Ensure the "Students" text stays on one line
+        marginRight: '20px', // Add space between text and line
+        whiteSpace: 'nowrap' // Prevent text wrapping
       }}>
         Students
       </h2>
       <div style={{ 
         borderTop: '2px solid #590000', 
-        width: '100%', // Take up the remaining space
-        maxWidth: '500px' // Adjust max width of the line if needed
+        flexGrow: 1, // This allows the line to take up all remaining space
+        maxWidth: '500px' // Set a max width for the line if necessary
       }}></div>
     </div>
   );
 };
+
 
 
 
