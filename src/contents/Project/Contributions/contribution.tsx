@@ -135,8 +135,8 @@ const Sidebar: React.FC = () => {
       <ul>
         {sections.map((section, index) => (
           <li key={index}>
-            <div onClick={() => setOpenSection(openSection === index ? null : index)} style={{ cursor: 'pointer' }}>
-              <img src={section.image} alt={section.name} className="section-image" />
+            <div onClick={() => setOpenSection(openSection === index ? null : index)} style={{ cursor: 'pointer', display: 'flex', alignItems: 'center' }}>
+              <img src={section.image} alt={section.name} className="section-image" style={{ marginRight: '8px' }} />
               <span>{section.name}</span>
             </div>
             {openSection === index && (
@@ -150,50 +150,26 @@ const Sidebar: React.FC = () => {
 };
 
 const StaggeredDropDown = ({ options }: { options: string[] }) => {
-  const [open, setOpen] = useState(false);
-
   return (
-    <div className="relative">
-      <button
-        onClick={() => setOpen((pv) => !pv)}
-        className="flex items-center gap-2 px-3 py-2 rounded-md text-indigo-50 bg-indigo-500 hover:bg-indigo-500 transition-colors"
-      >
-        <span className="font-medium text-sm">Toggle Sections</span>
-        <motion.span variants={iconVariants}>
-          <FiChevronDown />
-        </motion.span>
-      </button>
-
-      {open && (
-        <motion.ul
-          initial={wrapperVariants.closed}
-          animate={open ? "open" : "closed"}
-          variants={wrapperVariants}
-          className={`flex flex-col gap-2 p-2 rounded-lg bg-white shadow-xl absolute top-full left-0 w-48 overflow-hidden`}
-        >
-          {options.map((option: string, index: number) => (
-            <Option key={index} setOpen={setOpen} Icon={FiEdit} text={option} />
-          ))}
-        </motion.ul>
-      )}
-    </div>
-  );
-};
-
-const Option = ({ text, Icon, setOpen }: { text: string; Icon: React.ElementType; setOpen: (open: boolean) => void }) => {
-  return (
-    <motion.li
-      variants={itemVariants}
-      onClick={() => setOpen(false)}
-      className="flex items-center gap-2 w-full p-2 text-xs font-medium whitespace-nowrap rounded-md hover:bg-indigo-100 text-slate-700 hover:text-indigo-500 transition-colors cursor-pointer"
+    <motion.ul
+      className="flex flex-col gap-2 p-2 rounded-lg bg-white shadow-xl"
     >
-      <motion.span variants={actionIconVariants}>
-        <Icon />
-      </motion.span>
-      <span>{text}</span>
-    </motion.li>
+      {options.map((option: string, index: number) => (
+        <Option key={index} text={option} />
+      ))}
+    </motion.ul>
   );
 };
+
+const Option = ({ text }: { text: string }) => {
+  return (
+    <li className="flex items-center gap-2 w-full p-2 text-xs font-medium whitespace-nowrap rounded-md hover:bg-indigo-100 text-slate-700 hover:text-indigo-500 transition-colors cursor-pointer">
+      <FiEdit />
+      <span>{text}</span>
+    </li>
+  );
+};
+
 
 // Back to Top Button Component
 const BackToTopButton: React.FC = () => {
