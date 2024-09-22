@@ -105,6 +105,8 @@ const WorkshopSection = () => {
               textTransform: 'uppercase',
               fontWeight: 'bold',
               cursor: 'pointer',
+              display: 'flex',
+              justifyContent: 'flex-end'
             }}
           >
             {text}
