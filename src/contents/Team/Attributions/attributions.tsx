@@ -40,27 +40,28 @@ export function Attributions() {
   const ExternalContributionsHeading: React.FC = () => {
     return (
       <div style={{ 
-        textAlign: 'right', 
-        marginTop: '30px', 
         display: 'flex', 
         alignItems: 'center', 
-        justifyContent: 'flex-end', // Align to the right
-        width: '100%', // Ensure the container takes full width
+        justifyContent: 'space-between',  // Space between heading and line
+        width: '100%', 
         boxSizing: 'border-box', 
-        paddingRight: '20px' // Add some padding if needed
+        paddingRight: '20px',
+        marginTop: '30px'
       }}>
         <h2 style={{ 
           fontSize: '2.5em', 
           color: '#590000', 
           fontWeight: 'bold', 
           letterSpacing: '2px', 
-          marginRight: '0' // Remove the margin on the right
+          whiteSpace: 'nowrap',  // Prevent wrapping to a new line
+          margin: 0  // Ensure no margins break the layout
         }}>
           External Contributions
         </h2>
         <div style={{ 
           borderTop: '2px solid #590000', 
-          width: '70%' // Take up the remaining space
+          flexGrow: 1,  // Take up the remaining space
+          marginLeft: '20px'  // Add space between the text and the line
         }}></div>
       </div>
     );
