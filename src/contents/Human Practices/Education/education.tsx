@@ -67,7 +67,7 @@ const StudentsHeading: React.FC = () => {
       <div
         style={{
           borderTop: '2px solid #590000',
-          width: '1150px',
+          width: '1200px',
         }}
       ></div>
     </div>
