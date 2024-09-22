@@ -4,6 +4,7 @@
   justify-content: flex-end; /* Align content to the right */
   width: 100%;
   margin-bottom: 50px; /* Adds space between sections */
+  box-sizing: border-box; /* Ensure padding and border are included in the width */
 }
 
 /* Workshop Section */
@@ -11,8 +12,10 @@
   background-color: #FE9BA1;
   color: white;
   padding: 20px;
-  width: 1140px; /* Width of the section */
-  margin-right: 50px; /* Space between section and right edge */
+  width: calc(100% - 50px); /* Take up full width minus the right margin */
+  max-width: 1140px; /* Set max width to prevent the section from being too large on wide screens */
+  margin-right: 0; /* No right margin to eliminate space on the right side */
+  box-sizing: border-box; /* Ensure padding is included in the width */
 }
 
 /* APSC 103 Section */
@@ -20,9 +23,10 @@
   background-color: #FE9BA1;
   color: white;
   padding: 20px;
-  width: 1140px; /* Width of the section */
-  margin-right: 50px; /* Space between section and right edge */
+  width: calc(100% - 50px); /* Take up full width minus the right margin */
+  max-width: 1140px;
   margin-top: 50px; /* Adds space above */
+  margin-right: 0;
+  box-sizing: border-box;
 }
-
 
