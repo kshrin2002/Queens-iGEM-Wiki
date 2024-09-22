@@ -90,10 +90,17 @@ const WorkshopSection = () => {
   );
 };
 
- // New navigation component to replicate the look in the screenshot
- const NavBar: React.FC = () => {
+const NavBar: React.FC = () => {
   return (
-      <div style={{ display: 'flex', gap: '20px' }}>
+      <div
+        style={{
+          display: 'flex',
+          justifyContent: 'center', // Center the navbar
+          gap: '20px',
+          marginTop: '40px', // Adjust this value for the desired spacing
+          marginBottom: '40px', // Adjust this value for spacing below
+        }}
+      >
         {[' ', ' ', ' ', ' ', ' '].map((text, index) => (
           <div
             key={index}
@@ -105,8 +112,6 @@ const WorkshopSection = () => {
               textTransform: 'uppercase',
               fontWeight: 'bold',
               cursor: 'pointer',
-              display: 'flex',
-              justifyContent: 'flex-end'
             }}
           >
             {text}
