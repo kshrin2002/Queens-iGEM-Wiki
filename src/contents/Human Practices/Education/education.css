@@ -25,11 +25,4 @@
   margin-top: 50px; /* Adds space above */
 }
 
-/* Optional: Add this to ensure responsive behavior */
-@media (max-width: 1200px) {
-  .workshop-section,
-  .apsc103-section {
-    width: 100%; /* Ensures sections take full width on smaller screens */
-    margin-right: 0;
-  }
-}
+
