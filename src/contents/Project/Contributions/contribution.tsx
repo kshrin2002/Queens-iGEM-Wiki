@@ -240,4 +240,31 @@ const wrapperVariants = {
   },
 };
 
+const iconVariants = {
+  open: { rotate: 180 },
+  closed: { rotate: 0 },
+};
+
+const itemVariants = {
+  open: {
+    opacity: 1,
+    y: 0,
+  },
+  closed: {
+    opacity: 0,
+    y: -20,
+  },
+};
+
+const actionIconVariants = {
+  open: {
+    scale: 1.2,
+    transition: { duration: 0.1 },
+  },
+  closed: {
+    scale: 1,
+    transition: { duration: 0.1 },
+  },
+};
+
 export default Contribution;
