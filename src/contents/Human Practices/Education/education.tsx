@@ -1,25 +1,18 @@
 import React from "react";
 import './education.css';
-
 export function Education() {
   return (
     <>
       <EducationHeading />
-
       <OverviewSection />
-
       <StudentsHeading />
-
       <WorkshopSection />
-
       <NavBar />
-  
+      <NavbarSection />
       <APSC103Section />
-
     </>
   );
 }
-
 const OverviewSection = () => {
   return (
     <section style={{ backgroundColor: '#FE9BA1', color: 'white', padding: '20px', marginTop: '100px', width: '1520px', height: '350px', marginBottom: '100px' }}>
@@ -33,7 +26,6 @@ const OverviewSection = () => {
     </section>
   );
 };
-
 const EducationHeading: React.FC = () => {
   return (
     <div style={{ textAlign: 'center', marginTop: '138px' }}>
@@ -43,7 +35,6 @@ const EducationHeading: React.FC = () => {
     </div>
   );
 };
-
 const StudentsHeading: React.FC = () => {
   return (
     <div
@@ -75,8 +66,6 @@ const StudentsHeading: React.FC = () => {
     </div>
   );
 };
-
-
 const WorkshopSection = () => {
   return (
     <div className="section-container">
@@ -89,17 +78,15 @@ const WorkshopSection = () => {
     </div>
   );
 };
-
 const NavBar: React.FC = () => {
   return (
       <div
         style={{
           display: 'flex',
-          justifyContent: 'center', // Keep the navbar centered
+          justifyContent: 'center', // Center the navbar
           gap: '20px',
-          marginTop: '40px', // Adjust for vertical spacing as needed
-          marginBottom: '40px',
-          paddingLeft: '300px', // This will nudge the navbar to the right
+          marginTop: '40px', // Adjust this value for the desired spacing
+          marginBottom: '40px', // Adjust this value for spacing below
         }}
       >
         {[' ', ' ', ' ', ' ', ' '].map((text, index) => (
@@ -123,8 +110,17 @@ const NavBar: React.FC = () => {
       </div>
   );
 };
-
-
+const NavbarSection = () => {
+  return (
+    <div className="section-navbar">
+      <section className="navbar-box">
+        <p>
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+        </p>
+      </section>
+    </div>
+  );
+};
 const APSC103Section = () => {
   return (
     <div className="section-container">
@@ -137,5 +133,4 @@ const APSC103Section = () => {
     </div>
   );
 };
-
 export default Education;
