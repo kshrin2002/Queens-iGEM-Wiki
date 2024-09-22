@@ -53,9 +53,11 @@ const EducationHeading: React.FC = () => {
 
 const StudentsHeading: React.FC = () => {
   return (
-    <div className="students-heading">
-      <h2 className="students-title">Students</h2>
-      <div className="students-divider"></div>
+    <div style={{ textAlign: 'center', marginTop: '30px', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
+      <h2 style={{ fontSize: '2.5em', color: '#590000', fontWeight: 'bold', letterSpacing: '2px', marginRight: '20px' }}>
+        Students
+      </h2>
+      <div style={{ borderTop: '2px solid #590000', width: '350px' }}></div>
     </div>
   );
 };
