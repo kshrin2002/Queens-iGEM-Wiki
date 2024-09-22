@@ -1,24 +1,18 @@
 .workshop-section {
-    background-color: #FE9BA1;
-    color: white;
-    padding: 20px;
-    width: 1140px; 
-    height: 250px;
-    right: 0; 
-    top: 890px; 
-    margin-bottom: 100px; 
-    position: absolute;
-  }
+  background-color: #FE9BA1;
+  color: white;
+  padding: 20px;
+  width: 1140px; 
+  height: 250px;
+  margin-bottom: 100px; /* Keep space between sections */
+}
 
-  .apsc103-section {
-    background-color: #FE9BA1;
-    color: white;
-    padding: 20px;
-    margin-top: 100px;
-    width: 1140px;
-    height: 250px;
-    right: 0;
-    top: 1190px;
-    margin-bottom: 100px;
-    position: absolute;
-  }
+.apsc103-section {
+  background-color: #FE9BA1;
+  color: white;
+  padding: 20px;
+  width: 1140px; 
+  height: 250px;
+  margin-top: 50px; /* Adds space above */
+  margin-bottom: 100px; /* Adds space below */
+}
