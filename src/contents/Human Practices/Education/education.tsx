@@ -105,13 +105,15 @@ const NavBar: React.FC = () => {
           <div
             key={index}
             style={{
-              backgroundColor: '#590000',
+              backgroundColor: '#980021',
               padding: '10px 20px',
               borderRadius: '50px',
               color: 'white',
               textTransform: 'uppercase',
               fontWeight: 'bold',
               cursor: 'pointer',
+              width: '148px',
+              height: '35px'
             }}
           >
             {text}
