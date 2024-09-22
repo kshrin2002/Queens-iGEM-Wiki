@@ -68,7 +68,6 @@ const StudentsHeading: React.FC = () => {
       </h2>
       <div style={{ 
         borderTop: '2px solid #590000', 
-        flexGrow: 1, // This allows the line to take up all remaining space
         maxWidth: '500px' // Set a max width for the line if necessary
       }}></div>
     </div>
