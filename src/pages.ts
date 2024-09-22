@@ -222,55 +222,6 @@ const Pages: (Page | Folder)[] = [
       },
     ],
   },
-
-  {
-    // this is the start of the folder for awards
-    name: "Awards",
-    folder: [
-      {
-        name: "Hardware",
-        title: "Hardware",
-        path: "/hardware",
-        component: Hardware,
-        lead: "Hardware in iGEM should make synthetic biology based on standard parts easier, faster, better, or more accessible to our community.",
-      },
-      {
-        name: "Inclusivity",
-        title: "Diversity and Inclusion",
-        path: "/inclusivity",
-        component: Inclusivity,
-        lead: "Every individual, regardless of background or experience, should have an equal opportunity to engage with scientific knowledge and technological development.",
-      },
-      {
-        name: "Measurement",
-        title: "Measurement",
-        path: "/measurement",
-        component: Measurement,
-        lead: "Synthetic Biology needs great measurement approaches for characterizing parts, and efficient new methods for characterizing many parts at once. Describe your measurement approaches on this page.",
-      },
-      {
-        name: "Plant",
-        title: "Plant",
-        path: "/plant",
-        component: Plant,
-        lead: "This award is designed to celebrate exemplary work done in plant synthetic biology.",
-      },
-      {
-        name: "Software",
-        title: "Software",
-        path: "/software",
-        component: Software,
-        lead: "Software in iGEM should make synthetic biology based on standard parts easier, faster, better or more accessible to our community.",
-      },
-      {
-        name: "Sustainable",
-        title: "Sustainable Development Goals",
-        path: "/sustainable",
-        component: Sustainable,
-        lead: "Describe how you have evaluated your project ideas against one or more of the SDGs.",
-      },
-    ],
-  },
 ];
 
 export default Pages;

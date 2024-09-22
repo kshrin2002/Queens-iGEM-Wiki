@@ -30,10 +30,4 @@ export * from "./Human Practices/Education/education.tsx";
 export * from "./Human Practices/Entrepreneurs/entrepreneurship.tsx"; 
 export * from "./Human Practices/Patient Stories/patient-stories.tsx";
 
-// Awards 
-export * from "./hardware.tsx";
-export * from "./inclusivity.tsx";
-export * from "./measurement.tsx";
-export * from "./plant.tsx";
-export * from "./software.tsx";
-export * from "./sustainable.tsx";
+
