@@ -67,35 +67,7 @@ export function Attributions() {
     );
   };
 
-  const TeamLeadHeading: React.FC = () => {
-    return (
-      <div style={{ 
-        display: 'flex', 
-        alignItems: 'center', 
-        justifyContent: 'space-between',  // Space between heading and line
-        width: '100%', 
-        boxSizing: 'border-box', 
-        paddingRight: '20px',
-        marginTop: '30px'
-      }}>
-        <h2 style={{ 
-          fontSize: '2.5em', 
-          color: '#590000', 
-          fontWeight: 'bold', 
-          letterSpacing: '2px', 
-          whiteSpace: 'nowrap',  // Prevent wrapping to a new line
-          margin: 0  // Ensure no margins break the layout
-        }}>
-          Team Lead
-        </h2>
-        <div style={{ 
-          borderTop: '2px solid #590000', 
-          flexGrow: 1,  // Take up the remaining space
-          marginLeft: '20px'  // Add space between the text and the line
-        }}></div>
-      </div>
-    );
-  };
+
   
   
   
@@ -138,6 +110,36 @@ export function Attributions() {
     );
   };
 
+  const TeamLeadHeading: React.FC = () => {
+    return (
+      <div style={{ 
+        display: 'flex', 
+        alignItems: 'center', 
+        justifyContent: 'space-between',  // Space between heading and line
+        width: '100%', 
+        boxSizing: 'border-box', 
+        paddingRight: '20px',
+        marginTop: '30px'
+      }}>
+        <h2 style={{ 
+          fontSize: '2.5em', 
+          color: '#590000', 
+          fontWeight: 'bold', 
+          letterSpacing: '2px', 
+          whiteSpace: 'nowrap',  // Prevent wrapping to a new line
+          margin: 0  // Ensure no margins break the layout
+        }}>
+          Team Lead
+        </h2>
+        <div style={{ 
+          borderTop: '2px solid #590000', 
+          flexGrow: 1,  // Take up the remaining space
+          marginLeft: '20px'  // Add space between the text and the line
+        }}></div>
+      </div>
+    );
+  };
+  
   const Card_team: React.FC<CardProps> = ({ description }) => {
     const images = [
       "https://static.igem.wiki/teams/5079/headshot-template-picture.png"
