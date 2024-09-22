@@ -10,4 +10,15 @@
     position: absolute;
   }
 
- 
+  .apsc103-section {
+    background-color: #FE9BA1;
+    color: white;
+    padding: 20px;
+    margin-top: 100px;
+    width: 1140px;
+    height: 250px;
+    right: 0;
+    top: 990;
+    margin-bottom: 100px;
+    position: absolute;
+  }
