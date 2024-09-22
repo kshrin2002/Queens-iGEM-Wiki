@@ -1,8 +1,8 @@
 import React, { useEffect, useState } from 'react';
 import { Card, Col, Container, Row, Button } from 'react-bootstrap';
-import { FiEdit, FiChevronDown } from "react-icons/fi";
-import { motion } from "framer-motion";
 import './contributions.css';
+import { FiEdit } from "react-icons/fi";
+import { motion } from "framer-motion";
 
 export function Contribution() {
   return (
@@ -119,10 +119,10 @@ const ContributionHeading: React.FC = () => {
 
 const Sidebar: React.FC = () => {
   const sections = [
-    { name: 'Subtitle 1', content: ['Section 1', 'Section 2'] },
-    { name: 'Subtitle 2', content: ['Section 1', 'Section 2'] },
-    { name: 'Subtitle 3', content: ['Section 1', 'Section 2'] },
-    { name: 'Subtitle 4', content: ['Section 1', 'Section 2'] },
+    { name: 'Subtitle 1', image: 'https://static.igem.wiki/teams/5079/rose-logo.png', content: ['Section 1', 'Section 2'] },
+    { name: 'Subtitle 2', image: 'https://static.igem.wiki/teams/5079/rose-logo.png', content: ['Section 1', 'Section 2'] },
+    { name: 'Subtitle 3', image: 'https://static.igem.wiki/teams/5079/rose-logo.png', content: ['Section 1', 'Section 2'] },
+    { name: 'Subtitle 4', image: 'https://static.igem.wiki/teams/5079/rose-logo.png', content: ['Section 1', 'Section 2'] },
   ];
 
   const [openSection, setOpenSection] = useState<number | null>(null);
@@ -131,29 +131,13 @@ const Sidebar: React.FC = () => {
     <div className="sidebar">
       <ul>
         {sections.map((section, index) => (
-          <li key={index} className="sidebar-item">
-            <div
-              onClick={() => setOpenSection(openSection === index ? null : index)}
-              className="sidebar-header"
-            >
-              <span className="sidebar-title">{section.name}</span>
-              <FiChevronDown
-                className={`chevron-icon ${openSection === index ? "open" : ""}`}
-              />
+          <li key={index}>
+            <div onClick={() => setOpenSection(openSection === index ? null : index)} style={{ cursor: 'pointer', display: 'flex', alignItems: 'center' }}>
+              <img src={section.image} alt={section.name} className="section-image" style={{ marginRight: '8px' }} />
+              <span>{section.name}</span>
             </div>
             {openSection === index && (
-              <motion.ul
-                initial={{ opacity: 0, height: 0 }}
-                animate={{ opacity: 1, height: "auto" }}
-                transition={{ duration: 0.3 }}
-                className="dropdown-content"
-              >
-                {section.content.map((item, subIndex) => (
-                  <li key={subIndex} className="dropdown-item">
-                    {item}
-                  </li>
-                ))}
-              </motion.ul>
+              <StaggeredDropDown options={section.content} />
             )}
           </li>
         ))}
@@ -162,6 +146,28 @@ const Sidebar: React.FC = () => {
   );
 };
 
+const StaggeredDropDown = ({ options }: { options: string[] }) => {
+  return (
+    <motion.ul
+      className="flex flex-col gap-2 p-2 rounded-lg bg-white shadow-xl"
+    >
+      {options.map((option: string, index: number) => (
+        <Option key={index} text={option} />
+      ))}
+    </motion.ul>
+  );
+};
+
+const Option = ({ text }: { text: string }) => {
+  return (
+    <li className="flex items-center gap-2 w-full p-2 text-xs font-medium whitespace-nowrap rounded-md hover:bg-indigo-100 text-slate-700 hover:text-indigo-500 transition-colors cursor-pointer">
+      <FiEdit />
+      <span>{text}</span>
+    </li>
+  );
+};
+
+// Back to Top Button Component
 const BackToTopButton: React.FC = () => {
   const [isVisible, setIsVisible] = useState(false);
 
