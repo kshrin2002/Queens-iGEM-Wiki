@@ -1,10 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import { Card, Col, Container, Row, Button } from 'react-bootstrap';
 import './contributions.css';
-import {
-  FiEdit,
-  FiChevronDown,
-} from "react-icons/fi";
+import { FiEdit } from "react-icons/fi";
 import { motion } from "framer-motion";
 
 export function Contribution() {
@@ -170,7 +167,6 @@ const Option = ({ text }: { text: string }) => {
   );
 };
 
-
 // Back to Top Button Component
 const BackToTopButton: React.FC = () => {
   const [isVisible, setIsVisible] = useState(false);
@@ -201,51 +197,6 @@ const BackToTopButton: React.FC = () => {
       ↑ Back to Top
     </Button>
   );
-};
-
-// Animation variants
-const wrapperVariants = {
-  open: {
-    scaleY: 1,
-    transition: {
-      when: "beforeChildren",
-      staggerChildren: 0.1,
-    },
-  },
-  closed: {
-    scaleY: 0,
-    transition: {
-      when: "afterChildren",
-      staggerChildren: 0.1,
-    },
-  },
-};
-
-const iconVariants = {
-  open: { rotate: 180 },
-  closed: { rotate: 0 },
-};
-
-const itemVariants = {
-  open: {
-    opacity: 1,
-    y: 0,
-  },
-  closed: {
-    opacity: 0,
-    y: -20,
-  },
-};
-
-const actionIconVariants = {
-  open: {
-    scale: 1.2,
-    transition: { duration: 0.1 },
-  },
-  closed: {
-    scale: 1,
-    transition: { duration: 0.1 },
-  },
 };
 
 export default Contribution;
