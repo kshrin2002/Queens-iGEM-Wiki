@@ -107,7 +107,7 @@ const NavBar: React.FC = () => {
             style={{
               backgroundColor: '#590000',
               padding: '10px 20px',
-              borderRadius: '20px',
+              borderRadius: '50px',
               color: 'white',
               textTransform: 'uppercase',
               fontWeight: 'bold',
