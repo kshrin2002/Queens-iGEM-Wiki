@@ -60,7 +60,7 @@ export function Attributions() {
         </h2>
         <div style={{ 
           borderTop: '2px solid #590000', 
-          width: '100%' // Take up the remaining space
+          width: '70%' // Take up the remaining space
         }}></div>
       </div>
     );
