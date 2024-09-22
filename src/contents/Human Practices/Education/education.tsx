@@ -8,7 +8,6 @@ export function Education() {
 
       <OverviewSection />
 
-      {/* Make sure StudentsHeading comes before the other sections */}
       <StudentsHeading />
 
       <WorkshopSection />
@@ -68,7 +67,7 @@ const StudentsHeading: React.FC = () => {
       <div
         style={{
           borderTop: '2px solid #590000',
-          width: '945px',
+          width: '1150px',
         }}
       ></div>
     </div>
