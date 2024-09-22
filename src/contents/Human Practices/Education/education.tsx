@@ -51,7 +51,9 @@ const StudentsHeading: React.FC = () => {
       display: 'flex', 
       alignItems: 'center', 
       justifyContent: 'flex-end', // Align to the right
-      width: '100%', // Ensure the container takes full width
+      width: 'calc(100% - 50px)', // Match width calculation
+      maxWidth: '1140px', // Match max-width
+      marginRight: '0', // Ensure margin-right is consistent
       boxSizing: 'border-box', 
       paddingRight: '20px' // Add some padding if needed
     }}>
@@ -66,11 +68,12 @@ const StudentsHeading: React.FC = () => {
       </h2>
       <div style={{ 
         borderTop: '2px solid #590000', 
-        width: '100%' // Take up the remaining space
+        width: '100%' // Take up the remaining space in the flex container
       }}></div>
     </div>
   );
 };
+
 
 
 const WorkshopSection = () => {
