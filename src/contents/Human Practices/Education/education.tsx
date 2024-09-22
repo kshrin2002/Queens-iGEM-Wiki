@@ -8,6 +8,7 @@ export function Education() {
 
       <OverviewSection />
 
+      {/* Make sure StudentsHeading comes before the other sections */}
       <StudentsHeading />
 
       <WorkshopSection />
@@ -50,9 +51,7 @@ const StudentsHeading: React.FC = () => {
         display: 'flex',
         alignItems: 'center',
         justifyContent: 'center',
-        position: 'absolute',
-        top: '1550px', 
-        right: '0', 
+        marginTop: '50px', // Add space between sections
       }}
     >
       <h2
@@ -102,6 +101,5 @@ const APSC103Section = () => {
     </div>
   );
 };
-
 
 export default Education;
