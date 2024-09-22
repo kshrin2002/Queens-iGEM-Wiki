@@ -2,11 +2,10 @@
     background-color: #FE9BA1;
     color: white;
     padding: 20px;
-    margin-top: 100px;
-    width: 1140px; /* Adjust the width if necessary */
+    width: 1140px; 
     height: 250px;
-    right: 0; /* Align it to the right side */
-    top: 150px; /* Adjust the distance from the top */
-    margin-bottom: 100px; /* Bottom margin for other sections */
+    right: 0; 
+    top: 150px; 
+    margin-bottom: 100px; 
   }
   
