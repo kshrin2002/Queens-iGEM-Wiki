@@ -134,9 +134,11 @@ const Sidebar: React.FC = () => {
     <div className="sidebar">
       <ul>
         {sections.map((section, index) => (
-          <li key={index} onClick={() => setOpenSection(openSection === index ? null : index)}>
-            <img src={section.image} alt={section.name} className="section-image" />
-            <span>{section.name}</span>
+          <li key={index}>
+            <div onClick={() => setOpenSection(openSection === index ? null : index)} style={{ cursor: 'pointer' }}>
+              <img src={section.image} alt={section.name} className="section-image" />
+              <span>{section.name}</span>
+            </div>
             {openSection === index && (
               <StaggeredDropDown options={section.content} />
             )}
@@ -162,15 +164,18 @@ const StaggeredDropDown = ({ options }: { options: string[] }) => {
         </motion.span>
       </button>
 
-      <motion.ul
-        initial={wrapperVariants.closed}
-        variants={wrapperVariants}
-        className={`flex flex-col gap-2 p-2 rounded-lg bg-white shadow-xl absolute top-full left-0 w-48 overflow-hidden ${!open && 'hidden'}`}
-      >
-        {options.map((option: string, index: number) => (
-          <Option key={index} setOpen={setOpen} Icon={FiEdit} text={option} />
-        ))}
-      </motion.ul>
+      {open && (
+        <motion.ul
+          initial={wrapperVariants.closed}
+          animate={open ? "open" : "closed"}
+          variants={wrapperVariants}
+          className={`flex flex-col gap-2 p-2 rounded-lg bg-white shadow-xl absolute top-full left-0 w-48 overflow-hidden`}
+        >
+          {options.map((option: string, index: number) => (
+            <Option key={index} setOpen={setOpen} Icon={FiEdit} text={option} />
+          ))}
+        </motion.ul>
+      )}
     </div>
   );
 };
