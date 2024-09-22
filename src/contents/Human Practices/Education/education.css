@@ -2,9 +2,8 @@
     background-color: #FE9BA1;
     color: white;
     padding: 20px;
-    width: 400px; /* Adjust the width if necessary */
+    width: 1140px; /* Adjust the width if necessary */
     height: 250px;
-    position: fixed; /* Fix it to the viewport */
     right: 0; /* Align it to the right side */
     top: 150px; /* Adjust the distance from the top */
     margin-bottom: 100px; /* Bottom margin for other sections */
