@@ -57,7 +57,7 @@ const StudentsHeading: React.FC = () => {
       <h2 style={{ fontSize: '2.5em', color: '#590000', fontWeight: 'bold', letterSpacing: '2px', marginRight: '20px' }}>
         Students
       </h2>
-      <div style={{ borderTop: '2px solid #590000', width: '500px' }}></div>
+      <div style={{ borderTop: '2px solid #590000', width: '1140px' }}></div>
     </div>
   );
 };
