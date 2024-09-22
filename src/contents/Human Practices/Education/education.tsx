@@ -95,10 +95,11 @@ const NavBar: React.FC = () => {
       <div
         style={{
           display: 'flex',
-          justifyContent: 'center', // Center the navbar
+          justifyContent: 'center', // Keep the navbar centered
           gap: '20px',
-          marginTop: '40px', // Adjust this value for the desired spacing
-          marginBottom: '40px', // Adjust this value for spacing below
+          marginTop: '40px', // Adjust for vertical spacing as needed
+          marginBottom: '40px',
+          paddingLeft: '10px', // This will nudge the navbar to the right
         }}
       >
         {[' ', ' ', ' ', ' ', ' '].map((text, index) => (
@@ -122,6 +123,7 @@ const NavBar: React.FC = () => {
       </div>
   );
 };
+
 
 const APSC103Section = () => {
   return (
