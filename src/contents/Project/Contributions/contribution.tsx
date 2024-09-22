@@ -1,7 +1,11 @@
-import React from 'react';
-import { useEffect, useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import { Card, Col, Container, Row, Button } from 'react-bootstrap';
 import './contributions.css';
+import {
+  FiEdit,
+  FiChevronDown,
+} from "react-icons/fi";
+import { motion } from "framer-motion";
 
 export function Contribution() {
   return (
@@ -118,23 +122,71 @@ const ContributionHeading: React.FC = () => {
 
 const Sidebar: React.FC = () => {
   const sections = [
-    { name: 'Subtitle 1', image: 'https://static.igem.wiki/teams/5079/rose-logo.png' },
-    { name: 'Subtitle 2', image: 'https://static.igem.wiki/teams/5079/rose-logo.png' },
-    { name: 'Subtitle 3', image: 'https://static.igem.wiki/teams/5079/rose-logo.png' },
-    { name: 'Subtitle 4', image: 'https://static.igem.wiki/teams/5079/rose-logo.png' },
+    { name: 'Subtitle 1', image: 'https://static.igem.wiki/teams/5079/rose-logo.png', content: ['Section 1', 'Section 2'] },
+    { name: 'Subtitle 2', image: 'https://static.igem.wiki/teams/5079/rose-logo.png', content: ['Section 1', 'Section 2'] },
+    { name: 'Subtitle 3', image: 'https://static.igem.wiki/teams/5079/rose-logo.png', content: ['Section 1', 'Section 2'] },
+    { name: 'Subtitle 4', image: 'https://static.igem.wiki/teams/5079/rose-logo.png', content: ['Section 1', 'Section 2'] },
   ];
+
+  const [openSection, setOpenSection] = useState<number | null>(null);
 
   return (
     <div className="sidebar">
       <ul>
         {sections.map((section, index) => (
-          <li key={index} onClick={() => document.getElementById(`section-${index}`)?.scrollIntoView({ behavior: 'smooth' })}>
+          <li key={index} onClick={() => setOpenSection(openSection === index ? null : index)}>
             <img src={section.image} alt={section.name} className="section-image" />
             <span>{section.name}</span>
+            {openSection === index && (
+              <StaggeredDropDown options={section.content} />
+            )}
           </li>
         ))}
       </ul>
     </div>
+  );
+};
+
+const StaggeredDropDown = ({ options }) => {
+  const [open, setOpen] = useState(false);
+
+  return (
+    <div className="relative">
+      <button
+        onClick={() => setOpen((pv) => !pv)}
+        className="flex items-center gap-2 px-3 py-2 rounded-md text-indigo-50 bg-indigo-500 hover:bg-indigo-500 transition-colors"
+      >
+        <span className="font-medium text-sm">Toggle Sections</span>
+        <motion.span variants={iconVariants}>
+          <FiChevronDown />
+        </motion.span>
+      </button>
+
+      <motion.ul
+        initial={wrapperVariants.closed}
+        variants={wrapperVariants}
+        className={`flex flex-col gap-2 p-2 rounded-lg bg-white shadow-xl absolute top-full left-0 w-48 overflow-hidden ${!open && 'hidden'}`}
+      >
+        {options.map((option, index) => (
+          <Option key={index} setOpen={setOpen} Icon={FiEdit} text={option} />
+        ))}
+      </motion.ul>
+    </div>
+  );
+};
+
+const Option = ({ text, Icon, setOpen }) => {
+  return (
+    <motion.li
+      variants={itemVariants}
+      onClick={() => setOpen(false)}
+      className="flex items-center gap-2 w-full p-2 text-xs font-medium whitespace-nowrap rounded-md hover:bg-indigo-100 text-slate-700 hover:text-indigo-500 transition-colors cursor-pointer"
+    >
+      <motion.span variants={actionIconVariants}>
+        <Icon />
+      </motion.span>
+      <span>{text}</span>
+    </motion.li>
   );
 };
 
@@ -168,6 +220,24 @@ const BackToTopButton: React.FC = () => {
       ↑ Back to Top
     </Button>
   );
+};
+
+// Animation variants
+const wrapperVariants = {
+  open: {
+    scaleY: 1,
+    transition: {
+      when: "beforeChildren",
+      staggerChildren: 0.1,
+    },
+  },
+  closed: {
+    scaleY: 0,
+    transition: {
+      when: "afterChildren",
+      staggerChildren: 0.1,
+    },
+  },
 };
 
 export default Contribution;
