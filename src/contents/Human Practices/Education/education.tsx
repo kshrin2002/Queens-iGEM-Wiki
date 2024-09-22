@@ -1,4 +1,5 @@
 import React from "react";
+import './education.css';
 
 export function Education() {
   return (
@@ -63,7 +64,7 @@ const StudentsHeading: React.FC = () => {
 
 const WorkshopSection = () => {
   return (
-    <section style={{ backgroundColor: '#FE9BA1', color: 'white', padding: '50px', marginTop: '100px', width: '1140px', height: '250px', marginBottom: '100px' }}>
+    <section className="workshop-section">
       <h2>Workshop</h2>
       <p>
         Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
@@ -71,6 +72,7 @@ const WorkshopSection = () => {
     </section>
   );
 };
+
 
 const APSC103Section = () => {
   return (
