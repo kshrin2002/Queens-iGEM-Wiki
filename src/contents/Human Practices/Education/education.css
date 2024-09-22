@@ -12,10 +12,10 @@
   background-color: #FE9BA1;
   color: white;
   padding: 20px;
-  width: calc(100% - 50px); /* Take up full width minus the right margin */
-  max-width: 1140px; /* Set max width to prevent the section from being too large on wide screens */
-  margin-right: 0; /* No right margin to eliminate space on the right side */
-  box-sizing: border-box; /* Ensure padding is included in the width */
+  width: calc(100% - 50px); 
+  max-width: 1140px; 
+  margin-right: 0; 
+  box-sizing: border-box; 
 }
 
 /* APSC 103 Section */
@@ -23,9 +23,9 @@
   background-color: #FE9BA1;
   color: white;
   padding: 20px;
-  width: calc(100% - 50px); /* Take up full width minus the right margin */
+  width: calc(100% - 50px); 
   max-width: 1140px;
-  margin-top: 50px; /* Adds space above */
+  margin-top: 50px; 
   margin-right: 0;
   box-sizing: border-box;
 }
