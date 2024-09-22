@@ -37,13 +37,31 @@ export function Attributions() {
   };
 
   
-  const ExternalContributionsHeading: React.FC = () => {
+  const ExternalContributions: React.FC = () => {
     return (
-      <div style={{ textAlign: 'center', marginTop: '30px', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
-        <h2 style={{ fontSize: '2.5em', color: '#590000', fontWeight: 'bold', letterSpacing: '2px', marginRight: '20px' }}>
-          EXTERNAL CONTRIBUTIONS
+      <div style={{ 
+        textAlign: 'right', 
+        marginTop: '30px', 
+        display: 'flex', 
+        alignItems: 'center', 
+        justifyContent: 'flex-end', // Align to the right
+        width: '100%', // Ensure the container takes full width
+        boxSizing: 'border-box', 
+        paddingRight: '20px' // Add some padding if needed
+      }}>
+        <h2 style={{ 
+          fontSize: '2.5em', 
+          color: '#590000', 
+          fontWeight: 'bold', 
+          letterSpacing: '2px', 
+          marginRight: '0' // Remove the margin on the right
+        }}>
+          External Contributions
         </h2>
-        <div style={{ borderTop: '2px solid #590000', width: '350px' }}></div>
+        <div style={{ 
+          borderTop: '2px solid #590000', 
+          width: '100%' // Take up the remaining space
+        }}></div>
       </div>
     );
   };
