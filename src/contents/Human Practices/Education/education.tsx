@@ -99,7 +99,7 @@ const NavBar: React.FC = () => {
           gap: '20px',
           marginTop: '40px', // Adjust for vertical spacing as needed
           marginBottom: '40px',
-          paddingLeft: '200px', // This will nudge the navbar to the right
+          paddingLeft: '300px', // This will nudge the navbar to the right
         }}
       >
         {[' ', ' ', ' ', ' ', ' '].map((text, index) => (
