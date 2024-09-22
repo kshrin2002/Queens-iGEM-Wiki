@@ -37,7 +37,7 @@ export function Attributions() {
   };
 
   
-  const ExternalContributions: React.FC = () => {
+  const ExternalContributionsHeading: React.FC = () => {
     return (
       <div style={{ 
         textAlign: 'right', 
