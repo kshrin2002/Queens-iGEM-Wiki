@@ -1,8 +1,5 @@
 import {
-  Home,
-  Hardware,
-  Inclusivity,
-  Measurement,
+  Home
 } from "./contents";
 
 // Wet Lab Folder
