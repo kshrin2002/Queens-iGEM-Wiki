@@ -86,7 +86,7 @@ const CommunityHeading: React.FC = () => {
         alignItems: 'center',
         justifyContent: 'center',
         position: 'absolute',
-        top: '1490px', 
+        top: '1550px', 
         right: '0', 
       }}
     >
