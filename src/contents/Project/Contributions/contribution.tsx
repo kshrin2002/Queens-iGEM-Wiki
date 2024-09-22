@@ -44,6 +44,20 @@ const CardSection: React.FC = () => {
       subtitle2: 'Section 2',
       description2: 'Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.',
     },
+    {
+      title: 'Subtitle 3',
+      subtitle1: 'Section 1',
+      description1: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
+      subtitle2: 'Section 2',
+      description2: 'Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.',
+    },
+    {
+      title: 'Subtitle 4',
+      subtitle1: 'Section 1',
+      description1: 'Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.',
+      subtitle2: 'Section 2',
+      description2: 'Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.',
+    },
   ];
   const placeholderImage = "https://via.placeholder.com/150"; // Placeholder image for now
 
