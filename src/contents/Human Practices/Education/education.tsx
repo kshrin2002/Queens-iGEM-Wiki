@@ -12,6 +12,8 @@ export function Education() {
 
       <WorkshopSection />
 
+      <NavBarn />
+  
       <APSC103Section />
 
     </>
@@ -85,6 +87,30 @@ const WorkshopSection = () => {
         </p>
       </section>
     </div>
+  );
+};
+
+ // New navigation component to replicate the look in the screenshot
+ const NavBar: React.FC = () => {
+  return (
+      <div style={{ display: 'flex', gap: '20px' }}>
+        {[' ', ' ', ' ', ' ', ' '].map((text, index) => (
+          <div
+            key={index}
+            style={{
+              backgroundColor: '#590000',
+              padding: '10px 20px',
+              borderRadius: '20px',
+              color: 'white',
+              textTransform: 'uppercase',
+              fontWeight: 'bold',
+              cursor: 'pointer',
+            }}
+          >
+            {text}
+          </div>
+        ))}
+      </div>
   );
 };
 
