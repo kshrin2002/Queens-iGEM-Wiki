@@ -83,6 +83,7 @@ const Sidebar: React.FC = () => {
     </div>
   );
 };
+
 const CardSection: React.FC = () => {
   const sections = ['Section 1', 'Section 2', 'Section 3', 'Section 4', 'Section 5'];
   const placeholderImage = "https://via.placeholder.com/150"; // Placeholder image for now

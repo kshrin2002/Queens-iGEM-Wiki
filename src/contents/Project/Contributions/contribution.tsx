@@ -84,7 +84,7 @@ const CardSection: React.FC = () => {
   return (
     <Container fluid className="card-container">
       {sections.map((section, index) => (
-        <Card key={index} className="custom-card">
+        <Card key={index} className="custom-card" id={`section-${index}`}>
           <Card.Body>
             <Card.Title>{section.title}</Card.Title>
             <Row>
