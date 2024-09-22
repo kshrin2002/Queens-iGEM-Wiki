@@ -1,18 +1,35 @@
+/* Parent container to align sections to the right */
+.section-container {
+  display: flex;
+  justify-content: flex-end; /* Align content to the right */
+  width: 100%;
+  margin-bottom: 50px; /* Adds space between sections */
+}
+
+/* Workshop Section */
 .workshop-section {
   background-color: #FE9BA1;
   color: white;
   padding: 20px;
-  width: 1140px; 
-  height: 250px;
-  margin-bottom: 100px; /* Keep space between sections */
+  width: 1140px; /* Width of the section */
+  margin-right: 50px; /* Space between section and right edge */
 }
 
+/* APSC 103 Section */
 .apsc103-section {
   background-color: #FE9BA1;
   color: white;
   padding: 20px;
-  width: 1140px; 
-  height: 250px;
+  width: 1140px; /* Width of the section */
+  margin-right: 50px; /* Space between section and right edge */
   margin-top: 50px; /* Adds space above */
-  margin-bottom: 100px; /* Adds space below */
+}
+
+/* Optional: Add this to ensure responsive behavior */
+@media (max-width: 1200px) {
+  .workshop-section,
+  .apsc103-section {
+    width: 100%; /* Ensures sections take full width on smaller screens */
+    margin-right: 0;
+  }
 }
