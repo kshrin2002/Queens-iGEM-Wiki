@@ -269,7 +269,7 @@ export function Attributions() {
           whiteSpace: 'nowrap',  // Prevent wrapping to a new line
           margin: 0  // Ensure no margins break the layout
         }}>
-          Team Lead
+          Dry Lab
         </h2>
         <div style={{ 
           borderTop: '2px solid #590000', 
@@ -354,7 +354,7 @@ const HumanPracticesHeading: React.FC = () => {
         whiteSpace: 'nowrap',  // Prevent wrapping to a new line
         margin: 0  // Ensure no margins break the layout
       }}>
-        Team Lead
+        Human Practices
       </h2>
       <div style={{ 
         borderTop: '2px solid #590000', 
