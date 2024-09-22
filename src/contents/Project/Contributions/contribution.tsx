@@ -147,7 +147,7 @@ const Sidebar: React.FC = () => {
   );
 };
 
-const StaggeredDropDown = ({ options }) => {
+const StaggeredDropDown = ({ options }: { options: string[] }) => {
   const [open, setOpen] = useState(false);
 
   return (
@@ -167,7 +167,7 @@ const StaggeredDropDown = ({ options }) => {
         variants={wrapperVariants}
         className={`flex flex-col gap-2 p-2 rounded-lg bg-white shadow-xl absolute top-full left-0 w-48 overflow-hidden ${!open && 'hidden'}`}
       >
-        {options.map((option, index) => (
+        {options.map((option: string, index: number) => (
           <Option key={index} setOpen={setOpen} Icon={FiEdit} text={option} />
         ))}
       </motion.ul>
@@ -175,7 +175,7 @@ const StaggeredDropDown = ({ options }) => {
   );
 };
 
-const Option = ({ text, Icon, setOpen }) => {
+const Option = ({ text, Icon, setOpen }: { text: string; Icon: React.ElementType; setOpen: (open: boolean) => void }) => {
   return (
     <motion.li
       variants={itemVariants}
