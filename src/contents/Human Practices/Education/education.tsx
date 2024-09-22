@@ -13,6 +13,8 @@ export function Education() {
       <WorkshopSection />
 
       <APSC103Section />
+
+      <CommunityHeading />
     </>
   );
 }
@@ -72,6 +74,40 @@ const APSC103Section = () => {
         Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
       </p>
     </section>
+  );
+};
+
+const CommunityHeading: React.FC = () => {
+  return (
+    <div
+      style={{
+        textAlign: 'center',
+        display: 'flex',
+        alignItems: 'center',
+        justifyContent: 'center',
+        position: 'absolute',
+        top: '1490px', 
+        right: '0', 
+      }}
+    >
+      <h2
+        style={{
+          fontSize: '2.5em',
+          color: '#590000',
+          fontWeight: 'bold',
+          letterSpacing: '2px',
+          marginRight: '20px',
+        }}
+      >
+        Community
+      </h2>
+      <div
+        style={{
+          borderTop: '2px solid #590000',
+          width: '945px',
+        }}
+      ></div>
+    </div>
   );
 };
 
