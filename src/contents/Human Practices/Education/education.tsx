@@ -12,7 +12,7 @@ export function Education() {
 
       <WorkshopSection />
 
-      <NavBarn />
+      <NavBar />
   
       <APSC103Section />
 
