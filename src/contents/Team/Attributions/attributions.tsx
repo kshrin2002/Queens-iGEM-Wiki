@@ -39,14 +39,35 @@ export function Attributions() {
   
   const ExternalContributionsHeading: React.FC = () => {
     return (
-      <div style={{ textAlign: 'center', marginTop: '30px', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
-        <h2 style={{ fontSize: '2.5em', color: '#590000', fontWeight: 'bold', letterSpacing: '2px', marginRight: '20px' }}>
-          EXTERNAL CONTRIBUTIONS
+      <div style={{ 
+        display: 'flex', 
+        alignItems: 'center', 
+        justifyContent: 'space-between',  // Space between heading and line
+        width: '100%', 
+        boxSizing: 'border-box', 
+        paddingRight: '20px',
+        marginTop: '30px'
+      }}>
+        <h2 style={{ 
+          fontSize: '2.5em', 
+          color: '#590000', 
+          fontWeight: 'bold', 
+          letterSpacing: '2px', 
+          whiteSpace: 'nowrap',  // Prevent wrapping to a new line
+          margin: 0  // Ensure no margins break the layout
+        }}>
+          External Contributions
         </h2>
-        <div style={{ borderTop: '2px solid #590000', width: '350px' }}></div>
+        <div style={{ 
+          borderTop: '2px solid #590000', 
+          flexGrow: 1,  // Take up the remaining space
+          marginLeft: '20px'  // Add space between the text and the line
+        }}></div>
       </div>
     );
   };
+
+
   
   
   
@@ -89,6 +110,36 @@ export function Attributions() {
     );
   };
 
+  const TeamLeadHeading: React.FC = () => {
+    return (
+      <div style={{ 
+        display: 'flex', 
+        alignItems: 'center', 
+        justifyContent: 'space-between',  // Space between heading and line
+        width: '100%', 
+        boxSizing: 'border-box', 
+        paddingRight: '20px',
+        marginTop: '30px'
+      }}>
+        <h2 style={{ 
+          fontSize: '2.5em', 
+          color: '#590000', 
+          fontWeight: 'bold', 
+          letterSpacing: '2px', 
+          whiteSpace: 'nowrap',  // Prevent wrapping to a new line
+          margin: 0  // Ensure no margins break the layout
+        }}>
+          Team Lead
+        </h2>
+        <div style={{ 
+          borderTop: '2px solid #590000', 
+          flexGrow: 1,  // Take up the remaining space
+          marginLeft: '20px'  // Add space between the text and the line
+        }}></div>
+      </div>
+    );
+  };
+
   const Card_team: React.FC<CardProps> = ({ description }) => {
     const images = [
       "https://static.igem.wiki/teams/5079/headshot-template-picture.png"
@@ -119,6 +170,37 @@ export function Attributions() {
       </>
     );
   };
+
+  const WetLabHeading: React.FC = () => {
+    return (
+      <div style={{ 
+        display: 'flex', 
+        alignItems: 'center', 
+        justifyContent: 'space-between',  // Space between heading and line
+        width: '100%', 
+        boxSizing: 'border-box', 
+        paddingRight: '20px',
+        marginTop: '30px'
+      }}>
+        <h2 style={{ 
+          fontSize: '2.5em', 
+          color: '#590000', 
+          fontWeight: 'bold', 
+          letterSpacing: '2px', 
+          whiteSpace: 'nowrap',  // Prevent wrapping to a new line
+          margin: 0  // Ensure no margins break the layout
+        }}>
+          Wet Lab
+        </h2>
+        <div style={{ 
+          borderTop: '2px solid #590000', 
+          flexGrow: 1,  // Take up the remaining space
+          marginLeft: '20px'  // Add space between the text and the line
+        }}></div>
+      </div>
+    );
+  };
+
 
   const Card_WetLab: React.FC<CardProps> = ({ description }) => {
     const images = [
@@ -167,6 +249,36 @@ export function Attributions() {
     );
   };
 
+
+  const DryLabHeading: React.FC = () => {
+    return (
+      <div style={{ 
+        display: 'flex', 
+        alignItems: 'center', 
+        justifyContent: 'space-between',  // Space between heading and line
+        width: '100%', 
+        boxSizing: 'border-box', 
+        paddingRight: '20px',
+        marginTop: '30px'
+      }}>
+        <h2 style={{ 
+          fontSize: '2.5em', 
+          color: '#590000', 
+          fontWeight: 'bold', 
+          letterSpacing: '2px', 
+          whiteSpace: 'nowrap',  // Prevent wrapping to a new line
+          margin: 0  // Ensure no margins break the layout
+        }}>
+          Dry Lab
+        </h2>
+        <div style={{ 
+          borderTop: '2px solid #590000', 
+          flexGrow: 1,  // Take up the remaining space
+          marginLeft: '20px'  // Add space between the text and the line
+        }}></div>
+      </div>
+    );
+  };
 
 const Card_DryLab: React.FC<CardProps> = ({ description }) => {
   // Separate the team lead and the other members
@@ -223,6 +335,35 @@ interface SingleImageProps {
   name: string;
   role: string;
 }
+const HumanPracticesHeading: React.FC = () => {
+  return (
+    <div style={{ 
+      display: 'flex', 
+      alignItems: 'center', 
+      justifyContent: 'space-between',  // Space between heading and line
+      width: '100%', 
+      boxSizing: 'border-box', 
+      paddingRight: '20px',
+      marginTop: '30px'
+    }}>
+      <h2 style={{ 
+        fontSize: '2.5em', 
+        color: '#590000', 
+        fontWeight: 'bold', 
+        letterSpacing: '2px', 
+        whiteSpace: 'nowrap',  // Prevent wrapping to a new line
+        margin: 0  // Ensure no margins break the layout
+      }}>
+        Human Practices
+      </h2>
+      <div style={{ 
+        borderTop: '2px solid #590000', 
+        flexGrow: 1,  // Take up the remaining space
+        marginLeft: '20px'  // Add space between the text and the line
+      }}></div>
+    </div>
+  );
+};
 
 const CardHP: React.FC<SingleImageProps> = ({ imageSrc, name, role }) => {
   return (
@@ -248,12 +389,21 @@ const CardHP: React.FC<SingleImageProps> = ({ imageSrc, name, role }) => {
       <AttributionsHeading />
       <ExternalContributionsHeading />
       
+      
 
       {/* Render the Card component properly */}
       <Card description={<span>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</span>} />
+      
+      <TeamLeadHeading />
       <Card_team description={<span>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</span>} />
+      
+      <WetLabHeading />
       <Card_WetLab description={<span>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</span>} />
+      
+      <DryLabHeading />
       <Card_DryLab description={<span>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</span>} />
+      
+      <HumanPracticesHeading />
       <CardHP imageSrc="https://static.igem.wiki/teams/5079/headshot-template-picture.png"
       name="John Doe"
       role="Team Lead" />

@@ -1,11 +1,5 @@
 import {
-  Home,
-  Hardware,
-  Inclusivity,
-  Measurement,
-  Plant,
-  Software,
-  Sustainable,
+  Home
 } from "./contents";
 
 // Wet Lab Folder
@@ -138,7 +132,7 @@ const Pages: (Page | Folder)[] = [
     },
   // this is the end of the folder for wet lab
 
-  // this is the start of the folder for dry lab
+      // this is the start of the folder for dry lab
   {
     name: "Dry Lab",
     folder: [
@@ -192,39 +186,18 @@ const Pages: (Page | Folder)[] = [
         lead: "Testing 123",
       },
       {
-        name: "Hardware",
-        title: "Hardware",
-        path: "/hardware",
-        component: Hardware,
-        lead: "Hardware in iGEM should make synthetic biology based on standard parts easier, faster, better, or more accessible to our community.",
+        name: "Team",
+        title: "Team",
+        path: "/team",
+        component: Team,
+        lead: "On this page you can introduce your team members, instructors, and advisors.",
       },
       {
-        name: "Inclusivity",
-        title: "Diversity and Inclusion",
-        path: "/inclusivity",
-        component: Inclusivity,
-        lead: "Every individual, regardless of background or experience, should have an equal opportunity to engage with scientific knowledge and technological development.",
-      },
-      {
-        name: "Measurement",
-        title: "Measurement",
-        path: "/measurement",
-        component: Measurement,
-        lead: "Synthetic Biology needs great measurement approaches for characterizing parts, and efficient new methods for characterizing many parts at once. Describe your measurement approaches on this page.",
-      },
-      {
-        name: "Plant",
-        title: "Plant",
-        path: "/plant",
-        component: Plant,
-        lead: "This award is designed to celebrate exemplary work done in plant synthetic biology.",
-      },
-      {
-        name: "Software",
-        title: "Software",
-        path: "/software",
-        component: Software,
-        lead: "Software in iGEM should make synthetic biology based on standard parts easier, faster, better or more accessible to our community.",
+        name: "Attributions",
+        title: "Attributions",
+        path: "/attributions",
+        component: Attributions,
+        lead: "In the iGEM Competition, we celebrate student effort and achievement. The Attributions form helps the judges differentiate between what students accomplished from how their external collaborators supported them. Therefore, teams must clearly explain on the standard Project Attributions form what work they have conducted by themselves and what has been done by others.",
       },
       {
         name: "Sustainable",
