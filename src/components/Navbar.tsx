@@ -145,7 +145,6 @@ export function Navbar() {
 
   return (
     <>
-      {/* Placeholder image that slides left when the navbar is visible */}
       <div className={`navbar-placeholder ${showNavbar ? "slide-left" : "slide-center"}`}>
         <img src="https://static.igem.wiki/teams/5079/rose-logo.png" alt="Menu" />
       </div>
@@ -154,7 +153,6 @@ export function Navbar() {
           <a href="/"></a>
       </div>
 
-      {/* Full Navbar that transitions smoothly */}
       <BootstrapNavbar
         expand="lg"
         className={`bg-body-tertiary full-navbar ${showNavbar ? "visible" : "hidden"}`}
