@@ -58,7 +58,6 @@
   margin-bottom: 20px; /* Space between the cards */
   width: 100%; /* Make each card fill the container's width */
   height: 70vh;
-  transition: transform 0.3s ease; /* Smooth transition for the hover effect */
 }
 
 .center-title {
