@@ -31,6 +31,7 @@ import {HumanPractices} from "./contents/Human Practices/Integrated Human Practi
 import {Education} from "./contents/Human Practices/Education/education";
 import {Entrepreneurship} from "./contents/Human Practices/Entrepreneurs/entrepreneurship";
 import {PatientStories} from "./contents/Human Practices/Patient Stories/patient-stories";
+import {Sustainable} from "./contents/sustainable"
 
 interface Base {
   name: string | undefined;
