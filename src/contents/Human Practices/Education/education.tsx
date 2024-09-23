@@ -87,6 +87,7 @@ const NavBar: React.FC = () => {
           gap: '20px',
           marginTop: '40px', // Adjust this value for the desired spacing
           marginBottom: '40px', // Adjust this value for spacing below
+          paddingLeft: '300px'
         }}
       >
         {[' ', ' ', ' ', ' ', ' '].map((text, index) => (
