@@ -1,5 +1,7 @@
 import React from "react";
 import './education.css';
+import { Card, Col, Container, Row} from 'react-bootstrap';
+
 export function Education() {
   return (
     <>
