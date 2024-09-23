@@ -5,6 +5,7 @@
   margin-bottom: 50px; /* Adds space between sections */
   box-sizing: border-box; /* Ensure padding and border are included in the width */
 }
+
 /* Workshop Section */
 .workshop-section {
   background-color: #FE9BA1;
@@ -15,6 +16,7 @@
   margin-right: 0;
   box-sizing: border-box;
 }
+
 /* APSC 103 Section */
 .apsc103-section {
   background-color: #FE9BA1;
@@ -26,6 +28,7 @@
   margin-right: 0;
   box-sizing: border-box;
 }
+
 .section-navbar {
   display: flex;
   justify-content: center;
@@ -59,6 +62,7 @@
   margin-bottom: 20px; /* Space between the cards */
   width: 100%; /* Make each card fill the container's width */
   height: 70vh;
+  /* No hover styles */
 }
 
 .center-title {
