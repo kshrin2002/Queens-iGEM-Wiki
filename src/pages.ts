@@ -9,7 +9,7 @@ import {Experiments} from "./contents/Wet Lab/Experiments/experiments";
 import {Safety} from "./contents/Wet Lab/Safety/safety";
 import {Parts} from "./contents/Wet Lab/Parts/parts";
 //import {ProofOfConcepts} from "./contents/Wet Lab/Proof of Concepts/proofofconcepts";
-//import {ResultsAndAnalysis} from "./contents/Wet Lab/Results & Analysis/resultsandanalysis";
+import {Results} from "./contents/Wet Lab/Results & Analysis/resultsandanalysis";
 
 // Dry Lab Folder
 import {Engineering} from "./contents/Dry Lab/Engineering/engineering";
@@ -128,6 +128,13 @@ const Pages: (Page | Folder)[] = [
           component: Safety,
           lead: "test 123",
         },
+        {
+          name: "Results and Analysis",
+          title: "Results",
+          path: "/resultsandanalysis",
+          component: Results,
+          lead: "test 123",
+        }
         //add proof of concept here
       ],
     },
