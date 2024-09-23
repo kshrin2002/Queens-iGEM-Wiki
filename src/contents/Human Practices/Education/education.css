@@ -62,6 +62,7 @@
   margin-bottom: 20px; /* Space between the cards */
   width: 100%; /* Make each card fill the container's width */
   height: 70vh;
+  border: 2px solid #FE9BA1; /* Set the border color to match the background */
   /* No hover styles */
 }
 
