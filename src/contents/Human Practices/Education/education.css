@@ -45,3 +45,33 @@
   border-radius: 50px;
   height: 500px;
 }
+
+.card-container {
+  width: 100%; /* Make the card container 60% of the screen width */
+  position: relative;
+  right: 0;
+  margin-left: 15vw; /* Align to the right side */
+}
+
+.custom-card {
+  border-radius: 20px;
+  margin-bottom: 20px; /* Space between the cards */
+  width: 100%; /* Make each card fill the container's width */
+  height: 70vh;
+  transition: transform 0.3s ease; /* Smooth transition for the hover effect */
+}
+
+.center-title {
+  text-align: center; /* Center the card title */
+  margin-bottom: 20px; /* Add some space below the title */
+}
+
+.text-container {
+  display: flex;
+  justify-content: center; /* Vertically center the text */
+  align-items: center;
+}
+
+.card-wrapper {
+  position: relative;
+}
