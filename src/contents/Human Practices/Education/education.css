@@ -47,7 +47,7 @@
 }
 
 .card-container {
-  width: 100%; /* Make the card container 60% of the screen width */
+  width: 900px; /* Make the card container 60% of the screen width */
   position: relative;
   right: 0;
   margin-left: 15vw; /* Align to the right side */
