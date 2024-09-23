@@ -156,7 +156,7 @@ const CardSection: React.FC = () => {
               <Card.Text>{section.description}</Card.Text>
             </Col>
             <Col xs={4}>
-              <img src={placeholderImage} alt={`Image for ${section.title}`} style={{ width: '100%', height: 'auto' }} />
+              <img src={placeholderImage} alt={`Image for ${section.title}`} style={{ width: '200px', height: '200px', radius: '100px' }} />
             </Col>
           </Row>
         </Card.Body>
