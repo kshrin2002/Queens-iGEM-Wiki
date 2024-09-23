@@ -12,6 +12,7 @@ export function Education() {
       <NavBar />
       <NavbarSection />
       <APSC103Section />
+      <CardSection />
     </>
   );
 }
