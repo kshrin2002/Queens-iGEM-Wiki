@@ -34,7 +34,7 @@ export function Navbar() {
         Math.pow(mouseY - (rect.top + rect.height / 2), 2)
       );
 
-      return distance < 200;
+      return distance < 400;
     }
 
     return false;
@@ -148,6 +148,10 @@ export function Navbar() {
       {/* Placeholder image that slides left when the navbar is visible */}
       <div className={`navbar-placeholder ${showNavbar ? "slide-left" : "slide-center"}`}>
         <img src="https://static.igem.wiki/teams/5079/rose-logo.png" alt="Menu" />
+      </div>
+
+      <div className="homelink">
+          <a href="/"></a>
       </div>
 
       {/* Full Navbar that transitions smoothly */}

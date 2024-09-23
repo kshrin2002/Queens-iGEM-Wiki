@@ -63,69 +63,79 @@ const Pages: (Page | Folder)[] = [
     component: Home,
     lead: "Welcome to iGEM 2024! Your team has been approved and you are ready to start the iGEM season!",
   },
-  {
-    // this is the start of the folder for team
-    name: "Team",
-    folder: [
-      {
-        name: "Team",
-        title: "Team",
-        path: "/team",
-        component: Team,
-        lead: "On this page you can introduce your team members, instructors, and advisors.",
-      },
-      {
-        name: "Attributions",
-        title: "Attributions",
-        path: "/attributions",
-        component: Attributions,
-        lead: "In the iGEM Competition, we celebrate student effort and achievement. The Attributions form helps the judges differentiate between what students accomplished from how their external collaborators supported them. Therefore, teams must clearly explain on the standard Project Attributions form what work they have conducted by themselves and what has been done by others.",
-      },
-      {
-        name: "Collaborations",
-        title: "Collaborations",
-        path: "/collaborations",
-        component: Collaborations,
-        lead: "test 123",
-      },
-    ],
-  },
 
-  {
+    // this is the start of the folder for project
+    {
+      name: "Project",
+      folder: [
+        {
+          name: "Contribution",
+          title: "Contribution",
+          path: "/contribution",
+          component: Contribution,
+          lead: "Make a useful contribution for future iGEM teams. Use this page to document that contribution.",
+        },
+        {
+          name: "Description",
+          title: "Project Description",
+          path: "/description",
+          component: Description,
+          lead: "Describe how and why you chose your iGEM project.",
+        },
+        {
+          name: "Implementation",
+          title: "Implementation",
+          path: "/implementation",
+          component: Implementation,
+          lead: "Testing 123",
+        },
+        {
+          name: "Judging",
+          title: "Judging",
+          path: "/judging",
+          component: Judging,
+          lead: "Testing 123",
+        },
+      ],
+    },
+  
+    // this is the end of the folder for projects
+
   // this is the start of the folder for wet lab
-  name: "Wet Lab",
-    folder: [
-      {
-        name: "Design",
-        title: "Design",
-        path: "/design",
-        component: Design,
-        lead: "test 123",
-      },
-      {
-        name: "Experiments",
-        title: "Experiments",
-        path: "/experiments",
-        component: Experiments,
-        lead: "test 123",
-      },
-      {
-        name: "Parts",
-        title: "Parts",
-        path: "/parts",
-        component: Parts,
-        lead: "test 123",
-      },
-      {
-        name: "Safety",
-        title: "Safety",
-        path: "/safety",
-        component: Safety,
-        lead: "test 123",
-      },
-      //add proof of concept here
-    ],
-  },
+  {
+    name: "Wet Lab",
+      folder: [
+        {
+          name: "Design",
+          title: "Design",
+          path: "/design",
+          component: Design,
+          lead: "test 123",
+        },
+        {
+          name: "Experiments",
+          title: "Experiments",
+          path: "/experiments",
+          component: Experiments,
+          lead: "test 123",
+        },
+        {
+          name: "Parts",
+          title: "Parts",
+          path: "/parts",
+          component: Parts,
+          lead: "test 123",
+        },
+        {
+          name: "Safety",
+          title: "Safety",
+          path: "/safety",
+          component: Safety,
+          lead: "test 123",
+        },
+        //add proof of concept here
+      ],
+    },
   // this is the end of the folder for wet lab
 
   // this is the start of the folder for dry lab
@@ -149,45 +159,6 @@ const Pages: (Page | Folder)[] = [
     ],
   },
   // this is the end of the folder for dry lab
-
-  // this is the start of the folder for project
-  {
-    name: "Project",
-    folder: [
-      {
-        name: "Contribution",
-        title: "Contribution",
-        path: "/contribution",
-        component: Contribution,
-        lead: "Make a useful contribution for future iGEM teams. Use this page to document that contribution.",
-      },
-      {
-        name: "Description",
-        title: "Project Description",
-        path: "/description",
-        component: Description,
-        lead: "Describe how and why you chose your iGEM project.",
-      },
-      {
-        name: "Implementation",
-        title: "Implementation",
-        path: "/implementation",
-        component: Implementation,
-        lead: "Testing 123",
-      },
-      {
-        name: "Judging",
-        title: "Judging",
-        path: "/judging",
-        component: Judging,
-        lead: "Testing 123",
-      },
-    ],
-  },
-
-  // this is the end of the folder for projects
-
-
   // this is start of the folder for human practices
   {
     name: "Human Practices",
@@ -220,13 +191,6 @@ const Pages: (Page | Folder)[] = [
         component: PatientStories,
         lead: "Testing 123",
       },
-    ],
-  },
-
-  {
-    // this is the start of the folder for awards
-    name: "Awards",
-    folder: [
       {
         name: "Hardware",
         title: "Hardware",
@@ -268,9 +232,55 @@ const Pages: (Page | Folder)[] = [
         path: "/sustainable",
         component: Sustainable,
         lead: "Describe how you have evaluated your project ideas against one or more of the SDGs.",
+      }
+    ],
+  },
+  // this is the end of the folder for human practices
+  {
+    // this is the start of the folder for team
+    name: "Team",
+    folder: [
+      {
+        name: "Team",
+        title: "Team",
+        path: "/team",
+        component: Team,
+        lead: "On this page you can introduce your team members, instructors, and advisors.",
+      },
+      {
+        name: "Attributions",
+        title: "Attributions",
+        path: "/attributions",
+        component: Attributions,
+        lead: "In the iGEM Competition, we celebrate student effort and achievement. The Attributions form helps the judges differentiate between what students accomplished from how their external collaborators supported them. Therefore, teams must clearly explain on the standard Project Attributions form what work they have conducted by themselves and what has been done by others.",
+      },
+      {
+        name: "Collaborations",
+        title: "Collaborations",
+        path: "/collaborations",
+        component: Collaborations,
+        lead: "test 123",
       },
     ],
   },
+
+
+
+
+
+
+
+
+
+
+  // {
+  //   // this is the start of the folder for awards
+  //   name: "Awards",
+  //   folder: [
+
+  //     },
+  //   ],
+  // },
 ];
 
 export default Pages;

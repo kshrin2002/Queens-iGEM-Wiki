@@ -63,12 +63,12 @@
 
 /* Slide the placeholder to the left when the navbar is visible */
 .navbar-placeholder.slide-left {
-    transform: translateX(-40vw);   
+    transform: translateX(-33vw);   
 }
 
 /* Return the placeholder to the center when the navbar is hidden */
 .navbar-placeholder.slide-center {
-    transform: translateX(0);   
+    transform: translateX(-48vw);   
 }
 
 /* Media Query for Small Screens */
