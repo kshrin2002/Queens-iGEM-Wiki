@@ -69,9 +69,11 @@
 .center-title {
   text-align: center; /* Center the card title */
   margin-bottom: 20px; /* Add some space below the title */
+  color: white;
 }
 
 .text-container {
+  color: white;
   display: flex;
   justify-content: center; /* Vertically center the text */
   align-items: center;
