@@ -5,6 +5,7 @@
   margin-bottom: 50px; /* Adds space between sections */
   box-sizing: border-box; /* Ensure padding and border are included in the width */
 }
+
 /* Workshop Section */
 .workshop-section {
   background-color: #FE9BA1;
@@ -15,6 +16,7 @@
   margin-right: 0;
   box-sizing: border-box;
 }
+
 /* APSC 103 Section */
 .apsc103-section {
   background-color: #FE9BA1;
@@ -26,6 +28,7 @@
   margin-right: 0;
   box-sizing: border-box;
 }
+
 .section-navbar {
   display: flex;
   justify-content: center;
@@ -44,4 +47,38 @@
   box-sizing: border-box;
   border-radius: 50px;
   height: 500px;
+}
+
+.card-container {
+  width: 900px; /* Make the card container 60% of the screen width */
+  height: 500px;
+  position: relative;
+  right: 0;
+  margin-left: 15vw; /* Align to the right side */
+}
+
+.custom-card {
+  border-radius: 20px;
+  margin-bottom: 20px; /* Space between the cards */
+  width: 100%; /* Make each card fill the container's width */
+  height: 70vh;
+  border: 2px solid #FE9BA1; /* Set the border color to match the background */
+  /* No hover styles */
+}
+
+.center-title {
+  text-align: center; /* Center the card title */
+  margin-bottom: 20px; /* Add some space below the title */
+  color: white;
+}
+
+.text-container {
+  color: white;
+  display: flex;
+  justify-content: center; /* Vertically center the text */
+  align-items: center;
+}
+
+.card-wrapper {
+  position: relative;
 }

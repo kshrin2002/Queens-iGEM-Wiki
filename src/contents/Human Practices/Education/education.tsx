@@ -1,5 +1,7 @@
 import React from "react";
 import './education.css';
+import { Card, Col, Container, Row} from 'react-bootstrap';
+
 export function Education() {
   return (
     <>
@@ -10,6 +12,7 @@ export function Education() {
       <NavBar />
       <NavbarSection />
       <APSC103Section />
+      <CardSection />
     </>
   );
 }
@@ -134,4 +137,32 @@ const APSC103Section = () => {
     </div>
   );
 };
+
+const CardSection: React.FC = () => {
+  const section = {
+    title: 'Experiential Learning',
+    description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.',
+  };
+
+  const placeholderImage = "https://via.placeholder.com/150"; // Placeholder image for now
+
+  return (
+    <Container fluid className="card-container">
+      <Card className="custom-card" style={{ backgroundColor: '#FE9BA1' }}>
+        <Card.Body>
+          <Card.Title>{section.title}</Card.Title>
+          <Row>
+            <Col xs={8}>
+              <Card.Text>{section.description}</Card.Text>
+            </Col>
+            <Col xs={4}>
+              <img src={placeholderImage} alt={`Image for ${section.title}`} style={{ width: '200px', height: '200px', borderRadius: '100px' }} />
+            </Col>
+          </Row>
+        </Card.Body>
+      </Card>
+    </Container>
+  );
+};
+
 export default Education;
