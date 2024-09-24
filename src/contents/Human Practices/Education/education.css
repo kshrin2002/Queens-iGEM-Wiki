@@ -50,11 +50,10 @@
 }
 
 .card-container {
-  width: 900px; /* Make the card container 60% of the screen width */
-  height: 500px;
-  position: relative;
-  right: 0;
-  margin-left: 15vw; /* Align to the right side */
+  max-width: 900px; /* Limit the card width */
+  margin-left: 25vw; /* Adjust this value to align with APSC 103 section */
+  padding: 20px; /* Add some padding to prevent overflow */
+  height: auto; /* Allow the container to adjust to its content */
 }
 
 .custom-card {
