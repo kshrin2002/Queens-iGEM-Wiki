@@ -1,413 +1,177 @@
-import React, { useEffect } from "react";
-
-// Define the props for Card with TypeScript types
-interface CardProps {
-  description: React.ReactNode;
-}
+import React, { useEffect, useState } from 'react';
+import { Card, Row, Col, Container } from 'react-bootstrap';
+import './attributions.css'; // Import the CSS file
 
 export function Attributions() {
-  // const teamID = import.meta.env.VITE_TEAM_ID;
-
-  useEffect(() => {
-    function listenToIframeHeight(e: MessageEvent) {
-      if (e.origin === "https://teams.igem.org") {
-        const { type, data } = JSON.parse(e.data);
-        if (type === "igem-attribution-form") {
-          const element = document.getElementById("igem-attribution-form");
-          if (element) {
-            element.style.height = `${data + 100}px`;
-          }
-        }
-      }
-    }
-    window.addEventListener("message", listenToIframeHeight);
-    return () => {
-      window.removeEventListener("message", listenToIframeHeight);
-    };
-  }, []);
-
-  const AttributionsHeading: React.FC = () => {
-    return (
-      <div style={{ textAlign: 'center', marginTop: '30px' }}>
-        <h1 style={{ fontSize: '5em', color: '#590000', fontWeight: 'bold', letterSpacing: '2px' }}>
-          ATTRIBUTIONS
-        </h1>
+  return (
+    <>
+      <div className='main'>
+        <DesignHeading />
+        <div className="main-content">
+          <Sidebar />
+          <CardSection />
+        </div>
       </div>
-    );
-  };
+    </>
+  );
+}
 
-  
-  const ExternalContributionsHeading: React.FC = () => {
-    return (
-      <div style={{ 
-        display: 'flex', 
-        alignItems: 'center', 
-        justifyContent: 'space-between',  // Space between heading and line
-        width: '100%', 
-        boxSizing: 'border-box', 
-        paddingRight: '20px',
-        marginTop: '30px'
-      }}>
-        <h2 style={{ 
-          fontSize: '2.5em', 
-          color: '#590000', 
-          fontWeight: 'bold', 
-          letterSpacing: '2px', 
-          whiteSpace: 'nowrap',  // Prevent wrapping to a new line
-          margin: 0  // Ensure no margins break the layout
-        }}>
-          External Contributions
-        </h2>
-        <div style={{ 
-          borderTop: '2px solid #590000', 
-          flexGrow: 1,  // Take up the remaining space
-          marginLeft: '20px'  // Add space between the text and the line
-        }}></div>
-      </div>
-    );
-  };
+const DesignHeading: React.FC = () => {
+  return (
+    <div style={{ textAlign: 'center', marginTop: '138px' }}>
+      <h1
+        style={{
+          fontSize: '5em',
+          color: '#590000',
+          fontWeight: 'bold',
+          letterSpacing: '2px'
+        }}
+      >
+        ATTRIBUTIONS
+      </h1>
+    </div>
+  );
+};
 
-
-  
-  
-  
-  const Card: React.FC<CardProps> = ({ description }) => {
-    const images = [
-      "https://static.igem.wiki/teams/5079/headshot-template-picture.png",
-      "https://static.igem.wiki/teams/5079/headshot-template-picture.png",
-      "https://static.igem.wiki/teams/5079/headshot-template-picture.png"
-    ];
-  
-    return (
-      <>
-        {images.length === 3 && (
-          <>
-            {/* Row with 3 images and names */}
-            <div style={{ display: 'flex', justifyContent: 'center', gap: '30px', flexWrap: 'wrap', marginBottom: '20px' }}>
-              {images.map((image, index) => (
-                <div key={index} style={{ textAlign: 'center' }}>
-                  <img
-                    src={image}
-                    alt={`Image ${index + 1}`}
-                    style={{ width: '150px', height: '150px', borderRadius: '50%', marginBottom: '10px' }}
-                  />
-                  {/* Name and Role under each image */}
-                  <p style={{ fontWeight: 'bold', margin: '5px 0' }}>NAME</p>
-                  <p style={{ fontSize: '14px', color: '#8B0000' }}>ROLE</p>
-                </div>
-              ))}
-            </div>
-  
-            {/* Description text centered under images */}
-            <div style={{ textAlign: 'center', marginTop: '20px' }}>
-              <p style={{ maxWidth: '600px', margin: '0 auto', lineHeight: '1.5' }}>
-                {description}
-              </p>
-            </div>
-          </>
-        )}
-      </>
-    );
-  };
-
-  const TeamLeadHeading: React.FC = () => {
-    return (
-      <div style={{ 
-        display: 'flex', 
-        alignItems: 'center', 
-        justifyContent: 'space-between',  // Space between heading and line
-        width: '100%', 
-        boxSizing: 'border-box', 
-        paddingRight: '20px',
-        marginTop: '30px'
-      }}>
-        <h2 style={{ 
-          fontSize: '2.5em', 
-          color: '#590000', 
-          fontWeight: 'bold', 
-          letterSpacing: '2px', 
-          whiteSpace: 'nowrap',  // Prevent wrapping to a new line
-          margin: 0  // Ensure no margins break the layout
-        }}>
-          Team Lead
-        </h2>
-        <div style={{ 
-          borderTop: '2px solid #590000', 
-          flexGrow: 1,  // Take up the remaining space
-          marginLeft: '20px'  // Add space between the text and the line
-        }}></div>
-      </div>
-    );
-  };
-
-  const Card_team: React.FC<CardProps> = ({ description }) => {
-    const images = [
-      "https://static.igem.wiki/teams/5079/headshot-template-picture.png"
-    ];
-  
-    return (
-      <>
-        {/* First row with one image centered */}
-        {images.length === 1 && (
-          <>
-            <div style={{ display: 'flex', justifyContent: 'center', marginBottom: '20px' }}>
-              <img
-                src={images[0]}
-                alt="Team Member"
-                style={{ width: '150px', height: '150px', borderRadius: '50%', marginBottom: '10px' }}
-              />
-            </div>
-  
-            {/* Name and description centered below the image */}
-            <p style={{ textAlign: 'center', fontWeight: 'bold' }}>NAME</p>
-  
-            {/* Custom description passed as prop */}
-            <div style={{ marginTop: '10px', textAlign: 'center' }}>
-              <p>{description}</p>
-            </div>
-          </>
-        )}
-      </>
-    );
-  };
-
-  const WetLabHeading: React.FC = () => {
-    return (
-      <div style={{ 
-        display: 'flex', 
-        alignItems: 'center', 
-        justifyContent: 'space-between',  // Space between heading and line
-        width: '100%', 
-        boxSizing: 'border-box', 
-        paddingRight: '20px',
-        marginTop: '30px'
-      }}>
-        <h2 style={{ 
-          fontSize: '2.5em', 
-          color: '#590000', 
-          fontWeight: 'bold', 
-          letterSpacing: '2px', 
-          whiteSpace: 'nowrap',  // Prevent wrapping to a new line
-          margin: 0  // Ensure no margins break the layout
-        }}>
-          Wet Lab
-        </h2>
-        <div style={{ 
-          borderTop: '2px solid #590000', 
-          flexGrow: 1,  // Take up the remaining space
-          marginLeft: '20px'  // Add space between the text and the line
-        }}></div>
-      </div>
-    );
-  };
-
-
-  const Card_WetLab: React.FC<CardProps> = ({ description }) => {
-    const images = [
-      "https://static.igem.wiki/teams/5079/headshot-template-picture.png",
-      "https://static.igem.wiki/teams/5079/headshot-template-picture.png",
-      "https://static.igem.wiki/teams/5079/headshot-template-picture.png",
-      "https://static.igem.wiki/teams/5079/headshot-template-picture.png"
-    ];
-
-    return (
-      <>
-        {/* First row with one image centered */}
-        {images.length >= 1 && (
-          <>
-            <div style={{ display: 'flex', justifyContent: 'center', marginBottom: '20px' }}>
-              <img
-                src={images[0]}
-                alt="Team Lead"
-                style={{ width: '150px', height: '150px', borderRadius: '50%', marginBottom: '10px' }}
-              />
-            </div>
-            <p style={{ textAlign: 'center', fontWeight: 'bold' }}>NAME</p>
-            <p style={{ textAlign: 'center', color: '#8b0000' }}>TEAM LEAD</p>
-  
-            {/* Second row with three images */}
-            <div style={{ display: 'flex', justifyContent: 'center', gap: '10px' }}>
-              {images.slice(1).map((image, index) => (
-                <div key={index} style={{ textAlign: 'center' }}>
-                  <img
-                    src={image}
-                    alt={`Image ${index + 2}`}
-                    style={{ width: '150px', height: '150px', borderRadius: '50%', marginBottom: '10px' }}
-                  />
-                  <p>NAME</p>
-                </div>
-              ))}
-            </div>
-  
-            {/* Description text */}
-            <div style={{ marginTop: '20px', textAlign: 'center' }}>
-              <p>{description}</p>
-            </div>
-          </>
-        )}
-      </>
-    );
-  };
-
-
-  const DryLabHeading: React.FC = () => {
-    return (
-      <div style={{ 
-        display: 'flex', 
-        alignItems: 'center', 
-        justifyContent: 'space-between',  // Space between heading and line
-        width: '100%', 
-        boxSizing: 'border-box', 
-        paddingRight: '20px',
-        marginTop: '30px'
-      }}>
-        <h2 style={{ 
-          fontSize: '2.5em', 
-          color: '#590000', 
-          fontWeight: 'bold', 
-          letterSpacing: '2px', 
-          whiteSpace: 'nowrap',  // Prevent wrapping to a new line
-          margin: 0  // Ensure no margins break the layout
-        }}>
-          Dry Lab
-        </h2>
-        <div style={{ 
-          borderTop: '2px solid #590000', 
-          flexGrow: 1,  // Take up the remaining space
-          marginLeft: '20px'  // Add space between the text and the line
-        }}></div>
-      </div>
-    );
-  };
-
-const Card_DryLab: React.FC<CardProps> = ({ description }) => {
-  // Separate the team lead and the other members
-  const teamLead = "https://static.igem.wiki/teams/5079/headshot-template-picture.png";
-  const teamMembers = [
-    "https://static.igem.wiki/teams/5079/headshot-template-picture.png",
-    "https://static.igem.wiki/teams/5079/headshot-template-picture.png",
-    "https://static.igem.wiki/teams/5079/headshot-template-picture.png",
-    "https://static.igem.wiki/teams/5079/headshot-template-picture.png",
-    "https://static.igem.wiki/teams/5079/headshot-template-picture.png",
-    "https://static.igem.wiki/teams/5079/headshot-template-picture.png"
+const Sidebar: React.FC = () => {
+  const sections = [
+    { name: 'External Contributors', image: 'https://static.igem.wiki/teams/5079/rose-logo.png' },
+    { name: 'Team Lead', image: 'https://static.igem.wiki/teams/5079/rose-logo.png' },
+    { name: 'Wet Lab', image: 'https://static.igem.wiki/teams/5079/rose-logo.png' },
+    { name: 'Section 4', image: 'https://static.igem.wiki/teams/5079/rose-logo.png' },
+    { name: 'Section 5', image: 'https://static.igem.wiki/teams/5079/rose-logo.png' },
   ];
 
   return (
-    <>
-      {/* Team Lead Section */}
-      <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', marginBottom: '20px' }}>
-        <img
-          src={teamLead}
-          alt="Team Lead"
-          style={{ width: '150px', height: '150px', borderRadius: '50%', marginBottom: '10px' }}
-        />
-        <p style={{ fontWeight: 'bold', margin: '5px 0', textAlign: 'center' }}>NAME</p>
-        <p style={{ fontSize: '14px', color: '#8B0000', textAlign: 'center' }}>TEAM LEAD</p>
-      </div>
-
-      {/* Team Members Section */}
-      <div style={{ display: 'flex', justifyContent: 'center', flexWrap: 'wrap', maxWidth: '500px', margin: '0 auto', gap: '20px' }}>
-        {teamMembers.map((member, index) => (
-          <div key={index} style={{ textAlign: 'center', width: '150px' }}>
-            <img
-              src={member}
-              alt={`Team Member ${index + 1}`}
-              style={{ width: '150px', height: '150px', borderRadius: '50%', marginBottom: '10px' }}
-            />
-            <p style={{ fontWeight: 'bold', margin: '5px 0' }}>NAME</p>
-            <p style={{ fontSize: '14px', color: '#8B0000' }}>ROLE</p>
-          </div>
+    <div className="sidebar">
+      <ul>
+        {sections.map((section, index) => (
+          <li key={index} onClick={() => document.getElementById(`section-${index}`)?.scrollIntoView({ behavior: 'smooth' })}>
+            <img src={section.image} alt={section.name} className="section-image" />
+            <span>{section.name}</span>
+          </li>
         ))}
-      </div>
-
-      {/* Dry Lab Description */}
-      <div style={{ textAlign: 'center', marginTop: '20px' }}>
-        <p style={{ maxWidth: '600px', margin: '0 auto', lineHeight: '1.5' }}>
-          {description}
-        </p>
-      </div>
-    </>
-  );
-};
-
-interface SingleImageProps {
-  imageSrc: string;
-  name: string;
-  role: string;
-}
-const HumanPracticesHeading: React.FC = () => {
-  return (
-    <div style={{ 
-      display: 'flex', 
-      alignItems: 'center', 
-      justifyContent: 'space-between',  // Space between heading and line
-      width: '100%', 
-      boxSizing: 'border-box', 
-      paddingRight: '20px',
-      marginTop: '30px'
-    }}>
-      <h2 style={{ 
-        fontSize: '2.5em', 
-        color: '#590000', 
-        fontWeight: 'bold', 
-        letterSpacing: '2px', 
-        whiteSpace: 'nowrap',  // Prevent wrapping to a new line
-        margin: 0  // Ensure no margins break the layout
-      }}>
-        Human Practices
-      </h2>
-      <div style={{ 
-        borderTop: '2px solid #590000', 
-        flexGrow: 1,  // Take up the remaining space
-        marginLeft: '20px'  // Add space between the text and the line
-      }}></div>
+      </ul>
     </div>
   );
 };
 
-const CardHP: React.FC<SingleImageProps> = ({ imageSrc, name, role }) => {
+const CardSection: React.FC = () => {
+  const sections = ['External Contributors', 'Team Lead', 'Wet Lab', 'Section 4', 'Section 5'];
+  const placeholderImage = "https://via.placeholder.com/150";
+
   return (
-    <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', marginTop: '20px' }}>
-      <img
-        src={imageSrc}
-        alt="Single Image"
-        style={{ width: '150px', height: '150px', borderRadius: '50%' }}
-      />
-      <p style={{ margin: '10px 0 0 0', fontWeight: 'bold' }}>{name}</p>
-      <p style={{ margin: '5px 0 0 0', color: 'maroon' }}>{role}</p>
-    </div>
+    <Container fluid className="card-container">
+      {sections.map((section, index) => (
+        <div key={index} id={`section-${index}`} className="card-wrapper">
+          <Card 
+            className="custom-card" 
+            style={{ 
+              border: 'none', 
+              ...(index === 0 ? { minHeight: '700px' } : {}),
+              ...(index === 2 ? { minHeight: '1000px' } : {})
+            }}
+          >
+            <Card.Header style={{ 
+              fontSize: '3.5em', 
+              fontWeight: 'bold', 
+              color: '#590000', 
+              textAlign: 'left',
+              backgroundColor: 'transparent',
+              borderBottom: 'none',
+              paddingBottom: '10px',
+              display: 'flex',
+              alignItems: 'center',
+              gap: '10px'
+            }}>
+              <span>{section}</span>
+              <div style={{ 
+                flexGrow: 1, 
+                height: '0.1em', 
+                backgroundColor: '#590000',
+                marginLeft: '10px' 
+              }}></div>
+            </Card.Header>
+
+            <Card.Body style={index === 0 ? { padding: '30px', minHeight: '600px' } : index === 2 ? { padding: '30px' } : {}}>
+              <Row>
+                {(index === 0 || index === 2) && (
+                  <>
+                    {index === 2 && (
+                      <Row className="mt-4" style={{ justifyContent: 'center' }}>
+                        <Col xs={12} md={3} lg={2} style={{ textAlign: 'center' }}>
+                          <img
+                            src={placeholderImage}
+                            alt="Centered Headshot"
+                            style={{ width: '200px', height: '200px', borderRadius: '50%' }}
+                          />
+                          <p style={{ fontWeight: 'bold', marginTop: '10px' }}>NAME</p>
+                          <p style={{ color: '#8B0000' }}>Team Lead</p>
+                        </Col>
+                      </Row>
+                    )}
+
+                    <Row className="mt-4" style={{ justifyContent: 'space-around', marginTop: index === 2 ? '50px' : '0px' }}>
+                      {[1, 2, 3].map((headshot, idx) => (
+                        <Col key={idx} xs={4} md={3} lg={2} style={{ textAlign: 'center' }}>
+                          <img
+                            src={placeholderImage}
+                            alt={`Headshot ${headshot}`}
+                            style={{ width: '200px', height: '200px', borderRadius: '50%' }}
+                          />
+                          <p style={{ fontWeight: 'bold', marginTop: '10px' }}>NAME</p>
+                          {index === 0 && <p style={{ color: '#8B0000' }}>ROLE</p>}
+                        </Col>
+                      ))}
+                    </Row>
+
+                    <div className="mt-4" style={{ textAlign: 'left', maxWidth: '800px', margin: '0 auto' }}>
+                      <p>
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                        Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+                      </p>
+                      <p>
+                        Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat 
+                        cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+                      </p>
+                    </div>
+                  </>
+                )}
+
+                {index === 1 && (
+                  <>
+                    <Col xs={12} md={3} style={{ textAlign: 'center' }}>
+                      <div style={{ marginTop: '20px' }}>
+                        <img
+                          src={placeholderImage}
+                          alt={`Headshot`}
+                          style={{ width: '200px', height: '200px', borderRadius: '50%' }}
+                        />
+                        <p style={{ fontWeight: 'bold', marginTop: '10px' }}>NAME</p>
+                      </div>
+                    </Col>
+
+                    <Col xs={12} md={9}>
+                      <div style={{ textAlign: 'left', marginTop: '20px' }}>
+                        <p>
+                          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
+                          Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+                        </p>
+                        <p>
+                          Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat 
+                          cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+                        </p>
+                      </div>
+                    </Col>
+                  </>
+                )}
+              </Row>
+            </Card.Body>
+          </Card>
+        </div>
+      ))}
+    </Container>
   );
 };
 
-
-
-
-  return (
-    <>
-
-      {/* Attributions Heading */}
-      <AttributionsHeading />
-      <ExternalContributionsHeading />
-      
-      
-
-      {/* Render the Card component properly */}
-      <Card description={<span>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</span>} />
-      
-      <TeamLeadHeading />
-      <Card_team description={<span>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</span>} />
-      
-      <WetLabHeading />
-      <Card_WetLab description={<span>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</span>} />
-      
-      <DryLabHeading />
-      <Card_DryLab description={<span>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</span>} />
-      
-      <HumanPracticesHeading />
-      <CardHP imageSrc="https://static.igem.wiki/teams/5079/headshot-template-picture.png"
-      name="John Doe"
-      role="Team Lead" />
-      
-    </>
-  );
-}
+export default Attributions;
