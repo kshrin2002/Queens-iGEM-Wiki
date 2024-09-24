@@ -6,6 +6,7 @@ import { useEffect, useState } from 'react';
 export function Design() {
   return (
     <>
+    <div className='main'>
       <DesignHeading />
       <OverviewSection />
       <div className="main-content">
@@ -13,6 +14,7 @@ export function Design() {
         <CardSection />
       </div>
       <BackToTopButton />
+      </div>
     </>
   );
 }

@@ -1,0 +1,123 @@
+/* Container for the entire page */
+.engineering-container {
+  position: relative;
+  width: 100vw;
+  overflow-x: hidden;
+}
+
+/* Wrapper for the horizontally scrolling pages */
+.page-wrapper {
+  display: flex;
+  transition: transform 0.5s ease-in-out;
+  height: 100vh;
+}
+
+/* Individual page styles */
+.page {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 2rem;
+}
+
+
+
+/* Styles for the first page with the arrow */
+.arrow-container {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  width: 100%;
+}
+
+/* Pink arrow */
+.arrow {
+  background-color: #c85875;
+  position: absolute;
+  color: white;
+  padding: 2rem;
+  left: -20px;
+  height: 40vh;
+  position: relative;
+  width: 75%;
+  margin-right: 2rem;
+}
+
+.arrow::after {
+  z-index: -1;
+  content: '';
+  position: absolute;
+  right: -200px;
+  top: 50%;
+  transform: translateY(-50%);
+  border-top: 300px solid transparent;
+  border-bottom: 300px solid transparent;
+  border-left: 300px solid #c85875;
+}
+
+.page-title {
+  font-size: 2rem;
+  font-weight: bold;
+}
+
+/* Circular diagram */
+.circle-diagram{
+  margin: auto;
+}
+
+.circle-img {
+  height: 700px;
+  left: 50vw;
+}
+
+/* Navigation dots */
+.navigation-dots {
+  position: absolute;
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  gap: 10px;
+}
+
+.dot {
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background-color: var(--pinksalmon);
+  cursor: pointer;
+}
+
+.dot.active {
+  background-color: var(--venetianred);
+}
+
+.navarrow1{
+  left: 1800px;
+  top: 47vh;
+  position: absolute;
+  z-index: 1;
+  color: var(--pinksalmon);
+  transition: color 0.5s ease;
+  
+  &:hover{
+    color: var(--venetianred);
+    transition: color 0.5s ease;
+  }
+}
+
+.navarrow2{
+  left: 3650px;
+  top: 47vh;
+  position: absolute;
+  z-index: 1;
+  color: var(--pinksalmon);
+  transition: color 0.5s ease;
+  
+  &:hover{
+    color: var(--venetianred);
+    transition: color 0.5s ease;
+  }
+}

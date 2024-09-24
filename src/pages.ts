@@ -5,7 +5,7 @@ import {
 // Wet Lab Folder
 import {Design} from "./contents/Wet Lab/Design/design";
 import {Experiments} from "./contents/Wet Lab/Experiments/experiments";
-//import {Engineering} from "./contents/Wet Lab/Engineering/engineering";
+import {EngineeringW} from "./contents/Wet Lab/Engineering/engineeringW";
 import {Safety} from "./contents/Wet Lab/Safety/safety";
 import {Parts} from "./contents/Wet Lab/Parts/parts";
 //import {ProofOfConcepts} from "./contents/Wet Lab/Proof of Concepts/proofofconcepts";
@@ -112,6 +112,13 @@ const Pages: (Page | Folder)[] = [
           title: "Experiments",
           path: "/experiments",
           component: Experiments,
+          lead: "test 123",
+        },
+        {
+          name: "Engineering",
+          title: "Engineering",
+          path: "/engineeringW",
+          component: EngineeringW,
           lead: "test 123",
         },
         {
