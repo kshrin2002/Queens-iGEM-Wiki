@@ -90,13 +90,13 @@ export function Collaborations() {
       background: "yellow",
     },
     panel: {
-      flex: "0 0 100vw", // Each panel takes full viewport width
-      height: "100vh",   // Each panel takes full viewport height
-      boxSizing: "border-box", // Ensure padding does not affect panel size
+      flex: "0 0 100vw",
+      height: "100vh",
+      boxSizing: "border-box" as "border-box", // Ensure correct typing for boxSizing
       display: "flex",
       justifyContent: "center",
       alignItems: "center",
-      backgroundColor: "white", // Make all panels' background white
+      backgroundColor: "white",
     },
   };
 
