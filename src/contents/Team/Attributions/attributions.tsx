@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import React from 'react';
 import { Card, Row, Col, Container } from 'react-bootstrap';
 import './attributions.css'; // Import the CSS file
 
