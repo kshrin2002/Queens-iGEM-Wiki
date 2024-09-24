@@ -49,16 +49,11 @@
   height: 500px;
 }
 
-.page-container {
-  display: flex;
-  justify-content: flex-start;
-  padding-left: 25vw; /* Adjust this value to match the start of APSC 103 */
-}
-
 .card-container {
   max-width: 900px; /* Limit the card width */
-  padding: 20px; /* Add padding inside the container */
-  height: auto; /* Auto height for flexibility */
+  margin-left: 25vw; /* Adjust this value to align with APSC 103 section */
+  padding: 20px; /* Add some padding to prevent overflow */
+  height: auto; /* Allow the container to adjust to its content */
 }
 
 
