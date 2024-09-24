@@ -1,1 +1,64 @@
 @import url('../../Wet Lab/Design/design.css');
+
+/* collaboration.css */
+
+html.collaborations {
+    overflow-x: hidden;
+    height: 100%;
+  }
+  
+  body.collaborations {
+    overflow: visible;
+    position: relative;
+    height: 100vh;
+    margin: 0;
+  }
+  
+  .collaborations-container {
+    width: 400vw; /* Total width for 4 sections */
+    height: 100vh;
+    display: flex;
+    flex-direction: row; /* Horizontal layout */
+    flex-wrap: nowrap; /* No wrapping */
+    position: relative;
+    left: 0;
+    padding: 0;
+    margin: 0;
+  }
+  
+  .collaborations-first-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start; /* Align content to the top */
+    align-items: center;
+    height: 100vh;
+    background: white;
+    margin: 0;
+    padding-top: 50px; /* Add some padding at the top */
+    position: relative;
+  }
+  
+  .collaborations-title {
+    color: #A80505; /* Bold red color */
+    font-size: 8rem; /* Adjusted font size */
+    font-weight: bold;
+    text-align: center;
+    margin-bottom: 20px; /* Add space between title and other content */
+  }
+  
+  .collaborations-panel {
+    flex: 0 0 100vw;
+    height: 100vh;
+    box-sizing: border-box;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: white;
+  }
+  
+  .collaborations-last-container {
+    display: flex;
+    height: 100vh;
+    background: yellow;
+  }
+  

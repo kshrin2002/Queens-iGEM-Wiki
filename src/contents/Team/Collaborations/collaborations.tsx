@@ -2,7 +2,7 @@ import React, { useEffect, useRef } from "react";
 import gsap from "gsap";
 import ScrollTrigger from "gsap/ScrollTrigger";
 import { Card, Row, Col, Container } from "react-bootstrap";
-import './collaboration.css'; // Assuming design.css holds your custom styles
+import './collaboration.css'; // Assuming collaboration.css holds your custom styles
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -10,7 +10,7 @@ export function Collaborations() {
   const containerRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
-    const sections = gsap.utils.toArray(".panel") as HTMLElement[];
+    const sections = gsap.utils.toArray(".collaborations-panel") as HTMLElement[];
 
     if (containerRef.current) {
       // Horizontal scroll trigger with pinning
@@ -43,79 +43,22 @@ export function Collaborations() {
     };
   }, []);
 
-  // Inline styles for the components
-  const styles = {
-    html: {
-      overflowX: "hidden" as "hidden",
-      height: "100%",
-    },
-    body: {
-      overflow: "visible",
-      position: "relative" as "relative",
-      height: "100vh",
-      margin: 0,
-    },
-    container: {
-      width: "400vw", // Total width for 4 sections
-      height: "100vh",
-      display: "flex",
-      flexDirection: "row" as "row", // Horizontal layout
-      flexWrap: "nowrap" as "nowrap",
-      position: "relative", // Ensure relative positioning
-      left: 0,
-      padding: 0,
-      margin: 0,
-    },
-    firstContainer: {
-      display: "flex",
-      flexDirection: "column",
-      justifyContent: "flex-start", // Align content to the top
-      alignItems: "center",
-      height: "100vh",
-      background: "white", // White background
-      margin: 0,
-      paddingTop: "50px", // Add some padding at the top
-      position: "relative",
-    },
-    title: {
-      color: "#A80505", // Bold red color
-      fontSize: "8rem", // Adjusted font size
-      fontWeight: "bold" as "bold",
-      textAlign: "center" as "center",
-      marginBottom: "20px", // Add space between title and other content
-    },
-    lastContainer: {
-      display: "flex",
-      height: "100vh",
-      background: "yellow",
-    },
-    panel: {
-      flex: "0 0 100vw",
-      height: "100vh",
-      boxSizing: "border-box" as "border-box", // Ensure correct typing for boxSizing
-      display: "flex",
-      justifyContent: "center",
-      alignItems: "center",
-      backgroundColor: "white",
-    },
-  };
-
   return (
     <>
-      <div style={styles.firstContainer}>
-        <h1 style={styles.title}>Collaborations</h1>
+      <div className="collaborations-first-container">
+        <h1 className="collaborations-title">Collaborations</h1>
       </div>
-      <div className="container" ref={containerRef} style={styles.container}>
-        <section className="panel blue" style={styles.panel}>
+      <div className="collaborations-container" ref={containerRef}>
+        <section className="collaborations-panel blue">
           <CardSection title="Section 1" />
         </section>
-        <section className="panel red" style={styles.panel}>
+        <section className="collaborations-panel red">
           <CardSection title="Section 2" />
         </section>
-        <section className="panel orange" style={styles.panel}>
+        <section className="collaborations-panel orange">
           <CardSection title="Section 3" />
         </section>
-        <section className="panel purple" style={styles.panel}>
+        <section className="collaborations-panel purple">
           <CardSection title="Section 4" />
         </section>
       </div>
