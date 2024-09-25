@@ -53,6 +53,18 @@
   box-sizing: border-box;
 }
 
+/* Podcast Section */
+.podcast-section {
+  background-color: #FE9BA1;
+  color: white;
+  padding: 20px;
+  width: calc(100% - 50px);
+  max-width: 1140px;
+  margin-top: 50px;
+  margin-right: 0;
+  box-sizing: border-box;
+}
+
 .section-navbar {
   display: flex;
   justify-content: center;
