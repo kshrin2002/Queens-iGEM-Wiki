@@ -14,7 +14,8 @@ export function Education() {
       <NavbarSection />
       <APSC103Section />
       <CardSection />
-      <SpinImage />
+      <CommunityHeading />
+      <CommunityCarousel1 />
     </>
   );
 }
@@ -71,6 +72,7 @@ const StudentsHeading: React.FC = () => {
     </div>
   );
 };
+
 const WorkshopSection = () => {
   return (
     <div className="section-container">
@@ -167,7 +169,39 @@ const CardSection: React.FC = () => {
   );
 };
 
-const SpinImage = () => {
+const CommunityHeading: React.FC = () => {
+  return (
+    <div
+      style={{
+        textAlign: 'center',
+        display: 'flex',
+        alignItems: 'center',
+        justifyContent: 'center',
+        marginTop: '50px', // Add space between sections
+      }}
+    >
+      <h2
+        style={{
+          fontSize: '2.5em',
+          color: '#590000',
+          fontWeight: 'bold',
+          letterSpacing: '2px',
+          marginRight: '20px',
+        }}
+      >
+        Community
+      </h2>
+      <div
+        style={{
+          borderTop: '2px solid #590000',
+          width: '1200px',
+        }}
+      ></div>
+    </div>
+  );
+};
+
+const CommunityCarousel1 = () => {
   const images = [
     "https://via.placeholder.com/150", // Replace with the actual paths to your images
     "https://via.placeholder.com/150",
