@@ -1,8 +1,7 @@
-import React from "react";
 import './education.css';
 import { Card, Col, Container, Row} from 'react-bootstrap';
-import { useState } from "react";
-import { motion, AnimatePresence } from "framer-motion";
+import React, { useState } from "react";
+import { AnimatePresence, motion } from "framer-motion"; 
 
 export function Education() {
   return (
@@ -168,9 +167,14 @@ const CardSection: React.FC = () => {
   );
 };
 
-const Carousel = ({ images }) => {
-  const [currentIndex, setCurrentIndex] = useState(0);
-  const [direction, setDirection] = useState(null);
+interface CarouselProps {
+  images: string[]; // Defining the type for the images prop
+}
+
+const Carousel: React.FC<CarouselProps> = ({ images }) => {
+  // Adding proper typing for the states
+  const [currentIndex, setCurrentIndex] = useState<number>(0);
+  const [direction, setDirection] = useState<"left" | "right" | null>(null);
 
   const slideVariants = {
     hiddenRight: {
@@ -196,12 +200,14 @@ const Carousel = ({ images }) => {
       },
     },
   };
+
   const slidersVariants = {
     hover: {
       scale: 1.2,
       backgroundColor: "#ff00008e",
     },
   };
+
   const dotsVariants = {
     initial: {
       y: 0,
@@ -209,7 +215,7 @@ const Carousel = ({ images }) => {
     animate: {
       y: -10,
       scale: 1.2,
-      transition: { type: "spring", stiffness: 1000, damping: "10" },
+      transition: { type: "spring", stiffness: 1000, damping: 10 },
     },
     hover: {
       scale: 1.1,
@@ -226,20 +232,19 @@ const Carousel = ({ images }) => {
 
   const handlePrevious = () => {
     setDirection("left");
-
     setCurrentIndex((prevIndex) =>
       prevIndex - 1 < 0 ? images.length - 1 : prevIndex - 1
     );
   };
 
-  const handleDotClick = (index) => {
+  const handleDotClick = (index: number) => {
     setDirection(index > currentIndex ? "right" : "left");
     setCurrentIndex(index);
   };
 
   return (
     <div className="carousel">
-        <div className="carousel-images">
+      <div className="carousel-images">
         <AnimatePresence>
           <motion.img
             key={currentIndex}
@@ -284,7 +289,7 @@ const Carousel = ({ images }) => {
         </div>
       </div>
       <div className="carousel-indicator">
-        {images.map((_, index) => (
+        {images.map((_, index: number) => (
           <motion.div
             key={index}
             className={`dot ${currentIndex === index ? "active" : ""}`}
@@ -299,6 +304,5 @@ const Carousel = ({ images }) => {
     </div>
   );
 };
-
 
 export default Education;
