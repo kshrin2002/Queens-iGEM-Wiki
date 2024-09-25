@@ -74,7 +74,7 @@
 .main-content {
     display: flex; /* Use flex to position sidebar and card section */
     margin-top: 100px; /* Space for the overview section */
-    margin-bottom: 3200px;
+    /* margin-bottom: 3200px; */
 }
 .sidebar {
     position: sticky; /* Change from absolute to sticky */
