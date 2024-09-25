@@ -1,31 +1,8 @@
-//import React from 'react';
+import React, { useState } from 'react';
+import './entrepreneurship.css';
 
 export function Entrepreneurship() {
-  return (
-    <>
-      <EntrepreneurshipHeading />
-
-      <OverviewSection />
-
-      <stagesData />
-    </>
-  );
-}
-
-const OverviewSection = () => {
-  return (
-    <section style={{ backgroundColor: '#FE9BA1', color: 'white', padding: '20px', marginTop: '100px', width: '1520px', height: '350px', marginBottom: '100px' }}>
-      <h2>Overview</h2>
-      <p>
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-      </p>
-      <p>
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-      </p>
-    </section>
-  );
-};
-const [selectedStage, setSelectedStage] = useState<string | null>(null);
+  const [selectedStage, setSelectedStage] = useState<string | null>(null);
 
   const stagesData = [
     {
@@ -55,36 +32,73 @@ const [selectedStage, setSelectedStage] = useState<string | null>(null);
   };
 
   return (
-    <div className="stages-container">
-      <div className="content">
-        <div className="stage-list">
-          {stagesData.map((stageData) => (
-            <div
-              key={stageData.stage}
-              className={`stage-item ${selectedStage === stageData.stage ? 'active' : ''}`}
-            >
+    <>
+      <EntrepreneurshipHeading />
+      <OverviewSection />
+
+      <div className="stages-container">
+        <div className="content">
+          <div className="stage-list">
+            {stagesData.map((stageData) => (
               <div
-                className={`stage-label ${selectedStage === stageData.stage ? 'active' : ''}`}
-                onClick={() => handleStageClick(stageData.stage)}
+                key={stageData.stage}
+                className={`stage-item ${selectedStage === stageData.stage ? 'active' : ''}`}
               >
-                {stageData.stage.toUpperCase()}
-              </div>
-              {selectedStage === stageData.stage && (
-                <div className="stage-details">
-                  <ul>
-                    {stageData.deliverables.map((deliverable, index) => (
-                      <li key={index}>{deliverable}</li>
-                    ))}
-                  </ul>
+                <div
+                  className={`stage-label ${selectedStage === stageData.stage ? 'active' : ''}`}
+                  onClick={() => handleStageClick(stageData.stage)}
+                >
+                  {stageData.stage.toUpperCase()}
                 </div>
-              )}
-            </div>
-          ))}
+                {selectedStage === stageData.stage && (
+                  <div className="stage-details">
+                    <ul>
+                      {stageData.deliverables.map((deliverable, index) => (
+                        <li key={index}>{deliverable}</li>
+                      ))}
+                    </ul>
+                  </div>
+                )}
+              </div>
+            ))}
+          </div>
         </div>
       </div>
-    </div>
+    </>
   );
+}
 
+const OverviewSection = () => {
+  return (
+    <section
+      style={{
+        backgroundColor: '#FE9BA1',
+        color: 'white',
+        padding: '20px',
+        marginTop: '100px',
+        width: '1520px',
+        height: '350px',
+        marginBottom: '100px',
+      }}
+    >
+      <h2>Overview</h2>
+      <p>
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
+        labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco
+        laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in
+        voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat
+        cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+      </p>
+      <p>
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
+        labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco
+        laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in
+        voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat
+        cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+      </p>
+    </section>
+  );
+};
 
 const EntrepreneurshipHeading: React.FC = () => {
   return (
