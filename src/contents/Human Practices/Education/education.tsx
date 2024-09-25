@@ -165,4 +165,5 @@ const CardSection: React.FC = () => {
   );
 };
 
+
 export default Education;
