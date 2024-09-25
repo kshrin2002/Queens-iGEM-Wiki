@@ -2,10 +2,6 @@ import './education.css';
 import { Card, Col, Container, Row} from 'react-bootstrap';
 import React, { useState } from "react";
 import { AnimatePresence, motion } from "framer-motion"; 
-import '@react-pdf-viewer/core/lib/styles/index.css'; // Core viewer styles
-import '@react-pdf-viewer/default-layout/lib/styles/index.css'; // Default layout styles
-import { Viewer } from '@react-pdf-viewer/core';
-import { defaultLayoutPlugin } from '@react-pdf-viewer/default-layout';
 
 export function Education() {
   return (
@@ -27,7 +23,6 @@ export function Education() {
       <PodcastSection />
       <NavBar2 />
       <NavbarSection2 />
-      <PdfViewer />
     </>
   );
 }
@@ -627,17 +622,5 @@ const NavbarSection2 = () => {
   );
 };
 
-const PdfViewer = () => {
-  const defaultLayoutPluginInstance = defaultLayoutPlugin();
-
-  return (
-      <div style={{ height: '750px' }}>
-          <Viewer
-              fileUrl='https://static.igem.wiki/teams/5079/pdf-document.pdf'
-              plugins={[defaultLayoutPluginInstance]}
-          />
-      </div>
-  );
-};
 
 export default Education;
