@@ -146,7 +146,6 @@ const CardSection: React.FC = () => {
                 {/* Section 3: Wet Lab */}
                 {index === 2 && (
                   <>
-                    {/* Two Team Lead Headshots Spaced Evenly */}
                     <Row className="mt-4" style={{ justifyContent: 'space-around' }}>
                       {[6, 7].map((headshot, idx) => (
                         <Col key={idx} xs={4} md={3} lg={2} style={{ textAlign: 'center' }}>
@@ -166,7 +165,6 @@ const CardSection: React.FC = () => {
                       ))}
                     </Row>
 
-                    {/* Row of Three Headshots */}
                     <Row className="mt-4" style={{ justifyContent: 'space-around', marginTop: '50px' }}>
                       {[1, 2, 3].map((headshot, idx) => (
                         <Col key={idx} xs={4} md={3} lg={2} style={{ textAlign: 'center' }}>
@@ -185,7 +183,6 @@ const CardSection: React.FC = () => {
                       ))}
                     </Row>
 
-                    {/* Additional Row of Three Headshots */}
                     <Row className="mt-4" style={{ justifyContent: 'space-around' }}>
                       {[4, 5, 6].map((headshot, idx) => (
                         <Col key={idx} xs={4} md={3} lg={2} style={{ textAlign: 'center' }}>
@@ -217,7 +214,6 @@ const CardSection: React.FC = () => {
                 {/* Section 4: Dry Lab */}
                 {index === 3 && (
                   <>
-                    {/* Single Team Lead Headshot */}
                     <Row className="mt-4" style={{ justifyContent: 'center' }}>
                       <Col xs={12} md={3} lg={2} style={{ textAlign: 'center' }}>
                         <button
@@ -235,7 +231,6 @@ const CardSection: React.FC = () => {
                       </Col>
                     </Row>
 
-                    {/* Row of Six Headshots */}
                     <Row className="mt-4" style={{ justifyContent: 'space-around', marginTop: '50px' }}>
                       {[1, 2, 3].map((headshot, idx) => (
                         <Col key={idx} xs={4} md={3} lg={2} style={{ textAlign: 'center' }}>
@@ -254,7 +249,6 @@ const CardSection: React.FC = () => {
                       ))}
                     </Row>
 
-                    {/* Additional Row of Three Headshots */}
                     <Row className="mt-4" style={{ justifyContent: 'space-around' }}>
                       {[4, 5, 6].map((headshot, idx) => (
                         <Col key={idx} xs={4} md={3} lg={2} style={{ textAlign: 'center' }}>
@@ -286,7 +280,6 @@ const CardSection: React.FC = () => {
                 {/* Section 5: Human Practices */}
                 {index === 4 && (
                   <>
-                    {/* Two Team Lead Headshots */}
                     <Row className="mt-4" style={{ justifyContent: 'space-around' }}>
                       {[6, 7].map((headshot, idx) => (
                         <Col key={idx} xs={4} md={3} lg={2} style={{ textAlign: 'center' }}>
@@ -296,7 +289,7 @@ const CardSection: React.FC = () => {
                           >
                             <img
                               src={placeholderImage}
-                              alt="Team Leads"
+                              alt={`Team Lead Headshot ${headshot}`}
                               style={{ width: '200px', height: '200px', borderRadius: '50%' }}
                             />
                           </button>
@@ -306,7 +299,6 @@ const CardSection: React.FC = () => {
                       ))}
                     </Row>
 
-                    {/* Row of Three Headshots */}
                     <Row className="mt-4" style={{ justifyContent: 'space-around', marginTop: '50px' }}>
                       {[1, 2, 3].map((headshot, idx) => (
                         <Col key={idx} xs={4} md={3} lg={2} style={{ textAlign: 'center' }}>
@@ -325,7 +317,6 @@ const CardSection: React.FC = () => {
                       ))}
                     </Row>
 
-                    {/* Additional Row of Three Headshots */}
                     <Row className="mt-4" style={{ justifyContent: 'space-around' }}>
                       {[4, 5, 6].map((headshot, idx) => (
                         <Col key={idx} xs={4} md={3} lg={2} style={{ textAlign: 'center' }}>
@@ -354,7 +345,6 @@ const CardSection: React.FC = () => {
                   </>
                 )}
 
-                {/* Content for Team Lead (Section 2) */}
                 {index === 1 && (
                   <>
                     <Col xs={12} md={3} style={{ textAlign: 'center' }}>
