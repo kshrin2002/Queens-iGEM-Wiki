@@ -53,7 +53,7 @@
   max-width: 900px; /* Adjust this width as per your layout */
   position: absolute; /* Position the container absolutely */
   right: 50px; /* Ensure the card stays 50px away from the right side of the page */
-  padding: 20px;
+  padding: 100px;
   height: auto;
 }
 
