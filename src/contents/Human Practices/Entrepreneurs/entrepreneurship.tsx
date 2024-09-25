@@ -7,6 +7,7 @@ export function Entrepreneurship() {
 
       <OverviewSection />
 
+      <stagesData />
     </>
   );
 }
@@ -24,6 +25,66 @@ const OverviewSection = () => {
     </section>
   );
 };
+const [selectedStage, setSelectedStage] = useState<string | null>(null);
+
+  const stagesData = [
+    {
+      stage: "Pre-Seed Stage",
+      deliverables: ["Market Analysis", "Competitor Landscape Matrix", "SWOT Analysis"],
+    },
+    {
+      stage: "Seed Stage",
+      deliverables: ["Lean Canvas", "Business Plan", "IP Protection Strategy"],
+    },
+    {
+      stage: "Early Stage",
+      deliverables: ["Preclinical Development Plan"],
+    },
+    {
+      stage: "Growth Stage",
+      deliverables: ["Clinical Trials Timeline", "Regulatory Strategy Roadmap"],
+    },
+    {
+      stage: "Late Stage",
+      deliverables: ["Manufacturing Plan", "Projected Financial Statements"],
+    },
+  ];
+
+  const handleStageClick = (stage: string) => {
+    setSelectedStage(selectedStage === stage ? null : stage);
+  };
+
+  return (
+    <div className="stages-container">
+      <div className="content">
+        <div className="stage-list">
+          {stagesData.map((stageData) => (
+            <div
+              key={stageData.stage}
+              className={`stage-item ${selectedStage === stageData.stage ? 'active' : ''}`}
+            >
+              <div
+                className={`stage-label ${selectedStage === stageData.stage ? 'active' : ''}`}
+                onClick={() => handleStageClick(stageData.stage)}
+              >
+                {stageData.stage.toUpperCase()}
+              </div>
+              {selectedStage === stageData.stage && (
+                <div className="stage-details">
+                  <ul>
+                    {stageData.deliverables.map((deliverable, index) => (
+                      <li key={index}>{deliverable}</li>
+                    ))}
+                  </ul>
+                </div>
+              )}
+            </div>
+          ))}
+        </div>
+      </div>
+    </div>
+  );
+
 
 const EntrepreneurshipHeading: React.FC = () => {
   return (
