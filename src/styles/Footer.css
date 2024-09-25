@@ -1,8 +1,55 @@
-.sponsor-image {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 150px; /* Adjust the height to your preference */
-  }
+/* Footer.css */
 
-  
+#unique-footer {
+  background-color: grey !important;
+  color: white !important;
+  padding: 5rem 0;
+}
+
+#unique-footer .sponsor-images {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+}
+
+#unique-footer .sponsor-images img {
+  margin: 10px;
+  width: 150px; /* This sets a consistent width */
+  height: auto; /* Let the height adjust to maintain the aspect ratio */
+  object-fit: contain; /* Ensures the image fits within the box without distortion */
+}
+
+#unique-footer h4 {
+  font-size: 1.5rem;
+  margin-bottom: 1.5rem;
+}
+
+#unique-footer p {
+  margin-bottom: 0.5rem;
+}
+
+#unique-footer .subfoot {
+  color: lightblue !important;
+  text-decoration: underline;
+}
+
+#unique-footer hr {
+  border-color: rgba(255, 255, 255, 0.1);
+}
+
+#unique-footer .container {
+  max-width: 1140px;
+}
+
+#unique-footer .row {
+  margin-bottom: 1.5rem;
+}
+
+#unique-footer .col {
+  text-align: left;
+}
+
+#unique-footer img {
+  max-width: 100%;
+  height: auto;
+}

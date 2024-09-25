@@ -1,5 +1,5 @@
 import { stringToSlug } from "../utils";
-import "../styles/Footer.css"; 
+import "../styles/Footer.css"; // Import the CSS file
 
 export function Footer() {
   const teamYear = import.meta.env.VITE_TEAM_YEAR;
@@ -7,7 +7,7 @@ export function Footer() {
   const teamSlug = stringToSlug(teamName);
 
   return (
-    <footer className="pt-5 pb-5 footer py-5 mt-5 bg-grey text-white">
+    <footer id="unique-footer" className="pt-5 pb-5 py-5 mt-5 bg-grey text-white">
       <div className="container">
         <div className="row mb-4">
           <div className="col-lg-12">
@@ -15,35 +15,35 @@ export function Footer() {
             <div className="sponsor-images">
               <img
                 src="https://static.igem.wiki/teams/5079/brandtech-transparent-logo.png"
-                style={{ width: '150px', height: 'auto' }}
+                alt="BrandTech"
               />
               <img
                 src="https://static.igem.wiki/teams/5079/csi-bio-combined-logo-bio-bottom-w-maple-leaf-full-size-rgb.png"
-                style={{ width: '150px', height: 'auto' }}
+                alt="CSI Bio"
               />
               <img
                 src="https://static.igem.wiki/teams/5079/idt-transparent-logo-cropped-version.png"
-                style={{ width: '150px', height: 'auto' }}
+                alt="IDT"
               />
               <img
                 src="https://static.igem.wiki/teams/5079/agat-transparent-logo.png"
-                style={{ width: '150px', height: 'auto' }}
+                alt="AGAT"
               />
               <img
                 src="https://static.igem.wiki/teams/5079/new-england-biolabs-transparent-cropped-version.png"
-                style={{ width: '150px', height: 'auto' }}
+                alt="New England Biolabs"
               />
               <img
                 src="https://static.igem.wiki/teams/5079/qhs-stacked.png"
-                style={{ width: '150px', height: 'auto' }}
+                alt="QHS"
               />
               <img
                 src="https://static.igem.wiki/teams/5079/smith-engineering-transparent-logo.png"
-                style={{ width: '150px', height: 'auto' }}
+                alt="Smith Engineering"
               />
               <img
                 src="https://static.igem.wiki/teams/5079/snapgene-logo-2022-1.png"
-                style={{ width: '150px', height: 'auto' }}
+                alt="SnapGene"
               />
             </div>
           </div>
@@ -90,6 +90,7 @@ export function Footer() {
           <div className="col text-right">
             <img
               src="https://static.igem.wiki/teams/5079/queenslogo-colour.png"
+              alt="Queen's University"
               style={{ width: '150px', height: 'auto' }}
             />
           </div>
