@@ -13,8 +13,8 @@
   "dependencies": {
     "@fullpage/react-fullpage": "latest",
     "@popperjs/core": "^2.11.8",
-    "@react-pdf-viewer/core": "^4.0.0",
-    "@react-pdf-viewer/default-layout": "^4.0.0",
+    "@react-pdf-viewer/core": "latest",
+    "@react-pdf-viewer/default-layout": "latest",
     "pdfjs-dist": "^2.10.377",
     "bootstrap": "^5.3.3",
     "framer-motion": "^11.5.4",
