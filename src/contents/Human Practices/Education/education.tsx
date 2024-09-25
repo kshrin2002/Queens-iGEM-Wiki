@@ -10,8 +10,8 @@ export function Education() {
       <OverviewSection />
       <StudentsHeading />
       <WorkshopSection />
-      <NavBar />
-      <NavbarSection />
+      <NavBar1 />
+      <NavbarSection1 />
       <APSC103Section />
       <CardSection />
       <CommunityHeading />
@@ -21,6 +21,8 @@ export function Education() {
       <CommunityCarousel2 />
       <ResearchersHeading />
       <PodcastSection />
+      <NavBar2 />
+      <NavbarSection2 />
     </>
   );
 }
@@ -91,7 +93,7 @@ const WorkshopSection = () => {
   );
 };
 
-const NavBar: React.FC = () => {
+const NavBar1: React.FC = () => {
   return (
       <div
         style={{
@@ -124,7 +126,7 @@ const NavBar: React.FC = () => {
       </div>
   );
 };
-const NavbarSection = () => {
+const NavbarSection1 = () => {
   return (
     <div className="section-navbar">
       <section className="navbar-box">
@@ -135,6 +137,7 @@ const NavbarSection = () => {
     </div>
   );
 };
+
 const APSC103Section = () => {
   return (
     <div className="section-container">
@@ -566,6 +569,51 @@ const PodcastSection = () => {
     <div className="section-container">
       <section className="podcast-section">
         <h2>Podcast</h2>
+        <p>
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+        </p>
+      </section>
+    </div>
+  );
+};
+
+const NavBar2: React.FC = () => {
+  return (
+      <div
+        style={{
+          display: 'flex',
+          justifyContent: 'center', // Center the navbar
+          gap: '20px',
+          marginTop: '40px', // Adjust this value for the desired spacing
+          marginBottom: '40px', // Adjust this value for spacing below
+          paddingLeft: '300px'
+        }}
+      >
+        {[' ', ' ', ' ', ' ', ' '].map((text, index) => (
+          <div
+            key={index}
+            style={{
+              backgroundColor: '#980021',
+              padding: '10px 20px',
+              borderRadius: '50px',
+              color: 'white',
+              textTransform: 'uppercase',
+              fontWeight: 'bold',
+              cursor: 'pointer',
+              width: '148px',
+              height: '35px'
+            }}
+          >
+            {text}
+          </div>
+        ))}
+      </div>
+  );
+};
+const NavbarSection2 = () => {
+  return (
+    <div className="section-navbar">
+      <section className="navbar2-box">
         <p>
           Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
         </p>

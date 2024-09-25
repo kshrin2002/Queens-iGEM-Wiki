@@ -85,6 +85,18 @@
   height: 500px;
 }
 
+.navbar2-box {
+  background-color: #980021;
+  color: white;
+  padding: 20px;
+  max-width: 900px;
+  margin-right: 0;
+  box-sizing: border-box;
+  border-radius: 50px;
+  height: 250px;
+}
+
+
 .card-container {
   max-width: 900px; /* Adjust this width as per your layout */
   position: absolute; /* Position the container absolutely */
