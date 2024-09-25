@@ -169,9 +169,9 @@ const CardSection: React.FC = () => {
 
 const SpinImage = () => {
   const images = [
-    "https://static.igem.wiki/teams/5079/rose-logo.png", // Replace with the actual paths to your images
-    "https://static.igem.wiki/teams/5079/rose-logo.png",
-    "https://static.igem.wiki/teams/5079/rose-logo.png",
+    "https://via.placeholder.com/150", // Replace with the actual paths to your images
+    "https://via.placeholder.com/150",
+    "https://via.placeholder.com/150",
   ];
 
   const Carousel = ({ images }: { images: string[] }) => {
@@ -309,8 +309,6 @@ const SpinImage = () => {
 
   return (
     <div>
-      <h1>Education Section</h1>
-      {/* Render the Carousel component */}
       <Carousel images={images} />
     </div>
   );
