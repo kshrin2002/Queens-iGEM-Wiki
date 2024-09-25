@@ -19,6 +19,7 @@ export function Education() {
       <CommunityCarousel1 />
       <SocialMediaSection />
       <CommunityCarousel2 />
+      <ResearchersHeading />
     </>
   );
 }
@@ -209,7 +210,7 @@ const PSWSection = () => {
   return (
     <div className="section-container">
       <section className="PSW-section">
-        <h2>Workshop</h2>
+        <h2>Parkinson Canada Superwalk</h2>
         <p>
           Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
         </p>
@@ -370,7 +371,7 @@ const SocialMediaSection = () => {
   return (
     <div className="section-container">
       <section className="social-media-section">
-        <h2>Workshop</h2>
+        <h2>Social Media</h2>
         <p>
           Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
         </p>
@@ -523,6 +524,38 @@ const CommunityCarousel2 = () => {
   return (
     <div>
       <Carousel images={images} />
+    </div>
+  );
+};
+
+const ResearchersHeading: React.FC = () => {
+  return (
+    <div
+      style={{
+        textAlign: 'center',
+        display: 'flex',
+        alignItems: 'center',
+        justifyContent: 'center',
+        marginTop: '50px', // Add space between sections
+      }}
+    >
+      <h2
+        style={{
+          fontSize: '2.5em',
+          color: '#590000',
+          fontWeight: 'bold',
+          letterSpacing: '2px',
+          marginRight: '20px',
+        }}
+      >
+        Researchers
+      </h2>
+      <div
+        style={{
+          borderTop: '2px solid #590000',
+          width: '1200px',
+        }}
+      ></div>
     </div>
   );
 };
