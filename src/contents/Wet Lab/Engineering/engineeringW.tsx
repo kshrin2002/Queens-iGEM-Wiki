@@ -4,7 +4,7 @@ import { BsArrowRightCircle, BsArrowLeftCircle } from "react-icons/bs";
 
 export function EngineeringW() {
   const [currentPage, setCurrentPage] = useState(0);
-  const totalPages = 3; // Total number of static pages
+  const totalPages = 5; // Total number of static pages
   const [isImgInView, setIsImgInView] = useState(false);
   const imgRef = useRef<HTMLImageElement>(null);
 
@@ -93,13 +93,15 @@ export function EngineeringW() {
             <div className="vertical-rectangle">
               <p>Text for Left Rectangle</p>
             </div>
-            <div className="circle-diagram" style={{ flex: '1'}}>
+            <div className="circle-diagram" style={{ flex: '1', position: 'relative' }}>
               <img
                 ref={imgRef} // Reference to the image
                 className={`circle-img ${isImgInView ? 'animate' : ''}`} // Add 'animate' class when in view
                 src="https://static.igem.wiki/teams/5079/engineeringcirclediagram.png"
                 alt=""
               />
+              {/* Text over the image */}
+              <div className="centered-text">LEARN</div>
             </div>
             <div className="vertical-rectangle-r">
               <p>Text for Right Rectangle</p>
@@ -124,13 +126,79 @@ export function EngineeringW() {
             <div className="vertical-rectangle">
               <p>Text for Left Rectangle</p>
             </div>
-            <div className="circle-diagram" style={{ flex: '1'}}>
+            <div className="circle-diagram" style={{ flex: '1', position: 'relative' }}>
               <img
                 ref={imgRef} // Reference to the image
                 className={`circle-img ${isImgInView ? 'animate' : ''}`} 
                 src="https://static.igem.wiki/teams/5079/engineeringcirclediagram.png"
                 alt=""
               />
+              {/* Text over the image */}
+              <div className="centered-text">DESIGN</div>
+            </div>
+            <div className="vertical-rectangle-r">
+              <p>Text for Right Rectangle</p>
+            </div>
+            <BsArrowRightCircle 
+              className='navarrow5'
+              size={50}
+              onClick={() => handleDotClick(3)}
+            />
+          </div>
+        </div>
+
+        {/* Static Page 4 - third Process Page */}
+        <div className="page">
+          <div className="page-content" style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between' }}>
+          <BsArrowLeftCircle 
+              className='navarrow6'
+              size={50}
+              onClick={() => handleDotClick(2)}
+            />
+            <div className="vertical-rectangle">
+              <p>Text for Left Rectangle</p>
+            </div>
+            <div className="circle-diagram" style={{ flex: '1', position: 'relative' }}>
+              <img
+                ref={imgRef} // Reference to the image
+                className={`circle-img ${isImgInView ? 'animate' : ''}`} 
+                src="https://static.igem.wiki/teams/5079/engineeringcirclediagram.png"
+                alt=""
+              />
+              {/* Text over the image */}
+              <div className="centered-text">BUILD</div>
+            </div>
+            <div className="vertical-rectangle-r">
+              <p>Text for Right Rectangle</p>
+            </div>
+            <BsArrowRightCircle 
+              className='navarrow7'
+              size={50}
+              onClick={() => handleDotClick(4)}
+            />
+          </div>
+        </div>
+
+        {/* Static Page 5 - third Process Page */}
+        <div className="page">
+          <div className="page-content" style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between' }}>
+          <BsArrowLeftCircle 
+              className='navarrow8'
+              size={50}
+              onClick={() => handleDotClick(3)}
+            />
+            <div className="vertical-rectangle">
+              <p>Text for Left Rectangle</p>
+            </div>
+            <div className="circle-diagram" style={{ flex: '1', position: 'relative' }}>
+              <img
+                ref={imgRef} // Reference to the image
+                className={`circle-img ${isImgInView ? 'animate' : ''}`} 
+                src="https://static.igem.wiki/teams/5079/engineeringcirclediagram.png"
+                alt=""
+              />
+              {/* Text over the image */}
+              <div className="centered-text">TEST</div>
             </div>
             <div className="vertical-rectangle-r">
               <p>Text for Right Rectangle</p>
@@ -154,3 +222,4 @@ export function EngineeringW() {
 }
 
 export default EngineeringW;
+

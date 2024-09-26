@@ -96,7 +96,7 @@
 }
 
 .navarrow1{
-  left: 1800px;
+  left: 96vw;
   top: 47vh;
   position: absolute;
   z-index: 1;
@@ -110,7 +110,7 @@
 }
 
 .navarrow2{
-  left: 3650px;
+  left: 196vw;
   top: 47vh;
   position: absolute;
   z-index: 1;
@@ -123,7 +123,7 @@
   }
 }
 .navarrow3{
-  left: 1900px;
+  left: 101vw;
   top: 47vh;
   position: absolute;
   z-index: 1;
@@ -136,7 +136,59 @@
   }
 }
 .navarrow4{
-  left: 3800px;
+  left: 201vw;
+  top: 47vh;
+  position: absolute;
+  z-index: 1;
+  color: var(--pinksalmon);
+  transition: color 0.5s ease;
+  
+  &:hover{
+    color: var(--venetianred);
+    transition: color 0.5s ease;
+  }
+}
+.navarrow5{
+  left: 296vw;
+  top: 47vh;
+  position: absolute;
+  z-index: 1;
+  color: var(--pinksalmon);
+  transition: color 0.5s ease;
+  
+  &:hover{
+    color: var(--venetianred);
+    transition: color 0.5s ease;
+  }
+}
+.navarrow6{
+  left: 301vw;
+  top: 47vh;
+  position: absolute;
+  z-index: 1;
+  color: var(--pinksalmon);
+  transition: color 0.5s ease;
+  
+  &:hover{
+    color: var(--venetianred);
+    transition: color 0.5s ease;
+  }
+}
+.navarrow7{
+  left: 396vw;
+  top: 47vh;
+  position: absolute;
+  z-index: 1;
+  color: var(--pinksalmon);
+  transition: color 0.5s ease;
+  
+  &:hover{
+    color: var(--venetianred);
+    transition: color 0.5s ease;
+  }
+}
+.navarrow8{
+  left: 401vw;
   top: 47vh;
   position: absolute;
   z-index: 1;
@@ -200,4 +252,16 @@
   to {
     transform: rotate(360deg);
   }
+}
+
+.centered-text {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: var(--venetianred); /* Change text color if necessary */
+  font-size: 4rem;
+  font-weight: bold;
+  text-align: center;
+  z-index: 1; /* Ensure text is above the image */
 }
