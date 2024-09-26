@@ -17,7 +17,7 @@ import {Model} from "./contents/Dry Lab/Model/model";
 
 // Team Folder
 import {Attributions} from "./contents/Team/Attributions/attributions";
-import {Team} from "./contents/Team/Team Members/Team";
+import {Team} from "./contents/Team/Team Members/team";
 import {Collaborations} from "./contents/Team/Collaborations/collaborations";
 
 // Project Folder

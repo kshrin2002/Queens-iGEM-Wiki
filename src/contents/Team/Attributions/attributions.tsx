@@ -760,6 +760,7 @@ const Timeline: React.FC = () => {
 
   const openBox = (month: string, index: number, position: 'left' | 'right') => {
     setSelectedMonth(month);
+    index;
     setIsAnimating(true);
     setIsClosing(false);
     setBoxPosition(position); // Set box to open on the left or right side
