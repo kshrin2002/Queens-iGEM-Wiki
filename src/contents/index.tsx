@@ -22,12 +22,10 @@ export * from "./Dry Lab/Model/model.tsx";
 // Human Practices
 export * from "./Human Practices/Integrated Human Practices/human-practices.tsx";
 export * from "./Human Practices/Education/education.tsx";
-export * from "./Human Practices/Entrepreneurs/entrepreneurship.tsx"; 
+export * from "./Human Practices/Entrepreneurs/entrepreneurship.tsx";
 export * from "./Human Practices/Patient Stories/patient-stories.tsx";
 
 // Team
-export * from "./Team/Team Members/team.tsx";
+export * from "./Team/Team Members/Team.tsx";
 export * from "./Team/Attributions/attributions.tsx";
 export * from "./Team/Collaborations/collaborations.tsx";
-
-
