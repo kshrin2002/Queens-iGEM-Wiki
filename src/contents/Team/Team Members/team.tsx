@@ -94,7 +94,7 @@ export function Team() {
                 />
               </button>
               <div className="advisor-name">Advisor 1</div>
-              <div className="advisor-role">Lead Scientist</div>
+              <div className="advisor-role">Role</div>
             </div>
             <div className="advisor-headshot">
               <button className="advisor-headshot-button" onClick={() => openModal('Advisor 2', 'About Advisor 2...', 'https://via.placeholder.com/150')}>
@@ -105,7 +105,7 @@ export function Team() {
                 />
               </button>
               <div className="advisor-name">Advisor 2</div>
-              <div className="advisor-role">Research Advisor</div>
+              <div className="advisor-role">Role</div>
             </div>
             <div className="advisor-headshot">
               <button className="advisor-headshot-button" onClick={() => openModal('Advisor 3', 'About Advisor 3...', 'https://via.placeholder.com/150')}>
@@ -116,7 +116,7 @@ export function Team() {
                 />
               </button>
               <div className="advisor-name">Advisor 3</div>
-              <div className="advisor-role">Technical Consultant</div>
+              <div className="advisor-role">Role</div>
             </div>
           </div>
         </div>
@@ -135,7 +135,7 @@ export function Team() {
               />
             </button>
             <div className="team-lead-name">Team Lead</div>
-            <div className="team-lead-role">Chief Executive Officer</div>
+            <div className="team-lead-role">Team Lead</div>
           </div>
 
           {/* Exec Members */}
@@ -149,7 +149,7 @@ export function Team() {
                 />
               </button>
               <div className="exec-name">Exec Member 1</div>
-              <div className="exec-role">CTO</div>
+              <div className="exec-role">Wet Lab Co-Lead</div>
             </div>
             <div className="exec-headshot">
               <button className="exec-headshot-button" onClick={() => openModal('Exec Member 2', 'About Exec Member 2...', 'https://via.placeholder.com/150')}>
@@ -160,7 +160,7 @@ export function Team() {
                 />
               </button>
               <div className="exec-name">Exec Member 2</div>
-              <div className="exec-role">COO</div>
+              <div className="exec-role">Wet Lab Co-Lead</div>
             </div>
             <div className="exec-headshot">
               <button className="exec-headshot-button" onClick={() => openModal('Exec Member 3', 'About Exec Member 3...', 'https://via.placeholder.com/150')}>
@@ -171,7 +171,7 @@ export function Team() {
                 />
               </button>
               <div className="exec-name">Exec Member 3</div>
-              <div className="exec-role">CFO</div>
+              <div className="exec-role">Dry Lab Lead</div>
             </div>
             <div className="exec-headshot">
               <button className="exec-headshot-button" onClick={() => openModal('Exec Member 4', 'About Exec Member 4...', 'https://via.placeholder.com/150')}>
@@ -182,7 +182,7 @@ export function Team() {
                 />
               </button>
               <div className="exec-name">Exec Member 4</div>
-              <div className="exec-role">VP of Engineering</div>
+              <div className="exec-role">Human Practices Co-Lead</div>
             </div>
             <div className="exec-headshot">
               <button className="exec-headshot-button" onClick={() => openModal('Exec Member 5', 'About Exec Member 5...', 'https://via.placeholder.com/150')}>
@@ -193,7 +193,7 @@ export function Team() {
                 />
               </button>
               <div className="exec-name">Exec Member 5</div>
-              <div className="exec-role">VP of Marketing</div>
+              <div className="exec-role">Human Practices Co-Lead</div>
             </div>
           </div>
         </section>
