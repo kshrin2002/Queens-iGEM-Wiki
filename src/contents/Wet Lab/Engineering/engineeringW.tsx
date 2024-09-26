@@ -127,7 +127,7 @@ export function EngineeringW() {
             <div className="circle-diagram" style={{ flex: '1'}}>
               <img
                 ref={imgRef} // Reference to the image
-                className={`circle-img ${isImgInView ? 'animate' : ''}`} // Add 'animate' class when in view
+                className={`circle-img ${isImgInView ? 'animate' : ''}`} 
                 src="https://static.igem.wiki/teams/5079/engineeringcirclediagram.png"
                 alt=""
               />
