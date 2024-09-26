@@ -34,7 +34,7 @@
 
 /* Pink arrow */
 .arrow {
-  background-color: var(--venetianred);
+  background-color: var(--pinksalmon);
   position: absolute;
   color: white;
   padding: 2rem;
@@ -54,7 +54,7 @@
   transform: translateY(-50%);
   border-top: 300px solid transparent;
   border-bottom: 300px solid transparent;
-  border-left: 300px solid var(--venetianred);
+  border-left: 300px solid var(--pinksalmon);
 }
 
 .page-title {
@@ -275,11 +275,12 @@
   border: none;
   border-radius: 5px;
   background-color: var(--venetianred);
-  color: #FFF;
+  color: var(--pinksalmon);
   cursor: pointer;
-  transition: background-color 0.3s ease; /* Optional for hover effect */
+  transition: background-color 0.3s ease; 
 }
 
 .scroll-button:hover {
-  background-color: var(--pinksalmon); /* Darker shade on hover */
+  color: var(--venetianred);
+  background-color: var(--pinksalmon); 
 }
