@@ -147,17 +147,17 @@ interface MonthListProps {
 const MonthList: React.FC<MonthListProps> = ({ monthsData, onMonthClick }) => {
   return (
     <div className="left-bar">
-    <div className="simple-month-list">
-      {monthsData.map((monthData) => (
-        <div
-          key={monthData.month}
-          className="simple-month-label"
-          onClick={() => onMonthClick(monthData.month)}
-        >
-          {monthData.month.toUpperCase()}
-        </div>
-      ))}
-    </div>
+      <div className="simple-month-list">
+        {monthsData.map((monthData) => (
+          <div
+            key={monthData.month}
+            className="simple-month-label"
+            onClick={() => onMonthClick(monthData.month)}
+          >
+            {monthData.month.toUpperCase()}
+          </div>
+        ))}
+      </div>
     </div>
   );
 };

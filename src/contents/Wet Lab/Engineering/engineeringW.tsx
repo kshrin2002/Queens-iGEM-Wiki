@@ -1,15 +1,56 @@
-import { useState } from 'react';
+import { useState, useEffect, useRef } from 'react';
 import './engineering.css';
-import { BsArrowRightCircle } from "react-icons/bs";
+import { BsArrowRightCircle, BsArrowLeftCircle } from "react-icons/bs";
 
 export function EngineeringW() {
   const [currentPage, setCurrentPage] = useState(0);
-
   const totalPages = 3; // Total number of static pages
+  const [isImgInView, setIsImgInView] = useState(false);
+  const imgRef = useRef<HTMLImageElement>(null);
 
   const handleDotClick = (index: number) => {
     setCurrentPage(index);
   };
+
+  const handleWheel = (event: WheelEvent) => {
+    event.preventDefault(); // Prevent the default scrolling behavior
+
+    if (event.deltaY > 0 && currentPage < totalPages - 1) {
+      setCurrentPage(prev => prev + 1); // Scroll right
+    } else if (event.deltaY < 0 && currentPage > 0) {
+      setCurrentPage(prev => prev - 1); // Scroll left
+    }
+  };
+
+  useEffect(() => {
+    window.addEventListener('wheel', handleWheel, { passive: false });
+
+    return () => {
+      window.removeEventListener('wheel', handleWheel);
+    };
+  }, [currentPage]);
+
+  useEffect(() => {
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          setIsImgInView(true); // Set image as in view
+        } else {
+          setIsImgInView(false); // Optionally, remove animation when out of view
+        }
+      });
+    });
+
+    if (imgRef.current) {
+      observer.observe(imgRef.current); // Observe the image element
+    }
+
+    return () => {
+      if (imgRef.current) {
+        observer.unobserve(imgRef.current); // Clean up observer
+      }
+    };
+  }, []);
 
   return (
     <div className="engineering-container">
@@ -43,26 +84,57 @@ export function EngineeringW() {
         {/* Static Page 2 - First Process Page */}
         <div className="page">
           <div className='page-2'>          
-          <div className="page-content">
-            <h2>Page 1</h2>
-            <p>Content for the first page...</p>
+          <div className="page-content" style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between' }}>
+          <BsArrowLeftCircle 
+              className='navarrow3'
+              size={50}
+              onClick={() => handleDotClick(0)}
+            />
+            <div className="vertical-rectangle">
+              <p>Text for Left Rectangle</p>
+            </div>
+            <div className="circle-diagram" style={{ flex: '1'}}>
+              <img
+                ref={imgRef} // Reference to the image
+                className={`circle-img ${isImgInView ? 'animate' : ''}`} // Add 'animate' class when in view
+                src="https://static.igem.wiki/teams/5079/engineeringcirclediagram.png"
+                alt=""
+              />
+            </div>
+            <div className="vertical-rectangle-r">
+              <p>Text for Right Rectangle</p>
+            </div>
           </div>
             <BsArrowRightCircle 
-                className='navarrow2'
-                size={50}
-                onClick={() => handleDotClick(2)}
-              />
+              className='navarrow2'
+              size={50}
+              onClick={() => handleDotClick(2)}
+            />
           </div>
         </div>
 
         {/* Static Page 3 - Second Process Page */}
         <div className="page">
-          <div className="page-content">
-            <h2>Page 2</h2>
-            <p>Content for the second page...</p>
-          </div>
-          <div className="circle-diagram">
-            <img className="circle-img" src="https://static.igem.wiki/teams/5079/engineeringcirclediagram.png" alt="" />
+          <div className="page-content" style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between' }}>
+          <BsArrowLeftCircle 
+              className='navarrow4'
+              size={50}
+              onClick={() => handleDotClick(1)}
+            />
+            <div className="vertical-rectangle">
+              <p>Text for Left Rectangle</p>
+            </div>
+            <div className="circle-diagram" style={{ flex: '1'}}>
+              <img
+                ref={imgRef} // Reference to the image
+                className={`circle-img ${isImgInView ? 'animate' : ''}`} // Add 'animate' class when in view
+                src="https://static.igem.wiki/teams/5079/engineeringcirclediagram.png"
+                alt=""
+              />
+            </div>
+            <div className="vertical-rectangle-r">
+              <p>Text for Right Rectangle</p>
+            </div>
           </div>
         </div>
       </div>
@@ -79,6 +151,6 @@ export function EngineeringW() {
       </div>
     </div>
   );
-};
+}
 
 export default EngineeringW;

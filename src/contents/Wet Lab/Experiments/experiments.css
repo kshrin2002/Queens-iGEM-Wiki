@@ -100,9 +100,10 @@
     color: #666;
 }
 
-/* Ensure the container for month details expands, and flex pushes items down */
+
 .month-list .month-item.active {
-    z-index: 2; /* Keep the expanded one above others */
+    z-index: 2;
+    background-color: white;
 }
 
 
@@ -128,4 +129,6 @@
     color: #A80505; /* Highlight color on hover */
     text-decoration: underline;
 }
+
+
 
