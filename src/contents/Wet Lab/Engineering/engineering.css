@@ -265,3 +265,21 @@
   text-align: center;
   z-index: 1; /* Ensure text is above the image */
 }
+
+.scroll-button {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  padding: 10px;
+  font-size: 16px;
+  border: none;
+  border-radius: 5px;
+  background-color: var(--venetianred);
+  color: #FFF;
+  cursor: pointer;
+  transition: background-color 0.3s ease; /* Optional for hover effect */
+}
+
+.scroll-button:hover {
+  background-color: var(--pinksalmon); /* Darker shade on hover */
+}

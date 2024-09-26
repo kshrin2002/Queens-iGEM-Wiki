@@ -1,12 +1,13 @@
 import { useState, useEffect, useRef } from 'react';
 import './engineering.css';
-import { BsArrowRightCircle, BsArrowLeftCircle } from "react-icons/bs";
+import { BsArrowRightCircle, BsArrowLeftCircle, BsArrowUpCircleFill, BsArrowDownCircleFill } from "react-icons/bs";
 
 export function EngineeringW() {
   const [currentPage, setCurrentPage] = useState(0);
   const totalPages = 5; // Total number of static pages
   const [isImgInView, setIsImgInView] = useState(false);
   const imgRef = useRef<HTMLImageElement>(null);
+  const [scrollDirection, setScrollDirection] = useState<'top' | 'bottom'>('bottom');
 
   const handleDotClick = (index: number) => {
     setCurrentPage(index);
@@ -51,6 +52,15 @@ export function EngineeringW() {
       }
     };
   }, []);
+
+  const toggleScroll = () => {
+    const target = scrollDirection === 'bottom' ? document.body.scrollHeight : 0; // Determine target scroll position
+    window.scrollTo({
+      top: target,
+      behavior: 'smooth' // Smooth scroll
+    });
+    setScrollDirection(prev => (prev === 'bottom' ? 'top' : 'bottom')); // Toggle direction
+  };
 
   return (
     <div className="engineering-container">
@@ -207,6 +217,8 @@ export function EngineeringW() {
         </div>
       </div>
 
+
+
       {/* Navigation Dots */}
       <div className="navigation-dots">
         {[...Array(totalPages)].map((_, index) => (
@@ -217,6 +229,15 @@ export function EngineeringW() {
           />
         ))}
       </div>
+
+        {/* Scroll Button */}
+        <button 
+        className="scroll-button"
+        onClick={toggleScroll}
+        >
+        {scrollDirection === 'bottom' ? 'Footer  ':'Pages '}
+        {scrollDirection === 'bottom' ? <BsArrowDownCircleFill />: <BsArrowUpCircleFill /> }
+      </button>
     </div>
   );
 }
