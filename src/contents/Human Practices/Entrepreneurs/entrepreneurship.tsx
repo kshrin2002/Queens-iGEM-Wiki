@@ -81,6 +81,8 @@ export function Entrepreneurship() {
           </div>
         </div>
       </div>
+
+      <ReferenceSection />
     </>
   );
 }
@@ -124,6 +126,24 @@ const EntrepreneurshipHeading: React.FC = () => {
         ENTREPRENEURSHIP
       </h1>
     </div>
+  );
+};
+
+const ReferenceSection = () => {
+  return (
+    <section
+      style={{
+        backgroundColor: '#FE9BA1',
+        color: 'white',
+        padding: '20px',
+        marginTop: '100px',
+        width: '1520px',
+        height: '350px',
+        marginBottom: '100px',
+      }}
+    >
+      <h2>References</h2>
+    </section>
   );
 };
 
