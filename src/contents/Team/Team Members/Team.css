@@ -1,194 +1,484 @@
+/* General Header and Team Styles */
 .team-header-container {
-    width: 100%;
-    text-align: center;
-    position: absolute;
-    top: 0;
-    left: 0;
-    padding: 20px;
-    margin-top: 40px;
-    background-color: white;
-    z-index: 1;
-  }
-  
-  .team-header {
-    font-size: 6rem;
-    color: #a6262e;
-    margin: 0;
-  }
-  
-  .team-first-container {
-    background-color: white;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: center;
-    height: 100vh;
-    padding: 100px 5% 0 5%;
-    position: relative;
-    overflow: hidden;
-  }
-  
-  .team-content {
-    flex: 1;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    color: #a6262e;
-    font-weight: bold;
-    text-align: left;
-  }
-  
-  .team-content h2 {
-    font-size: 3rem;
-    margin-top: 10px;
-    font-weight: bold;
-    padding-left: 50px;
-  }
-  
-  /* Right side: Headshot container */
-  .team-headshot-container {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    flex: 1;
-  }
-  
-  /* Headshot as a button */
-  .PI-headshot-button {
-    background: none;
-    border: none;
-    padding: 0;
-    cursor: pointer;
-  }
-  
-  .PI-headshot {
-    width: 300px;
-    height: 300px;
-    object-fit: cover;
-    border-radius: 50%; /* Circular headshot */
-  }
-  
-  .PI-name {
-    font-weight: bold;
-    color: #a6262e;
-    margin-top: 20px;
-    font-size: 1.5rem;
-    text-align: center;
-  }
-  
-  .team-container {
-    width: 500vw; /* Adjusted for 5 sections */
-    height: 100vh;
-    display: flex;
-    flex-direction: row;
-    flex-wrap: nowrap;
-    position: relative;
-    left: 0;
-    padding: 0;
-    margin: 0;
-  }
-  
-  .team-panel {
-    flex: 0 0 100vw;
-    height: 100vh;
-    box-sizing: border-box;
-  }
-  
-  /* Different panel colors */
-  .team-blue-panel {
-    margin-top: 40px;
-  }
-  
-  .team-red-panel {
-    margin-top: 40px;
-  }
-  
-  .team-orange-panel {
-    margin-top: 40px;
-  }
-  
-  .team-purple-panel {
-    margin-top: 40px;
-  }
-  
-  .team-green-panel {
-    margin-top: 40px;
-  }
-  
-  /* Modal styling */
-  .modal-overlay {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: rgba(0, 0, 0, 0.5);
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    z-index: 1000;
-  }
-  
-  .modal-content {
-    background-color: rgba(255, 255, 255, 0.95); /* Slightly opaque modal background */
-    padding: 20px;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: center;
-    border-radius: 10px;
-    position: relative;
-    width: 70%;
-    max-width: 1000px;
-    transform-origin: center center;
-  }
-  
-  .modal-text {
-    flex: 2;
-    padding-right: 20px;
-  }
-  
-  .modal-text h2 {
-    font-size: 2.5rem;
-    margin-bottom: 15px;
-    color: #a6262e;
-  }
-  
-  .modal-text p {
-    font-size: 1.2rem;
-    margin-bottom: 10px;
-  }
-  
-  .PI-headshot-modal {
-    width: auto;
-    height: auto;
-    object-fit: cover;
-    border-radius: 5px; /* Rectangular headshot */
-    flex: 1;
-  }
-  
-  /* Small X button */
-  .modal-close {
-    position: absolute;
-    top: 10px;
-    right: 10px;
-    background: none;
-    border: none;
-    font-size: 2rem;
-    color: #a6262e;
-    cursor: pointer;
-    padding: 0;
-    line-height: 1;
-  }
-  
-  .modal-close:hover {
-    color: #8e212a;
-  }
-  
-  .advisor-header {
-    font-size: 6rem;
-    color: #a6262e;
-    text-align: center;
-  }
-  
+  width: 100%;
+  text-align: center;
+  position: absolute;
+  top: 0;
+  left: 0;
+  padding: 20px;
+  margin-top: 40px;
+  background-color: white;
+  z-index: 1;
+}
+
+.team-header {
+  font-size: 6rem;
+  color: #a6262e;
+  margin: 0;
+}
+
+.team-first-container {
+  background-color: white;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  height: 100vh;
+  padding: 100px 5% 0 5%;
+  position: relative;
+  overflow: hidden;
+}
+
+.team-content {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  color: #a6262e;
+  font-weight: bold;
+  text-align: left;
+}
+
+.team-content h2 {
+  font-size: 3rem;
+  margin-top: 10px;
+  font-weight: bold;
+  padding-left: 50px;
+}
+
+.team-headshot-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  flex: 1;
+}
+
+.PI-headshot-button {
+  background: none;
+  border: none;
+  padding: 0;
+  cursor: pointer;
+}
+
+.PI-headshot {
+  width: 300px;
+  height: 300px;
+  object-fit: cover;
+  border-radius: 50%;
+  transition: transform 0.3s ease;
+}
+
+.PI-headshot:hover {
+  transform: scale(1.1);
+}
+
+.PI-name {
+  font-weight: bold;
+  color: #a6262e;
+  margin-top: 20px;
+  font-size: 1.5rem;
+  text-align: center;
+}
+
+.team-container {
+  width: 500vw;
+  height: 100vh;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  position: relative;
+  left: 0;
+  padding: 0;
+  margin: 0;
+}
+
+.team-panel {
+  flex: 0 0 100vw;
+  height: 100vh;
+  box-sizing: border-box;
+  background-color: white;
+  margin-top: 40px;
+}
+
+/* Modal styling */
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+.modal-content {
+  background-color: white;
+  padding: 20px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  border-radius: 10px;
+  position: relative;
+  width: 70%;
+  height: auto;
+  max-width: 1000px;
+  transform-origin: center center;
+}
+
+.modal-header-top-left {
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  color: #a6262e;
+}
+
+.modal-text {
+  flex: 2;
+  padding-right: 20px;
+}
+
+.modal-text h2 {
+  font-size: 2.5rem;
+  margin-bottom: 15px;
+  color: #a6262e;
+}
+
+.modal-text p {
+  font-size: 1.2rem;
+  margin-bottom: 10px;
+}
+
+.PI-headshot-modal {
+  width: 300px;
+  height: 300px;
+  object-fit: cover;
+  border-radius: 5px;
+  flex: 1;
+}
+
+.modal-close {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background: none;
+  border: none;
+  font-size: 2rem;
+  color: #a6262e;
+  cursor: pointer;
+  padding: 0;
+  line-height: 1;
+}
+
+.modal-close:hover {
+  color: #8e212a;
+}
+
+/* Advisor Section Styles */
+.advisor-header {
+  font-size: 6rem;
+  color: #a6262e;
+  text-align: center;
+}
+
+.advisor-headshots-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 40px;
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.advisor-headshot {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  flex: 1;
+}
+
+.advisor-headshot-button {
+  background: none;
+  border: none;
+  padding: 0;
+  cursor: pointer;
+}
+
+.advisor-headshot-img {
+  width: auto;
+  height: 300px;
+  border-radius: 50%;
+  object-fit: cover;
+  transition: transform 0.3s ease;
+}
+
+.advisor-headshot-img:hover {
+  transform: scale(1.1);
+}
+
+.advisor-name {
+  margin-top: 15px;
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #a6262e;
+}
+
+.advisor-role {
+  margin-top: 5px;
+  font-size: 1.2rem;
+  font-weight: normal;
+  color: #555;
+}
+
+/* Exec Team-specific styles */
+.exec-header {
+  font-size: 4rem;
+  color: #a6262e;
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.team-lead-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  margin-bottom: 50px;
+}
+
+.team-lead-button {
+  background: none;
+  border: none;
+  padding: 0;
+  cursor: pointer;
+}
+
+.team-lead-headshot {
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  object-fit: cover;
+  transition: transform 0.3s ease;
+}
+
+.team-lead-headshot:hover {
+  transform: scale(1.1);
+}
+
+.team-lead-name {
+  margin-top: 10px;
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #a6262e;
+}
+
+.team-lead-role {
+  margin-top: 5px;
+  font-size: 1.2rem;
+  color: #555;
+}
+
+/* Exec Members - Side by Side */
+.exec-headshots-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 50px;
+  max-width: 100%;
+  margin: 0 auto;
+}
+
+.exec-headshot {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.exec-headshot-button {
+  background: none;
+  border: none;
+  padding: 0;
+  cursor: pointer;
+}
+
+.exec-headshot-img {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  object-fit: cover;
+  transition: transform 0.3s ease;
+}
+
+.exec-headshot-img:hover {
+  transform: scale(1.1);
+}
+
+.exec-name {
+  margin-top: 10px;
+  font-size: 1.3rem;
+  font-weight: bold;
+  color: #a6262e;
+}
+
+.exec-role {
+  margin-top: 5px;
+  font-size: 1.1rem;
+  color: #555;
+}
+
+/* Wet Lab-specific styles */
+.wetlab-header {
+  font-size: 4rem;
+  color: #a6262e;
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.wetlab-headshots-container {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  padding: 0 50px;
+  max-width: 100%;
+  margin: 20px auto;
+}
+
+.wetlab-headshot {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.wetlab-headshot-button {
+  background: none;
+  border: none;
+  padding: 0;
+  cursor: pointer;
+}
+
+.wetlab-headshot-img {
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  object-fit: cover;
+  transition: transform 0.3s ease;
+}
+
+.wetlab-headshot-img:hover {
+  transform: scale(1.1);
+}
+
+.wetlab-name {
+  margin-top: 10px;
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #a6262e;
+}
+
+/* Dry Lab-specific styles (same as Wet Lab) */
+.drylab-header {
+  font-size: 4rem;
+  color: #a6262e;
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.drylab-headshots-container {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  padding: 0 50px;
+  max-width: 100%;
+  margin: 20px auto;
+}
+
+.drylab-headshot {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.drylab-headshot-button {
+  background: none;
+  border: none;
+  padding: 0;
+  cursor: pointer;
+}
+
+.drylab-headshot-img {
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  object-fit: cover;
+  transition: transform 0.3s ease;
+}
+
+.drylab-headshot-img:hover {
+  transform: scale(1.1);
+}
+
+.drylab-name {
+  margin-top: 10px;
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #a6262e;
+}
+
+/* Human Practices-specific styles (same as Wet Lab) */
+.humanpractices-header {
+  font-size: 4rem;
+  color: #a6262e;
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.humanpractices-headshots-container {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  padding: 0 50px;
+  max-width: 100%;
+  margin: 20px auto;
+}
+
+.humanpractices-headshot {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.humanpractices-headshot-button {
+  background: none;
+  border: none;
+  padding: 0;
+  cursor: pointer;
+}
+
+.humanpractices-headshot-img {
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  object-fit: cover;
+  transition: transform 0.3s ease;
+}
+
+.humanpractices-headshot-img:hover {
+  transform: scale(1.1);
+}
+
+.humanpractices-name {
+  margin-top: 10px;
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #a6262e;
+}
