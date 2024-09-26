@@ -138,7 +138,7 @@ const ReferenceSection = () => {
         padding: '20px',
         marginTop: '100px',
         width: '1520px',
-        height: '350px',
+        height: '250px',
         marginBottom: '100px',
       }}
     >
