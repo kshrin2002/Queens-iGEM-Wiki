@@ -6,29 +6,41 @@ export function Entrepreneurship() {
 
   const stagesData = [
     {
-      stage: "Pre-Seed Stage",
-      deliverables: ["Market Analysis", "Competitor Landscape Matrix", "SWOT Analysis"],
+      stage: 'Pre-Seed Stage',
+      deliverables: [
+        'Market Analysis',
+        'Competitor Landscape Matrix',
+        'Skills Gap Analysis',
+        'Advisory Board Profiles',
+        'PESTEL Analysis',
+        'SWOT Analysis',
+      ],
     },
     {
-      stage: "Seed Stage",
-      deliverables: ["Lean Canvas", "Business Plan", "IP Protection Strategy"],
+      stage: 'Seed Stage',
+      deliverables: [
+        'Lean Canvas',
+        'Business Plan',
+        'IP Protection Strategy',
+        'Risk Analysis Report',
+      ],
     },
     {
-      stage: "Early Stage",
-      deliverables: ["Preclinical Development Plan"],
+      stage: 'Early Stage',
+      deliverables: ['Preclinical Development Plan'],
     },
     {
-      stage: "Growth Stage",
-      deliverables: ["Clinical Trials Timeline", "Regulatory Strategy Roadmap"],
+      stage: 'Growth Stage',
+      deliverables: ['Clinical Trials Timeline', 'Regulatory Strategy Roadmap'],
     },
     {
-      stage: "Late Stage",
-      deliverables: ["Manufacturing Plan", "Projected Financial Statements"],
+      stage: 'Late Stage',
+      deliverables: ['Manufacturing Plan', 'Projected Financial Statements'],
     },
   ];
 
   const handleStageClick = (stage: string) => {
-    setSelectedStage(selectedStage === stage ? null : stage);
+    setSelectedStage((prevStage) => (prevStage === stage ? null : stage));
   };
 
   return (
