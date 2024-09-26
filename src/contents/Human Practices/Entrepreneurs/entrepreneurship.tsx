@@ -1,13 +1,15 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import './entrepreneurship.css';
+import { Button } from 'react-bootstrap';
 
 export function Entrepreneurship() {
   const [selectedStage, setSelectedStage] = useState<string | null>(null);
+  const [expandedDeliverables, setExpandedDeliverables] = useState<{ [key: string]: number | null }>({});
 
   const stagesData = [
     {
       stage: "Pre-Seed Stage",
-      deliverables: ["Market Analysis", "Competitor Landscape Matrix", "SWOT Analysis"],
+      deliverables: ["Pitch Deck", "Market Analysis", "Competitor Landscape Matrix", "Skill Gap Analysis", "Advisory Board Profiles", "PSETEL Analysis", "SWOT Analysis"],
     },
     {
       stage: "Seed Stage",
@@ -29,6 +31,13 @@ export function Entrepreneurship() {
 
   const handleStageClick = (stage: string) => {
     setSelectedStage(selectedStage === stage ? null : stage);
+  };
+
+  const handleDeliverableClick = (stage: string, index: number) => {
+    setExpandedDeliverables((prevState) => ({
+      ...prevState,
+      [stage]: prevState[stage] === index ? null : index,
+    }));
   };
 
   return (
@@ -54,7 +63,16 @@ export function Entrepreneurship() {
                   <div className="stage-details">
                     <ul>
                       {stageData.deliverables.map((deliverable, index) => (
-                        <li key={index}>{deliverable}</li>
+                        <li key={index} onClick={() => handleDeliverableClick(stageData.stage, index)}>
+                          {deliverable}
+                          {expandedDeliverables[stageData.stage] === index && (
+                            <div className="deliverable-content">
+                              <p>
+                                {`${deliverable} details go here...`} {/* You can replace this with actual content */}
+                              </p>
+                            </div>
+                          )}
+                        </li>
                       ))}
                     </ul>
                   </div>
@@ -64,6 +82,9 @@ export function Entrepreneurship() {
           </div>
         </div>
       </div>
+
+      <ReferenceSection />
+      <BackToTopButton />
     </>
   );
 }
@@ -107,6 +128,57 @@ const EntrepreneurshipHeading: React.FC = () => {
         ENTREPRENEURSHIP
       </h1>
     </div>
+  );
+};
+
+const ReferenceSection = () => {
+  return (
+    <section
+      style={{
+        backgroundColor: '#FE9BA1',
+        color: 'white',
+        padding: '20px',
+        marginTop: '100px',
+        width: '1520px',
+        height: '250px',
+        marginBottom: '100px',
+      }}
+    >
+      <h2>References</h2>
+    </section>
+  );
+};
+
+
+// Back to Top Button Component
+const BackToTopButton: React.FC = () => {
+  const [isVisible, setIsVisible] = useState(false);
+
+  const handleScroll = () => {
+    if (window.scrollY > 300) {
+      setIsVisible(true);
+    } else {
+      setIsVisible(false);
+    }
+  };
+
+  useEffect(() => {
+    window.addEventListener('scroll', handleScroll);
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, []);
+
+  const scrollToTop = () => {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  };
+
+  return (
+    <Button
+      className={`button ${isVisible ? 'visible' : ''}`} 
+      variant="primary"
+      onClick={scrollToTop}
+    >
+      ↑ Back to Top
+    </Button>
   );
 };
 
