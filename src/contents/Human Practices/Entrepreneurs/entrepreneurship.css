@@ -87,3 +87,14 @@
     font-size: 1rem;
     color: #A80505;
 }
+
+/* Deliverable content styling */
+.deliverable-content {
+    margin-top: 10px;
+    background-color: #FFDEE2;
+    padding: 10px;
+    border-radius: 8px;
+    color: #A80505;
+    box-shadow: 0px 0px 8px rgba(255, 222, 226, 1);
+    font-size: 0.9rem;
+}

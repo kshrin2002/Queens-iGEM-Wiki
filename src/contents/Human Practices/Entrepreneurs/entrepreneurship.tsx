@@ -3,6 +3,7 @@ import './entrepreneurship.css';
 
 export function Entrepreneurship() {
   const [selectedStage, setSelectedStage] = useState<string | null>(null);
+  const [expandedDeliverables, setExpandedDeliverables] = useState<{ [key: string]: number | null }>({});
 
   const stagesData = [
     {
@@ -31,6 +32,13 @@ export function Entrepreneurship() {
     setSelectedStage(selectedStage === stage ? null : stage);
   };
 
+  const handleDeliverableClick = (stage: string, index: number) => {
+    setExpandedDeliverables((prevState) => ({
+      ...prevState,
+      [stage]: prevState[stage] === index ? null : index,
+    }));
+  };
+
   return (
     <>
       <EntrepreneurshipHeading />
@@ -54,7 +62,16 @@ export function Entrepreneurship() {
                   <div className="stage-details">
                     <ul>
                       {stageData.deliverables.map((deliverable, index) => (
-                        <li key={index}>{deliverable}</li>
+                        <li key={index} onClick={() => handleDeliverableClick(stageData.stage, index)}>
+                          {deliverable}
+                          {expandedDeliverables[stageData.stage] === index && (
+                            <div className="deliverable-content">
+                              <p>
+                                {`${deliverable} details go here...`} {/* You can replace this with actual content */}
+                              </p>
+                            </div>
+                          )}
+                        </li>
                       ))}
                     </ul>
                   </div>
