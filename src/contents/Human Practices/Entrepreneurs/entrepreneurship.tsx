@@ -8,7 +8,7 @@ export function Entrepreneurship() {
   const stagesData = [
     {
       stage: "Pre-Seed Stage",
-      deliverables: ["Market Analysis", "Competitor Landscape Matrix", "SWOT Analysis"],
+      deliverables: ["Pitch Deck", "Market Analysis", "Competitor Landscape Matrix", "Skill Gap Analysis", "Advisory Board Profiles", "PSETEL Analysis", "SWOT Analysis"],
     },
     {
       stage: "Seed Stage",
