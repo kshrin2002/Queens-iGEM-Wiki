@@ -1,0 +1,286 @@
+/* Container for the entire page */
+.engineering-container {
+    position: relative;
+    width: 100vw;
+    overflow-x: hidden;
+  }
+  
+  /* Wrapper for the horizontally scrolling pages */
+  .page-wrapper {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+    height: 100vh;
+  }
+  
+  /* Individual page styles */
+  .page {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 2rem;
+  }
+  
+  
+  
+  /* Styles for the first page with the arrow */
+  .arrow-container {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    width: 100%;
+  }
+  
+  /* Pink arrow */
+  .arrow {
+    background-color: var(--pinksalmon);
+    position: absolute;
+    color: white;
+    padding: 2rem;
+    left: -20px;
+    height: 40vh;
+    position: relative;
+    width: 75%;
+    margin-right: 2rem;
+  }
+  
+  .arrow::after {
+    z-index: -1;
+    content: '';
+    position: absolute;
+    right: -200px;
+    top: 50%;
+    transform: translateY(-50%);
+    border-top: 300px solid transparent;
+    border-bottom: 300px solid transparent;
+    border-left: 300px solid var(--pinksalmon);
+  }
+  
+  .page-title {
+    font-size: 2rem;
+    font-weight: bold;
+  }
+  
+  /* Circular diagram */
+  .circle-diagram{
+    margin: auto;
+    padding-left: 0rem;
+  }
+  
+  .circle-img {
+    height: 700px;
+    left: 50vw;
+  }
+  
+  /* Navigation dots */
+  .navigation-dots {
+    position: absolute;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    gap: 10px;
+  }
+  
+  .dot {
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background-color: var(--pinksalmon);
+    cursor: pointer;
+  }
+  
+  .dot.active {
+    background-color: var(--venetianred);
+  }
+  
+  .navarrow1{
+    left: 96vw;
+    top: 47vh;
+    position: absolute;
+    z-index: 1;
+    color: var(--pinksalmon);
+    transition: color 0.5s ease;
+    
+    &:hover{
+      color: var(--venetianred);
+      transition: color 0.5s ease;
+    }
+  }
+  
+  .navarrow2{
+    left: 196vw;
+    top: 47vh;
+    position: absolute;
+    z-index: 1;
+    color: var(--pinksalmon);
+    transition: color 0.5s ease;
+    
+    &:hover{
+      color: var(--venetianred);
+      transition: color 0.5s ease;
+    }
+  }
+  .navarrow3{
+    left: 101vw;
+    top: 47vh;
+    position: absolute;
+    z-index: 1;
+    color: var(--pinksalmon);
+    transition: color 0.5s ease;
+    
+    &:hover{
+      color: var(--venetianred);
+      transition: color 0.5s ease;
+    }
+  }
+  .navarrow4{
+    left: 201vw;
+    top: 47vh;
+    position: absolute;
+    z-index: 1;
+    color: var(--pinksalmon);
+    transition: color 0.5s ease;
+    
+    &:hover{
+      color: var(--venetianred);
+      transition: color 0.5s ease;
+    }
+  }
+  .navarrow5{
+    left: 296vw;
+    top: 47vh;
+    position: absolute;
+    z-index: 1;
+    color: var(--pinksalmon);
+    transition: color 0.5s ease;
+    
+    &:hover{
+      color: var(--venetianred);
+      transition: color 0.5s ease;
+    }
+  }
+  .navarrow6{
+    left: 301vw;
+    top: 47vh;
+    position: absolute;
+    z-index: 1;
+    color: var(--pinksalmon);
+    transition: color 0.5s ease;
+    
+    &:hover{
+      color: var(--venetianred);
+      transition: color 0.5s ease;
+    }
+  }
+  .navarrow7{
+    left: 396vw;
+    top: 47vh;
+    position: absolute;
+    z-index: 1;
+    color: var(--pinksalmon);
+    transition: color 0.5s ease;
+    
+    &:hover{
+      color: var(--venetianred);
+      transition: color 0.5s ease;
+    }
+  }
+  .navarrow8{
+    left: 401vw;
+    top: 47vh;
+    position: absolute;
+    z-index: 1;
+    color: var(--pinksalmon);
+    transition: color 0.5s ease;
+    
+    &:hover{
+      color: var(--venetianred);
+      transition: color 0.5s ease;
+    }
+  }
+  
+  .vertical-rectangle {
+    width: 300px;
+    height: 500px;
+    background-color: #f0f0f0; 
+    border: solid;
+    border-width: 5px;
+    border-radius: 20px;
+    border-color: var(--venetianred);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: transform 0.3s ease; 
+  }
+  
+  .vertical-rectangle:hover {
+      transform: translateX(-10px);
+  }
+  .vertical-rectangle-r {
+    width: 300px;
+    height: 500px;
+    background-color: #f0f0f0; 
+    border: solid;
+    border-width: 5px;
+    border-radius: 20px;
+    border-color: var(--venetianred);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: transform 0.3s ease; 
+  }
+  
+  .vertical-rectangle-r:hover {
+      transform: translateX(10px);
+  }
+  
+  .circle-img {
+    animation: rotate 8s linear infinite;
+    margin-bottom: 1rem;
+  }
+  
+  .circle-img.animate {
+    transform: rotate(180deg);
+  }
+  
+  @keyframes rotate {
+    from {
+      transform: rotate(0deg);
+    }
+    to {
+      transform: rotate(360deg);
+    }
+  }
+  
+  .centered-text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: var(--venetianred); /* Change text color if necessary */
+    font-size: 4rem;
+    font-weight: bold;
+    text-align: center;
+    z-index: 1; /* Ensure text is above the image */
+  }
+  
+  .scroll-button {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    padding: 10px;
+    font-size: 16px;
+    border: none;
+    border-radius: 5px;
+    background-color: var(--venetianred);
+    color: var(--pinksalmon);
+    cursor: pointer;
+    transition: background-color 0.3s ease; 
+  }
+  
+  .scroll-button:hover {
+    color: var(--venetianred);
+    background-color: var(--pinksalmon); 
+  }
