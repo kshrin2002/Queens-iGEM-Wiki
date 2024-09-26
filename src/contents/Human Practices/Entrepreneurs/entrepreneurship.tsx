@@ -83,6 +83,7 @@ export function Entrepreneurship() {
       </div>
 
       <ReferenceSection />
+      <BackToTopButton />
     </>
   );
 }
@@ -144,6 +145,39 @@ const ReferenceSection = () => {
     >
       <h2>References</h2>
     </section>
+  );
+};
+
+
+// Back to Top Button Component
+const BackToTopButton: React.FC = () => {
+  const [isVisible, setIsVisible] = useState(false);
+
+  const handleScroll = () => {
+    if (window.scrollY > 300) {
+      setIsVisible(true);
+    } else {
+      setIsVisible(false);
+    }
+  };
+
+  useEffect(() => {
+    window.addEventListener('scroll', handleScroll);
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, []);
+
+  const scrollToTop = () => {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  };
+
+  return (
+    <Button
+      className={`button ${isVisible ? 'visible' : ''}`} 
+      variant="primary"
+      onClick={scrollToTop}
+    >
+      ↑ Back to Top
+    </Button>
   );
 };
 
