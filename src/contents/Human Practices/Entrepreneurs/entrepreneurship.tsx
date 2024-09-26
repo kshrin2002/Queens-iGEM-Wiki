@@ -1,5 +1,7 @@
 import React, { useState } from 'react';
 import './entrepreneurship.css';
+import React, { useEffect} from 'react';
+import { Button } from 'react-bootstrap';
 
 export function Entrepreneurship() {
   const [selectedStage, setSelectedStage] = useState<string | null>(null);
