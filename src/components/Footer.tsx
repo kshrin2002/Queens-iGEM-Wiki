@@ -62,37 +62,35 @@ export function Footer() {
             <p>Instagram: <a href="https://www.instagram.com/queens_igem" className="contact-link" target="_blank" rel="noopener noreferrer">@queens_igem</a></p>
           </div>
 
-          {/* Queen's University Logo */}
+          {/* Queen's University Logo and Text Aligned Bottom Right */}
           <div className="col-lg-4 text-lg-right text-center mt-lg-0 mt-4">
-            <img
-              src="https://static.igem.wiki/teams/5079/queenslogo-colour.png"
-              alt="Queen's University"
-              className="queens-logo" /* Add a custom class for the logo */
-            />
-          </div>
-        </div>
-
-        <hr />
-        <div className="row mt-4">
-          <div className="col-12 text-center">
-            <p className="mb-0">
-              <small>
-                © 2024 - Content on this site is licensed under a{" "}
-                <a className="subfoot" href="https://creativecommons.org/licenses/by/4.0/" rel="license">
-                  Creative Commons Attribution 4.0 International license
-                </a>
-                .
-              </small>
-            </p>
-            <p>
-              <small>
-                The repository used to create this website is available at{" "}
-                <a href={`https://gitlab.igem.org/${teamYear}/${teamSlug}`}>
-                  gitlab.igem.org/{teamYear}/{teamSlug}
-                </a>
-                .
-              </small>
-            </p>
+            <div className="bottom-right-content">
+              <img
+                src="https://static.igem.wiki/teams/5079/queenslogo-colour.png"
+                alt="Queen's University"
+                className="queens-logo"
+              />
+              <div className="footer-text"> {/* Wrapper for text */}
+                <p className="mb-0">
+                  <small>
+                    © 2024 - Content on this site is licensed under a{" "}
+                    <a className="subfoot" href="https://creativecommons.org/licenses/by/4.0/" rel="license">
+                      Creative Commons Attribution 4.0 International license
+                    </a>
+                    .
+                  </small>
+                </p>
+                <p>
+                  <small>
+                    The repository used to create this website is available at{" "}
+                    <a href={`https://gitlab.igem.org/${teamYear}/${teamSlug}`}>
+                      gitlab.igem.org/{teamYear}/{teamSlug}
+                    </a>
+                    .
+                  </small>
+                </p>
+              </div>
+            </div>
           </div>
         </div>
       </div>
