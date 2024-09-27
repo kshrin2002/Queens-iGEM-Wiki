@@ -179,8 +179,6 @@ const CardSection1: React.FC = () => {
   );
 };
 
-
-
 const PitchCompCarousel: React.FC = () => {
   const section = {
     title: 'Pitch Competition',
@@ -188,9 +186,9 @@ const PitchCompCarousel: React.FC = () => {
   };
 
   const images = [
-    "https://via.placeholder.com/150", // Replace with the actual paths to your images
-    "https://via.placeholder.com/150",
-    "https://via.placeholder.com/150",
+    "https://via.placeholder.com/300x200", // Replace with the actual paths to your images
+    "https://via.placeholder.com/300x200",
+    "https://via.placeholder.com/300x200",
   ];
 
   const [currentIndex, setCurrentIndex] = useState(0);
@@ -224,7 +222,7 @@ const PitchCompCarousel: React.FC = () => {
   const slidersVariants = {
     hover: {
       scale: 1.2,
-      backgroundColor: "#FE9BA1",
+      backgroundColor: "#ff00008e",
     },
   };
 
@@ -283,7 +281,7 @@ const PitchCompCarousel: React.FC = () => {
                     animate="visible"
                     exit="exit"
                     variants={slideVariants}
-                    style={{ width: '200px', height: '200px', borderRadius: '100px' }}
+                    style={{ width: '300px', height: '200px', borderRadius: '10px' }} // Rectangular shape
                   />
                 </AnimatePresence>
                 <div className="slide_direction">
