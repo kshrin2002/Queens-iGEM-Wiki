@@ -178,7 +178,9 @@ const Option = ({ text, sectionIndex, sectionPartIndex }: { text: string, sectio
     const sectionId = `section-${sectionIndex}-part-${sectionPartIndex}`;
     const sectionElement = document.getElementById(sectionId);
     if (sectionElement) {
-      sectionElement.scrollIntoView({ behavior: 'smooth' });
+      const topPosition = sectionElement.getBoundingClientRect().top + window.scrollY; // Get the current top position of the element
+      const offset = 100; // Adjust this value to change the offset (pixels)
+      window.scrollTo({ top: topPosition - offset, behavior: 'smooth' }); // Scroll to the element with an offset
     }
   };
 
