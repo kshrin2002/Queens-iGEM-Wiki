@@ -1,31 +1,42 @@
 /* Footer.css */
 
 #unique-footer {
-  background-color: grey !important;
-  color: white !important;
-  padding: 5rem 0;
+  background-color: #EAE9E9;
+  padding: 0 0 5rem 0;
+  margin: 0;
+  width: 100vw;
+  box-sizing: border-box;
 }
 
-#unique-footer .sponsor-images {
-  display: flex;
-  justify-content: space-around;
-  flex-wrap: wrap;
+#unique-footer .sponsor-logo {
+  margin: 0 auto;
+  width: 180px; /* Ensure logos have a uniform size */
+  height: auto;
+  object-fit: contain;
 }
 
-#unique-footer .sponsor-images img {
-  margin: 10px;
-  width: 150px; /* This sets a consistent width */
-  height: auto; /* Let the height adjust to maintain the aspect ratio */
-  object-fit: contain; /* Ensures the image fits within the box without distortion */
+.slick-slide {
+  text-align: center;
+}
+
+/* Styling for carousel arrows */
+.slick-prev, .slick-next {
+  color: #790000;
+}
+
+.slick-prev:hover, .slick-next:hover {
+  color: #d73a31;
 }
 
 #unique-footer h4 {
-  font-size: 1.5rem;
+  font-size: 3rem;
   margin-bottom: 1.5rem;
+  color: #790000;
 }
 
 #unique-footer p {
   margin-bottom: 0.5rem;
+  color: #790000;
 }
 
 #unique-footer .subfoot {
@@ -33,12 +44,25 @@
   text-decoration: underline;
 }
 
+#unique-footer .contact-link {
+  color: #4DB6E3;
+  text-decoration: none;
+}
+
+#unique-footer .contact-link:hover {
+  text-decoration: underline;
+}
+
 #unique-footer hr {
   border-color: rgba(255, 255, 255, 0.1);
+  margin: 0;
 }
 
 #unique-footer .container {
-  max-width: 1140px;
+  max-width: 100%;
+  padding-left: 15px;
+  padding-right: 30px;
+  padding-bottom: 0;
 }
 
 #unique-footer .row {
@@ -52,4 +76,33 @@
 #unique-footer img {
   max-width: 100%;
   height: auto;
+}
+
+#unique-footer .row.mt-4 .col-12 {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 0;
+}
+
+.queens-logo {
+  width: 200px;
+  height: auto;
+  position: relative;
+}
+
+.bottom-right-content {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  margin-top: 20px;
+  width: 100%;
+}
+
+.bottom-right-content .footer-text {
+  text-align: right;
+  font-size: 0.85rem;
+  width: 1000px;
+  margin-bottom: 0;
 }

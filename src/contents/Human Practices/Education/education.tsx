@@ -13,7 +13,8 @@ export function Education() {
       <NavBar1 />
       <NavbarSection1 />
       <APSC103Section />
-      <CardSection />
+      <CardSection1 />
+      <PitchCompCarousel />
       <CommunityHeading />
       <PSWSection />
       <CommunityCarousel1 />
@@ -151,7 +152,7 @@ const APSC103Section = () => {
   );
 };
 
-const CardSection: React.FC = () => {
+const CardSection1: React.FC = () => {
   const section = {
     title: 'Experiential Learning',
     description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.',
@@ -171,6 +172,165 @@ const CardSection: React.FC = () => {
             <Col xs={4}>
               <img src={placeholderImage} alt={`Image for ${section.title}`} style={{ width: '200px', height: '200px', borderRadius: '100px' }} />
             </Col>
+          </Row>
+        </Card.Body>
+      </Card>
+    </Container>
+  );
+};
+
+const PitchCompCarousel: React.FC = () => {
+  const section = {
+    title: 'Pitch Competition',
+    description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.',
+  };
+
+  const images = [
+    "https://via.placeholder.com/300x200", // Replace with the actual paths to your images
+    "https://via.placeholder.com/300x200",
+    "https://via.placeholder.com/300x200",
+  ];
+
+  const [currentIndex, setCurrentIndex] = useState(0);
+  const [direction, setDirection] = useState<"left" | "right" | null>(null);
+
+  const slideVariants = {
+    hiddenRight: {
+      x: "100%",
+      opacity: 0,
+    },
+    hiddenLeft: {
+      x: "-100%",
+      opacity: 0,
+    },
+    visible: {
+      x: "0",
+      opacity: 1,
+      transition: {
+        duration: 1,
+      },
+    },
+    exit: {
+      opacity: 0,
+      scale: 0.8,
+      transition: {
+        duration: 0.5,
+      },
+    },
+  };
+
+  const slidersVariants = {
+    hover: {
+      scale: 1.2,
+      backgroundColor: "#ff00008e",
+    },
+  };
+
+  const dotsVariants = {
+    initial: {
+      y: 0,
+    },
+    animate: {
+      y: -10,
+      scale: 1.2,
+      transition: { type: "spring", stiffness: 1000, damping: 10 },
+    },
+    hover: {
+      scale: 1.1,
+      transition: { duration: 0.2 },
+    },
+  };
+
+  const handleNext = () => {
+    setDirection("right");
+    setCurrentIndex((prevIndex) =>
+      prevIndex + 1 === images.length ? 0 : prevIndex + 1
+    );
+  };
+
+  const handlePrevious = () => {
+    setDirection("left");
+    setCurrentIndex((prevIndex) =>
+      prevIndex - 1 < 0 ? images.length - 1 : prevIndex - 1
+    );
+  };
+
+  const handleDotClick = (index: number) => {
+    setDirection(index > currentIndex ? "right" : "left");
+    setCurrentIndex(index);
+  };
+
+  return (
+    <Container fluid className="card-container">
+      <Card className="custom-card" style={{ backgroundColor: '#FE9BA1' }}>
+        <Card.Body>
+          <Card.Title>{section.title}</Card.Title>
+          <Row>
+            <Col>
+              <Card.Text>{section.description}</Card.Text>
+            </Col>
+          </Row>
+          <Row className="mt-4 justify-content-center">
+            <div className="carousel">
+              <div className="carousel-images">
+                <AnimatePresence>
+                  <motion.img
+                    key={currentIndex}
+                    src={images[currentIndex]}
+                    initial={direction === "right" ? "hiddenRight" : "hiddenLeft"}
+                    animate="visible"
+                    exit="exit"
+                    variants={slideVariants}
+                    style={{ width: '300px', height: '200px', borderRadius: '10px' }} // Rectangular shape
+                  />
+                </AnimatePresence>
+                <div className="slide_direction">
+                  <motion.div
+                    variants={slidersVariants}
+                    whileHover="hover"
+                    className="left"
+                    onClick={handlePrevious}
+                  >
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      height="20"
+                      viewBox="0 96 960 960"
+                      width="20"
+                    >
+                      <path d="M400 976 0 576l400-400 56 57-343 343 343 343-56 57Z" />
+                    </svg>
+                  </motion.div>
+                  <motion.div
+                    variants={slidersVariants}
+                    whileHover="hover"
+                    className="right"
+                    onClick={handleNext}
+                  >
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      height="20"
+                      viewBox="0 96 960 960"
+                      width="20"
+                    >
+                      <path d="m304 974-56-57 343-343-343-343 56-57 400 400-400 400Z" />
+                    </svg>
+                  </motion.div>
+                </div>
+              </div>
+              <div className="carousel-indicator">
+                {images.map((_, index) => (
+                  <motion.div
+                    key={index}
+                    className={`dot ${currentIndex === index ? "active" : ""}`}
+                    onClick={() => handleDotClick(index)}
+                    initial="initial"
+                    animate={currentIndex === index ? "animate" : ""}
+                    whileHover="hover"
+                    variants={dotsVariants}
+                  ></motion.div>
+                ))}
+              </div>
+            </div>
           </Row>
         </Card.Body>
       </Card>
@@ -621,6 +781,5 @@ const NavbarSection2 = () => {
     </div>
   );
 };
-
 
 export default Education;

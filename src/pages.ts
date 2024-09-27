@@ -31,7 +31,6 @@ import {HumanPractices} from "./contents/Human Practices/Integrated Human Practi
 import {Education} from "./contents/Human Practices/Education/education";
 import {Entrepreneurship} from "./contents/Human Practices/Entrepreneurs/entrepreneurship";
 import {PatientStories} from "./contents/Human Practices/Patient Stories/patient-stories";
-import {Sustainable} from "./contents/sustainable"
 
 interface Base {
   name: string | undefined;
@@ -64,13 +63,6 @@ const Pages: (Page | Folder)[] = [
       name: "Project",
       folder: [
         {
-          name: "Contribution",
-          title: "Contribution",
-          path: "/contribution",
-          component: Contribution,
-          lead: "Make a useful contribution for future iGEM teams. Use this page to document that contribution.",
-        },
-        {
           name: "Description",
           title: "Project Description",
           path: "/description",
@@ -83,6 +75,13 @@ const Pages: (Page | Folder)[] = [
           path: "/implementation",
           component: Implementation,
           lead: "Testing 123",
+        },
+        {
+          name: "Contribution",
+          title: "Contribution",
+          path: "/contribution",
+          component: Contribution,
+          lead: "Make a useful contribution for future iGEM teams. Use this page to document that contribution.",
         },
         {
           name: "Judging",
@@ -108,6 +107,13 @@ const Pages: (Page | Folder)[] = [
           lead: "test 123",
         },
         {
+          name: "Parts",
+          title: "Parts",
+          path: "/parts",
+          component: Parts,
+          lead: "test 123",
+        },
+        {
           name: "Experiments",
           title: "Experiments",
           path: "/experiments",
@@ -115,17 +121,17 @@ const Pages: (Page | Folder)[] = [
           lead: "test 123",
         },
         {
+          name: "Results and Analysis",
+          title: "Results",
+          path: "/resultsandanalysis",
+          component: Results,
+          lead: "test 123",
+        },
+        {
           name: "Engineering",
           title: "Engineering",
           path: "/engineeringW",
           component: EngineeringW,
-          lead: "test 123",
-        },
-        {
-          name: "Parts",
-          title: "Parts",
-          path: "/parts",
-          component: Parts,
           lead: "test 123",
         },
         {
@@ -159,17 +165,17 @@ const Pages: (Page | Folder)[] = [
     name: "Dry Lab",
     folder: [
       {
-        name: "Engineering",
-        title: "Engineering",
-        path: "/engineering",
-        component: Engineering,
-        lead: "test 123",
-      },
-      {
         name: "Model",
         title: "Model",
         path: "/model",
         component: Model,
+        lead: "test 123",
+      },
+      {
+        name: "Engineering",
+        title: "Engineering",
+        path: "/engineering",
+        component: Engineering,
         lead: "test 123",
       },
     ],
@@ -179,13 +185,6 @@ const Pages: (Page | Folder)[] = [
   {
     name: "Human Practices",
     folder: [
-      {
-        name: "Education",
-        title: "Education",
-        path: "/education",
-        component: Education,
-        lead: "test 123",
-      },
       {
         name: "Entrepreneurship",
         title: "Entrepreneurship",
@@ -201,32 +200,18 @@ const Pages: (Page | Folder)[] = [
         lead: "Testing 123",
       },
       {
+        name: "Education",
+        title: "Education",
+        path: "/education",
+        component: Education,
+        lead: "test 123",
+      },
+      {
         name: "Patient Stories",
         title: "Patient Stories",
         path: "/patient-stories",
         component: PatientStories,
         lead: "Testing 123",
-      },
-      {
-        name: "Team",
-        title: "Team",
-        path: "/team",
-        component: Team,
-        lead: "On this page you can introduce your team members, instructors, and advisors.",
-      },
-      {
-        name: "Attributions",
-        title: "Attributions",
-        path: "/attributions",
-        component: Attributions,
-        lead: "In the iGEM Competition, we celebrate student effort and achievement. The Attributions form helps the judges differentiate between what students accomplished from how their external collaborators supported them. Therefore, teams must clearly explain on the standard Project Attributions form what work they have conducted by themselves and what has been done by others.",
-      },
-      {
-        name: "Sustainable",
-        title: "Sustainable Development Goals",
-        path: "/sustainable",
-        component: Sustainable,
-        lead: "Describe how you have evaluated your project ideas against one or more of the SDGs.",
       }
     ],
   },
