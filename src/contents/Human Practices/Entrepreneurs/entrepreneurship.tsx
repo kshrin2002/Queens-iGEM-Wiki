@@ -97,7 +97,7 @@ const OverviewSection = () => {
         color: 'white',
         padding: '20px',
         marginTop: '100px',
-        width: '1520px',
+        width: '100%',
         height: '350px',
         marginBottom: '100px',
       }}
@@ -139,7 +139,7 @@ const ReferenceSection = () => {
         color: 'white',
         padding: '20px',
         marginTop: '100px',
-        width: '1520px',
+        width: '100%',
         height: '250px',
         marginBottom: '100px',
       }}
