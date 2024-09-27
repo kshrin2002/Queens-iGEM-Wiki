@@ -80,20 +80,21 @@ const CardSection: React.FC = () => {
       description2: 'Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.',
     },
   ];
-  const placeholderImage = "https://via.placeholder.com/150"; // Placeholder image for now
+
+  const placeholderImage = "https://via.placeholder.com/150";
 
   return (
     <Container fluid className="card-container">
-      {sections.map((section, index) => (
-        <Card key={index} className="custom-card" id={`section-${index}`}>
+      {sections.map((section, sectionIndex) => (
+        <Card key={sectionIndex} className="custom-card" id={`section-${sectionIndex}`}>
           <Card.Body>
             <Card.Title>{section.title}</Card.Title>
             <Row>
               <Col xs={8}>
-                <h3>{section.subtitle1}</h3>
+                <h3 id={`section-${sectionIndex}-part-0`}>{section.subtitle1}</h3>
                 <Card.Text>{section.description1}</Card.Text>
 
-                <h3>{section.subtitle2}</h3>
+                <h3 id={`section-${sectionIndex}-part-1`}>{section.subtitle2}</h3>
                 <Card.Text>{section.description2}</Card.Text>
               </Col>
               <Col xs={4}>
@@ -128,7 +129,7 @@ const Sidebar: React.FC = () => {
   const [openSection, setOpenSection] = useState<number | null>(null);
 
   return (
-    <div className="sidebar">
+    <div className="sidebar-contributions">
       <ul>
         {sections.map((section, index) => (
           <li key={index}>
@@ -137,7 +138,7 @@ const Sidebar: React.FC = () => {
               <span>{section.name}</span>
             </div>
             {openSection === index && (
-              <StaggeredDropDown options={section.content} />
+              <StaggeredDropDown options={section.content} sectionIndex={index} />
             )}
           </li>
         ))}
@@ -146,26 +147,52 @@ const Sidebar: React.FC = () => {
   );
 };
 
-const StaggeredDropDown = ({ options }: { options: string[] }) => {
+const StaggeredDropDown = ({ options, sectionIndex }: { options: string[]; sectionIndex: number }) => {
   return (
     <motion.ul
-      className="flex flex-col gap-2 p-2 rounded-lg bg-white shadow-xl"
+      style={{
+        padding: '10px',
+        backgroundColor: '#fff',
+        listStyle: 'none',
+        marginLeft: '0',
+        marginTop: '10px',
+        width: '100%',
+      }}
     >
       {options.map((option: string, index: number) => (
-        <Option key={index} text={option} />
+        <Option
+          key={index}
+          text={option}
+          sectionIndex={sectionIndex}
+          sectionPartIndex={index}
+        />
       ))}
     </motion.ul>
   );
 };
 
-const Option = ({ text }: { text: string }) => {
+
+const Option = ({ text, sectionIndex, sectionPartIndex }: { text: string, sectionIndex: number, sectionPartIndex: number }) => {
+  const handleClick = () => {
+    // Logic to scroll to the specific section of the card
+    const sectionId = `section-${sectionIndex}-part-${sectionPartIndex}`;
+    const sectionElement = document.getElementById(sectionId);
+    if (sectionElement) {
+      sectionElement.scrollIntoView({ behavior: 'smooth' });
+    }
+  };
+
   return (
-    <li className="flex items-center gap-2 w-full p-2 text-xs font-medium whitespace-nowrap rounded-md hover:bg-indigo-100 text-slate-700 hover:text-indigo-500 transition-colors cursor-pointer">
+    <li
+      className="flex items-center gap-2 w-full p-2 text-xs font-medium whitespace-nowrap rounded-md hover:bg-indigo-100 text-slate-700 hover:text-indigo-500 transition-colors cursor-pointer"
+      onClick={handleClick}
+    >
       <FiEdit />
       <span>{text}</span>
     </li>
   );
 };
+
 
 // Back to Top Button Component
 const BackToTopButton: React.FC = () => {

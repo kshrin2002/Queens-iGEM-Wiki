@@ -76,43 +76,71 @@
     display: flex; /* Use flex to position sidebar and card section */
     margin-top: 100px; /* Space for the overview section */
 }
-.sidebar {
-    position: sticky; /* Change from absolute to sticky */
-    top: 300px; /* Adjust this to align with the top of the overview section */
-    left: 0; /* Position it to the left */
+
+.sidebar-contributions {
+    position: sticky; /* Keep sidebar fixed */
+    top: 300px; /* Align with the overview section */
+    left: 0; /* Align to the left */
     width: 25%; /* Width of the sidebar */
     padding: 20px;
     max-height: calc(100vh - 100px); /* Prevent scrolling past the top */
-    overflow-y: auto; /* Allow scrolling within the sidebar if content overflows */
+    overflow-y: auto; 
 }
 
-.sidebar ul {
+.sidebar-contributions ul {
     list-style: none; /* Remove default list styles */
-    padding: 5;
-
+    padding: 0;
 }
 
-.sidebar li {
+.sidebar-contributions li {
     cursor: pointer; /* Change cursor to pointer on hover */
     margin: 5px 0; /* Spacing between items */
     padding: 10px; /* Add some padding for clickable area */
     border: 2px solid transparent; /* Transparent border for hover effect */
     border-radius: 10px;
-    display: flex; /* Align items in a row */
-    align-items: center; /* Center icons and text vertically */
+    display: block; /* Align items in a row */
     transition: border-color 0.3s; /* Transition effect */
+    position: relative; /* Position relative for dropdown */
 }
 
-.sidebar li:hover {
+.sidebar-contributions li:hover {
     border-color: var(--mexired); /* Change border color on hover */
-    
 }
 
-.sidebar li span {
+.sidebar-contributions li span {
     margin-left: 10px; /* Space between icon and text */
 }
 
-.sidebar img {
+.sidebar-contributions img {
     width: 30px;
     height: 30px;
 }
+
+.motion-ul {
+    display: block; /* Ensure it's displayed as a block */
+    width: 100%; /* Full width for dropdown */
+    margin-top: 0; /* Remove margin to avoid extra spacing */
+    position: absolute; /* Position absolute for dropdown */
+    left: 0; /* Align dropdown to the left */
+    padding: 0; /* Remove default padding */
+    z-index: 1; /* Ensure it's on top of other content */
+    background-color: white; /* Background color for dropdown */
+    border-radius: 5px; /* Slightly round corners */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); /* Add shadow for depth */
+}
+
+.motion-li {
+    display: block; /* Ensure items are block-level */
+    margin: 0; /* Reset margins */
+    padding: 10px; /* Padding for clickable area */
+    cursor: pointer; /* Pointer cursor for hover effect */
+    transition: background-color 0.3s; /* Smooth transition for hover */
+}
+
+.motion-li:hover {
+    background-color: var(--pinksalmon); /* Change background on hover */
+}
+
+
+
+
