@@ -8,7 +8,7 @@ import {Experiments} from "./contents/Wet Lab/Experiments/experiments";
 import {EngineeringW} from "./contents/Wet Lab/Engineering/engineeringW";
 import {Safety} from "./contents/Wet Lab/Safety/safety";
 import {Parts} from "./contents/Wet Lab/Parts/parts";
-//import {ProofOfConcepts} from "./contents/Wet Lab/Proof of Concepts/proofofconcepts";
+import {ProofOfConcepts} from "./contents/Wet Lab/Proof of Concepts/proofofconcept";
 import {Results} from "./contents/Wet Lab/Results & Analysis/resultsandanalysis";
 
 // Dry Lab Folder
@@ -140,6 +140,13 @@ const Pages: (Page | Folder)[] = [
           title: "Results",
           path: "/resultsandanalysis",
           component: Results,
+          lead: "test 123",
+        },
+        {
+          name: "Proof Of Concept",
+          title: "Proof of Concept",
+          path: "/ProofOfConcept",
+          component: ProofOfConcepts,
           lead: "test 123",
         }
         //add proof of concept here
