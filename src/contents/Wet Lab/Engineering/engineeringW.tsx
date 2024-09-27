@@ -100,9 +100,6 @@ export function EngineeringW() {
               size={50}
               onClick={() => handleDotClick(0)}
             />
-            <div className="vertical-rectangle">
-              <p>Text for Left Rectangle</p>
-            </div>
             <div className="circle-diagram" style={{ flex: '1', position: 'relative' }}>
               <img
                 ref={imgRef} // Reference to the image
@@ -111,7 +108,7 @@ export function EngineeringW() {
                 alt=""
               />
               {/* Text over the image */}
-              <div className="centered-text">LEARN</div>
+              <div className="centered-text">ITERATION 1</div>
             </div>
             <div className="vertical-rectangle-r">
               <p>Text for Right Rectangle</p>
@@ -133,9 +130,6 @@ export function EngineeringW() {
               size={50}
               onClick={() => handleDotClick(1)}
             />
-            <div className="vertical-rectangle">
-              <p>Text for Left Rectangle</p>
-            </div>
             <div className="circle-diagram" style={{ flex: '1', position: 'relative' }}>
               <img
                 ref={imgRef} // Reference to the image
@@ -144,7 +138,7 @@ export function EngineeringW() {
                 alt=""
               />
               {/* Text over the image */}
-              <div className="centered-text">DESIGN</div>
+              <div className="centered-text">ITERATION 2</div>
             </div>
             <div className="vertical-rectangle-r">
               <p>Text for Right Rectangle</p>
@@ -165,9 +159,6 @@ export function EngineeringW() {
               size={50}
               onClick={() => handleDotClick(2)}
             />
-            <div className="vertical-rectangle">
-              <p>Text for Left Rectangle</p>
-            </div>
             <div className="circle-diagram" style={{ flex: '1', position: 'relative' }}>
               <img
                 ref={imgRef} // Reference to the image
@@ -176,7 +167,7 @@ export function EngineeringW() {
                 alt=""
               />
               {/* Text over the image */}
-              <div className="centered-text">BUILD</div>
+              <div className="centered-text">ITERATION 3</div>
             </div>
             <div className="vertical-rectangle-r">
               <p>Text for Right Rectangle</p>
@@ -197,9 +188,6 @@ export function EngineeringW() {
               size={50}
               onClick={() => handleDotClick(3)}
             />
-            <div className="vertical-rectangle">
-              <p>Text for Left Rectangle</p>
-            </div>
             <div className="circle-diagram" style={{ flex: '1', position: 'relative' }}>
               <img
                 ref={imgRef} // Reference to the image
@@ -208,7 +196,7 @@ export function EngineeringW() {
                 alt=""
               />
               {/* Text over the image */}
-              <div className="centered-text">TEST</div>
+              <div className="centered-text">ITERATION 4</div>
             </div>
             <div className="vertical-rectangle-r">
               <p>Text for Right Rectangle</p>
