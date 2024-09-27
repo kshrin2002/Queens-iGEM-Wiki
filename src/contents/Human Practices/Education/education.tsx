@@ -264,75 +264,75 @@ const PitchCompCarousel: React.FC = () => {
 
   return (
     <Container fluid className="card-container">
-      <Card className="custom-card" style={{ backgroundColor: '#FE9BA1' }}>
+      <Card className="custom-card" style={{ backgroundColor: '#B20D30' }}>
         <Card.Body>
           <Card.Title>{section.title}</Card.Title>
           <Row>
-            <Col xs={8}>
+            <Col>
               <Card.Text>{section.description}</Card.Text>
             </Col>
-            <Col xs={4}>
-              <div className="carousel">
-                <div className="carousel-images">
-                  <AnimatePresence>
-                    <motion.img
-                      key={currentIndex}
-                      src={images[currentIndex]}
-                      initial={direction === "right" ? "hiddenRight" : "hiddenLeft"}
-                      animate="visible"
-                      exit="exit"
-                      variants={slideVariants}
-                      style={{ width: '200px', height: '200px', borderRadius: '100px' }}
-                    />
-                  </AnimatePresence>
-                  <div className="slide_direction">
-                    <motion.div
-                      variants={slidersVariants}
-                      whileHover="hover"
-                      className="left"
-                      onClick={handlePrevious}
+          </Row>
+          <Row className="mt-4 justify-content-center">
+            <div className="carousel">
+              <div className="carousel-images">
+                <AnimatePresence>
+                  <motion.img
+                    key={currentIndex}
+                    src={images[currentIndex]}
+                    initial={direction === "right" ? "hiddenRight" : "hiddenLeft"}
+                    animate="visible"
+                    exit="exit"
+                    variants={slideVariants}
+                    style={{ width: '200px', height: '200px', borderRadius: '100px' }}
+                  />
+                </AnimatePresence>
+                <div className="slide_direction">
+                  <motion.div
+                    variants={slidersVariants}
+                    whileHover="hover"
+                    className="left"
+                    onClick={handlePrevious}
+                  >
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      height="20"
+                      viewBox="0 96 960 960"
+                      width="20"
                     >
-                      <svg
-                        xmlns="http://www.w3.org/2000/svg"
-                        height="20"
-                        viewBox="0 96 960 960"
-                        width="20"
-                      >
-                        <path d="M400 976 0 576l400-400 56 57-343 343 343 343-56 57Z" />
-                      </svg>
-                    </motion.div>
-                    <motion.div
-                      variants={slidersVariants}
-                      whileHover="hover"
-                      className="right"
-                      onClick={handleNext}
+                      <path d="M400 976 0 576l400-400 56 57-343 343 343 343-56 57Z" />
+                    </svg>
+                  </motion.div>
+                  <motion.div
+                    variants={slidersVariants}
+                    whileHover="hover"
+                    className="right"
+                    onClick={handleNext}
+                  >
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      height="20"
+                      viewBox="0 96 960 960"
+                      width="20"
                     >
-                      <svg
-                        xmlns="http://www.w3.org/2000/svg"
-                        height="20"
-                        viewBox="0 96 960 960"
-                        width="20"
-                      >
-                        <path d="m304 974-56-57 343-343-343-343 56-57 400 400-400 400Z" />
-                      </svg>
-                    </motion.div>
-                  </div>
-                </div>
-                <div className="carousel-indicator">
-                  {images.map((_, index) => (
-                    <motion.div
-                      key={index}
-                      className={`dot ${currentIndex === index ? "active" : ""}`}
-                      onClick={() => handleDotClick(index)}
-                      initial="initial"
-                      animate={currentIndex === index ? "animate" : ""}
-                      whileHover="hover"
-                      variants={dotsVariants}
-                    ></motion.div>
-                  ))}
+                      <path d="m304 974-56-57 343-343-343-343 56-57 400 400-400 400Z" />
+                    </svg>
+                  </motion.div>
                 </div>
               </div>
-            </Col>
+              <div className="carousel-indicator">
+                {images.map((_, index) => (
+                  <motion.div
+                    key={index}
+                    className={`dot ${currentIndex === index ? "active" : ""}`}
+                    onClick={() => handleDotClick(index)}
+                    initial="initial"
+                    animate={currentIndex === index ? "animate" : ""}
+                    whileHover="hover"
+                    variants={dotsVariants}
+                  ></motion.div>
+                ))}
+              </div>
+            </div>
           </Row>
         </Card.Body>
       </Card>
