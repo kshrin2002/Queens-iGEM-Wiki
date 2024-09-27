@@ -224,7 +224,7 @@ const PitchCompCarousel: React.FC = () => {
   const slidersVariants = {
     hover: {
       scale: 1.2,
-      backgroundColor: "#ff00008e",
+      backgroundColor: "#FE9BA1",
     },
   };
 
@@ -264,7 +264,7 @@ const PitchCompCarousel: React.FC = () => {
 
   return (
     <Container fluid className="card-container">
-      <Card className="custom-card" style={{ backgroundColor: '#B20D30' }}>
+      <Card className="custom-card" style={{ backgroundColor: '#FE9BA1' }}>
         <Card.Body>
           <Card.Title>{section.title}</Card.Title>
           <Row>
