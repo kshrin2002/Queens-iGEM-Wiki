@@ -793,7 +793,7 @@ const PdfViewer = () => {
   return (
       <div style={{ height: '750px' }}>
           <Viewer
-              fileUrl='/path-to-your-pdf.pdf'
+              fileUrl='https://static.igem.wiki/teams/5079/pdf-document.pdf'
               plugins={[defaultLayoutPluginInstance]}
           />
       </div>
