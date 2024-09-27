@@ -13,7 +13,8 @@ export function Education() {
       <NavBar1 />
       <NavbarSection1 />
       <APSC103Section />
-      <CardSection />
+      <CardSection1 />
+      <CardSection2 />
       <CommunityHeading />
       <PSWSection />
       <CommunityCarousel1 />
@@ -151,9 +152,37 @@ const APSC103Section = () => {
   );
 };
 
-const CardSection: React.FC = () => {
+const CardSection1: React.FC = () => {
   const section = {
     title: 'Experiential Learning',
+    description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.',
+  };
+
+  const placeholderImage = "https://via.placeholder.com/150"; // Placeholder image for now
+
+  return (
+    <Container fluid className="card-container">
+      <Card className="custom-card" style={{ backgroundColor: '#FE9BA1' }}>
+        <Card.Body>
+          <Card.Title>{section.title}</Card.Title>
+          <Row>
+            <Col xs={8}>
+              <Card.Text>{section.description}</Card.Text>
+            </Col>
+            <Col xs={4}>
+              <img src={placeholderImage} alt={`Image for ${section.title}`} style={{ width: '200px', height: '200px', borderRadius: '100px' }} />
+            </Col>
+          </Row>
+        </Card.Body>
+      </Card>
+    </Container>
+  );
+};
+
+
+const CardSection2: React.FC = () => {
+  const section = {
+    title: 'Pitch Competition',
     description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.',
   };
 
