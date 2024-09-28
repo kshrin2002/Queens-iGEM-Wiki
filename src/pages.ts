@@ -21,7 +21,7 @@ import {Team} from "./contents/Team/Team Members/team";
 import {Collaborations} from "./contents/Team/Collaborations/collaborations";
 
 // Project Folder
-import {Contribution} from "./contents/Project/Contributions/contribution";
+import {Contributions} from "./contents/Project/Contributions/contribution";
 import {Description} from "./contents/Project/Description/description";
 import {Implementation} from "./contents/Project/Implementation/implementation";
 import {Judging} from "./contents/Project/Judging/judging";

@@ -4,7 +4,7 @@ import './contributions.css';
 import { FiEdit } from "react-icons/fi";
 import { motion } from "framer-motion";
 
-export function Contribution() {
+export function Contributions() {
   return (
     <>
       <ContributionHeading />
@@ -228,4 +228,4 @@ const BackToTopButton: React.FC = () => {
   );
 };
 
-export default Contribution;
+export default Contributions;
