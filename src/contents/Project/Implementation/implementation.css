@@ -1,4 +1,3 @@
-/* Card Container */
 .card-container-implementation {
     width: 100%; /* Make the card container 60% of the screen width */
     position: relative;
@@ -6,7 +5,6 @@
     margin-left: 15vw; /* Align to the right side */
 }
 
-/* Custom Card Styling */
 .custom-card-implementation {
     border: 5px solid var(--mexired); /* Red border around the card */
     border-radius: 20px;
@@ -16,30 +14,25 @@
     transition: transform 0.3s ease; /* Smooth transition for the hover effect */
 }
 
-/* Card Hover Effect */
 .custom-card-implementation:hover {
     transform: translateX(-10px);
 }
 
-/* Card Title Alignment */
 .center-title-implementation {
     text-align: center; /* Center the card title */
     margin-bottom: 20px; /* Add some space below the title */
 }
 
-/* Text Centering */
 .text-container-implementation {
     display: flex;
     justify-content: center; /* Vertically center the text */
     align-items: center;
 }
 
-/* Card Wrapper */
 .card-wrapper-implementation {
     position: relative;
 }
 
-/* Scroll Arrow */
 .scroll-arrow-implementation {
     text-align: center;
     font-size: 2em;
@@ -52,7 +45,6 @@
     color: #000;
 }
 
-/* Back-to-Top Button */
 .button-implementation {
     position: fixed;
     bottom: 20px;
@@ -64,27 +56,27 @@
     opacity: 0; /* Start hidden */
     transition: opacity 0.3s ease, transform 0.3s ease; /* Smooth transition for opacity and position */
     transform: translateY(20px); /* Start slightly below */
+
+    &:hover{
+        background-color: var(--mexired);
+        border-color: black;
+    }
+
+    
 }
 
-/* Button Hover Effect */
-.button-implementation:hover {
-    background-color: var(--mexired);
-    border-color: black;
-}
-
-/* Visible State for Back-to-Top Button */
 .button.visible-implementation {
     opacity: 1; /* Fully visible */
     transform: translateY(0); /* Move to original position */
 }
 
-/* Main Content Layout */
+
+
 .main-content-implementation {
     display: flex; /* Use flex to position sidebar and card section */
     margin-top: 100px; /* Space for the overview section */
 }
 
-/* Sidebar Styling */
 .sidebar-contributions-implementation {
     position: sticky; /* Keep sidebar fixed */
     top: 300px; /* Align with the overview section */
@@ -95,13 +87,11 @@
     overflow-y: auto; 
 }
 
-/* Sidebar List Items */
 .sidebar-contributions-implementation ul {
     list-style: none; /* Remove default list styles */
     padding: 0;
 }
 
-/* Sidebar Links */
 .sidebar-implementation li {
     cursor: pointer; /* Change cursor to pointer on hover */
     margin: 5px 0; /* Spacing between items */
@@ -113,23 +103,19 @@
     position: relative; /* Position relative for dropdown */
 }
 
-/* Sidebar Hover Effect */
 .sidebar-implementation li:hover {
     border-color: var(--mexired); /* Change border color on hover */
 }
 
-/* Sidebar Text Styling */
 .sidebar-implementation li span {
     margin-left: 10px; /* Space between icon and text */
 }
 
-/* Sidebar Image */
 .sidebar-implementation img {
     width: 30px;
     height: 30px;
 }
 
-/* Dropdown Animation */
 .motion-implementation-ul {
     display: block; /* Ensure it's displayed as a block */
     width: 100%; /* Full width for dropdown */
@@ -143,7 +129,6 @@
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); /* Add shadow for depth */
 }
 
-/* Option List in Dropdown */
 .motion-implementation-li {
     display: block; /* Ensure items are block-level */
     margin: 0; /* Reset margins */
@@ -155,3 +140,7 @@
 .motion-implementation-li:hover {
     background-color: var(--pinksalmon); /* Change background on hover */
 }
+
+
+
+
