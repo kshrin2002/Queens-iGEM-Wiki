@@ -57,20 +57,16 @@
     transition: opacity 0.3s ease, transform 0.3s ease; /* Smooth transition for opacity and position */
     transform: translateY(20px); /* Start slightly below */
 
-    &:hover{
+    &:hover {
         background-color: var(--mexired);
         border-color: black;
     }
-
-    
 }
 
 .button.visible-implementation {
     opacity: 1; /* Fully visible */
     transform: translateY(0); /* Move to original position */
 }
-
-
 
 .main-content-implementation {
     display: flex; /* Use flex to position sidebar and card section */
@@ -140,7 +136,3 @@
 .motion-implementation-li:hover {
     background-color: var(--pinksalmon); /* Change background on hover */
 }
-
-
-
-

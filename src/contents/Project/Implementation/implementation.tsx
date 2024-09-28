@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import { Card, Col, Container, Row, Button } from 'react-bootstrap';
-import './implementation.css';
+import './implementation.css'; // Updated CSS file name
 import { FiEdit } from "react-icons/fi";
 import { motion } from "framer-motion";
 
@@ -134,7 +134,7 @@ const Sidebar: React.FC = () => {
         {sections.map((section, index) => (
           <li key={index}>
             <div onClick={() => setOpenSection(openSection === index ? null : index)} style={{ cursor: 'pointer', display: 'flex', alignItems: 'center' }}>
-              <img src={section.image} alt={section.name} className="section-image" style={{ marginRight: '8px' }} />
+              <img src={section.image} alt={section.name} className="section-image-implementation" style={{ marginRight: '8px' }} />
               <span>{section.name}</span>
             </div>
             {openSection === index && (
@@ -171,7 +171,6 @@ const StaggeredDropDown = ({ options, sectionIndex }: { options: string[]; secti
   );
 };
 
-
 const Option = ({ text, sectionIndex, sectionPartIndex }: { text: string, sectionIndex: number, sectionPartIndex: number }) => {
   const handleClick = () => {
     // Logic to scroll to the specific section of the card
@@ -194,7 +193,6 @@ const Option = ({ text, sectionIndex, sectionPartIndex }: { text: string, sectio
     </li>
   );
 };
-
 
 // Back to Top Button Component
 const BackToTopButton: React.FC = () => {
