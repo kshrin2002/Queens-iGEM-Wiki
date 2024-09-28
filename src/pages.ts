@@ -21,7 +21,7 @@ import {Team} from "./contents/Team/Team Members/team";
 import {Collaborations} from "./contents/Team/Collaborations/collaborations";
 
 // Project Folder
-import {Contributions} from "./contents/Project/Contributions/contribution";
+import {Contributions} from "./contents/Project/Contributions/contributions";
 import {Description} from "./contents/Project/Description/description";
 import {Implementation} from "./contents/Project/Implementation/implementation";
 import {Judging} from "./contents/Project/Judging/judging";
@@ -78,7 +78,7 @@ const Pages: (Page | Folder)[] = [
         },
         {
           name: "Contributions",
-          title: "Contribution",
+          title: "Contributions",
           path: "/contributions",
           component: Contributions,
           lead: "Make a useful contribution for future iGEM teams. Use this page to document that contribution.",
