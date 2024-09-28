@@ -1,5 +1,4 @@
 import React, { useState, useEffect } from 'react';
-import './entrepreneurship.css';
 import { Button } from 'react-bootstrap';
 
 export function Entrepreneurship() {
