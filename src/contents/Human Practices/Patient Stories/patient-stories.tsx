@@ -1,47 +1,27 @@
-// src/contents/PatientStories.tsx
+//import React from 'react';
 
-import React from 'react';
-import Header from '../components/Header';
-import Navbar from '../components/Navbar';
-import Footer from '../components/Footer';
-import { Link } from 'react-router-dom';
-
-const PatientStories: React.FC = () => {
+export function PatientStories() {
   return (
     <>
-      <Header />
-      <Navbar />
-      <main>
-        <PatientStoriesHeading />
-        <OverviewSection />
-
-        {/* Patient Sections */}
-        <PatientInfoSection
-          name="Barbara Salsberg Mathews"
-          excerpt="Placeholder for Barbara's excerpt..."
-          imageUrl="Placeholder for Barbara's image URL"
-          link="/patient-stories/barbara-salsberg-mathews"
-          artText="BARBARA ART"
-        />
-
-        <PatientInfoSection
-          name="Larry Gifford"
-          excerpt="Placeholder for Larry's excerpt..."
-          imageUrl="Placeholder for Larry's image URL"
-          link="/patient-stories/larry-gifford"
-          artText="LARRY ART"
-        />
-
-        <PatientInfoSection
-          name="Benjamin Stecher"
-          excerpt="Placeholder for Benjamin's excerpt..."
-          imageUrl="Placeholder for Benjamin's image URL"
-          link="/patient-stories/benjamin-stecher"
-          artText="BENJAMIN ART"
-        />
-      </main>
-      <Footer />
+      <PatientStoriesHeading />
+      <OverviewSection />
+      <PatientInfoSection />
+      <PatientInfoSectionFirst />
     </>
+  );
+}
+
+const OverviewSection = () => {
+  return (
+    <section style={{ backgroundColor: '#FE9BA1', color: 'white', padding: '20px', marginTop: '100px', width: '1520px', height: '350px', marginBottom: '100px' }}>
+      <h2>Overview</h2>
+      <p>
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+      </p>
+      <p>
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+      </p>
+    </section>
   );
 };
 
@@ -55,79 +35,35 @@ const PatientStoriesHeading: React.FC = () => {
   );
 };
 
-const OverviewSection: React.FC = () => {
+const PatientInfoSection: React.FC = () => {
   return (
-    <section
-      style={{
-        backgroundColor: '#FE9BA1',
-        color: 'white',
-        padding: '20px',
-        marginTop: '100px',
-        maxWidth: '1200px',
-        margin: '100px auto',
-        borderRadius: '15px',
-      }}
-    >
-      <h2>Overview</h2>
-      <p>
-        Placeholder for the overview of patient stories, explaining the purpose and what readers can expect.
-      </p>
-    </section>
+    <div style={{ display: 'flex', justifyContent: 'center', alignItems: 'center', margin: '30px 0' }}>
+      <div style={{ backgroundColor: '#800000', borderRadius: '15px', padding: '20px', width: '40%' }}>
+        <h2 style={{ color: 'white', marginBottom: '10px' }}>PATIENT NAME</h2>
+        <p style={{ color: 'white' }}>
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+        </p>
+      </div>
+      <div style={{ textAlign: 'center', fontWeight: 'bold', fontSize: '2em', marginLeft: '30px', paddingRight: '30px' }}>
+        <p style={{ margin: 0 }}>BARBARA</p>
+        <p style={{ margin: 0 }}>ART</p>
+      </div>
+    </div>
   );
 };
 
-interface PatientInfoProps {
-  name: string;
-  excerpt: string;
-  imageUrl: string;
-  link: string;
-  artText: string;
-}
-
-const PatientInfoSection: React.FC<PatientInfoProps> = ({ name, excerpt, imageUrl, link, artText }) => {
+const PatientInfoSectionFirst: React.FC = () => {
   return (
-    <div
-      style={{
-        display: 'flex',
-        flexDirection: 'row',
-        justifyContent: 'center',
-        alignItems: 'center',
-        margin: '30px 0',
-        flexWrap: 'wrap',
-      }}
-    >
-      <div
-        style={{
-          backgroundColor: '#800000',
-          borderRadius: '15px',
-          padding: '20px',
-          width: '40%',
-          minWidth: '300px',
-          margin: '10px',
-        }}
-      >
-        <h2 style={{ color: 'white', marginBottom: '10px' }}>{name}</h2>
-        <p style={{ color: 'white' }}>{excerpt}</p>
-        <Link to={link} className="btn btn-light">
-          Read More
-        </Link>
+    <div style={{ display: 'flex', justifyContent: 'center', alignItems: 'center', margin: '30px 0' }}>
+      <div style={{ backgroundColor: '#800000', borderRadius: '15px', padding: '20px', width: '40%' }}>
+        <h2 style={{ color: 'white', marginBottom: '10px' }}>PATIENT NAME</h2>
+        <p style={{ color: 'white' }}>
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+        </p>
       </div>
-      <div
-        style={{
-          textAlign: 'center',
-          fontWeight: 'bold',
-          fontSize: '2em',
-          marginLeft: '30px',
-          paddingRight: '30px',
-          margin: '10px',
-        }}
-      >
-        <img
-          src={imageUrl}
-          alt={`${name}'s Art`}
-          style={{ maxWidth: '300px', borderRadius: '15px' }}
-        />
-        <p style={{ margin: 0 }}>{artText}</p>
+      <div style={{ textAlign: 'center', fontWeight: 'bold', fontSize: '2em', marginLeft: '30px', paddingRight: '30px' }}>
+        <p style={{ margin: 0 }}>JOHN</p>
+        <p style={{ margin: 0 }}>DOE</p>
       </div>
     </div>
   );
