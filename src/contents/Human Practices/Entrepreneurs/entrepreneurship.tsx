@@ -7,7 +7,6 @@ export function Entrepreneurship() {
       <EntrepreneurshipHeading />
       <OverviewSection />
       <Timeline />
-
       <ReferenceSection />
       <BackToTopButton />
     </>
@@ -56,7 +55,6 @@ const EntrepreneurshipHeading: React.FC = () => {
   );
 };
 
-
 const Timeline: React.FC = () => {
   const stages = [
     'PRE-SEED STAGE',
@@ -68,7 +66,6 @@ const Timeline: React.FC = () => {
 
   const [selectedStage, setSelectedStage] = useState<string | null>(null);
   const [isAnimating, setIsAnimating] = useState(false);
-  const [isClosing, setIsClosing] = useState(false);
   const [boxStyle, setBoxStyle] = useState({
     width: '80px',
     height: '30px',
@@ -84,26 +81,24 @@ const Timeline: React.FC = () => {
     const position = isEvenStage ? 'left' : 'right';
 
     if (selectedStage && selectedStage !== stage) {
-      setIsClosing(true);
       setIsAnimating(true);
       setBoxStyle(prev => ({ ...prev, height: '30px', padding: '5px' }));
       setTimeout(() => {
         setBoxStyle(prev => ({ ...prev, width: '80px' }));
         setTimeout(() => {
-          openBox(stage, index, position);
+          openBox(stage, position);
         }, 300);
       }, 300);
     } else if (selectedStage === stage) {
       closeBox();
     } else {
-      openBox(stage, index, position);
+      openBox(stage, position);
     }
   };
 
-  const openBox = (stage: string, index: number, position: 'left' | 'right') => {
+  const openBox = (stage: string, position: 'left' | 'right') => {
     setSelectedStage(stage);
     setIsAnimating(true);
-    setIsClosing(false);
     setBoxPosition(position); // Set box to open on the left or right side
 
     // Expand width first
@@ -116,7 +111,6 @@ const Timeline: React.FC = () => {
   };
 
   const closeBox = () => {
-    setIsClosing(true);
     setIsAnimating(true);
     setBoxStyle(prev => ({ ...prev, height: '30px', padding: '5px' }));
     setTimeout(() => {
@@ -124,7 +118,6 @@ const Timeline: React.FC = () => {
       setTimeout(() => {
         setSelectedStage(null);
         setIsAnimating(false);
-        setIsClosing(false);
       }, 300);
     }, 300);
   };
@@ -210,56 +203,36 @@ const Timeline: React.FC = () => {
   );
 };
 
-
-const ReferenceSection = () => {
+const ReferenceSection: React.FC = () => {
   return (
-    <section
-      style={{
-        backgroundColor: '#FE9BA1',
-        color: 'white',
-        padding: '20px',
-        marginTop: '100px',
-        width: '100%',
-        height: '250px',
-        marginBottom: '100px',
-      }}
-    >
+    <section>
       <h2>References</h2>
+      <p>Some references will be listed here.</p>
     </section>
   );
 };
 
-
-// Back to Top Button Component
 const BackToTopButton: React.FC = () => {
-  const [isVisible, setIsVisible] = useState(false);
-
-  const handleScroll = () => {
-    if (window.scrollY > 300) {
-      setIsVisible(true);
-    } else {
-      setIsVisible(false);
-    }
-  };
-
-  useEffect(() => {
-    window.addEventListener('scroll', handleScroll);
-    return () => window.removeEventListener('scroll', handleScroll);
-  }, []);
-
   const scrollToTop = () => {
-    window.scrollTo({ top: 0, behavior: 'smooth' });
+    window.scrollTo({
+      top: 0,
+      behavior: 'smooth',
+    });
   };
 
   return (
     <Button
-      className={`button ${isVisible ? 'visible' : ''}`} 
-      variant="primary"
       onClick={scrollToTop}
+      style={{
+        position: 'fixed',
+        bottom: '20px',
+        right: '20px',
+        backgroundColor: '#590000',
+        color: 'white',
+      }}
     >
-      ↑ Back to Top
+      Back to Top
     </Button>
   );
 };
-
 export default Entrepreneurship;
