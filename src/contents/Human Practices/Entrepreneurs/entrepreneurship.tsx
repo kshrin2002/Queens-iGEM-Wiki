@@ -3,85 +3,11 @@ import './entrepreneurship.css';
 import { Button } from 'react-bootstrap';
 
 export function Entrepreneurship() {
-  const [selectedStage, setSelectedStage] = useState<string | null>(null);
-  const [expandedDeliverables, setExpandedDeliverables] = useState<{ [key: string]: number | null }>({});
-
-  const stagesData = [
-    {
-      stage: "Pre-Seed Stage",
-      deliverables: ["Pitch Deck", "Market Analysis", "Competitor Landscape Matrix", "Skill Gap Analysis", "Advisory Board Profiles", "PSETEL Analysis", "SWOT Analysis"],
-    },
-    {
-      stage: "Seed Stage",
-      deliverables: ["Lean Canvas", "Business Plan", "IP Protection Strategy"],
-    },
-    {
-      stage: "Early Stage",
-      deliverables: ["Preclinical Development Plan"],
-    },
-    {
-      stage: "Growth Stage",
-      deliverables: ["Clinical Trials Timeline", "Regulatory Strategy Roadmap"],
-    },
-    {
-      stage: "Late Stage",
-      deliverables: ["Manufacturing Plan", "Projected Financial Statements"],
-    },
-  ];
-
-  const handleStageClick = (stage: string) => {
-    setSelectedStage(selectedStage === stage ? null : stage);
-  };
-
-  const handleDeliverableClick = (stage: string, index: number) => {
-    setExpandedDeliverables((prevState) => ({
-      ...prevState,
-      [stage]: prevState[stage] === index ? null : index,
-    }));
-  };
-
   return (
     <>
       <EntrepreneurshipHeading />
-      <OverviewSection />
 
-      <div className="stages-container">
-        <div className="content">
-          <div className="stage-list">
-            {stagesData.map((stageData) => (
-              <div
-                key={stageData.stage}
-                className={`stage-item ${selectedStage === stageData.stage ? 'active' : ''}`}
-              >
-                <div
-                  className={`stage-label ${selectedStage === stageData.stage ? 'active' : ''}`}
-                  onClick={() => handleStageClick(stageData.stage)}
-                >
-                  {stageData.stage.toUpperCase()}
-                </div>
-                {selectedStage === stageData.stage && (
-                  <div className="stage-details">
-                    <ul>
-                      {stageData.deliverables.map((deliverable, index) => (
-                        <li key={index} onClick={() => handleDeliverableClick(stageData.stage, index)}>
-                          {deliverable}
-                          {expandedDeliverables[stageData.stage] === index && (
-                            <div className="deliverable-content">
-                              <p>
-                                {`${deliverable} details go here...`} {/* You can replace this with actual content */}
-                              </p>
-                            </div>
-                          )}
-                        </li>
-                      ))}
-                    </ul>
-                  </div>
-                )}
-              </div>
-            ))}
-          </div>
-        </div>
-      </div>
+      <Timeline />
 
       <ReferenceSection />
       <BackToTopButton />
@@ -130,6 +56,165 @@ const EntrepreneurshipHeading: React.FC = () => {
     </div>
   );
 };
+
+
+const Timeline: React.FC = () => {
+  const stages = [
+    'PRE-SEED STAGE',
+    'SEED STAGE',
+    'EARLY STAGE',
+    'GROWTH STAGE',
+    'LATE STAGE'
+  ];
+
+  const [selectedStage, setSelectedStage] = useState<string | null>(null);
+  const [isAnimating, setIsAnimating] = useState(false);
+  const [isClosing, setIsClosing] = useState(false);
+  const [boxStyle, setBoxStyle] = useState({
+    width: '80px',
+    height: '30px',
+    padding: '5px',
+  });
+  const [boxPosition, setBoxPosition] = useState<'left' | 'right'>('right'); // Track left or right
+
+  const handleStageClick = (stage: string, index: number) => {
+    if (isAnimating) return;
+
+    const isEvenStage = index % 2 === 1; // Even stage check (1-based index)
+    const position = isEvenStage ? 'left' : 'right';
+
+    if (selectedStage && selectedStage !== stage) {
+      setIsClosing(true);
+      setIsAnimating(true);
+      setBoxStyle(prev => ({ ...prev, height: '30px', padding: '5px' }));
+      setTimeout(() => {
+        setBoxStyle(prev => ({ ...prev, width: '80px' }));
+        setTimeout(() => {
+          openBox(stage, index, position);
+        }, 300);
+      }, 300);
+    } else if (selectedStage === stage) {
+      closeBox();
+    } else {
+      openBox(stage, index, position);
+    }
+  };
+
+  const openBox = (stage: string, index: number, position: 'left' | 'right') => {
+    setSelectedStage(stage);
+    setIsAnimating(true);
+    setIsClosing(false);
+    setBoxPosition(position); // Set box to open on the left or right side
+
+    // Expand width first
+    setBoxStyle(prev => ({ ...prev, width: '40%' }));
+    setTimeout(() => {
+      // Then expand the height and padding
+      setBoxStyle(prev => ({ ...prev, height: '75vh', padding: '20px' }));
+      setTimeout(() => setIsAnimating(false), 300);
+    }, 300);
+  };
+
+  const closeBox = () => {
+    setIsClosing(true);
+    setIsAnimating(true);
+    setBoxStyle(prev => ({ ...prev, height: '30px', padding: '5px' }));
+    setTimeout(() => {
+      setBoxStyle(prev => ({ ...prev, width: '80px' }));
+      setTimeout(() => {
+        setSelectedStage(null);
+        setIsAnimating(false);
+        setIsClosing(false);
+      }, 300);
+    }, 300);
+  };
+
+  return (
+    <div style={{ position: 'relative', height: '100vh' }}>
+      <div style={{ position: 'relative', display: 'flex', justifyContent: 'center', alignItems: 'center', marginBottom: '20px' }}>
+        <h1 style={{ fontSize: '3.5em', margin: '0', color: '#590000' }}>Timeline</h1>
+        <div
+          style={{
+            position: 'absolute',
+            top: '50%',
+            left: 'calc(50% + 120px)',
+            right: '0',
+            height: '6px',
+            backgroundColor: '#590000',
+            transform: 'translateY(-50%)',
+          }}
+        />
+      </div>
+
+      <div
+        style={{
+          position: 'absolute',
+          left: '50%',
+          transform: 'translateX(-50%)',
+          top: '12vh',
+          width: '6px',
+          height: '90vh',
+          backgroundColor: '#590000',
+        }}
+      >
+        {stages.map((stage, index) => (
+          <button
+            key={index}
+            onClick={() => handleStageClick(stage, index)}
+            style={{
+              position: 'absolute',
+              left: '50%',
+              transform: 'translateX(-50%)',
+              top: `${index * 20}vh`, // Adjust the spacing based on the number of stages
+              backgroundColor: selectedStage === stage ? '#a00000' : '#590000',
+              color: '#fff',
+              padding: '5px 15px',
+              borderRadius: '25px',
+              fontSize: '1.2em',
+              fontWeight: 'bold',
+              textAlign: 'center',
+              width: '80px',
+              border: 'none',
+              cursor: 'pointer',
+            }}
+          >
+            {stage}
+          </button>
+        ))}
+      </div>
+
+      {selectedStage && (
+        <div
+          style={{
+            position: 'absolute',
+            top: '20vh',
+            // Set box on the left or right of the timeline based on the stage
+            left: boxPosition === 'right' ? 'calc(50% + 120px)' : 'auto',
+            right: boxPosition === 'left' ? 'calc(50% + 120px)' : 'auto',
+            backgroundColor: '#fff',
+            border: '2px solid #590000',
+            borderRadius: '8px',
+            boxShadow: '0px 4px 12px rgba(0, 0, 0, 0.1)',
+            overflow: 'hidden',
+            ...boxStyle,
+            transition: 'width 0.3s ease, height 0.3s ease, padding 0.3s ease',
+          }}
+        >
+          {!isClosing && (
+            <>
+              <h2 style={{ color: '#590000' }}>{selectedStage} Details</h2>
+              <p>
+                This is the text content for the {selectedStage}. You can fill this box with any
+                details, such as events, data, or notes for the selected stage.
+              </p>
+            </>
+          )}
+        </div>
+      )}
+    </div>
+  );
+};
+
 
 const ReferenceSection = () => {
   return (
