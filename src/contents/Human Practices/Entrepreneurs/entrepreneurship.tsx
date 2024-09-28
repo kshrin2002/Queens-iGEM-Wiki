@@ -5,7 +5,7 @@ export function Entrepreneurship() {
   return (
     <>
       <EntrepreneurshipHeading />
-
+      <OverviewSection />
       <Timeline />
 
       <ReferenceSection />
@@ -76,9 +76,10 @@ const Timeline: React.FC = () => {
   });
   const [boxPosition, setBoxPosition] = useState<'left' | 'right'>('right'); // Track left or right
 
-  const handleStageClick = (stage: string, index: number) => {
+  const handleStageClick = (stage: string) => {
     if (isAnimating) return;
 
+    const index = stages.indexOf(stage);
     const isEvenStage = index % 2 === 1; // Even stage check (1-based index)
     const position = isEvenStage ? 'left' : 'right';
 
@@ -159,7 +160,7 @@ const Timeline: React.FC = () => {
         {stages.map((stage, index) => (
           <button
             key={index}
-            onClick={() => handleStageClick(stage, index)}
+            onClick={() => handleStageClick(stage)}
             style={{
               position: 'absolute',
               left: '50%',
@@ -197,17 +198,12 @@ const Timeline: React.FC = () => {
             overflow: 'hidden',
             ...boxStyle,
             transition: 'width 0.3s ease, height 0.3s ease, padding 0.3s ease',
+            zIndex: 2,
           }}
         >
-          {!isClosing && (
-            <>
-              <h2 style={{ color: '#590000' }}>{selectedStage} Details</h2>
-              <p>
-                This is the text content for the {selectedStage}. You can fill this box with any
-                details, such as events, data, or notes for the selected stage.
-              </p>
-            </>
-          )}
+          <h2 style={{ margin: '0', color: '#590000' }}>{selectedStage}</h2>
+          <p>Details about {selectedStage} go here.</p>
+          <button onClick={closeBox} style={{ marginTop: '10px', backgroundColor: '#590000', color: '#fff', border: 'none', padding: '10px 20px', cursor: 'pointer' }}>Close</button>
         </div>
       )}
     </div>
