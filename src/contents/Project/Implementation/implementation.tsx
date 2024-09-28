@@ -112,7 +112,7 @@ const ImplementationHeading: React.FC = () => {
   return (
     <div style={{ textAlign: 'center', marginTop: '138px' }}>
       <h1 style={{ fontSize: '5em', color: '#590000', fontWeight: 'bold', letterSpacing: '2px' }}>
-        <IMPLEMENTATION></IMPLEMENTATION>
+        <IMPLEMENTATION />
       </h1>
     </div>
   );
