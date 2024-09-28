@@ -1,6 +1,5 @@
 import React from 'react';
 
-// https://static.igem.wiki/teams/5079/medal-picture.jpg
 
 export function Judging() {
   return (
