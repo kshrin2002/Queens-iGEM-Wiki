@@ -1,0 +1,146 @@
+.card-container-implementation {
+    width: 100%; /* Make the card container 60% of the screen width */
+    position: relative;
+    right: 0;
+    margin-left: 15vw; /* Align to the right side */
+}
+
+.custom-card-implementation {
+    border: 5px solid var(--mexired); /* Red border around the card */
+    border-radius: 20px;
+    margin-bottom: 20px; /* Space between the cards */
+    width: 100%; /* Make each card fill the container's width */
+    height: 70vh;
+    transition: transform 0.3s ease; /* Smooth transition for the hover effect */
+}
+
+.custom-card-implementation:hover {
+    transform: translateX(-10px);
+}
+
+.center-title-implementation {
+    text-align: center; /* Center the card title */
+    margin-bottom: 20px; /* Add some space below the title */
+}
+
+.text-container-implementation {
+    display: flex;
+    justify-content: center; /* Vertically center the text */
+    align-items: center;
+}
+
+.card-wrapper-implementation {
+    position: relative;
+}
+
+.scroll-arrow-implementation {
+    text-align: center;
+    font-size: 2em;
+    cursor: pointer;
+    color: #333;
+    margin-top: 10px;
+}
+
+.scroll-arrow-implementation:hover {
+    color: #000;
+}
+
+.button-implementation {
+    position: fixed;
+    bottom: 20px;
+    left: 20px; /* Adjust left value to align with the sidebar */
+    display: block; 
+    color: var(--mexired);
+    background-color: var(--pinksalmon);
+    border-color: black;
+    opacity: 0; /* Start hidden */
+    transition: opacity 0.3s ease, transform 0.3s ease; /* Smooth transition for opacity and position */
+    transform: translateY(20px); /* Start slightly below */
+
+    &:hover{
+        background-color: var(--mexired);
+        border-color: black;
+    }
+
+    
+}
+
+.button.visible-implementation {
+    opacity: 1; /* Fully visible */
+    transform: translateY(0); /* Move to original position */
+}
+
+
+
+.main-content-implementation {
+    display: flex; /* Use flex to position sidebar and card section */
+    margin-top: 100px; /* Space for the overview section */
+}
+
+.sidebar-contributions-implementation {
+    position: sticky; /* Keep sidebar fixed */
+    top: 300px; /* Align with the overview section */
+    left: 0; /* Align to the left */
+    width: 25%; /* Width of the sidebar */
+    padding: 20px;
+    max-height: calc(100vh - 100px); /* Prevent scrolling past the top */
+    overflow-y: auto; 
+}
+
+.sidebar-contributions-implementation ul {
+    list-style: none; /* Remove default list styles */
+    padding: 0;
+}
+
+.sidebar-implementation li {
+    cursor: pointer; /* Change cursor to pointer on hover */
+    margin: 5px 0; /* Spacing between items */
+    padding: 10px; /* Add some padding for clickable area */
+    border: 2px solid transparent; /* Transparent border for hover effect */
+    border-radius: 10px;
+    display: block; /* Align items in a row */
+    transition: border-color 0.3s; /* Transition effect */
+    position: relative; /* Position relative for dropdown */
+}
+
+.sidebar-implementation li:hover {
+    border-color: var(--mexired); /* Change border color on hover */
+}
+
+.sidebar-implementation li span {
+    margin-left: 10px; /* Space between icon and text */
+}
+
+.sidebar-implementation img {
+    width: 30px;
+    height: 30px;
+}
+
+.motion-implementation-ul {
+    display: block; /* Ensure it's displayed as a block */
+    width: 100%; /* Full width for dropdown */
+    margin-top: 0; /* Remove margin to avoid extra spacing */
+    position: absolute; /* Position absolute for dropdown */
+    left: 0; /* Align dropdown to the left */
+    padding: 0; /* Remove default padding */
+    z-index: 1; /* Ensure it's on top of other content */
+    background-color: white; /* Background color for dropdown */
+    border-radius: 5px; /* Slightly round corners */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); /* Add shadow for depth */
+}
+
+.motion-implementation-li {
+    display: block; /* Ensure items are block-level */
+    margin: 0; /* Reset margins */
+    padding: 10px; /* Padding for clickable area */
+    cursor: pointer; /* Pointer cursor for hover effect */
+    transition: background-color 0.3s; /* Smooth transition for hover */
+}
+
+.motion-implementation-li:hover {
+    background-color: var(--pinksalmon); /* Change background on hover */
+}
+
+
+
+
