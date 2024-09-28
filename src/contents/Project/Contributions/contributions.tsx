@@ -9,7 +9,7 @@ export function Contributions() {
     <>
       <ContributionHeading />
       <OverviewSection />
-      <div className="main-content">
+      <div className="main-content-contribution">
         <Sidebar />
         <CardSection />
       </div>
@@ -84,7 +84,7 @@ const CardSection: React.FC = () => {
   const placeholderImage = "https://via.placeholder.com/150";
 
   return (
-    <Container fluid className="card-container">
+    <Container fluid className="card-container-contribution">
       {sections.map((section, sectionIndex) => (
         <Card key={sectionIndex} className="custom-card" id={`section-${sectionIndex}`}>
           <Card.Body>

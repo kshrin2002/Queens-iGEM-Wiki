@@ -1,11 +1,11 @@
-.card-container {
+.card-container-contribution {
     width: 100%; /* Make the card container 60% of the screen width */
     position: relative;
     right: 0;
     margin-left: 15vw; /* Align to the right side */
 }
 
-.custom-card {
+.custom-card-contribution {
     border: 5px solid var(--mexired); /* Red border around the card */
     border-radius: 20px;
     margin-bottom: 20px; /* Space between the cards */
@@ -14,26 +14,26 @@
     transition: transform 0.3s ease; /* Smooth transition for the hover effect */
 }
 
-.custom-card:hover {
+.custom-card-contribution:hover {
     transform: translateX(-10px);
 }
 
-.center-title {
+.center-title-contribution {
     text-align: center; /* Center the card title */
     margin-bottom: 20px; /* Add some space below the title */
 }
 
-.text-container {
+.text-container-contribution {
     display: flex;
     justify-content: center; /* Vertically center the text */
     align-items: center;
 }
 
-.card-wrapper {
+.card-wrapper-contribution {
     position: relative;
 }
 
-.scroll-arrow {
+.scroll-arrow-contribution {
     text-align: center;
     font-size: 2em;
     cursor: pointer;
@@ -41,11 +41,11 @@
     margin-top: 10px;
 }
 
-.scroll-arrow:hover {
+.scroll-arrow-contribution:hover {
     color: #000;
 }
 
-.button {
+.button-contribution {
     position: fixed;
     bottom: 20px;
     left: 20px; /* Adjust left value to align with the sidebar */
@@ -57,27 +57,23 @@
     transition: opacity 0.3s ease, transform 0.3s ease; /* Smooth transition for opacity and position */
     transform: translateY(20px); /* Start slightly below */
 
-    &:hover{
+    &:hover {
         background-color: var(--mexired);
         border-color: black;
     }
-
-    
 }
 
-.button.visible {
+.button-contribution.visible {
     opacity: 1; /* Fully visible */
     transform: translateY(0); /* Move to original position */
 }
 
-
-
-.main-content {
+.main-content-contribution {
     display: flex; /* Use flex to position sidebar and card section */
     margin-top: 100px; /* Space for the overview section */
 }
 
-.sidebar-contributions {
+.sidebar-contributions-contribution {
     position: sticky; /* Keep sidebar fixed */
     top: 300px; /* Align with the overview section */
     left: 0; /* Align to the left */
@@ -87,12 +83,12 @@
     overflow-y: auto; 
 }
 
-.sidebar-contributions ul {
+.sidebar-contributions-contribution ul {
     list-style: none; /* Remove default list styles */
     padding: 0;
 }
 
-.sidebar-contributions li {
+.sidebar-contributions-contribution li {
     cursor: pointer; /* Change cursor to pointer on hover */
     margin: 5px 0; /* Spacing between items */
     padding: 10px; /* Add some padding for clickable area */
@@ -103,20 +99,20 @@
     position: relative; /* Position relative for dropdown */
 }
 
-.sidebar-contributions li:hover {
+.sidebar-contributions-contribution li:hover {
     border-color: var(--mexired); /* Change border color on hover */
 }
 
-.sidebar-contributions li span {
+.sidebar-contributions-contribution li span {
     margin-left: 10px; /* Space between icon and text */
 }
 
-.sidebar-contributions img {
+.sidebar-contributions-contribution img {
     width: 30px;
     height: 30px;
 }
 
-.motion-ul {
+.motion-ul-contribution {
     display: block; /* Ensure it's displayed as a block */
     width: 100%; /* Full width for dropdown */
     margin-top: 0; /* Remove margin to avoid extra spacing */
@@ -129,7 +125,7 @@
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); /* Add shadow for depth */
 }
 
-.motion-li {
+.motion-li-contribution {
     display: block; /* Ensure items are block-level */
     margin: 0; /* Reset margins */
     padding: 10px; /* Padding for clickable area */
@@ -137,10 +133,6 @@
     transition: background-color 0.3s; /* Smooth transition for hover */
 }
 
-.motion-li:hover {
+.motion-li-contribution:hover {
     background-color: var(--pinksalmon); /* Change background on hover */
 }
-
-
-
-
