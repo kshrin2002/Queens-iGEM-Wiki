@@ -73,7 +73,7 @@
     margin-top: 100px; /* Space for the overview section */
 }
 
-.sidebar-contributions-implementation {
+.sidebar-implementation {
     position: sticky; /* Keep sidebar fixed */
     top: 300px; /* Align with the overview section */
     left: 0; /* Align to the left */
@@ -83,7 +83,7 @@
     overflow-y: auto; 
 }
 
-.sidebar-contributions-implementation ul {
+.sidebar-implementation ul {
     list-style: none; /* Remove default list styles */
     padding: 0;
 }

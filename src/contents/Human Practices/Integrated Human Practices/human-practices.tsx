@@ -8,6 +8,7 @@ export function HumanPractices() {
       <OverviewSection />
       <PuzzleSection />
       <TreePuzzle/>
+      <FinalSection />
     </>
   );
 }
@@ -114,25 +115,26 @@ const TreePuzzle: React.FC = () => {
   return (
     <div className="tree-container">
       <div className="level level-1">
-        <img src="https://static.igem.wiki/teams/5079/brainpuzzle/piece1.png" alt="Piece 1" onClick={() => handlePieceClick(1)} />
+        <img className="tree-piece" src="https://static.igem.wiki/teams/5079/brainpuzzle/piece1.png" alt="Piece 1" onClick={() => handlePieceClick(1)} />
+        <img className="treeline-1" src="https://static.igem.wiki/teams/5079/brainpuzzle/line.png" alt="" />
       </div>
       <div className="level level-2">
-        <img src="https://static.igem.wiki/teams/5079/brainpuzzle/piece1.png" alt="Piece 2" onClick={() => handlePieceClick(2)} />
-        <img src="https://static.igem.wiki/teams/5079/brainpuzzle/piece1.png" alt="Piece 3" onClick={() => handlePieceClick(3)} />
-        <img src="https://static.igem.wiki/teams/5079/brainpuzzle/piece1.png" alt="Piece 4" onClick={() => handlePieceClick(4)} />
+        <img className="tree-piece" src="https://static.igem.wiki/teams/5079/brainpuzzle/piece2.png" alt="Piece 2" onClick={() => handlePieceClick(2)} />
+        <img className="tree-piece" src="https://static.igem.wiki/teams/5079/brainpuzzle/piece3.png" alt="Piece 3" onClick={() => handlePieceClick(3)} />
+        <img className="tree-piece" src="https://static.igem.wiki/teams/5079/brainpuzzle/piece4.png" alt="Piece 4" onClick={() => handlePieceClick(4)} />
       </div>
       <div className="level level-3">
-        <img src="https://static.igem.wiki/teams/5079/brainpuzzle/piece1.png" alt="Piece 5" onClick={() => handlePieceClick(2)} />
-        <img src="https://static.igem.wiki/teams/5079/brainpuzzle/piece1.png" alt="Piece 6" onClick={() => handlePieceClick(3)} />
-        <img src="https://static.igem.wiki/teams/5079/brainpuzzle/piece1.png" alt="Piece 7" onClick={() => handlePieceClick(4)} />
-        <img src="https://static.igem.wiki/teams/5079/brainpuzzle/piece1.png" alt="Piece 8" onClick={() => handlePieceClick(2)} />
-        <img src="https://static.igem.wiki/teams/5079/brainpuzzle/piece1.png" alt="Piece 9" onClick={() => handlePieceClick(3)} />
-        <img src="https://static.igem.wiki/teams/5079/brainpuzzle/piece1.png" alt="Piece 10" onClick={() => handlePieceClick(4)} />
+        <img className="tree-piece" src="https://static.igem.wiki/teams/5079/brainpuzzle/piece5.png" alt="Piece 5" onClick={() => handlePieceClick(2)} />
+        <img className="tree-piece" src="https://static.igem.wiki/teams/5079/brainpuzzle/piece6.png" alt="Piece 6" onClick={() => handlePieceClick(3)} />
+        <img className="tree-piece" src="https://static.igem.wiki/teams/5079/brainpuzzle/piece2.png" alt="Piece 7" onClick={() => handlePieceClick(4)} />
+        <img className="tree-piece" src="https://static.igem.wiki/teams/5079/brainpuzzle/piece3.png" alt="Piece 8" onClick={() => handlePieceClick(2)} />
+        <img className="tree-piece" src="https://static.igem.wiki/teams/5079/brainpuzzle/piece2.png" alt="Piece 9" onClick={() => handlePieceClick(3)} />
+        <img className="tree-piece" src="https://static.igem.wiki/teams/5079/brainpuzzle/piece1.png" alt="Piece 10" onClick={() => handlePieceClick(4)} />
       </div>
       <div className="level level-4">
-        <img src="https://static.igem.wiki/teams/5079/brainpuzzle/piece1.png" alt="Piece 11" onClick={() => handlePieceClick(2)} />
-        <img src="https://static.igem.wiki/teams/5079/brainpuzzle/piece1.png" alt="Piece 12" onClick={() => handlePieceClick(3)} />
-        <img src="https://static.igem.wiki/teams/5079/brainpuzzle/piece1.png" alt="Piece 13" onClick={() => handlePieceClick(4)} />
+        <img className="tree-piece" src="https://static.igem.wiki/teams/5079/brainpuzzle/piece6.png" alt="Piece 11" onClick={() => handlePieceClick(2)} />
+        <img className="tree-piece" src="https://static.igem.wiki/teams/5079/brainpuzzle/piece2.png" alt="Piece 12" onClick={() => handlePieceClick(3)} />
+        <img className="tree-piece" src="https://static.igem.wiki/teams/5079/brainpuzzle/piece3.png" alt="Piece 13" onClick={() => handlePieceClick(4)} />
       </div>
 
       {selectedPiece && (
@@ -214,6 +216,10 @@ const PuzzleSection: React.FC = () => {
             <img src="https://static.igem.wiki/teams/5079/brainpuzzle/piece5.png" alt="Piece 5" />
             {enlargedPiece === "piece-5" && <div className="piece-text">Text for Piece 5</div>}
           </div>
+          <div onClick={() => handlePieceClick("piece-6")} className={`piece piece-6 ${enlargedPiece === "piece-6" ? "enlarged" : ""}`}>
+            <img src="https://static.igem.wiki/teams/5079/brainpuzzle/piece6.png" alt="Piece 6" />
+            {enlargedPiece === "piece-6" && <div className="piece-text">Text for Piece 6</div>}
+          </div>
         </div>
       </div>
 
@@ -246,5 +252,36 @@ const PuzzleSection: React.FC = () => {
 
   );
 };
+
+const FinalSection: React.FC = () =>{
+  return (
+    <div className="ihp-container">
+      <h1 className="section-title">
+          Section Stage 3 Putting the Pieces Together
+      </h1>
+      <h1 className="subsection-title">
+          Subsection 1
+      </h1>
+      <p className="section-text">
+        text for subsection 1
+      </p>
+      <h1 className="subsection-title">
+          Subsection 2
+      </h1>
+      <p className="section-text">
+        text for subsection 2
+      </p>
+      <h1 className="subsection-title">
+          Subsection 3
+      </h1>
+      <p className="section-text">
+        text for subsection 3
+      </p>
+      <h1 className="section-title">
+          References
+      </h1>
+    </div>
+  )
+}
 
 export default HumanPractices;

@@ -3,6 +3,7 @@
     text-decoration: underline;
     margin-left: 7rem;
     font-size: 50px;
+    text-align: center;
 }
 
 .section-title {
@@ -28,8 +29,8 @@
 .brain-puzzle {
     position: relative;
     width: 50vw;
-    margin-left: 23vw;
-    padding-bottom: 20rem;
+    margin-left: 34rem;
+    padding-bottom: 5rem;
 }
 
 .brain-shell {
@@ -92,6 +93,13 @@
     width: 337px;
 }
 
+.piece-6 {
+    top: -807px;
+    left: 325px;
+    height: 190px;
+    width: 246px;
+}
+
 /* On click, scale the piece smoothly */
 .enlarged {
     transform: scale(2.5); /* Enlarges the puzzle piece */
@@ -133,18 +141,26 @@
     align-items: center;
 }
 
-.tree-container img{
+.tree-piece{
     height: 200px;
+    width: 270px;
     padding-inline: 3rem;
     transition: transform 0.5s ease;
     cursor: pointer;
 }
 
-.tree-container img:hover{
+.tree-piece:hover{
     transform: translate(10px);
 }
 
-
+.treeline-1{
+    position: absolute;
+    width: 200px;
+    left: 1025px;
+    top: -1000px;
+    rotate: 90deg;
+    z-index: 10;
+}
 
 .level{
     padding-bottom: 7rem;

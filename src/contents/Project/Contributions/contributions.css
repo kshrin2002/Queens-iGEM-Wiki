@@ -73,7 +73,7 @@
     margin-top: 100px; /* Space for the overview section */
 }
 
-.sidebar-contributions-contribution {
+.sidebar-contributions{
     position: sticky; /* Keep sidebar fixed */
     top: 300px; /* Align with the overview section */
     left: 0; /* Align to the left */
@@ -83,12 +83,12 @@
     overflow-y: auto; 
 }
 
-.sidebar-contributions-contribution ul {
+.sidebar-contributions ul {
     list-style: none; /* Remove default list styles */
     padding: 0;
 }
 
-.sidebar-contributions-contribution li {
+.sidebar-contributions li {
     cursor: pointer; /* Change cursor to pointer on hover */
     margin: 5px 0; /* Spacing between items */
     padding: 10px; /* Add some padding for clickable area */
@@ -99,15 +99,15 @@
     position: relative; /* Position relative for dropdown */
 }
 
-.sidebar-contributions-contribution li:hover {
+.sidebar-contributions li:hover {
     border-color: var(--mexired); /* Change border color on hover */
 }
 
-.sidebar-contributions-contribution li span {
+.sidebar-contributions li span {
     margin-left: 10px; /* Space between icon and text */
 }
 
-.sidebar-contributions-contribution img {
+.sidebar-contributions img {
     width: 30px;
     height: 30px;
 }

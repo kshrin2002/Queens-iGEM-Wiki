@@ -207,10 +207,10 @@ const BackToTopButton: React.FC = () => {
   return (
     <Button
       className={`button ${isVisible ? 'visible' : ''}`} // Add the visible class
-      variant="primary"
+      variant="custom"
       onClick={scrollToTop}
     >
-      ↑ Back to Top
+      ↑
     </Button>
   );
 };

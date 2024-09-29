@@ -3,21 +3,23 @@ import { Card, Row, Col, Container, Button } from 'react-bootstrap';
 import { BsArrowDownCircle } from "react-icons/bs";
 import './design.css'; // Import the CSS file
 import { useEffect, useState } from 'react';
+
 export function Design() {
   return (
     <>
-    <div className='main'>
-      <DesignHeading />
-      <OverviewSection />
-      <div className="main-content">
-        <Sidebar />
-        <CardSection />
-      </div>
-      <BackToTopButton />
+      <div className='main'>
+        <DesignHeading />
+        <OverviewSection />
+        <div className="main-content">
+          <Sidebar />
+          <CardSection />
+        </div>
+        <BackToTopButton />
       </div>
     </>
   );
 }
+
 const OverviewSection = () => {
   return (
     <section
@@ -48,6 +50,7 @@ const OverviewSection = () => {
     </section>
   );
 };
+
 const DesignHeading: React.FC = () => {
   return (
     <div style={{ textAlign: 'center', marginTop: '138px' }}>
@@ -64,6 +67,7 @@ const DesignHeading: React.FC = () => {
     </div>
   );
 };
+
 const Sidebar: React.FC = () => {
   const sections = [
     { name: 'Section 1', image: 'https://static.igem.wiki/teams/5079/rose-logo.png' },
@@ -87,23 +91,30 @@ const Sidebar: React.FC = () => {
 };
 
 const CardSection: React.FC = () => {
-  const sections = ['Section 1', 'Section 2', 'Section 3', 'Section 4', 'Section 5'];
+  const sections = [
+    { title: 'Section 1', text: 'This is the content for Section 1. It provides an overview of the initial concepts.' },
+    { title: 'Section 2', text: 'Section 2 dives deeper into the core principles behind the project.' },
+    { title: 'Section 3', text: 'In Section 3, we explore the technical implementations and methodologies.' },
+    { title: 'Section 4', text: 'This section presents the challenges faced and how they were overcome.' },
+    { title: 'Section 5', text: 'Finally, Section 5 offers a conclusion and the future outlook for the project.' }
+  ];
   const placeholderImage = "https://via.placeholder.com/150"; // Placeholder image for now
+
   return (
     <Container fluid className="card-container">
       {sections.map((section, index) => (
         <div key={index} id={`section-${index}`} className="card-wrapper">
           <Card className="custom-card">
             <Card.Body>
-              <Card.Title className="center-title">{section}</Card.Title>
+              <Card.Title className="center-title" style={{ color: 'black' }}>{section.title}</Card.Title>
               <Row>
                 <Col xs={8} className="text-container">
-                  <Card.Text>
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin vel mauris eros.
+                  <Card.Text style={{ color: 'black' }}>
+                    {section.text}
                   </Card.Text>
                 </Col>
                 <Col xs={4}>
-                  <img src={placeholderImage} alt={`Image for ${section}`} style={{ width: '100%', height: 'auto' }} />
+                  <img src={placeholderImage} alt={`Image for ${section.title}`} style={{ width: '100%', height: 'auto' }} />
                 </Col>
               </Row>
             </Card.Body>
@@ -111,7 +122,7 @@ const CardSection: React.FC = () => {
           {/* Add a clickable arrow that scrolls to the next card */}
           {index < sections.length - 1 && (
             <div className="scroll-arrow" onClick={() => document.getElementById(`section-${index + 1}`)?.scrollIntoView({ behavior: 'smooth' })}>
-                <BsArrowDownCircle style={{marginBottom: '20px'}} />
+              <BsArrowDownCircle style={{ marginBottom: '20px' }} />
             </div>
           )}
         </div>
@@ -119,6 +130,7 @@ const CardSection: React.FC = () => {
     </Container>
   );
 };
+
 // Back to Top Button Component
 const BackToTopButton: React.FC = () => {
   const [isVisible, setIsVisible] = useState(false);
@@ -139,11 +151,12 @@ const BackToTopButton: React.FC = () => {
   return (
     <Button
       className={`button ${isVisible ? 'visible' : ''}`} // Add the visible class
-      variant="primary"
+      variant="custom"
       onClick={scrollToTop}
     >
-      ↑ Back to Top
+      ↑
     </Button>
   );
 };
+ 
 export default Design;

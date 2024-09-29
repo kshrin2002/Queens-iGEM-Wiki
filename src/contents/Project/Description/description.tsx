@@ -1,6 +1,6 @@
 export function Description() {
   return (
-    <div className="container-fluid">
+    <div className="container-fluid" style={{marginTop:'7rem'}}>
       <div className="row">
         <div className="col-lg-8 mx-auto">
           <h2>Significance of Parkinson's Disease (PD)</h2>
