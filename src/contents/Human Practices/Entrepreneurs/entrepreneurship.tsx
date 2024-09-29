@@ -203,12 +203,14 @@ const Timeline: React.FC = () => {
   );
 };
 
-const ReferenceSection: React.FC = () => {
+
+const ReferenceSection = () => {
   return (
-    <section>
-      <h2>References</h2>
-      <p>Some references will be listed here.</p>
-    </section>
+    <div className="section-container">
+      <section className="reference-section">
+        <h2>References</h2>
+      </section>
+    </div>
   );
 };
 
