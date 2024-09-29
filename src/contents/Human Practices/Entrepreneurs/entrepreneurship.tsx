@@ -1,6 +1,5 @@
 import React, { useState } from 'react';
 import { Button } from 'react-bootstrap';
-import './entrepreneurship.css';
 
 export function Entrepreneurship() {
   return (
@@ -207,11 +206,19 @@ const Timeline: React.FC = () => {
 
 const ReferenceSection = () => {
   return (
-    <div className="section-container">
-      <section className="reference-section">
-        <h2>References</h2>
-      </section>
-    </div>
+    <section
+      style={{
+        backgroundColor: '#FE9BA1',
+        color: 'white',
+        padding: '20px',
+        marginTop: '100px',
+        width: '100%',
+        height: '350px',
+        marginBottom: '100px',
+      }}
+    >
+      <h2>References</h2>
+    </section>
   );
 };
 
