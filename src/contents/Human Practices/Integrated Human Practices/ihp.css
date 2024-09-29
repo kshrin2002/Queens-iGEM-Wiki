@@ -1,0 +1,241 @@
+.puzzle-title {
+    color: var(--mexired);
+    text-decoration: underline;
+    margin-left: 7rem;
+    font-size: 50px;
+}
+
+.section-title {
+    margin-left: 7rem;
+    color: var(--pinksalmon);
+    font-size: 50px;
+    padding-top: 5rem;
+    padding-bottom: 5rem;
+}
+
+.subsection-title{
+    margin-left: 7rem;
+
+}
+.section-text{
+    margin-left: 10rem;
+}
+
+.ihp-container {
+    margin-left: 0rem;
+}
+
+.brain-puzzle {
+    position: relative;
+    width: 50vw;
+    margin-left: 23vw;
+    padding-bottom: 20rem;
+}
+
+.brain-shell {
+    width: 100%;
+    position: relative; /* Position the brain as the reference */
+    z-index: 1;
+}
+
+.pieces {
+    position: relative;
+    z-index: 2; /* Ensure puzzle pieces are above the brain-shell */
+    transition: transform 0.3s ease;
+}
+
+/* Hover effect only applies if the piece is not enlarged */
+.piece:hover:not(.enlarged) {
+    cursor: pointer;
+    transform: translateX(10px);
+    z-index: 3; /* Bring the hovered piece to the front */
+}
+
+/* Style for each puzzle piece */
+.pieces .piece {
+    user-select: none;
+    position: absolute;
+    transition: transform 0.3s ease; /* Smooth transition for enlargement */
+    pointer-events: auto;
+}
+
+/* Keep each piece's position and size as is */
+.piece-1 { 
+    top: -675px;
+    left: 90px;
+    height: 315px;
+    width: 300px;
+}
+
+.piece-2 {
+    top: -687px;
+    left: 325px;
+    height: 325px;
+    width: 250px;
+}
+
+.piece-3 {
+    top: -433px;
+    left: 560px;
+    width: 312px;
+}
+
+.piece-4 {
+    top: -693px;
+    left: 515px;
+    width: 340px;
+}
+
+.piece-5 {
+    top: -435px;
+    left: 285px;
+    width: 337px;
+}
+
+/* On click, scale the piece smoothly */
+.enlarged {
+    transform: scale(2.5); /* Enlarges the puzzle piece */
+    z-index: 3; /* Bring the enlarged piece above others */
+}
+
+/* Style the text that appears when a piece is clicked */
+.piece-text {
+    position: absolute;
+    color: white;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 1.2em;
+    text-align: center;
+    pointer-events: none; /* Ensure clicks pass through to the image */
+}
+
+/* Reset image size and positioning */
+.pieces img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    pointer-events: none; /* Disable clicking directly on the image */
+}
+
+.diagram-container{
+    display: flex;
+    width: 100%;
+    justify-content: center;
+}
+
+.tree-container{
+    user-select: none;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+}
+
+.tree-container img{
+    height: 200px;
+    padding-inline: 3rem;
+    transition: transform 0.5s ease;
+    cursor: pointer;
+}
+
+.tree-container img:hover{
+    transform: translate(10px);
+}
+
+
+
+.level{
+    padding-bottom: 7rem;
+}
+
+.popup-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.3s ease;
+  }
+  
+  .popup-overlay.visible {
+    background-color: rgba(0, 0, 0, 0.5);
+    opacity: 1;
+    visibility: visible;
+  }
+  
+  .popup-content {
+    background-color: white;
+    border-radius: 20px;
+    border: 5px solid var(--mexired);
+    width: 80%;
+    height: 80%;
+    max-width: 1000px;
+    max-height: 800px;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    transform: scale(0.7);
+    opacity: 0;
+    transition: all 0.3s ease;
+  }
+  
+  .popup-overlay.visible .popup-content {
+    transform: scale(1);
+    opacity: 1;
+  }
+  
+  .close-btn {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    font-size: 24px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    z-index: 1;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+  }
+  
+  .popup-overlay.visible .close-btn {
+    opacity: 1;
+  }
+  
+  .popup-inner {
+    display: flex;
+    height: 100%;
+  }
+  
+  .popup-image {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+  }
+  
+  .popup-image img {
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: contain;
+  }
+  
+  .popup-text {
+    flex: 1;
+    padding: 20px;
+    overflow-y: auto;
+  }
+  
+  .popup-text h2 {
+    margin-top: 0;
+  }
+  
