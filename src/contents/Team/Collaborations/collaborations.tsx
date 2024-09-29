@@ -1,101 +1,173 @@
-import React, { useEffect, useRef } from "react";
-import gsap from "gsap";
-import ScrollTrigger from "gsap/ScrollTrigger";
-import { Card, Row, Col, Container } from "react-bootstrap";
-import './collaboration.css';
-
-gsap.registerPlugin(ScrollTrigger);
+import { useState, useEffect, useRef } from "react";
+import "./collaboration.css";
+import { BsArrowUpCircleFill, BsArrowDownCircleFill } from "react-icons/bs";
 
 export function Collaborations() {
+  const [currentPage, setCurrentPage] = useState(0);
+  const totalPages = 5; // Total number of pages
   const containerRef = useRef<HTMLDivElement>(null);
+  const [scrollDirection, setScrollDirection] = useState<"top" | "bottom">(
+    "bottom"
+  );
 
-  useEffect(() => {
-    const sections = gsap.utils.toArray(".collaborations-panel") as HTMLElement[];
+  const handleDotClick = (index: number) => {
+    setCurrentPage(index);
+  };
 
-    if (containerRef.current) {
-      // Horizontal scroll trigger with pinning
-      ScrollTrigger.create({
-        trigger: containerRef.current,
-        pin: true,
-        scrub: 0.5,
-        start: "top top",
-        end: () => "+=" + containerRef.current!.scrollWidth, // Scroll for the width of the container
-        invalidateOnRefresh: true,
-      });
+  // Function to handle wheel scrolling
+  const handleWheel = (event: WheelEvent) => {
+    event.preventDefault(); // Prevent default scrolling behavior
 
-      // Horizontal scrolling animation
-      gsap.to(sections, {
-        xPercent: -100 * (sections.length - 1),
-        ease: "none",
-        scrollTrigger: {
-          trigger: containerRef.current,
-          scrub: 0.2,
-          start: "top top",
-          end: () => "+=" + containerRef.current!.scrollWidth,
-          anticipatePin: 1,
-        },
-      });
+    // Scroll right if scrolling down and not on the last page
+    if (event.deltaY > 0 && currentPage < totalPages - 1) {
+      setCurrentPage((prev) => prev + 1);
     }
+    // Scroll left if scrolling up and not on the first page
+    else if (event.deltaY < 0 && currentPage > 0) {
+      setCurrentPage((prev) => prev - 1);
+    }
+  };
 
+  // Add wheel event listener on mount
+  useEffect(() => {
+    window.addEventListener("wheel", handleWheel, { passive: false });
+
+    // Cleanup event listener on unmount
     return () => {
-      ScrollTrigger.getAll().forEach((trigger) => trigger.kill());
+      window.removeEventListener("wheel", handleWheel);
     };
-  }, []);
+  }, [currentPage]);
+
+  const toggleScroll = () => {
+    const target =
+      scrollDirection === "bottom" ? document.body.scrollHeight : 0; // Determine target scroll position
+    window.scrollTo({
+      top: target,
+      behavior: "smooth", // Smooth scroll
+    });
+    setScrollDirection((prev) => (prev === "bottom" ? "top" : "bottom")); // Toggle direction
+  };
+
+  const pageData = [
+    {
+      header: "Collaborations Overview",
+      text: [
+        "On this page, we provide a summary of our team collaborations.",
+        "We worked with multiple teams to achieve the goals of our project.",
+      ],
+    },
+    {
+      header: "International Collaborations",
+      text: [
+        "Our international collaborations span across several continents.",
+        "Working with teams from Europe, Asia, and the Americas, we fostered global connections.",
+      ],
+    },
+    {
+      header: "Research Partnerships",
+      text: [
+        "We partnered with research institutions to enhance the scientific rigor of our work.",
+        "Collaborations in research helped validate key components of our project.",
+      ],
+    },
+    {
+      header: "Outreach Collaborations",
+      text: [
+        "Our outreach efforts involved collaborations with local communities and educational institutions.",
+        "These efforts helped us increase public awareness and engagement in synthetic biology.",
+      ],
+    },
+    {
+      header: "Final Reflections",
+      text: [
+        "In our final reflections, we emphasize the importance of teamwork and collaboration.",
+        "These collaborations were critical to the success of our project, enabling us to achieve more together.",
+      ],
+    },
+  ];
 
   return (
-    <>
-      <div className="collaborations-first-container">
-        <h1 className="collaborations-title">Collaborations</h1>
-        {/* Embed the image under the main "Collaborations" title */}
-        <img 
-          src="https://static.igem.wiki/teams/5079/colabmapchart.png" 
-          alt="Collaboration Map Chart" 
-          style={{ width: '80%', height: 'auto', marginTop: '20px' }}
-        />
+    <div className="engineering-container">
+      <div
+        className="page-wrapper"
+        style={{
+          transform: `translateX(-${currentPage * 100}vw)`, // Translate pages horizontally
+          width: `${totalPages * 100}vw`, // Set the width based on the number of pages
+        }}
+        ref={containerRef}
+      >
+        {[...Array(totalPages)].map((_, index) => (
+          <div
+            className="page"
+            key={index}
+            style={{ width: "100vw", height: "100vh" }}
+          >
+            {/* First page keeps the original design */}
+            {index === 0 ? (
+              <div className="collaborations-content">
+                <h2 className="collaborations-title">Collaborations</h2>
+                <div className="image-container">
+                  <img
+                    src="https://static.igem.wiki/teams/5079/colabmapchart.png"
+                    alt="Collaborations Map"
+                    className="collaborations-image"
+                  />
+                  <img
+                    src="https://static.igem.wiki/teams/5079/colabmapchart.png"
+                    alt="Collaborations Map"
+                    className="collaborations-image"
+                  />
+                  <img
+                    src="https://static.igem.wiki/teams/5079/colabmapchart.png"
+                    alt="Collaborations Map"
+                    className="collaborations-image"
+                  />
+                </div>
+              </div>
+            ) : (
+              // Other pages have unique content in the rounded box
+              <div className="rounded-box">
+                <div className="text-section">
+                  <h3 className="rounded-box-header">{pageData[index - 1].header}</h3>
+                  {pageData[index - 1].text.map((paragraph, i) => (
+                    <p key={i}>{paragraph}</p>
+                  ))}
+                </div>
+                <div className="image-section">
+                  <img
+                    src="https://via.placeholder.com/150"
+                    alt="Placeholder Image"
+                    className="rounded-box-image"
+                  />
+                </div>
+              </div>
+            )}
+          </div>
+        ))}
       </div>
-      <div className="collaborations-container" ref={containerRef}>
-        <section className="collaborations-panel blue">
-          <CardSection title="Section 1" />
-        </section>
-        <section className="collaborations-panel red">
-          <CardSection title="Section 2" />
-        </section>
-        <section className="collaborations-panel orange">
-          <CardSection title="Section 3" />
-        </section>
-        <section className="collaborations-panel purple">
-          <CardSection title="Section 4" />
-        </section>
+
+      {/* Navigation Dots */}
+      <div className="navigation-dots">
+        {[...Array(totalPages)].map((_, index) => (
+          <div
+            key={index}
+            className={`dot ${currentPage === index ? "active" : ""}`}
+            onClick={() => handleDotClick(index)}
+          />
+        ))}
       </div>
-    </>
+
+      {/* Scroll Button */}
+      <button className="scroll-button" onClick={toggleScroll}>
+        {scrollDirection === "bottom" ? "Footer  " : "Pages "}
+        {scrollDirection === "bottom" ? (
+          <BsArrowDownCircleFill />
+        ) : (
+          <BsArrowUpCircleFill />
+        )}
+      </button>
+    </div>
   );
 }
 
-// CardSection component used in each horizontal section
-const CardSection: React.FC<{ title: string }> = ({ title }) => {
-  const placeholderImage = "https://via.placeholder.com/150"; // Placeholder image for now
-  return (
-    <Container fluid className="card-container">
-      <Card className="custom-card" style={{ borderColor: 'ff1837', borderWidth: '2px', borderStyle: 'solid' }}>
-        <Card.Body>
-          <Card.Title className="center-title" style={{ color: '#ff1837' }}>{title}</Card.Title>
-          <Row className="align-items-center">
-            <Col xs={6} className="text-container">
-              <Card.Text style={{ color: 'black' }}>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin vel mauris eros. 
-                Vivamus eu augue vel felis dictum sollicitudin. Curabitur blandit, mauris vel ornare feugiat, 
-                velit justo dictum sapien, at mollis erat leo in lorem. Integer placerat bibendum purus, 
-                sit amet pharetra justo sollicitudin ut. Sed ultricies libero a neque fringilla, 
-                at viverra metus congue. Nullam vitae libero lacinia, ultricies eros nec, feugiat odio.
-              </Card.Text>
-            </Col>
-
-            <Col xs={6}>
-              <img src={placeholderImage} alt={`Image for ${title}`} style={{ width: '100%', height: 'auto' }} />
-            </Col>
-          </Row>
-        </Card.Body>
-      </Card>
-    </Container>
-  );
-}
+export default Collaborations;
