@@ -105,7 +105,7 @@ const Timeline: React.FC = () => {
     setBoxStyle(prev => ({ ...prev, width: '40%' }));
     setTimeout(() => {
       // Then expand the height and padding
-      setBoxStyle(prev => ({ ...prev, height: '75vh', padding: '20px' }));
+      setBoxStyle(prev => ({ ...prev, height: '150px', padding: '20px' })); // Updated height
       setTimeout(() => setIsAnimating(false), 300);
     }, 300);
   };
@@ -235,4 +235,5 @@ const BackToTopButton: React.FC = () => {
     </Button>
   );
 };
+
 export default Entrepreneurship;
