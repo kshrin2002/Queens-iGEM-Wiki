@@ -1,7 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import { Card, Col, Container, Row, Button } from 'react-bootstrap';
 import './judging.css'; // Updated CSS file name
-import { FiEdit } from "react-icons/fi";
 import { motion } from "framer-motion";
 
 export function Judging() {
