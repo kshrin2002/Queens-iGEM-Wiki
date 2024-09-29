@@ -822,7 +822,8 @@ const Timeline: React.FC = () => {
   };
 
   const openBox = (month: string, index: number, position: "left" | "right") => {
-    setSelectedMonth(month);
+    setSelectedMonth(month);;
+    index;
     setIsAnimating(true);
     setIsClosing(false);
     setBoxPosition(position);
