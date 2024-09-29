@@ -101,11 +101,10 @@ const Timeline: React.FC = () => {
     setIsAnimating(true);
     setBoxPosition(position); // Set box to open on the left or right side
 
-    // Expand width first
-    setBoxStyle(prev => ({ ...prev, width: '80%', height: '100px' })); // Updated width and height
+    // Reverting back to the original box size
+    setBoxStyle(prev => ({ ...prev, width: '150px', height: '50px' })); 
     setTimeout(() => {
-      // Then expand the height and padding
-      setBoxStyle(prev => ({ ...prev, height: '150px', padding: '20px' })); // Updated height
+      setBoxStyle(prev => ({ ...prev, width: '300px', height: '100px' })); // Updated width and height
       setTimeout(() => setIsAnimating(false), 300);
     }, 300);
   };
@@ -244,5 +243,6 @@ const BackToTopButton: React.FC = () => {
     </Button>
   );
 };
+
 
 export default Entrepreneurship;
