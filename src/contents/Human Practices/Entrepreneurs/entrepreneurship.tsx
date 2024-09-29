@@ -102,7 +102,7 @@ const Timeline: React.FC = () => {
     setBoxPosition(position); // Set box to open on the left or right side
 
     // Expand width first
-    setBoxStyle(prev => ({ ...prev, width: '40%' }));
+    setBoxStyle(prev => ({ ...prev, width: '80%', height: '100px' })); // Updated width and height
     setTimeout(() => {
       // Then expand the height and padding
       setBoxStyle(prev => ({ ...prev, height: '150px', padding: '20px' })); // Updated height
@@ -161,12 +161,12 @@ const Timeline: React.FC = () => {
               top: `${index * 20}vh`, // Adjust the spacing based on the number of stages
               backgroundColor: selectedStage === stage ? '#a00000' : '#590000',
               color: '#fff',
-              padding: '5px 15px',
+              padding: '10px 30px', // Adjusted padding for a larger button
               borderRadius: '25px',
-              fontSize: '1.2em',
+              fontSize: '1.5em', // Adjusted font size
               fontWeight: 'bold',
               textAlign: 'center',
-              width: '80px',
+              width: '120px', // Adjusted width
               border: 'none',
               cursor: 'pointer',
             }}
@@ -203,7 +203,6 @@ const Timeline: React.FC = () => {
   );
 };
 
-
 const ReferenceSection = () => {
   return (
     <section
@@ -238,7 +237,7 @@ const BackToTopButton: React.FC = () => {
         bottom: '20px',
         right: '20px',
         backgroundColor: '#590000',
-        color: 'white',
+        color: '#fff',
       }}
     >
       Back to Top
