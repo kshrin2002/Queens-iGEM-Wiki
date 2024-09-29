@@ -142,13 +142,6 @@ const Pages: (Page | Folder)[] = [
           lead: "test 123",
         },
         {
-          name: "Results and Analysis",
-          title: "Results",
-          path: "/resultsandanalysis",
-          component: Results,
-          lead: "test 123",
-        },
-        {
           name: "Proof Of Concept",
           title: "Proof of Concept",
           path: "/ProofOfConcept",

@@ -105,4 +105,16 @@
   font-size: 0.85rem;
   width: 1000px;
   margin-bottom: 0;
+  color: #790000;
 }
+
+#unique-footer .subfoot {
+  color: #4DB6E3;
+  text-decoration: none;
+}
+
+.git-link {
+  color: #4DB6E3;
+  text-decoration: none;
+}
+

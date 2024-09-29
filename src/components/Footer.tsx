@@ -17,22 +17,46 @@ export function Footer() {
     slidesToShow: 5,
     slidesToScroll: 1,
     autoplay: true,
-    autoplaySpeed: 5000,
+    autoplaySpeed: 3000,
     arrows: true,
   };
 
   // Array of sponsor logos
   const sponsorLogos = [
-    { src: "https://static.igem.wiki/teams/5079/brandtech-transparent-logo.png", alt: "BrandTech" },
-    { src: "https://static.igem.wiki/teams/5079/csi-bio-combined-logo-bio-bottom-w-maple-leaf-full-size-rgb.png", alt: "CSI Bio" },
-    { src: "https://static.igem.wiki/teams/5079/idt-transparent-logo-cropped-version.png", alt: "IDT" },
-    { src: "https://static.igem.wiki/teams/5079/agat-transparent-logo.png", alt: "AGAT" },
-    { src: "https://static.igem.wiki/teams/5079/new-england-biolabs-transparent-cropped-version.png", alt: "New England Biolabs" },
+    {
+      src: "https://static.igem.wiki/teams/5079/brandtech-transparent-logo.png",
+      alt: "BrandTech",
+    },
+    {
+      src: "https://static.igem.wiki/teams/5079/csi-bio-combined-logo-bio-bottom-w-maple-leaf-full-size-rgb.png",
+      alt: "CSI Bio",
+    },
+    {
+      src: "https://static.igem.wiki/teams/5079/idt-transparent-logo-cropped-version.png",
+      alt: "IDT",
+    },
+    {
+      src: "https://static.igem.wiki/teams/5079/agat-transparent-logo.png",
+      alt: "AGAT",
+    },
+    {
+      src: "https://static.igem.wiki/teams/5079/new-england-biolabs-transparent-cropped-version.png",
+      alt: "New England Biolabs",
+    },
     { src: "https://static.igem.wiki/teams/5079/qhs-stacked.png", alt: "QHS" },
-    { src: "https://static.igem.wiki/teams/5079/smith-engineering-transparent-logo.png", alt: "Smith Engineering" },
-    { src: "https://static.igem.wiki/teams/5079/snapgene-logo-2022-1.png", alt: "SnapGene" },
+    {
+      src: "https://static.igem.wiki/teams/5079/smith-engineering-transparent-logo.png",
+      alt: "Smith Engineering",
+    },
+    {
+      src: "https://static.igem.wiki/teams/5079/snapgene-logo-2022-1.png",
+      alt: "SnapGene",
+    },
     { src: "https://static.igem.wiki/teams/5079/asus-logo.png", alt: "Asus" },
-    { src: "https://static.igem.wiki/teams/5079/lohans-lab-logo.png", alt: "Lohans" },
+    {
+      src: "https://static.igem.wiki/teams/5079/lohans-lab-logo.png",
+      alt: "Lohans",
+    },
   ];
 
   return (
@@ -44,7 +68,11 @@ export function Footer() {
             <Slider {...settings}>
               {sponsorLogos.map((sponsor, index) => (
                 <div key={index} className="sponsor-slide">
-                  <img src={sponsor.src} alt={sponsor.alt} className="sponsor-logo" />
+                  <img
+                    src={sponsor.src}
+                    alt={sponsor.alt}
+                    className="sponsor-logo"
+                  />
                 </div>
               ))}
             </Slider>
@@ -57,9 +85,34 @@ export function Footer() {
             <h4 className="mt-lg-0 mt-sm-4 mb-3">Contact</h4>
             <p>Address: 99 University Ave. Kingston, Ontario.</p>
             <p className="mb-0">Phone Number: (613) - 533 - 2000</p>
-            <p>Email: <a href="mailto:qgem@engsoc.queensu.ca" className="contact-link">qgem@engsoc.queensu.ca</a></p>
-            <p>LinkedIn: <a href="https://www.linkedin.com/in/qgem" className="contact-link" target="_blank" rel="noopener noreferrer">QGEM</a></p>
-            <p>Instagram: <a href="https://www.instagram.com/queens_igem" className="contact-link" target="_blank" rel="noopener noreferrer">@queens_igem</a></p>
+            <p>
+              Email:{" "}
+              <a href="mailto:qgem@engsoc.queensu.ca" className="contact-link">
+                qgem@engsoc.queensu.ca
+              </a>
+            </p>
+            <p>
+              LinkedIn:{" "}
+              <a
+                href="https://www.linkedin.com/company/qgem/mycompany/"
+                className="contact-link"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                QGEM
+              </a>
+            </p>
+            <p>
+              Instagram:{" "}
+              <a
+                href="https://www.instagram.com/queens_igem"
+                className="contact-link"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                @queens_igem
+              </a>
+            </p>
           </div>
 
           {/* Queen's University Logo and Text Aligned Bottom Right */}
@@ -70,11 +123,17 @@ export function Footer() {
                 alt="Queen's University"
                 className="queens-logo"
               />
-              <div className="footer-text"> {/* Wrapper for text */}
+              <div className="footer-text">
+                {" "}
+                {/* Wrapper for text */}
                 <p className="mb-0">
                   <small>
                     © 2024 - Content on this site is licensed under a{" "}
-                    <a className="subfoot" href="https://creativecommons.org/licenses/by/4.0/" rel="license">
+                    <a
+                      className="git-link"
+                      href="https://creativecommons.org/licenses/by/4.0/"
+                      rel="license"
+                    >
                       Creative Commons Attribution 4.0 International license
                     </a>
                     .
@@ -83,7 +142,10 @@ export function Footer() {
                 <p>
                   <small>
                     The repository used to create this website is available at{" "}
-                    <a href={`https://gitlab.igem.org/${teamYear}/${teamSlug}`}>
+                    <a
+                      href={`https://gitlab.igem.org/${teamYear}/${teamSlug}`}
+                      className="git-link"
+                    >
                       gitlab.igem.org/{teamYear}/{teamSlug}
                     </a>
                     .
