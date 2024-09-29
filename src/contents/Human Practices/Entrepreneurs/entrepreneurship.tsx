@@ -67,8 +67,8 @@ const Timeline: React.FC = () => {
   const [selectedStage, setSelectedStage] = useState<string | null>(null);
   const [isAnimating, setIsAnimating] = useState(false);
   const [boxStyle, setBoxStyle] = useState({
-    width: '80px',
-    height: '30px',
+    width: '150px',
+    height: '50px',
     padding: '5px',
   });
   const [boxPosition, setBoxPosition] = useState<'left' | 'right'>('right'); // Track left or right
