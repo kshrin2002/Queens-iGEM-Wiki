@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { Button } from 'react-bootstrap';
+import './entrepreneurship.css';
 
 export function Entrepreneurship() {
   return (
