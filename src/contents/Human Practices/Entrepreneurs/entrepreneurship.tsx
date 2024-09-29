@@ -82,7 +82,7 @@ const Timeline: React.FC = () => {
 
     if (selectedStage && selectedStage !== stage) {
       setIsAnimating(true);
-      setBoxStyle(prev => ({ ...prev, height: '30px', padding: '5px' }));
+      setBoxStyle(prev => ({ ...prev, height: '80px', padding: '5px' }));
       setTimeout(() => {
         setBoxStyle(prev => ({ ...prev, width: '80px' }));
         setTimeout(() => {
