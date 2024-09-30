@@ -78,9 +78,45 @@ const Sidebar: React.FC = () => {
     },
   ];
 
+  const sidebarStyle: React.CSSProperties = {
+    position: 'sticky',
+    top: '50px',
+    left: '0px',
+    width: '25%',
+    padding: '20px',
+    maxHeight: '200vh',
+    overflowY: 'auto',
+  };
+
+  const listItemStyle: React.CSSProperties = {
+    display: 'flex',
+    alignItems: 'center',
+    marginBottom: '10px',
+    cursor: 'pointer',
+    padding: '10px',
+    borderRadius: '5px',
+    backgroundColor: '#fff',
+    transition: 'background-color 0.3s ease',
+  };
+
+  const imageStyle: React.CSSProperties = {
+    width: '40px',
+    height: '40px',
+    marginRight: '10px',
+    borderRadius: '50%',
+  };
+
+  const handleItemHover = (event: React.MouseEvent<HTMLLIElement, MouseEvent>, hover: boolean) => {
+    if (hover) {
+      event.currentTarget.style.backgroundColor = '#e0e0e0';
+    } else {
+      event.currentTarget.style.backgroundColor = '#fff';
+    }
+  };
+
   return (
-    <div className="sidebar">
-      <ul>
+    <div style={sidebarStyle}>
+      <ul style={{ padding: 0, listStyleType: 'none' }}>
         {sections.map((section, index) => (
           <li
             key={index}
@@ -89,11 +125,14 @@ const Sidebar: React.FC = () => {
                 .getElementById(`section-${index}`)
                 ?.scrollIntoView({ behavior: "smooth" })
             }
+            style={listItemStyle}
+            onMouseEnter={(e) => handleItemHover(e, true)}
+            onMouseLeave={(e) => handleItemHover(e, false)}
           >
             <img
               src={section.image}
               alt={section.name}
-              className="section-image"
+              style={imageStyle}
             />
             <span>{section.name}</span>
           </li>
