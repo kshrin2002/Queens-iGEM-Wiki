@@ -214,9 +214,9 @@ const Pages: (Page | Folder)[] = [
     name: "Team",
     folder: [
       {
-        name: "Team",
-        title: "Team",
-        path: "/team",
+        name: "Members",
+        title: "Members",
+        path: "/Members",
         component: Team,
         lead: "On this page you can introduce your team members, instructors, and advisors.",
       },
