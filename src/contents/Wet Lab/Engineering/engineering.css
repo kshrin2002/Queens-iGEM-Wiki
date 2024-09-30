@@ -17,6 +17,7 @@
   width: 100vw;
   height: 100vh;
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
   padding: 2rem;
@@ -62,16 +63,6 @@
   font-weight: bold;
 }
 
-/* Circular diagram */
-.circle-diagram{
-  margin: auto;
-  padding-left: 0rem;
-}
-
-.circle-img {
-  height: 700px;
-  left: 50vw;
-}
 
 /* Navigation dots */
 .navigation-dots {
@@ -81,6 +72,7 @@
   transform: translateX(-50%);
   display: flex;
   gap: 10px;
+  padding-bottom: 2rem;
 }
 
 .dot {
@@ -95,123 +87,17 @@
   background-color: var(--venetianred);
 }
 
-.navarrow1{
-  left: 96vw;
-  top: 47vh;
-  position: absolute;
-  z-index: 1;
-  color: var(--pinksalmon);
-  transition: color 0.5s ease;
-  
-  &:hover{
-    color: var(--venetianred);
-    transition: color 0.5s ease;
-  }
-}
-
-.navarrow2{
-  left: 196vw;
-  top: 47vh;
-  position: absolute;
-  z-index: 1;
-  color: var(--pinksalmon);
-  transition: color 0.5s ease;
-  
-  &:hover{
-    color: var(--venetianred);
-    transition: color 0.5s ease;
-  }
-}
-.navarrow3{
-  left: 101vw;
-  top: 47vh;
-  position: absolute;
-  z-index: 1;
-  color: var(--pinksalmon);
-  transition: color 0.5s ease;
-  
-  &:hover{
-    color: var(--venetianred);
-    transition: color 0.5s ease;
-  }
-}
-.navarrow4{
-  left: 201vw;
-  top: 47vh;
-  position: absolute;
-  z-index: 1;
-  color: var(--pinksalmon);
-  transition: color 0.5s ease;
-  
-  &:hover{
-    color: var(--venetianred);
-    transition: color 0.5s ease;
-  }
-}
-.navarrow5{
-  left: 296vw;
-  top: 47vh;
-  position: absolute;
-  z-index: 1;
-  color: var(--pinksalmon);
-  transition: color 0.5s ease;
-  
-  &:hover{
-    color: var(--venetianred);
-    transition: color 0.5s ease;
-  }
-}
-.navarrow6{
-  left: 301vw;
-  top: 47vh;
-  position: absolute;
-  z-index: 1;
-  color: var(--pinksalmon);
-  transition: color 0.5s ease;
-  
-  &:hover{
-    color: var(--venetianred);
-    transition: color 0.5s ease;
-  }
-}
-.navarrow7{
-  left: 396vw;
-  top: 47vh;
-  position: absolute;
-  z-index: 1;
-  color: var(--pinksalmon);
-  transition: color 0.5s ease;
-  
-  &:hover{
-    color: var(--venetianred);
-    transition: color 0.5s ease;
-  }
-}
-.navarrow8{
-  left: 401vw;
-  top: 47vh;
-  position: absolute;
-  z-index: 1;
-  color: var(--pinksalmon);
-  transition: color 0.5s ease;
-  
-  &:hover{
-    color: var(--venetianred);
-    transition: color 0.5s ease;
-  }
-}
-
 .vertical-rectangle-r {
-  width: 700px;
-  height: 800px;
+  min-height: 300px;
+  height: auto;
+  width: auto;
+  max-width: 60vw;
   background-color: #f0f0f0; 
   border: solid;
   border-width: 5px;
   border-radius: 20px;
   border-color: var(--venetianred);
   display: flex;
-  align-items: center;
-  justify-content: center;
   transition: transform 0.3s ease; 
 }
 
@@ -222,7 +108,7 @@
 .circle-img {
   animation: rotate 8s linear infinite;
   margin-bottom: 1rem;
-  height: 700px;
+  height: 300px;
 }
 
 .circle-img.animate {
@@ -267,4 +153,85 @@
 .scroll-button:hover {
   color: var(--venetianred);
   background-color: var(--pinksalmon); 
+}
+
+.engnavbar {
+  position: absolute;
+  top: 10vh;
+  left: 33vw;
+  display: flex;
+  justify-content: center;
+  z-index: 10;
+}
+
+.engnavbar-button {
+  padding: 10px 20px;
+  margin: 0 10px;
+  background-color: #f0f0f0;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.engnavbar-button.active {
+  background-color: var(--venetianred);
+  color: white;
+}
+
+.engnavbar-button:hover{
+  background-color: var(--pinksalmon);
+}
+
+.page-wrapper {
+  display: flex;
+  transition: transform 0.5s ease;
+}
+
+.page {
+  width: 100vw;
+  padding: 40px;
+}
+
+.page-content {
+  display: flex;
+  text-align: center;
+}
+
+.scroll-button {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  z-index: 1000;
+  padding: 10px;
+  background-color: var(--venetianred);
+  color: white;
+  border: none;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+.page-content {
+  display: flex;
+  flex-direction: column; /* Stack title and content vertically */
+  align-items: center; /* Center items */
+}
+
+.flex-container {
+  display: flex; /* Use flexbox for side-by-side layout */
+  align-items: flex-start; /* Align items to the start */
+  justify-content: space-between; /* Space between the items */
+  width: 100%; /* Full width for proper alignment */
+  margin-top: 20px; /* Space between title and content */
+}
+
+.circle-diagram {
+  flex: 1; /* Allow this to grow */
+  margin-right: 20px; /* Space between image and rectangle */
+}
+
+
+.page-title {
+  text-align: center; /* Center the title */
+  margin-bottom: 20px; /* Space below the title */
 }

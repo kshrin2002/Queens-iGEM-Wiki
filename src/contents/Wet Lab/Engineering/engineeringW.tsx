@@ -1,25 +1,475 @@
-import { useState, useEffect, useRef } from 'react';
+import { useState, useEffect } from 'react';
 import './engineering.css';
-import { BsArrowRightCircle, BsArrowLeftCircle, BsArrowUpCircleFill, BsArrowDownCircleFill } from "react-icons/bs";
+import {BsArrowUpCircleFill, BsArrowDownCircleFill } from "react-icons/bs";
 
+// Define types
+interface PageContent {
+  title: string;
+  content: JSX.Element;
+}
+
+interface PageSet {
+  [key: number]: PageContent[];
+}
+
+// Page content structure
+const pageContent: PageSet = {
+  0: [
+    {
+      title: "Page 1 of Set 1",
+      content: (
+        <>
+          <div className="circle-diagram">
+            <img
+              className="circle-img"
+              src="https://static.igem.wiki/teams/5079/engineeringcirclediagram.png"
+              alt="Engineering Diagram"
+            />
+          </div>
+          <div className="vertical-rectangle-r">
+            <p>
+              Welcome to Set 1, Page 1. This section discusses the basics of engineering principles.
+            </p>
+          </div>
+        </>
+      ),
+    },
+    {
+      title: "Page 2 of Set 1",
+      content: (
+        <>
+          <div className="circle-diagram">
+            <img
+              className="circle-img"
+              src="https://static.igem.wiki/teams/5079/engineeringcirclediagram.png"
+              alt="Engineering Diagram"
+            />
+          </div>
+          <div className="vertical-rectangle-r">
+            <p>
+              Set 1, Page 2 delves into fundamental design processes.
+            </p>
+          </div>
+        </>
+      ),
+    },
+  ],
+  1: [
+    {
+      title: "Page 1 of Set 2",
+      content: (
+        <>
+          <div className="circle-diagram">
+            <img
+              className="circle-img"
+              src="https://static.igem.wiki/teams/5079/engineeringcirclediagram.png"
+              alt="Engineering Diagram"
+            />
+          </div>
+          <div className="vertical-rectangle-r">
+            <p>
+              Set 2, Page 1 covers advanced engineering concepts.
+            </p>
+          </div>
+        </>
+      ),
+    },
+    {
+      title: "Page 2 of Set 2",
+      content: (
+        <>
+          <div className="circle-diagram">
+            <img
+              className="circle-img"
+              src="https://static.igem.wiki/teams/5079/engineeringcirclediagram.png"
+              alt="Engineering Diagram"
+            />
+          </div>
+          <div className="vertical-rectangle-r">
+            <p>
+              Set 2, Page 2 focuses on project management in engineering.
+            </p>
+          </div>
+        </>
+      ),
+    },
+    {
+      title: "Page 3 of Set 2",
+      content: (
+        <>
+          <div className="circle-diagram">
+            <img
+              className="circle-img"
+              src="https://static.igem.wiki/teams/5079/engineeringcirclediagram.png"
+              alt="Engineering Diagram"
+            />
+          </div>
+          <div className="vertical-rectangle-r">
+            <p>
+              Set 2, Page 3 discusses quality control methodologies.
+            </p>
+          </div>
+        </>
+      ),
+    },
+    {
+      title: "Page 4 of Set 2",
+      content: (
+        <>
+          <div className="circle-diagram">
+            <img
+              className="circle-img"
+              src="https://static.igem.wiki/teams/5079/engineeringcirclediagram.png"
+              alt="Engineering Diagram"
+            />
+          </div>
+          <div className="vertical-rectangle-r">
+            <p>
+              Set 2, Page 4 explores emerging technologies in engineering.
+            </p>
+          </div>
+        </>
+      ),
+    },
+    {
+      title: "Page 5 of Set 2",
+      content: (
+        <>
+          <div className="circle-diagram">
+            <img
+              className="circle-img"
+              src="https://static.igem.wiki/teams/5079/engineeringcirclediagram.png"
+              alt="Engineering Diagram"
+            />
+          </div>
+          <div className="vertical-rectangle-r">
+            <p>
+              Set 2, Page 5 covers sustainability in engineering.
+            </p>
+          </div>
+        </>
+      ),
+    },
+    {
+      title: "Page 6 of Set 2",
+      content: (
+        <>
+          <div className="circle-diagram">
+            <img
+              className="circle-img"
+              src="https://static.igem.wiki/teams/5079/engineeringcirclediagram.png"
+              alt="Engineering Diagram"
+            />
+          </div>
+          <div className="vertical-rectangle-r">
+            <p>
+              Set 2, Page 6 highlights interdisciplinary approaches in engineering.
+            </p>
+          </div>
+        </>
+      ),
+    },
+    {
+      title: "Page 7 of Set 2",
+      content: (
+        <>
+          <div className="circle-diagram">
+            <img
+              className="circle-img"
+              src="https://static.igem.wiki/teams/5079/engineeringcirclediagram.png"
+              alt="Engineering Diagram"
+            />
+          </div>
+          <div className="vertical-rectangle-r">
+            <p>
+              Set 2, Page 7 reviews ethical considerations in engineering.
+            </p>
+          </div>
+        </>
+      ),
+    },
+    {
+      title: "Page 8 of Set 2",
+      content: (
+        <>
+          <div className="circle-diagram">
+            <img
+              className="circle-img"
+              src="https://static.igem.wiki/teams/5079/engineeringcirclediagram.png"
+              alt="Engineering Diagram"
+            />
+          </div>
+          <div className="vertical-rectangle-r">
+            <p>
+              Set 2, Page 8 discusses the future of engineering education.
+            </p>
+          </div>
+        </>
+      ),
+    },
+  ],
+  2: [
+    {
+      title: "Page 1 of Set 3",
+      content: (
+        <>
+          <div className="circle-diagram">
+            <img
+              className="circle-img"
+              src="https://static.igem.wiki/teams/5079/engineeringcirclediagram.png"
+              alt="Engineering Diagram"
+            />
+          </div>
+          <div className="vertical-rectangle-r">
+            <p>
+              Set 3, Page 1 introduces mechanical engineering concepts.
+            </p>
+          </div>
+        </>
+      ),
+    },
+    {
+      title: "Page 2 of Set 3",
+      content: (
+        <>
+          <div className="circle-diagram">
+            <img
+              className="circle-img"
+              src="https://static.igem.wiki/teams/5079/engineeringcirclediagram.png"
+              alt="Engineering Diagram"
+            />
+          </div>
+          <div className="vertical-rectangle-r">
+            <p>
+              Set 3, Page 2 explores thermal dynamics.
+            </p>
+          </div>
+        </>
+      ),
+    },
+    {
+      title: "Page 3 of Set 3",
+      content: (
+        <>
+          <div className="circle-diagram">
+            <img
+              className="circle-img"
+              src="https://static.igem.wiki/teams/5079/engineeringcirclediagram.png"
+              alt="Engineering Diagram"
+            />
+          </div>
+          <div className="vertical-rectangle-r">
+            <p>
+              Set 3, Page 3 covers fluid mechanics.
+            </p>
+          </div>
+        </>
+      ),
+    },
+    {
+      title: "Page 4 of Set 3",
+      content: (
+        <>
+          <div className="circle-diagram">
+            <img
+              className="circle-img"
+              src="https://static.igem.wiki/teams/5079/engineeringcirclediagram.png"
+              alt="Engineering Diagram"
+            />
+          </div>
+          <div className="vertical-rectangle-r">
+            <p>
+              Set 3, Page 4 examines materials science.
+            </p>
+          </div>
+        </>
+      ),
+    },
+  ],
+  3: [
+    {
+      title: "Page 1 of Set 4",
+      content: (
+        <>
+          <div className="circle-diagram">
+            <img
+              className="circle-img"
+              src="https://static.igem.wiki/teams/5079/engineeringcirclediagram.png"
+              alt="Engineering Diagram"
+            />
+          </div>
+          <div className="vertical-rectangle-r">
+            <p>
+              Set 4, Page 1 introduces electrical engineering fundamentals.
+            </p>
+          </div>
+        </>
+      ),
+    },
+    {
+      title: "Page 2 of Set 4",
+      content: (
+        <>
+          <div className="circle-diagram">
+            <img
+              className="circle-img"
+              src="https://static.igem.wiki/teams/5079/engineeringcirclediagram.png"
+              alt="Engineering Diagram"
+            />
+          </div>
+          <div className="vertical-rectangle-r">
+            <p>
+              Set 4, Page 2 explores circuit design.
+            </p>
+          </div>
+        </>
+      ),
+    },
+    {
+      title: "Page 3 of Set 4",
+      content: (
+        <>
+          <div className="circle-diagram">
+            <img
+              className="circle-img"
+              src="https://static.igem.wiki/teams/5079/engineeringcirclediagram.png"
+              alt="Engineering Diagram"
+            />
+          </div>
+          <div className="vertical-rectangle-r">
+            <p>
+            Set 4, Page 3 discusses signal processing.
+            </p>
+          </div>
+        </>
+      ),
+    },
+    {
+      title: "Page 4 of Set 4",
+      content: (
+        <>
+          <div className="circle-diagram">
+            <img
+              className="circle-img"
+              src="https://static.igem.wiki/teams/5079/engineeringcirclediagram.png"
+              alt="Engineering Diagram"
+            />
+          </div>
+          <div className="vertical-rectangle-r">
+            <p>
+              Set 4, Page 4 covers control systems.
+            </p>
+          </div>
+        </>
+      ),
+    },
+    {
+      title: "Page 5 of Set 4",
+      content: (
+        <>
+          <div className="circle-diagram">
+            <img
+              className="circle-img"
+              src="https://static.igem.wiki/teams/5079/engineeringcirclediagram.png"
+              alt="Engineering Diagram"
+            />
+          </div>
+          <div className="vertical-rectangle-r">
+            <p>
+              Set 4, Page 5 discusses renewable energy technologies.
+            </p>
+          </div>
+        </>
+      ),
+    },
+  ],
+  4: [
+    {
+      title: "Page 1 of Set 5",
+      content: (
+        <>
+          <div className="circle-diagram">
+            <img
+              className="circle-img"
+              src="https://static.igem.wiki/teams/5079/engineeringcirclediagram.png"
+              alt="Engineering Diagram"
+            />
+          </div>
+          <div className="vertical-rectangle-r">
+            <p>
+              Set 5, Page 1 introduces systems engineering.
+            </p>
+          </div>
+        </>
+      ),
+    },
+    {
+      title: "Page 2 of Set 5",
+      content: (
+        <>
+          <div className="circle-diagram">
+            <img
+              className="circle-img"
+              src="https://static.igem.wiki/teams/5079/engineeringcirclediagram.png"
+              alt="Engineering Diagram"
+            />
+          </div>
+          <div className="vertical-rectangle-r">
+            <p>
+              Set 5, Page 2 explores requirements engineering.
+            </p>
+          </div>
+        </>
+      ),
+    },
+    {
+      title: "Page 3 of Set 5",
+      content: (
+        <>
+          <div className="circle-diagram">
+            <img
+              className="circle-img"
+              src="https://static.igem.wiki/teams/5079/engineeringcirclediagram.png"
+              alt="Engineering Diagram"
+            />
+          </div>
+          <div className="vertical-rectangle-r">
+            <p>
+              Set 5, Page 3 covers validation and verification processes.
+            </p>
+          </div>
+        </>
+      ),
+    },
+  ],
+};
+
+// Main component
 export function EngineeringW() {
-  const [currentPage, setCurrentPage] = useState(0);
-  const totalPages = 5; // Total number of static pages
-  const [isImgInView, setIsImgInView] = useState(false);
-  const imgRef = useRef<HTMLImageElement>(null);
+  const [currentPageSet, setCurrentPageSet] = useState<number>(0);
+  const [currentPage, setCurrentPage] = useState<number>(0);
   const [scrollDirection, setScrollDirection] = useState<'top' | 'bottom'>('bottom');
+
+  const pageSets = [
+    { id: 0, totalPages: 2, label: 'Section 1' },
+    { id: 1, totalPages: 8, label: 'Section 2' },
+    { id: 2, totalPages: 4, label: 'Section 3' },
+    { id: 3, totalPages: 5, label: 'Section 4' },
+    { id: 4, totalPages: 3, label: 'Section 5' },
+  ];
+
+  const totalPages = pageContent[currentPageSet].length;
 
   const handleDotClick = (index: number) => {
     setCurrentPage(index);
   };
 
   const handleWheel = (event: WheelEvent) => {
-    event.preventDefault(); // Prevent the default scrolling behavior
-
+    event.preventDefault();
     if (event.deltaY > 0 && currentPage < totalPages - 1) {
-      setCurrentPage(prev => prev + 1); // Scroll right
+      setCurrentPage((prev) => prev + 1);
     } else if (event.deltaY < 0 && currentPage > 0) {
-      setCurrentPage(prev => prev - 1); // Scroll left
+      setCurrentPage((prev) => prev - 1);
     }
   };
 
@@ -31,39 +481,35 @@ export function EngineeringW() {
     };
   }, [currentPage]);
 
-  useEffect(() => {
-    const observer = new IntersectionObserver((entries) => {
-      entries.forEach(entry => {
-        if (entry.isIntersecting) {
-          setIsImgInView(true); // Set image as in view
-        } else {
-          setIsImgInView(false); // Optionally, remove animation when out of view
-        }
-      });
-    });
-
-    if (imgRef.current) {
-      observer.observe(imgRef.current); // Observe the image element
-    }
-
-    return () => {
-      if (imgRef.current) {
-        observer.unobserve(imgRef.current); // Clean up observer
-      }
-    };
-  }, []);
-
   const toggleScroll = () => {
-    const target = scrollDirection === 'bottom' ? document.body.scrollHeight : 0; // Determine target scroll position
+    const target = scrollDirection === 'bottom' ? document.body.scrollHeight : 0;
     window.scrollTo({
       top: target,
-      behavior: 'smooth' // Smooth scroll
+      behavior: 'smooth',
     });
-    setScrollDirection(prev => (prev === 'bottom' ? 'top' : 'bottom')); // Toggle direction
+    setScrollDirection((prev) => (prev === 'bottom' ? 'top' : 'bottom'));
+  };
+
+  const handlePageSetClick = (setId: number) => {
+    setCurrentPageSet(setId);
+    setCurrentPage(0);
   };
 
   return (
     <div className="engineering-container">
+      {/* Navbar for switching between page sets */}
+      <div className="engnavbar">
+        {pageSets.map((set) => (
+          <button
+            key={set.id}
+            className={`engnavbar-button ${currentPageSet === set.id ? 'active' : ''}`}
+            onClick={() => handlePageSetClick(set.id)}
+          >
+            {set.label}
+          </button>
+        ))}
+      </div>
+
       <div
         className="page-wrapper"
         style={{
@@ -71,141 +517,17 @@ export function EngineeringW() {
           width: `${totalPages * 100}vw`,
         }}
       >
-        {/* Static Page 1 - Overview */}
-        <div className="page">
-          <div className="page-1">
-            <div className="page-content arrow-container">
-              <div className="arrow">
-                <h2 className="page-title">Overview</h2>
-                <p>
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec euismod, nisl eget consectetur sagittis, nisl nunc tincidunt eros, vel egestas justo erat et lectus. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla facilisi. Ut efficitur, odio eu cursus laoreet, lorem lacus vulputate dolor, eget hendrerit turpis nunc at massa.
-                </p>
+        {Array.from({ length: totalPages }, (_, index) => (
+          <div className="page" key={index}>
+            <div className="page-content">
+              <h2 className="page-title">{pageContent[currentPageSet][index].title}</h2>
+              <div className="flex-container">
+                {pageContent[currentPageSet][index].content}
               </div>
             </div>
-            {/* Right navigation arrow for page 1 */}
-            <BsArrowRightCircle 
-              className='navarrow1'
-              size={50}
-              onClick={() => handleDotClick(1)}
-            />
           </div>
-        </div>
-
-        {/* Static Page 2 - First Process Page */}
-        <div className="page">
-          <div className='page-2'>          
-          <div className="page-content" style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between' }}>
-          <BsArrowLeftCircle 
-              className='navarrow3'
-              size={50}
-              onClick={() => handleDotClick(0)}
-            />
-            <div className="circle-diagram" style={{ flex: '1', position: 'relative' }}>
-              <img
-                ref={imgRef} // Reference to the image
-                className={`circle-img ${isImgInView ? 'animate' : ''}`} // Add 'animate' class when in view
-                src="https://static.igem.wiki/teams/5079/engineeringcirclediagram.png"
-                alt=""
-              />
-              {/* Text over the image */}
-              <div className="centered-text">ITERATION 1</div>
-            </div>
-            <div className="vertical-rectangle-r">
-              <p>Text for Right Rectangle</p>
-            </div>
-          </div>
-            <BsArrowRightCircle 
-              className='navarrow2'
-              size={50}
-              onClick={() => handleDotClick(2)}
-            />
-          </div>
-        </div>
-
-        {/* Static Page 3 - Second Process Page */}
-        <div className="page">
-          <div className="page-content" style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between' }}>
-          <BsArrowLeftCircle 
-              className='navarrow4'
-              size={50}
-              onClick={() => handleDotClick(1)}
-            />
-            <div className="circle-diagram" style={{ flex: '1', position: 'relative' }}>
-              <img
-                ref={imgRef} // Reference to the image
-                className={`circle-img ${isImgInView ? 'animate' : ''}`} 
-                src="https://static.igem.wiki/teams/5079/engineeringcirclediagram.png"
-                alt=""
-              />
-              {/* Text over the image */}
-              <div className="centered-text">ITERATION 2</div>
-            </div>
-            <div className="vertical-rectangle-r">
-              <p>Text for Right Rectangle</p>
-            </div>
-            <BsArrowRightCircle 
-              className='navarrow5'
-              size={50}
-              onClick={() => handleDotClick(3)}
-            />
-          </div>
-        </div>
-
-        {/* Static Page 4 - third Process Page */}
-        <div className="page">
-          <div className="page-content" style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between' }}>
-          <BsArrowLeftCircle 
-              className='navarrow6'
-              size={50}
-              onClick={() => handleDotClick(2)}
-            />
-            <div className="circle-diagram" style={{ flex: '1', position: 'relative' }}>
-              <img
-                ref={imgRef} // Reference to the image
-                className={`circle-img ${isImgInView ? 'animate' : ''}`} 
-                src="https://static.igem.wiki/teams/5079/engineeringcirclediagram.png"
-                alt=""
-              />
-              {/* Text over the image */}
-              <div className="centered-text">ITERATION 3</div>
-            </div>
-            <div className="vertical-rectangle-r">
-              <p>Text for Right Rectangle</p>
-            </div>
-            <BsArrowRightCircle 
-              className='navarrow7'
-              size={50}
-              onClick={() => handleDotClick(4)}
-            />
-          </div>
-        </div>
-
-        {/* Static Page 5 - third Process Page */}
-        <div className="page">
-          <div className="page-content" style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between' }}>
-          <BsArrowLeftCircle 
-              className='navarrow8'
-              size={50}
-              onClick={() => handleDotClick(3)}
-            />
-            <div className="circle-diagram" style={{ flex: '1', position: 'relative' }}>
-              <img
-                ref={imgRef} // Reference to the image
-                className={`circle-img ${isImgInView ? 'animate' : ''}`} 
-                src="https://static.igem.wiki/teams/5079/engineeringcirclediagram.png"
-                alt=""
-              />
-              {/* Text over the image */}
-              <div className="centered-text">ITERATION 4</div>
-            </div>
-            <div className="vertical-rectangle-r">
-              <p>Text for Right Rectangle</p>
-            </div>
-          </div>
-        </div>
+        ))}
       </div>
-
-
 
       {/* Navigation Dots */}
       <div className="navigation-dots">
@@ -218,17 +540,13 @@ export function EngineeringW() {
         ))}
       </div>
 
-        {/* Scroll Button */}
-        <button 
-        className="scroll-button"
-        onClick={toggleScroll}
-        >
-        {scrollDirection === 'bottom' ? 'Footer  ':'Pages '}
-        {scrollDirection === 'bottom' ? <BsArrowDownCircleFill />: <BsArrowUpCircleFill /> }
+      {/* Scroll Button */}
+      <button className="scroll-button" onClick={toggleScroll}>
+        {scrollDirection === 'bottom' ? 'Footer  ' : 'Pages '}
+        {scrollDirection === 'bottom' ? <BsArrowDownCircleFill /> : <BsArrowUpCircleFill />}
       </button>
     </div>
   );
 }
 
 export default EngineeringW;
-
