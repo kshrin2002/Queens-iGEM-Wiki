@@ -265,3 +265,9 @@ h2 {
 .scroll-button svg {
   margin-left: 8px;
 }
+
+.headshot:hover, .advisor-img:hover, .lead-img:hover, .lab-img:hover {
+  transform: scale(1.05);
+  border: 5px solid #a6262e;
+  transition: transform 0.3s ease, border 0.3s ease;
+}

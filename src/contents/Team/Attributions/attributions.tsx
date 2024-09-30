@@ -273,6 +273,7 @@ const CardSection: React.FC = () => {
                       <div style={{ marginTop: "20px" }}>
                         <img
                           src={placeholderImage}
+                          className="headshot-img"
                           alt={`Headshot`}
                           style={{
                             width: "200px",
@@ -320,6 +321,7 @@ const CardSection: React.FC = () => {
                       <div style={{ marginTop: "20px" }}>
                         <img
                           src={placeholderImage}
+                          className="headshot-img"
                           alt={`Headshot`}
                           style={{
                             width: "200px",
@@ -387,6 +389,7 @@ const CardSection: React.FC = () => {
                             <img
                               src={placeholderImage}
                               alt={`Headshot ${headshot}`}
+                              className="headshot-img"
                               style={{
                                 width: "200px",
                                 height: "200px",
@@ -413,7 +416,7 @@ const CardSection: React.FC = () => {
                       <p>
                         {selectedHeadshot1 !== null
                           ? paragraphs[1][selectedHeadshot1]
-                          : "Click on a headshot to see the description."}
+                          : "Click on a headshot to read more about our amazing team!"}
                       </p>
                     </div>
                   </>
@@ -426,6 +429,7 @@ const CardSection: React.FC = () => {
                       <div style={{ marginTop: "20px" }}>
                         <img
                           src={placeholderImage}
+                          className="headshot-img"
                           alt={`Headshot`}
                           style={{
                             width: "200px",
@@ -493,6 +497,7 @@ const CardSection: React.FC = () => {
                             <img
                               src={placeholderImage}
                               alt={`Headshot ${headshot}`}
+                              className="headshot-img"
                               style={{
                                 width: "200px",
                                 height: "200px",
@@ -518,7 +523,7 @@ const CardSection: React.FC = () => {
                       <p>
                         {selectedHeadshotWetLabLeads !== null
                           ? paragraphs[2][selectedHeadshotWetLabLeads]
-                          : "Click on a headshot to see the description."}
+                          : "Click on a headshot to read more about our amazing team!"}
                       </p>
                     </div>
                   </>
@@ -551,6 +556,7 @@ const CardSection: React.FC = () => {
                             <img
                               src={placeholderImage}
                               alt={`Headshot ${headshot}`}
+                              className="headshot-img"
                               style={{
                                 width: "200px",
                                 height: "200px",
@@ -589,6 +595,7 @@ const CardSection: React.FC = () => {
                             <img
                               src={placeholderImage}
                               alt={`Headshot ${headshot}`}
+                              className="headshot-img"
                               style={{
                                 width: "200px",
                                 height: "200px",
@@ -614,7 +621,7 @@ const CardSection: React.FC = () => {
                       <p>
                         {selectedHeadshot3 !== null
                           ? paragraphs[3][selectedHeadshot3]
-                          : "Click on a headshot to see the description."}
+                          : "Click on a headshot to read more about our amazing team!"}
                       </p>
                     </div>
                   </>
@@ -626,6 +633,7 @@ const CardSection: React.FC = () => {
                       <div style={{ marginTop: "20px" }}>
                         <img
                           src={placeholderImage}
+                          className="headshot-img"
                           alt={`Headshot`}
                           style={{
                             width: "200px",
@@ -685,6 +693,7 @@ const CardSection: React.FC = () => {
                             <img
                               src={placeholderImage}
                               alt={`Headshot ${headshot}`}
+                              className="headshot-img"
                               style={{
                                 width: "200px",
                                 height: "200px",
@@ -723,6 +732,7 @@ const CardSection: React.FC = () => {
                             <img
                               src={placeholderImage}
                               alt={`Headshot ${headshot}`}
+                              className="headshot-img"
                               style={{
                                 width: "200px",
                                 height: "200px",
@@ -748,7 +758,7 @@ const CardSection: React.FC = () => {
                       <p>
                         {selectedHeadshot4 !== null
                           ? paragraphs[5][selectedHeadshot4]
-                          : "Click on a headshot to see the description."}
+                          : "Click on a headshot to read more about our amazing team!"}
                       </p>
                     </div>
                   </>
@@ -783,6 +793,7 @@ const CardSection: React.FC = () => {
                             <img
                               src={placeholderImage}
                               alt={`Headshot ${headshot}`}
+                              className="headshot-img"
                               style={{
                                 width: "200px",
                                 height: "200px",
@@ -808,7 +819,7 @@ const CardSection: React.FC = () => {
                       <p>
                         {selectedHeadshot5 !== null
                           ? paragraphs[6][selectedHeadshot5]
-                          : "Click on a headshot to see the description."}
+                          : "Click on a headshot to read more about our amazing team!"}
                       </p>
                     </div>
                   </>
@@ -841,6 +852,7 @@ const CardSection: React.FC = () => {
                             <img
                               src={placeholderImage}
                               alt={`Headshot ${headshot}`}
+                              className="headshot-img"
                               style={{
                                 width: "200px",
                                 height: "200px",
@@ -879,6 +891,7 @@ const CardSection: React.FC = () => {
                             <img
                               src={placeholderImage}
                               alt={`Headshot ${headshot}`}
+                              className="headshot-img"
                               style={{
                                 width: "200px",
                                 height: "200px",
@@ -904,7 +917,7 @@ const CardSection: React.FC = () => {
                       <p>
                         {selectedHeadshot5 !== null
                           ? paragraphs[7][selectedHeadshot5]
-                          : "Click on a headshot to see the description."}
+                          : "Click on a headshot to read more about our amazing team!"}
                       </p>
                     </div>
                   </>
