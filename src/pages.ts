@@ -84,6 +84,13 @@ const Pages: (Page | Folder)[] = [
           lead: "Make a useful contribution for future iGEM teams. Use this page to document that contribution.",
         },
         {
+          name: "Safety",
+          title: "Safety",
+          path: "/safety",
+          component: Safety,
+          lead: "test 123",
+        },
+        {
           name: "Judging",
           title: "Judging",
           path: "/judging",
@@ -134,13 +141,7 @@ const Pages: (Page | Folder)[] = [
           component: EngineeringW,
           lead: "test 123",
         },
-        {
-          name: "Safety",
-          title: "Safety",
-          path: "/safety",
-          component: Safety,
-          lead: "test 123",
-        },
+
         {
           name: "Proof Of Concept",
           title: "Proof of Concept",
