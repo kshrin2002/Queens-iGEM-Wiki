@@ -1,6 +1,7 @@
 import React from 'react';
 import { Card, Row, Col, Container, Button } from 'react-bootstrap';
-import { BsArrowDownCircle } from "react-icons/bs";
+import { FiEdit } from "react-icons/fi";
+import { motion } from "framer-motion";
 import './resultsandanalysis.css'; // Import the CSS file
 import { useEffect, useState } from 'react';
 export function Results() {
@@ -62,21 +63,31 @@ const DesignHeading: React.FC = () => {
     </div>
   );
 };
+
+
+// FOR WRITE UPS CHANGE TITLES AND SIBTITLES ON SIDEBAR AS NEEDED
 const Sidebar: React.FC = () => {
   const sections = [
-    { name: 'Section 1', image: 'https://static.igem.wiki/teams/5079/rose-logo.png' },
-    { name: 'Section 2', image: 'https://static.igem.wiki/teams/5079/rose-logo.png' },
-    { name: 'Section 3', image: 'https://static.igem.wiki/teams/5079/rose-logo.png' },
-    { name: 'Section 4', image: 'https://static.igem.wiki/teams/5079/rose-logo.png' },
-    { name: 'Section 5', image: 'https://static.igem.wiki/teams/5079/rose-logo.png' },
+    { name: 'LAWS AND POLICIES', image: 'https://static.igem.wiki/teams/5079/rose-logo.png', content: ['iGEM Rules and Policies', 'Institutional Rules and Policies', 'National Rules and Policies'] },
+    { name: 'OUR LAB', image: 'https://static.igem.wiki/teams/5079/rose-logo.png', content: ['Our Lab'] },
+    { name: 'OUR PROJECT', image: 'https://static.igem.wiki/teams/5079/rose-logo.png', content: ['Our Project'] },
+    { name: 'RISK MANAGEMENT', image: 'https://static.igem.wiki/teams/5079/rose-logo.png', content: ['Identifying Project Risks', 'Anticipating Future Risks', 'Managing Risks'] },
   ];
+
+  const [openSection, setOpenSection] = useState<number | null>(null);
+
   return (
-    <div className="sidebar">
+    <div className="sidebar-contributions">
       <ul>
         {sections.map((section, index) => (
-          <li key={index} onClick={() => document.getElementById(`section-${index}`)?.scrollIntoView({ behavior: 'smooth' })}>
-            <img src={section.image} alt={section.name} className="section-image" />
-            <span>{section.name}</span>
+          <li key={index}>
+            <div onClick={() => setOpenSection(openSection === index ? null : index)} style={{ cursor: 'pointer', display: 'flex', alignItems: 'center' }}>
+              <img src={section.image} alt={section.name} className="section-image" style={{ marginRight: '8px' }} />
+              <span>{section.name}</span>
+            </div>
+            {openSection === index && (
+              <StaggeredDropDown options={section.content} sectionIndex={index} />
+            )}
           </li>
         ))}
       </ul>
@@ -84,66 +95,192 @@ const Sidebar: React.FC = () => {
   );
 };
 
-const CardSection: React.FC = () => {
-  const sections = [
-    { title: 'Section 1', text: 'This is the content for Section 1. It provides an overview of the initial concepts.' },
-    { title: 'Section 2', text: 'Section 2 dives deeper into the core principles behind the project.' },
-    { title: 'Section 3', text: 'In Section 3, we explore the technical implementations and methodologies.' },
-    { title: 'Section 4', text: 'This section presents the challenges faced and how they were overcome.' },
-    { title: 'Section 5', text: 'Finally, Section 5 offers a conclusion and the future outlook for the project.' }
-  ];
-  const placeholderImage = "https://via.placeholder.com/150"; // Placeholder image for now
+const StaggeredDropDown = ({ options, sectionIndex }: { options: string[]; sectionIndex: number }) => {
+  return (
+    <motion.ul
+      style={{
+        padding: '10px',
+        backgroundColor: '#fff',
+        listStyle: 'none',
+        marginLeft: '0',
+        marginTop: '10px',
+        width: '100%',
+      }}
+    >
+      {options.map((option: string, index: number) => (
+        <Option
+          key={index}
+          text={option}
+          sectionIndex={sectionIndex}
+          sectionPartIndex={index}
+        />
+      ))}
+    </motion.ul>
+  );
+};
+
+const Option = ({ text, sectionIndex, sectionPartIndex }: { text: string, sectionIndex: number, sectionPartIndex: number }) => {
+  const handleClick = () => {
+    const sectionId = `section-${sectionIndex}-part-${sectionPartIndex}`;
+    const sectionElement = document.getElementById(sectionId);
+    if (sectionElement) {
+      const topPosition = sectionElement.getBoundingClientRect().top + window.scrollY;
+      const offset = 100;
+      window.scrollTo({ top: topPosition - offset, behavior: 'smooth' });
+    }
+  };
 
   return (
-    <Container fluid className="card-container">
-      {sections.map((section, index) => (
-        <div key={index} id={`section-${index}`} className="card-wrapper">
-          <Card className="custom-card">
-            <Card.Body>
-              <Card.Title className="center-title" style={{ color: 'black' }}>{section.title}</Card.Title>
-              <Row>
-                <Col xs={8} className="text-container">
-                  <Card.Text style={{ color: 'black' }}>
-                    {section.text}
-                  </Card.Text>
-                </Col>
-                <Col xs={4}>
-                  <img src={placeholderImage} alt={`Image for ${section.title}`} style={{ width: '100%', height: 'auto' }} />
-                </Col>
-              </Row>
-            </Card.Body>
-          </Card>
-          {/* Add a clickable arrow that scrolls to the next card */}
-          {index < sections.length - 1 && (
-            <div className="scroll-arrow" onClick={() => document.getElementById(`section-${index + 1}`)?.scrollIntoView({ behavior: 'smooth' })}>
-              <BsArrowDownCircle style={{ marginBottom: '20px' }} />
-            </div>
-          )}
-        </div>
+    <li
+      className="flex items-center gap-2 w-full p-2 text-xs font-medium whitespace-nowrap rounded-md hover:bg-indigo-100 text-slate-700 hover:text-indigo-500 transition-colors cursor-pointer"
+      onClick={handleClick}
+    >
+      <FiEdit />
+      <span>{text}</span>
+    </li>
+  );
+};
+
+// FOR WRIETUPS CHANGE TITLES AND DESCRIPTIONS AS NEEDED. SEE WETLAB/SAFETY FOR REFERENCE
+const CardSection: React.FC = () => {
+  const sections = [
+    {
+      title: 'TITLE 1',
+      subsections: [
+        {
+          subtitle: 'SUBTITLE 1',
+          description: (
+            <>
+
+            </>
+          ),
+        },
+        {
+          subtitle: 'SUBTITLE 2',
+          description: (
+            <>
+
+            </>
+          ),
+        },
+        {
+          subtitle: 'SUBTITLE 3',
+          description: (
+            <>
+
+            </>
+          )
+        },
+      ],
+    },
+    {
+      title: 'TITLE 2',
+      image: '',
+      subsections: [
+        {
+          subtitle: '',
+          description: (
+            <>
+
+            </>
+          )
+        },
+      ],
+    },
+    {
+      title: 'TITLE 3',
+      subsections: [
+        {
+          subtitle: '',
+          description: (
+            <>
+
+            </>
+          )
+        },
+      ],
+    },
+    {
+      title: 'TITLE 4',
+      subsections: [
+        {
+          subtitle: 'SUBTITLE 1',
+          description: (
+            <>
+
+            </>
+          )
+        },
+        {
+          subtitle: 'SUBTITLE 2',
+          description: (
+            <>
+
+            </>
+          )
+        },
+        {
+          subtitle: 'SUBTITLE 3',
+          description:(
+            <>
+
+            </>
+          )
+        },
+      ],
+    },
+  ];
+
+
+  return (
+    <Container fluid className="card-container-contribution">
+      {sections.map((section, sectionIndex) => (
+        <Card key={sectionIndex} className="custom-card" id={`section-${sectionIndex}`}>
+          <Card.Body>
+            <Card.Title>{section.title}</Card.Title>
+            <Row>
+              <Col xs={8}>
+                {section.subsections.map((subsection, subsectionIndex) => (
+                  <div key={subsectionIndex}>
+                    <h3 id={`section-${sectionIndex}-part-${subsectionIndex}`}>{subsection.subtitle}</h3>
+                    <Card.Text>{subsection.description}</Card.Text>
+                  </div>
+                ))}
+              </Col>
+              <Col xs={4}>
+                <img src={section.image} alt='' style={{ width: '100%', height: 'auto' }} />
+              </Col>
+            </Row>
+          </Card.Body>
+        </Card>
       ))}
     </Container>
   );
 };
-// Back to Top Button Component
+
 const BackToTopButton: React.FC = () => {
   const [isVisible, setIsVisible] = useState(false);
+  
   const handleScroll = () => {
-    if (window.scrollY > 300) { // Change this value as needed
+    if (window.scrollY > 300) {
       setIsVisible(true);
     } else {
       setIsVisible(false);
     }
   };
+  
   useEffect(() => {
     window.addEventListener('scroll', handleScroll);
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
+  
   const scrollToTop = () => {
     window.scrollTo({ top: 0, behavior: 'smooth' });
   };
+  
   return (
     <Button
-      className={`button ${isVisible ? 'visible' : ''}`} // Add the visible class
+      className={`button ${isVisible ? 'visible' : ''}`}
       variant="custom"
       onClick={scrollToTop}
     >
