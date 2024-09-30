@@ -37,6 +37,14 @@ const DesignHeading: React.FC = () => {
 const Sidebar: React.FC = () => {
   const sections = [
     {
+      name: "Principal Investigator",
+      image: "https://static.igem.wiki/teams/5079/rose-logo.png",
+    },
+    {
+      name: "Advisor",
+      image: "https://static.igem.wiki/teams/5079/rose-logo.png",
+    },
+    {
       name: "External Contributors",
       image: "https://static.igem.wiki/teams/5079/rose-logo.png",
     },
@@ -97,6 +105,8 @@ const Sidebar: React.FC = () => {
 
 const CardSection: React.FC = () => {
   const sections = [
+    "Principle Investigator",
+    "Advisor",
     "External Contributors",
     "Team Lead",
     "Wet Lab Leads",
@@ -172,13 +182,16 @@ const CardSection: React.FC = () => {
             className="custom-card"
             style={{
               border: "none",
-              ...(index === 0 ? { minHeight: "700px" } : {}),
-              ...(index === 1 ? { minHeight: "500px" } : {}),
+              ...(index === 0 ? { minHeight: "300px" } : {}),
+              ...(index === 1 ? { minHeight: "300px" } : {}),
               ...(index === 2 ? { minHeight: "700px" } : {}),
-              ...(index === 3 ? { minHeight: "900px" } : {}),
-              ...(index === 4 ? { minHeight: "500px" } : {}),
-              ...(index >= 5 ? { minHeight: "900px" } : {}),
-              ...(index === 6 ? { minHeight: "700px" } : {}),
+              ...(index === 3 ? { minHeight: "300px" } : {}),
+              ...(index === 4 ? { minHeight: "700px" } : {}),
+              ...(index === 5 ? { minHeight: "900px" } : {}),
+              ...(index === 6 ? { minHeight: "300px" } : {}),
+              ...(index === 7 ? { minHeight: "900px" } : {}),
+              ...(index === 8 ? { minHeight: "700px" } : {}),
+              ...(index === 9 ? { minHeight: "900px" } : {}),
             }}
           >
             <Card.Header
@@ -214,8 +227,102 @@ const CardSection: React.FC = () => {
               }
             >
               <Row>
-                {/* Content for External Contributors (Section 1) */}
+                {/* content for PI section*/}
                 {index === 0 && (
+                  <Row>
+                    <Col xs={12} md={3} style={{ textAlign: "center" }}>
+                      <div style={{ marginTop: "20px" }}>
+                        <img
+                          src={placeholderImage}
+                          alt={`Headshot`}
+                          style={{
+                            width: "200px",
+                            height: "200px",
+                            borderRadius: "50%",
+                          }}
+                        />
+                        <p style={{ fontWeight: "bold", marginTop: "10px" }}>
+                          TEAM LEAD NAME
+                        </p>
+                      </div>
+                    </Col>
+
+                    <Col xs={12} md={9}>
+                      <div
+                        style={{
+                          textAlign: "left",
+                          marginTop: "30px",
+                          marginLeft: "30px",
+                        }}
+                      >
+                        <p>
+                          Lorem ipsum dolor sit amet, consectetur adipiscing
+                          elit. Sed do eiusmod tempor incididunt ut labore et
+                          dolore magna aliqua. Ut enim ad minim veniam, quis
+                          nostrud exercitation ullamco laboris nisi ut aliquip
+                          ex ea commodo consequat.
+                        </p>
+                        <p>
+                          Duis aute irure dolor in reprehenderit in voluptate
+                          velit esse cillum dolore eu fugiat nulla pariatur.
+                          Excepteur sint occaecat cupidatat non proident, sunt
+                          in culpa qui officia deserunt mollit anim id est
+                          laborum.
+                        </p>
+                      </div>
+                    </Col>
+                  </Row>
+                )}
+
+                {/* content for advisor section*/}
+                {index === 1 && (
+                  <Row>
+                    <Col xs={12} md={3} style={{ textAlign: "center" }}>
+                      <div style={{ marginTop: "20px" }}>
+                        <img
+                          src={placeholderImage}
+                          alt={`Headshot`}
+                          style={{
+                            width: "200px",
+                            height: "200px",
+                            borderRadius: "50%",
+                          }}
+                        />
+                        <p style={{ fontWeight: "bold", marginTop: "10px" }}>
+                          TEAM LEAD NAME
+                        </p>
+                      </div>
+                    </Col>
+
+                    <Col xs={12} md={9}>
+                      <div
+                        style={{
+                          textAlign: "left",
+                          marginTop: "30px",
+                          marginLeft: "30px",
+                        }}
+                      >
+                        <p>
+                          Lorem ipsum dolor sit amet, consectetur adipiscing
+                          elit. Sed do eiusmod tempor incididunt ut labore et
+                          dolore magna aliqua. Ut enim ad minim veniam, quis
+                          nostrud exercitation ullamco laboris nisi ut aliquip
+                          ex ea commodo consequat.
+                        </p>
+                        <p>
+                          Duis aute irure dolor in reprehenderit in voluptate
+                          velit esse cillum dolore eu fugiat nulla pariatur.
+                          Excepteur sint occaecat cupidatat non proident, sunt
+                          in culpa qui officia deserunt mollit anim id est
+                          laborum.
+                        </p>
+                      </div>
+                    </Col>
+                  </Row>
+                )}
+
+                {/* Content for External Contributors (Section 1) */}
+                {index === 2 && (
                   <>
                     <Row
                       className="mt-4"
@@ -274,7 +381,7 @@ const CardSection: React.FC = () => {
                 )}
 
                 {/* Team Lead Section */}
-                {index === 1 && (
+                {index === 3 && (
                   <Row>
                     <Col xs={12} md={3} style={{ textAlign: "center" }}>
                       <div style={{ marginTop: "20px" }}>
@@ -321,7 +428,7 @@ const CardSection: React.FC = () => {
                 )}
 
                 {/* Wet Lab Leads Section */}
-                {index === 2 && (
+                {index === 4 && (
                   <>
                     <Row
                       className="mt-4"
@@ -379,7 +486,7 @@ const CardSection: React.FC = () => {
                 )}
 
                 {/* Wet Lab Section */}
-                {index === 3 && (
+                {index === 5 && (
                   <>
                     <Row
                       className="mt-4"
@@ -474,7 +581,7 @@ const CardSection: React.FC = () => {
                   </>
                 )}
 
-                {index === 4 && (
+                {index === 6 && (
                   <Row>
                     <Col xs={12} md={3} style={{ textAlign: "center" }}>
                       <div style={{ marginTop: "20px" }}>
@@ -513,7 +620,7 @@ const CardSection: React.FC = () => {
                 )}
 
                 {/* Dry Lab Section */}
-                {index === 5 && (
+                {index === 7 && (
                   <>
                     <Row
                       className="mt-4"
@@ -609,7 +716,7 @@ const CardSection: React.FC = () => {
                 )}
 
                 {/* Human Practices Leads Section */}
-                {index === 6 && (
+                {index === 8 && (
                   <>
                     <Row
                       className="mt-4"
@@ -669,7 +776,7 @@ const CardSection: React.FC = () => {
                 )}
 
                 {/* Human Practices Section */}
-                {index === 7 && (
+                {index === 9 && (
                   <>
                     <Row
                       className="mt-4"
