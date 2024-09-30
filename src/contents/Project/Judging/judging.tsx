@@ -1,22 +1,47 @@
 import React, { useEffect, useState } from 'react';
 import { Card, Col, Container, Row, Button } from 'react-bootstrap';
 import './judging.css'; // Updated CSS file name
-import { FiEdit } from "react-icons/fi";
 import { motion } from "framer-motion";
 
 export function Judging() {
+  // State to manage the visibility of the text box when clicking the medal
+  const [isBoxVisible, setIsBoxVisible] = useState(false);
+
+  // Function to toggle the box visibility when medal is clicked
+  const handleMedalClick = () => {
+    setIsBoxVisible(!isBoxVisible);
+  };
+
   return (
     <>
       <JudgingHeading />
       <OverviewSection />
 
       <div style={{ display: 'flex', justifyContent: 'center', marginTop: '25px', marginBottom: '25px' }}>
+        {/* Medal Image */}
         <img 
           src="https://static.igem.wiki/teams/5079/medal-picture.jpg" 
           alt="Medals"
-          style={{ width: '600px', height: 'auto' }} 
+          style={{ width: '600px', height: 'auto', cursor: 'pointer' }} 
+          onClick={handleMedalClick} // Handle the click event to show/hide the box
         />
       </div>
+
+      {/* Text Box that appears when the medal is clicked */}
+      {isBoxVisible && (
+        <div style={{
+          border: '1px solid black',
+          padding: '20px',
+          marginTop: '10px',
+          backgroundColor: '#f0f0f0',
+          borderRadius: '8px',
+          width: '300px',
+          margin: '0 auto',
+          textAlign: 'center'
+        }}>
+          <p>This is the text inside the box that appears when you click the medal.</p>
+        </div>
+      )}
 
       <div className="main-content-judging">
         <Sidebar />
@@ -186,28 +211,33 @@ const Option = ({ text, sectionIndex, sectionPartIndex }: { text: string, sectio
     const sectionId = `section-${sectionIndex}-part-${sectionPartIndex}`;
     const sectionElement = document.getElementById(sectionId);
     if (sectionElement) {
-      const topPosition = sectionElement.getBoundingClientRect().top + window.scrollY; // Get the current top position of the element
-      const offset = 100; // Adjust this value to change the offset (pixels)
-      window.scrollTo({ top: topPosition - offset, behavior: 'smooth' }); // Scroll to the element with an offset
+      const topPosition = sectionElement.getBoundingClientRect().top + window.scrollY;
+      window.scrollTo({ top: topPosition - 100, behavior: 'smooth' });
     }
   };
 
   return (
-    <li
-      className="flex items-center gap-2 w-full p-2 text-xs font-medium whitespace-nowrap rounded-md hover:bg-indigo-100 text-slate-700 hover:text-indigo-500 transition-colors cursor-pointer"
+    <motion.li
       onClick={handleClick}
+      style={{
+        marginBottom: '10px',
+        cursor: 'pointer',
+        border: '1px solid black',
+        padding: '5px',
+        borderRadius: '5px',
+      }}
+      whileHover={{ scale: 1.05 }}
+      whileTap={{ scale: 0.95 }}
     >
-      <FiEdit />
-      <span>{text}</span>
-    </li>
+      {text}
+    </motion.li>
   );
 };
 
-// Back to Top Button Component
-const BackToTopButton: React.FC = () => {
+const BackToTopButton = () => {
   const [isVisible, setIsVisible] = useState(false);
 
-  const handleScroll = () => {
+  const toggleVisibility = () => {
     if (window.scrollY > 300) {
       setIsVisible(true);
     } else {
@@ -216,8 +246,8 @@ const BackToTopButton: React.FC = () => {
   };
 
   useEffect(() => {
-    window.addEventListener('scroll', handleScroll);
-    return () => window.removeEventListener('scroll', handleScroll);
+    window.addEventListener('scroll', toggleVisibility);
+    return () => window.removeEventListener('scroll', toggleVisibility);
   }, []);
 
   const scrollToTop = () => {
@@ -225,14 +255,12 @@ const BackToTopButton: React.FC = () => {
   };
 
   return (
-    <Button
-      className={`button ${isVisible ? 'visible' : ''}`} 
-      variant="primary"
-      onClick={scrollToTop}
-    >
-      ↑ Back to Top
-    </Button>
+    <div className="scroll-to-top">
+      {isVisible && (
+        <Button onClick={scrollToTop} className="back-to-top-button-judging">
+          Back to Top
+        </Button>
+      )}
+    </div>
   );
 };
-
-export default Judging;

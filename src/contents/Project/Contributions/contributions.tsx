@@ -197,33 +197,30 @@ const Option = ({ text, sectionIndex, sectionPartIndex }: { text: string, sectio
 
 
 // Back to Top Button Component
+
 const BackToTopButton: React.FC = () => {
   const [isVisible, setIsVisible] = useState(false);
-
   const handleScroll = () => {
-    if (window.scrollY > 300) {
+    if (window.scrollY > 300) { // Change this value as needed
       setIsVisible(true);
     } else {
       setIsVisible(false);
     }
   };
-
   useEffect(() => {
     window.addEventListener('scroll', handleScroll);
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
-
   const scrollToTop = () => {
     window.scrollTo({ top: 0, behavior: 'smooth' });
   };
-
   return (
     <Button
-      className={`button ${isVisible ? 'visible' : ''}`} 
-      variant="primary"
+      className={`button ${isVisible ? 'visible' : ''}`} // Add the visible class
+      variant="custom"
       onClick={scrollToTop}
     >
-      ↑ Back to Top
+      ↑
     </Button>
   );
 };

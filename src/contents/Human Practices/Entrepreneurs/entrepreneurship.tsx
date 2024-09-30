@@ -67,8 +67,8 @@ const Timeline: React.FC = () => {
   const [selectedStage, setSelectedStage] = useState<string | null>(null);
   const [isAnimating, setIsAnimating] = useState(false);
   const [boxStyle, setBoxStyle] = useState({
-    width: '80px',
-    height: '30px',
+    width: '150px',
+    height: '50px',
     padding: '5px',
   });
   const [boxPosition, setBoxPosition] = useState<'left' | 'right'>('right'); // Track left or right
@@ -82,7 +82,7 @@ const Timeline: React.FC = () => {
 
     if (selectedStage && selectedStage !== stage) {
       setIsAnimating(true);
-      setBoxStyle(prev => ({ ...prev, height: '30px', padding: '5px' }));
+      setBoxStyle(prev => ({ ...prev, height: '80px', padding: '5px' }));
       setTimeout(() => {
         setBoxStyle(prev => ({ ...prev, width: '80px' }));
         setTimeout(() => {
@@ -101,11 +101,10 @@ const Timeline: React.FC = () => {
     setIsAnimating(true);
     setBoxPosition(position); // Set box to open on the left or right side
 
-    // Expand width first
-    setBoxStyle(prev => ({ ...prev, width: '40%' }));
+    // Reverting back to the original box size
+    setBoxStyle(prev => ({ ...prev, width: '150px', height: '50px' })); 
     setTimeout(() => {
-      // Then expand the height and padding
-      setBoxStyle(prev => ({ ...prev, height: '75vh', padding: '20px' }));
+      setBoxStyle(prev => ({ ...prev, width: '300px', height: '100px' })); // Updated width and height
       setTimeout(() => setIsAnimating(false), 300);
     }, 300);
   };
@@ -161,12 +160,12 @@ const Timeline: React.FC = () => {
               top: `${index * 20}vh`, // Adjust the spacing based on the number of stages
               backgroundColor: selectedStage === stage ? '#a00000' : '#590000',
               color: '#fff',
-              padding: '5px 15px',
+              padding: '10px 30px', // Adjusted padding for a larger button
               borderRadius: '25px',
-              fontSize: '1.2em',
+              fontSize: '1.5em', // Adjusted font size
               fontWeight: 'bold',
               textAlign: 'center',
-              width: '80px',
+              width: '120px', // Adjusted width
               border: 'none',
               cursor: 'pointer',
             }}
@@ -203,11 +202,20 @@ const Timeline: React.FC = () => {
   );
 };
 
-const ReferenceSection: React.FC = () => {
+const ReferenceSection = () => {
   return (
-    <section>
+    <section
+      style={{
+        backgroundColor: '#FE9BA1',
+        color: 'white',
+        padding: '20px',
+        marginTop: '100px',
+        width: '100%',
+        height: '350px',
+        marginBottom: '100px',
+      }}
+    >
       <h2>References</h2>
-      <p>Some references will be listed here.</p>
     </section>
   );
 };
@@ -228,11 +236,13 @@ const BackToTopButton: React.FC = () => {
         bottom: '20px',
         right: '20px',
         backgroundColor: '#590000',
-        color: 'white',
+        color: '#fff',
       }}
     >
       Back to Top
     </Button>
   );
 };
+
+
 export default Entrepreneurship;
