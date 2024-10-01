@@ -523,7 +523,7 @@ Watermelon `,
                 <div className="leads-row">
                   <div className="lead-headshot">
                     <img
-                      src="https://via.placeholder.com/150"
+                      src="https://static.igem.wiki/teams/5079/headshots/zain-ali-wet-lab-co-lead.jpeg"
                       alt="Team Lead 1"
                       className="lead-img"
                       onClick={() => handleHeadshotClick("Zain Ali")}
@@ -608,7 +608,7 @@ Watermelon `,
                   </div>
                   <div className="lab-headshot">
                     <img
-                      src="https://via.placeholder.com/150"
+                      src="https://static.igem.wiki/teams/5079/headshots/wet-lab/katherine-brewer.jpeg"
                       alt="Wet Lab Member 3"
                       className="lab-img"
                       onClick={() => handleHeadshotClick("Katherine Brewer")}
@@ -617,7 +617,7 @@ Watermelon `,
                   </div>
                   <div className="lab-headshot">
                     <img
-                      src="https://via.placeholder.com/150"
+                      src="https://static.igem.wiki/teams/5079/headshots/wet-lab/christopher-lainas.jpeg"
                       alt="Wet Lab Member 3"
                       className="lab-img"
                       onClick={() => handleHeadshotClick("Christopher Lainas")}
@@ -655,7 +655,7 @@ Watermelon `,
                   </div>
                   <div className="lab-headshot">
                     <img
-                      src="https://via.placeholder.com/150"
+                      src="https://static.igem.wiki/teams/5079/headshots/wet-lab/taylor-powers-luketic.jpeg"
                       alt="Wet Lab Member 6"
                       className="lab-img"
                       onClick={() =>
@@ -681,7 +681,7 @@ Watermelon `,
                 <div className="lab-row">
                   <div className="lab-headshot">
                     <img
-                      src="https://via.placeholder.com/150"
+                      src="https://static.igem.wiki/teams/5079/headshots/dry-lab/shrinidhi-thatahngudi-sampath-krishnan.jpg"
                       alt="Dry Lab Member 2"
                       className="lab-img"
                       onClick={() =>
@@ -758,7 +758,7 @@ Watermelon `,
                   </div>
                   <div className="lab-headshot">
                     <img
-                      src="https://via.placeholder.com/150"
+                      src="https://static.igem.wiki/teams/5079/headshots/hp/emma-wright.jpeg"
                       alt="Human Practices Member 3"
                       className="lab-img"
                       onClick={() => handleHeadshotClick("Emma Wright")}
@@ -805,7 +805,7 @@ Watermelon `,
                   </div>
                   <div className="lab-headshot">
                     <img
-                      src="https://via.placeholder.com/150"
+                      src="https://static.igem.wiki/teams/5079/headshots/hp/lily-chen.jpg"
                       alt="Human Practices Member 6"
                       className="lab-img"
                       onClick={() => handleHeadshotClick("Lily Chen")}
