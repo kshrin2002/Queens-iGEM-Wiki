@@ -490,9 +490,9 @@ const CardSection: React.FC = () => {
                           image: "https://static.igem.wiki/teams/5079/headshots/extern/dean-tripp.jpg",
                         },
                         {
-                          name: "Stephen Scibner",
+                          name: "Stephen Scribner",
                           role: "External Advisor",
-                          image: placeholderImage,
+                          image: "https://static.igem.wiki/teams/5079/headshots/avatar.jpg",
                         },
                         {
                           name: "Plasmidsaurus",
@@ -978,7 +978,7 @@ const CardSection: React.FC = () => {
                       style={{ justifyContent: "space-around" }}
                     >
                       {[
-                        { name: "Shrinidhi Thatahngudi Sampath Krishnan", image: "https://static.igem.wiki/teams/5079/headshots/dry-lab/shrinidhi-thatahngudi-sampath-krishnan.jpg" },
+                        { name: "Shrinidhi Krishnan", image: "https://static.igem.wiki/teams/5079/headshots/dry-lab/shrinidhi-thatahngudi-sampath-krishnan.jpg" },
                         { name: "Tigh Gallagher", image: "https://static.igem.wiki/teams/5079/headshots/dry-lab/tigh-gallagher.jpg" },
                       ].map((headshot, idx) => (
                         <Col

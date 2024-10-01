@@ -256,8 +256,8 @@ Personal Anthem:
 Senorita by Justin Timberlake `,
     },
     // Dry Lab Members
-    "Shrinidhi Thatahngudi Sampath Krishban": {
-      name: "Shrinidhi Thatahngudi Sampath Krishban",
+    "Shrinidhi Krishnan": {
+      name: "Shrinidhi Krishnan",
       role: "Dry Lab Member",
       bio: `Program and Year: 4th Year, Biomedical Computing 
 
@@ -273,7 +273,16 @@ Tacos`,
     "Tigh Gallagher": {
       name: "Tigh Gallagher",
       role: "Dry Lab Member",
-      bio: ``,
+      bio: `Program and Year: Computer Science, 4th Year 
+
+Why did you join QGEM? 
+I joined QGEM to gain hands-on experience in a large, team-based, real-world project. 
+
+What do you like to do outside of school and work? 
+I love playing guitar. 
+
+Fun Fact: 
+I wish I could play guitar like Stevie Ray Vaughan! `,
     },
     "Victor Chowdhury": {
       name: "Victor Chowdhury",
@@ -686,12 +695,12 @@ Watermelon `,
                       className="lab-img"
                       onClick={() =>
                         handleHeadshotClick(
-                          "Shrinidhi Thatahngudi Sampath Krishban"
+                          "Shrinidhi Krishnan"
                         )
                       }
                     />
                     <p className="lab-name">
-                      Shrinidhi Thatahngudi Sampath Krishban
+                      Shrinidhi Krishnan
                     </p>
                   </div>
                   <div className="lab-headshot">
