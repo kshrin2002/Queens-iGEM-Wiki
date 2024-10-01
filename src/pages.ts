@@ -79,7 +79,7 @@ const Pages: (Page | Folder)[] = [
         {
           name: "Contributions",
           title: "Contributions",
-          path: "/contributions",
+          path: "/contribution",
           component: Contributions,
           lead: "Make a useful contribution for future iGEM teams. Use this page to document that contribution.",
         },
