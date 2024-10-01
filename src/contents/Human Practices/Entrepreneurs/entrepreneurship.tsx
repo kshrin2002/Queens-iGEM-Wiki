@@ -3,13 +3,11 @@ import "./entrepreneurship.css";
 import Button from "react-bootstrap/esm/Button";
 import Carousel from "react-bootstrap/Carousel";
 
-// Types for Monthly Updates
 interface MonthlyUpdates {
   month: string;
   description: string;
 }
 
-// Data for each stage with unique descriptions
 const stagesData: { title: string; months: MonthlyUpdates[] }[] = [
   {
     title: "Pre-Seed Stage",
@@ -116,15 +114,12 @@ const stagesData: { title: string; months: MonthlyUpdates[] }[] = [
 ];
 
 export function Entrepreneurship() {
-  // State to store which month is selected per stage
   const [selectedMonths, setSelectedMonths] = useState<(string | null)[]>(
     Array(stagesData.length).fill(null)
   );
 
-  // State to manage modal visibility
   const [isModalVisible, setModalVisible] = useState(false);
 
-  // Handle month click for a specific stage
   const handleMonthClick = (stageIndex: number, month: string) => {
     setSelectedMonths((prevSelectedMonths) =>
       prevSelectedMonths.map((selectedMonth, index) =>
@@ -150,7 +145,6 @@ export function Entrepreneurship() {
       <DesignHeading />
       <OverviewSection />
       <div className="content">
-        {/* Dynamically rendering each stage with its respective months */}
         {stagesData.map((stage, stageIndex) => (
           <div key={stage.title}>
             <h2 className="pills-section-header">{stage.title}</h2>
@@ -294,7 +288,6 @@ interface MonthDetailsProps {
 }
 
 const MonthDetails: React.FC<MonthDetailsProps> = ({
-  month,
   description,
   active,
 }) => {
