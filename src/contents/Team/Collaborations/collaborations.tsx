@@ -106,7 +106,7 @@ export function Collaborations() {
             {index === 0 ? (
               <div className="collaborations-content">
                 <h2 className="collaborations-title">Collaborations</h2>
-                <div className="image-container">
+                <div className="collaborations-image-container">
                   <img
                     src="https://static.igem.wiki/teams/5079/colabmapchart.png"
                     alt="Collaborations Map"
