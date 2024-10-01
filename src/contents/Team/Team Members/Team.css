@@ -51,8 +51,8 @@
 }
 
 .advisor-img {
-  width: 200px;
-  height: 200px;
+  width: 300px;
+  height: 300px;
   border-radius: 50%;
   object-fit: cover;
   cursor: pointer;
@@ -190,6 +190,7 @@
 .modal-text {
   font-size: 1.2rem;
   line-height: 1.6;
+  white-space: pre-line;
 }
 
 h2 {

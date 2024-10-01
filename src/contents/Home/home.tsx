@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react';
+import { useEffect } from 'react';
 import { tsParticles } from "@tsparticles/engine";
 import { loadAll } from "@tsparticles/all";
 import './home.css';
