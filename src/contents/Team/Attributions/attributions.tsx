@@ -176,8 +176,6 @@ const CardSection: React.FC = () => {
     "Human Practices",
   ];
 
-  const placeholderImage = "https://via.placeholder.com/150";
-
   const [selectedHeadshot1, setSelectedHeadshot1] = useState<number | null>(
     null
   );
