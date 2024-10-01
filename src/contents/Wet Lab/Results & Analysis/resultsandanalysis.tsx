@@ -149,6 +149,7 @@ const CardSection: React.FC = () => {
       subsections: [
         {
           subtitle: 'SUBTITLE 1',
+          //CONTENT FOR SECTION GOES IN DESCRIPTION
           description: (
             <>
 

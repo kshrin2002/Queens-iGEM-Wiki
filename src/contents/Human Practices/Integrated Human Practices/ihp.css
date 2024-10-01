@@ -20,6 +20,13 @@
 }
 .section-text{
     margin-left: 10rem;
+    margin-right: 10rem;
+    border: 2px solid;
+    border-color: var(--venetianred);
+    border-radius: 20px;
+    padding: 1rem;
+    font-size: 20px;
+
 }
 
 .ihp-container {
@@ -102,7 +109,7 @@
 
 /* On click, scale the piece smoothly */
 .enlarged {
-    transform: scale(2.5); /* Enlarges the puzzle piece */
+    transform: scale(3.5); /* Enlarges the puzzle piece */
     z-index: 3; /* Bring the enlarged piece above others */
 }
 
@@ -118,6 +125,29 @@
     pointer-events: none; /* Ensure clicks pass through to the image */
 }
 
+.piece-content {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+    padding: 5px 10px;
+    border-radius: 5px;
+    text-align: center;
+    font-size: 20px;
+    transition: all 0.3s ease;
+    width: 80%; /* Adjust as needed */
+    max-width: 200px; /* Adjust as needed */
+  }
+  .piece.enlarged .piece-content {
+    padding: 10px;
+  }
+  
+  .piece.enlarged .piece-content {
+    font-size: 1.2em;
+    padding: 10px;
+  }
+
 /* Reset image size and positioning */
 .pieces img {
     display: block;
@@ -128,130 +158,125 @@
 
 .diagram-container{
     display: flex;
-    width: 100%;
+    width: 100vw;
     justify-content: center;
 }
 
-.tree-container{
-    user-select: none;
-    display: flex;
-    flex-direction: column;
-    width: 100%;
-    justify-content: center;
-    align-items: center;
+.reflection-diagram{
+    width: 80vw;
+    margin-top: -20rem;
+    margin-bottom: -20rem;
 }
 
-.tree-piece{
-    height: 200px;
-    width: 270px;
-    padding-inline: 3rem;
-    transition: transform 0.5s ease;
-    cursor: pointer;
+.framework-diagram {
+    width: 80vw;
+    margin-top: -8rem;
+    margin-bottom: -8rem;
 }
 
-.tree-piece:hover{
-    transform: translate(10px);
-}
 
-.treeline-1{
-    position: absolute;
-    width: 200px;
-    left: 1025px;
-    top: -1000px;
-    rotate: 90deg;
-    z-index: 10;
-}
-
-.level{
-    padding-bottom: 7rem;
-}
-
-.popup-overlay {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(0, 0, 0, 0);
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    z-index: 1000;
-    opacity: 0;
-    visibility: hidden;
-    transition: all 0.3s ease;
-  }
-  
-  .popup-overlay.visible {
-    background-color: rgba(0, 0, 0, 0.5);
-    opacity: 1;
-    visibility: visible;
-  }
-  
-  .popup-content {
-    background-color: white;
-    border-radius: 20px;
-    border: 5px solid var(--mexired);
-    width: 80%;
-    height: 80%;
+.timeline-container {
     max-width: 1000px;
-    max-height: 800px;
+    margin: 0 auto;
+    padding: 20px;
+  }
+  
+  .timeline-title {
+    font-size: 2rem;
+    font-weight: bold;
+    text-align: center;
+    margin-bottom: 2rem;
+  }
+  
+  .timeline {
     position: relative;
-    display: flex;
-    flex-direction: column;
-    transform: scale(0.7);
-    opacity: 0;
-    transition: all 0.3s ease;
+    padding: 20px 0;
   }
   
-  .popup-overlay.visible .popup-content {
-    transform: scale(1);
-    opacity: 1;
-  }
-  
-  .close-btn {
+  .timeline::before {
+    content: '';
     position: absolute;
-    top: 10px;
-    right: 10px;
-    font-size: 24px;
+    width: 3px;
+    background-color: red;
+    top: 0;
+    bottom: 0;
+    left: 50%;
+    margin-left: -1px;
+  }
+  
+  .timeline-item {
+    margin-bottom: 40px;
+    position: relative;
+  }
+  
+  .timeline-content {
+    width: 45%;
+    padding: 10px 30px;
+    position: relative;
+  }
+  
+  .timeline-item.odd .timeline-content {
+    left: 55%;
+  }
+
+  .timeline-item.even .card.expanded{
+    transform: translateX(-200px);
+  }
+  
+  .card {
+    background-color: white;
+    border: 2px solid var(--mexired);
+    width: auto;
+    border-radius: 8px;
+    padding: 20px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+  }
+  
+  .card:hover {
+    box-shadow: 5px 6px 8px rgba(0, 0, 0, 0.45);
+  }
+  
+  .card.expanded {
+    transform: scale(1.05);
+    width: 30vw;
+  }
+  
+  .card-image {
+    width: 100px;
+    border-radius: 50%;
+    margin: 0 auto 10px;
+    display: block;
+  }
+  
+  .card-title {
+    font-size: 1.2rem;
+    font-weight: bold;
+    text-align: center;
+    margin-bottom: 10px;
+  }
+  
+  .card-description {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease-in-out;
+  }
+  
+  .card-description.show {
+    max-height: 2000px;
+  }
+  
+  .close-button {
     background: none;
     border: none;
+    color: #666;
     cursor: pointer;
-    z-index: 1;
-    opacity: 0;
-    transition: opacity 0.3s ease;
+    display: block;
+    margin: 10px auto 0;
   }
   
-  .popup-overlay.visible .close-btn {
-    opacity: 1;
-  }
-  
-  .popup-inner {
-    display: flex;
-    height: 100%;
-  }
-  
-  .popup-image {
-    flex: 1;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding: 20px;
-  }
-  
-  .popup-image img {
-    max-width: 100%;
-    max-height: 100%;
-    object-fit: contain;
-  }
-  
-  .popup-text {
-    flex: 1;
-    padding: 20px;
-    overflow-y: auto;
-  }
-  
-  .popup-text h2 {
-    margin-top: 0;
+  .close-button:hover {
+    color: white;
   }
   
