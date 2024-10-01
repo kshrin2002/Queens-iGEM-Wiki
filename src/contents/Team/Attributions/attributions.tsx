@@ -332,7 +332,7 @@ const CardSection: React.FC = () => {
                         style={{
                           textAlign: "left",
                           marginTop: "30px",
-                          marginLeft: "30px",
+                          marginLeft: "50px",
                         }}
                       >
                         <p>
@@ -382,7 +382,7 @@ const CardSection: React.FC = () => {
                         style={{
                           textAlign: "left",
                           marginTop: "30px",
-                          marginLeft: "30px",
+                          marginLeft: "50px",
                         }}
                       >
                         <p>
@@ -643,7 +643,7 @@ const CardSection: React.FC = () => {
                         style={{
                           textAlign: "left",
                           marginTop: "30px",
-                          marginLeft: "30px",
+                          marginLeft: "50px",
                         }}
                       >
                         <p>
@@ -764,8 +764,8 @@ const CardSection: React.FC = () => {
                               alt={`Headshot ${headshot.name}`}
                               className="headshot-img"
                               style={{
-                                width: "175px",
-                                height: "175px",
+                                width: "150px",
+                                height: "150px",
                                 borderRadius: "50%",
                                 objectFit: "cover",
                               }}
@@ -911,7 +911,7 @@ const CardSection: React.FC = () => {
                         style={{
                           textAlign: "left",
                           marginTop: "30px",
-                          marginLeft: "30px",
+                          marginLeft: "50px",
                         }}
                       >
                         <p>
