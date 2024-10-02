@@ -1,7 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import { Card, Col, Container, Row, Button } from 'react-bootstrap';
 import './contributions.css';
-import { FiEdit } from "react-icons/fi";
 import { motion } from "framer-motion";
 
 export function Contributions() {

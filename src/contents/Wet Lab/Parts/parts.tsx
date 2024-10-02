@@ -2,6 +2,8 @@ import React from 'react';
 import { Card, Row, Col, Container, Button } from 'react-bootstrap';
 import { motion } from "framer-motion";
 import { useEffect, useState } from 'react';
+import { FiEdit } from "react-icons/fi";
+
 export function Parts() {
   return (
     <>
