@@ -20,10 +20,11 @@ const OverviewSection = () => {
     <section style={{ backgroundColor: '#FE9BA1', color: 'white', padding: '20px', marginTop: '100px', width: '100%', height: '350px', marginBottom: '100px' }}>
       <h2>Overview</h2>
       <p>
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-      </p>
-      <p>
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+      <p>Scientific innovation cannot happen in isolation. The QGEM team understands this incredibly well, and as such, we have made it our goal to meet with experts at every step of the development page to gain as many new perspectives as possible. We contacted experts related to all of our wet lab, dry lab, and human practices initiatives to ensure that our team remained on the right track and to improve our project as much as possible.  </p>
+
+<p>During the development of SynAxis, our team has been incredibly committed to the integrating all suggestions made to us by our advisors and stakeholders to put the best version of our project forward. As part of this integrative process, our team followed a cycle of questions to critically reflect on what was gained from every conversation. This cycle can be seen in the figure below.  After each interview, members of the interview panel answered several questions about their relevance to our project, what we gained from our interaction, and how we plan to apply their comments or feedback. </p>
+
+<p>Our team has kept in mind the above quote by Cesar Chavez throughout our entire design process. His philosophy about knowledge being in service to others is the epitome of Integrated Human Practices. We take in information from our advisors and stakeholders to improve SynAxis in a way that benefits the greater Parkinson’s community. As we continue to develop our project past the Grand Jamboree, this quote is a reminder to maintain a patient centric perspective and not lose sight of the people we are hoping to help.  </p>
       </p>
     </section>
   );
@@ -36,7 +37,7 @@ const IHPHeading: React.FC = () => {
         INTEGRATED HUMAN PRACTICES
       </h1>
       <h1>
-        "The end of all knowledge should be truth to others"
+        "The end of all knowledge should be service to others"
       </h1>
       <h1>
         - Ceasar Chevez
@@ -1549,22 +1550,214 @@ const FinalSection: React.FC = () =>{
       </h1>
       <VerticalTimeline />
       <h1 className="subsection-title">
-          Subsection 1
+          Key Takeaways from Interviews
       </h1>
       <p className="section-text">
-        text for subsection 1
+      <p>Below are 3 main themes we saw throughout our IHP interviews with various experts in different fields.  </p>
+
+<p>1. Parkinson’s disease is heterogenous, this makes clinical diagnosis difficult and thus defining our early-stage population becomes a challenge. </p>
+
+<p>Parkinson’s disease manifests itself differently in each patient. One patient may have the classic notable tremor while another may only experience sleep disorder. This makes clinical diagnosis a nightmare for physicians and why Parkinson’s is misdiagnosed or missed often times. SynAxis aims to target the alpha-syn pathological seeds in early-stage patients. Currently the only way to define early-stage is through various scales that rank clinical presentation symptoms. This is a challenge we are aware of and we plan to meet with experts in the future to find a solution and overcome this challenege.  </p>
+
+<p>2. Getting a therapeutic from lab to market is expensive, from clinical trials to manufacturing, the costs never end, this is why many therapeutics never make it to market. </p>
+
+<p>There are various steps a therapeutic must go through before it reaches the market. It must go through rigorous preclinical trials and clinical trials. That is just the beginning of the costs. Before you even get there, you must protect your intellectual property through patenting. Doing this right with the help of experts is expensive. Even if your therapeutic makes it through clinical trials, the expenses don’t end there. You must think about manufacturing costs and any costs associated with maintaining the company. This is a challenge that we can overcome by applying for grants, scholarships and funding opportunities.  </p>
+
+<p>3. Parkinson’s disease is more than a diagnosis for patients, it is life altering and as researchers we need to adapt a patient-centric approach to the conductance of our research. </p>
+
+<p>More times than not, researchers treat human diseases like any other research project. They overlook the humanity behind the disease. SynAxis has learned that Parkinson’s disease is more than just a disease. It is a diagnosis of a patient, a patient with a life, a family and friends. The diagnosis for the patient is a life altering moment in their life. They will have to change their day-to-day life and rewrite their future. SynAxis makes it our mission to deliver our research and product with a patient-centric approach, constantly putting the wants and needs of patients first. </p>
       </p>
       <h1 className="subsection-title">
-          Subsection 2
+      Gibbs Reflective Cycle Applicaiton
       </h1>
       <p className="section-text">
-        text for subsection 2
+     <h1 style={{color:'red'}}>Researchers: </h1>
+
+<p>Description: We interviewed researchers from various different backgrounds. </p>
+
+ 
+
+<p>Feelings: We felt reassurance and support when interviewing these experts. </p>
+
+ 
+
+<p>Evaluation: These were very good, reassuring experiences.  </p>
+
+ 
+
+<p>Analysis: These interviews helped support us with the scientific side of our project. </p>
+
+ 
+
+<p>Conclusion: We learned about various components of our project, namely the wet lab research, we could have met with more researchers, there is endless knowledge among the experts out there. </p>
+
+ 
+
+<p>Action plan: In the future we could interview more researchers to even further deepen our understanding of the various aspects of our project.  </p>
+
+ 
+
+ 
+
+<h1 style={{color:'red'}}>Patients and Patient Advocates: </h1>
+
+<p>Description: We interviewed people with Parkinson’s disease and advocates of Parkinson’s patients. </p>
+
+ 
+
+<p>Feelings: We felt very connected to these individuals and empathized with their experiences.  </p>
+
+ 
+
+<p>Evaluation: These were very good, meaningful experiences.  </p>
+
+ 
+
+<p>Analysis: These interviews helped SynAxis utilize a patient-centric model in our research. </p>
+
+ 
+
+<p>Conclusion: We learned more about what it means to live with Parkinson’s disease, however, we could have interviewed patients from different areas to get an even deeper understanding.  </p>
+
+ 
+
+<p>Action plan: In the future we could broaden our search for patients and patient advocates, expanding beyond Canada and North America. </p>
+
+  
+
+ 
+
+<h1 style={{color:'red'}}>
+  <p>Movement Disorder Neurologists:  </p>
+</h1>
+
+<p>Description: We interviewed physicians, specifically neurologists that specialize their work in movement disorders.  </p>
+
+ 
+
+<p>Feelings: We felt very educated on Parkinson’s disease after these interviews.  </p>
+
+ 
+
+<p>Evaluation: These were very good, educational experiences.  </p>
+
+ 
+
+<p>Analysis: These interviews helped us to gain a deeper understanding of Parkinson’s disease.  </p>
+
+ 
+
+<p>Conclusion: We learned more about Parkinson's disease from experts in the field, we could have met with more experts who specialize in the diagnosis process. </p>
+
+ 
+
+<p>Action plan: In the future we could expand on our target patient population description by meeting with more experts who specialize in the diagnosis process of Parkinson's disease.  </p>
+
+ 
+
+  
+
+<h1 style={{color:'red'}}>
+  <p>Ethicists:  </p>
+</h1>
+
+<p>Description: We interviewed experts who evaluate ethical considerations surrounding research. </p>
+
+ 
+
+<p>Feelings: We felt moral and ethical with our research. </p>
+
+  
+
+<p>Evaluation: These were very good, impactful experiences.  </p>
+
+ 
+
+<p>Analysis: These interviews helped us maintain ethical standards in our research. </p>
+
+ 
+
+<p>Conclusion: We learned about ethical regulations and standards, in the future we could incorporate more experts, especially outside of the Queen’s community.   </p>
+
+ 
+
+<p>Action plan: In the future we could interview more ethics experts outside of the Queen’s community </p>
+
+  
+
+ 
+
+<h1 style={{color:'red'}}>
+  <p>Clinical Development Experts:  </p>
+</h1>
+
+<p>Description: We interviewed experts who specialize in the development of research from lab to clinical trials and manufacturing.  </p>
+
+ 
+
+<p>Feelings: We felt optimistic for the future of SynAxis after these interviews.  </p>
+
+ 
+
+<p>Evaluation: These were very good, productive experiences. </p>
+
+  
+
+<p>Analysis: These interviews helped us to plan for the future of SynAxis. </p>
+
+ 
+
+<p>Conclusion: We learned about the clinical development process of therapeutics; we could have interviewed more experts in industry. </p>
+
+ 
+
+<p>Action plan: In the future we could interview more experts that are currently working or have worked in industry. </p>
+
+ 
+
+  
+
+<h1 style={{color:'red'}}>
+  <p>Investors and Entrepreneurs: </p>
+</h1>
+
+<p>Description: We interviewed experts with background in business and entrepreneurship </p>
+
+ 
+
+<p>Feelings: We felt very inspired by these individuals. </p>
+
+ 
+
+<p>Evaluation: These were very good, inspiring experiences. </p>
+
+ 
+
+<p>Analysis: These interviews sparked our interest and dedication to the entrepreneurship side of our project. </p>
+
+ 
+
+<p>Conclusion: We learned about biotechnological startups and the challenges that come with it; in the future we could meet with more individuals in the therapeutics market. </p>
+
+ 
+
+<p>Action plan: In the future we could interview more experts in the therapeutics field. </p>
       </p>
       <h1 className="subsection-title">
-          Subsection 3
+          Podcast
       </h1>
       <p className="section-text">
-        text for subsection 3
+      <p>As another one of our initiatives, we established season one of the QGEM Podcast, Parkinson’s Unscripted. Focusing on how each aspect of our team (dry lab, wet lab, and human practices) is focused on improving the lives of the community we aim to serve.  </p>
+
+<p>Each episode included one of our team leads meeting with an expert in their field. In a 40+ minute casual conversation, we were able to learn how to maintain a patient centric approach in every facet of our project.  </p>
+
+<p>In the first episode, human practices leads, Claire and Stephanie met with Larisa Svirsky, a Postdoctoral Fellow in the Centre for Ethics at the University of Toronto. She is a philosopher and poet and provided us with a unique perspective into the importance of patient treatment, maintaining a strict ethical code in research, and some philosophies to consider when moving forward with our project to clinical trials.  </p>
+
+<p>In the second episode, QGEM’s wet lab leads, Zain and Marianna, met with Dr. Marco Prado, Canada research chair in neurochemistry of dementia, scientist with the Robarts Research Institute, and professor with the department of physiology and pharmacology and department of anatomy and cell biology at the University of Western Ontario. In this episode, we learned about various manifestations of Parkinson’s Disease, and how pathological markers have been used to show how pathologies spread between brain regions and to the periphery.  </p>
+
+<p>The QGEM Podcast’s third episode saw dry lab lead Aden sitting down with Dr. Justin Lemkul, associate professor at Virginia Tech in the department of biochemistry, to learn about using computational modeling and simulations in drug design and understanding disease mechanisms. </p>
+
+<p>And the last episode of the QGEM Podcast revisited some of the patient interviews that we were able to conduct over the course of developing SynAxis. We highlight several important quotes and philosophies to remind us of the purpose of our project and the people behind Parkinson’s Disease. </p>
       </p>
       <h1 className="section-title">
           References
