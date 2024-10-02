@@ -56,17 +56,17 @@
   justify-content: space-between;
   align-items: center;
   background-color: #f7f7f7;
-  border-radius: 20px; /* Rounded corners */
+  border-radius: 20px;
   padding: 20px;
-  width: 80vw; /* Make it 80% of the viewport width */
-  height: auto; /* Increase the height */
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+  width: 80vw;
+  height: auto;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   overflow: hidden;
-  border: 5px solid #ff9ca5; /* Thicker border with the color #ff9ca5 */
+  border: 5px solid #ff9ca5;
 }
 
 .text-section {
-  width: 45%; /* Text takes 45% of the box */
+  flex: 2; /* Allow text to take more space */
   padding-right: 20px;
   text-align: left;
 }
@@ -85,8 +85,8 @@
 }
 
 .image-section {
-  width: 45%; /* Image takes 45% of the box */
-  padding-left: 10px; /* Add padding so the image doesn't touch the edges */
+  flex: 1; /* Allow image to take less space */
+  padding-left: 10px;
 }
 
 .rounded-box-image {
