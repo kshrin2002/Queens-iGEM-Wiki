@@ -215,57 +215,34 @@ const CardSection: React.FC = () => {
         },
       ],
     },
+
     {
-      title: 'TITLE 2',
-      image: '',
+      title: 'Spore Biotic Components',
       subsections: [
         {
-          subtitle: '',
+          subtitle: 'Basic Parts',
           description: (
             <>
-
-            </>
-          )
-        },
-      ],
-    },
-    {
-      title: 'TITLE 3',
-      subsections: [
-        {
-          subtitle: '',
-          description: (
-            <>
-
-            </>
-          )
-        },
-      ],
-    },
-    {
-      title: 'TITLE 4',
-      subsections: [
-        {
-          subtitle: 'SUBTITLE 1',
-          description: (
-            <>
+            <img
+                src="https://static.igem.wiki/teams/5079/writeups/wet-lab/table-4.png"
+                alt="Molecular Switch Components"
+                className="molecular-switch-image"
+                style={{ width: '100%', height: 'auto', marginTop: '20px' }}
+              />
 
             </>
           )
         },
         {
-          subtitle: 'SUBTITLE 2',
+          subtitle: 'Composite Parts',
           description: (
             <>
-
-            </>
-          )
-        },
-        {
-          subtitle: 'SUBTITLE 3',
-          description:(
-            <>
-
+            <img
+                src="https://static.igem.wiki/teams/5079/writeups/wet-lab/table-5.png"
+                alt="Molecular Switch Components"
+                className="molecular-switch-image"
+                style={{ width: '100%', height: 'auto', marginTop: '20px' }}
+              />
             </>
           )
         },
