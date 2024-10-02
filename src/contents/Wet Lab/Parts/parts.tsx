@@ -2,8 +2,6 @@ import React from 'react';
 import { Card, Row, Col, Container, Button } from 'react-bootstrap';
 import { motion } from "framer-motion";
 import { useEffect, useState } from 'react';
-import { FiEdit } from "react-icons/fi";
-
 export function Parts() {
   return (
     <>
@@ -144,7 +142,7 @@ const CardSection: React.FC = () => {
             Below are our coding sequences including our 12 designed molecular switches, as well as their components - neurosin (KLK6) and cyclophilin D – and the input signal a-synculein. 
             
             <img
-                src="https://static.igem.wiki/teams/5079/wet-lab/table_1.png"
+                src="https://static.igem.wiki/teams/5079/writeups/wet-lab/table_1.png"
                 alt="Molecular Switch Components"
                 className="molecular-switch-image"
                 style={{ width: '100%', height: 'auto', marginTop: '20px' }}
