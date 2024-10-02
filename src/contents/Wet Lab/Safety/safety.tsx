@@ -343,7 +343,7 @@ const CardSection: React.FC = () => {
                 {section.subsections.map((subsection, subsectionIndex) => (
                   <div key={subsectionIndex}>
                     <h3 id={`section-${sectionIndex}-part-${subsectionIndex}`}>{subsection.subtitle}</h3>
-                    <Card.Text>{subsection.description}</Card.Text>
+                    <Card.Text style={{marginRight:'-10rem'}}>{subsection.description}</Card.Text>
                   </div>
                 ))}
               </Col>

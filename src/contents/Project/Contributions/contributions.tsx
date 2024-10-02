@@ -43,17 +43,9 @@ const OverviewSection = () => {
     >
       <h2>Overview</h2>
       <p>
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-        Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure
-        dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-        proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+      QGEM 2024 has made significant contributions to the iGEM community through protocol development, public outreach, and collaborative efforts. We created and shared key protocols, including those for GROMACS molecular dynamics simulations, HiFi DNA assembly, protein purification, and enzymatic assays, all accessible on our team wiki to support future teams. We also organized the BiomImpact Challenge pitch competition, raised over $2000 for Parkinson Canada, and co-developed an ethics and regulatory handbooks in collaboration with other iGEM teams, addressing key challenges in synthetic biology. Beyond the lab, our community engagement included hosting the Parkinson’s Unscripted podcast, creating Gaelia's Big Project storybook, and hostsing educational workshops for elementary school kids. Through these efforts, we aim to contribute both scientifically and socially to the responsible advancement of synthetic biology. 
       </p>
-      <p>
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-        Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure
-        dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-        proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-      </p>
+
     </section>
   );
 };
@@ -143,85 +135,114 @@ const Option = ({ text, image, sectionIndex, sectionPartIndex }: { text: string,
 const CardSection: React.FC = () => {
   const sections = [
     {
-      title: 'TITLE 1',
+      title: 'Molecular Dynamics Protocol Development',
       subsections: [
         {
           subtitle: 'SUBTITLE 1',
           description: (
             <>
-
+            <p>
+            We developed a GROMACS protocol that allows teams to perform advanced molecular dynamics simulations. This tool enables researchers to study biomolecular interactions, specifically protein-protein complexes and protein-ligand complexes,  at the atomic level. By sharing this protocol, we aimed to support future iGEM teams in incorporating computational methods into their wet lab experiments, thereby streamlining their workflow and improving the efficiency of biomolecular research. 
+            </p>
             </>
           ),
-        },
-        {
-          subtitle: 'SUBTITLE 2',
-          description: (
-            <>
-
-            </>
-          ),
-        },
-        {
-          subtitle: 'SUBTITLE 3',
-          description: (
-            <>
-
-            </>
-          )
-        },
+        }
       ],
     },
     {
-      title: 'TITLE 2',
+      title: 'Experimental Protocols',
       image: '',
       subsections: [
         {
-          subtitle: '',
+          subtitle: 'HI-FI DNA Assembly',
           description: (
             <>
-
+            <p>
+            Our HiFi DNA assembly protocol streamlines the process of constructing large, multi-part genetic sequences with high accuracy. Traditional methods of DNA assembly, such as Gibson assembly, can introduce errors or inefficiencies when combining multiple DNA fragments. The HiFi method offers increased fidelity by reducing errors in fragment joining and ensuring that complex genetic constructs can be assembled more reliably. This is critical for synthetic biology projects that rely on the precise engineering of gene circuits or metabolic pathways. By optimizing this protocol and making it publicly available, we contributed to improved efficiency and reliability in genetic engineering, enabling future iGEM teams to quickly iterate on their designs with confidence in the assembly process. 
+            </p>
+            </>
+          )
+        },
+        {
+          subtitle: 'Protein Expression and Purification',
+          description: (
+            <>
+            <p>
+            Our team developed a versatile and efficient protein purification protocol that enhances the yield and purity of recombinant proteins. This protocol is essential for downstream applications such as enzymatic assays, structural studies, or therapeutic development. We optimized this process for scalability, ensuring that it could be adapted for both small lab-scale purifications and larger-scale production. The protocol includes detailed instructions on affinity chromatography using tags like His-tag or GST, and outlines methods to minimize contamination and degradation, which are common issues in protein purification. Sharing this protocol empowers future teams to obtain high-quality protein samples, which is often a bottleneck in synthetic biology workflows, thus enabling better experimental outcomes and reproducibility.             </p>
+            </>
+          )
+        },
+        {
+          subtitle: 'Ethics Handbook',
+          description: (
+            <>
+            <p>
+            Our team collaborated with multiple iGEM teams to develop a comprehensive Ethics and Regulatory Handbook that addresses the ethical and legal considerations of synthetic biology research. This resource covers vital topics, including ethical challenges related to genetic data privacy, informed consent for human subjects research, and the impact of synthetic biology innovations on society. Additionally, we outlined strategies for navigating regulatory landscapes, providing clear guidance on compliance with regional and international laws governing gene editing, synthetic organisms, and biopharmaceutical development. By addressing these critical issues, the handbook serves as a foundational resource for future teams to ensure that their research adheres to ethical standards and legal requirements, promoting responsible innovation.             
+            </p>
             </>
           )
         },
       ],
     },
     {
-      title: 'TITLE 3',
+      title: 'Parkinsons Unscripted Podcast: Rasing Awareness Through Storytelling',
       subsections: [
         {
           subtitle: '',
           description: (
             <>
-
+            <p>
+            As part of our public engagement efforts, we launched the Parkinson’s Unscripted Podcast, where we interviewed patients, researchers, and healthcare professionals to discuss their experiences with Parkinson’s disease. This podcast series served a dual purpose: raising awareness about the disease while also providing a platform to explain the role of synthetic biology in developing novel therapeutics. We emphasized patient-centric research, sharing our progress in developing a Parkinson’s therapeutic, and discussing how scientific innovation can be informed by patient advocacy. The podcast episodes reached a broad audience, including both scientific and non-scientific listeners, making complex research accessible to the general public and highlighting the importance of patient involvement in the therapeutic development process. Listen to our podcast <a href="https://www.youtube.com/@QueensiGEM2024/videos">here</a>.  
+            </p>
+            <div style={{display:'flex', flexDirection:'row'}}>
+            <img src="https://static.igem.wiki/teams/5079/writeups/contributions/podcast.png" alt="" style={{height:'400px', borderRadius:'20px', margin:'3rem'}}/>
+            <img src="https://static.igem.wiki/teams/5079/writeups/contributions/podcast1.png" alt="" style={{height:'600px', borderRadius:'20px', margin:'3rem'}} />
+            </div>
             </>
           )
         },
       ],
     },
     {
-      title: 'TITLE 4',
+      title: `Gaelia's Big Project! Storybook: Inspiring Young Scientists`,
       subsections: [
         {
-          subtitle: 'SUBTITLE 1',
+          subtitle: '',
           description: (
             <>
-
+            <p>
+            To inspire the next generation of scientists, we created Gaelia's Big Project Storybook, a children’s book that introduces synthetic biology concepts through an engaging narrative. This storybook follows a young scientist named Gaelia from Planet iGEM as they embark on a journey to enrich their knowledge of synthetic biology by exploring iGEM teams’ project from around the world. By simplifying complex ideas such as gene editing and molecular design, the storybook aims to make synthetic biology accessible and exciting for young readers.  This initiative contributes to science literacy and encourages curiosity in a fun, approachable way. 
+            </p>
             </>
           )
         },
+      ],
+    },
+    {
+      title: `Parkinson SuperWalk `,
+      subsections: [
         {
-          subtitle: 'SUBTITLE 2',
+          subtitle: '',
           description: (
             <>
-
+            <p>
+            Our team took a leadership role in organizing the Kingston Chapter Parkinson SuperWalk, a major fundraising and awareness event. This event not only raised funds for Parkinson’s disease research but also provided a platform for community engagement. We used this opportunity to share our project with the public and connect directly with Parkinson’s patients and their families, gaining valuable insights into the daily challenges faced by those living with the disease. Organizing the SuperWalk strengthened our commitment to advocacy and demonstrated the importance of community involvement in scientific research. We are incredibly proud to announce that the QGEM team raised over $2000 Parkinson Canada!             
+            </p>
             </>
           )
         },
+      ],
+    },
+    {
+      title: `The BioImpact Challenge `,
+      subsections: [
         {
-          subtitle: 'SUBTITLE 3',
-          description:(
+          subtitle: '',
+          description: (
             <>
-
+            <p>
+            Our team took the initiative to organize the Biomimpact Challenge, a pitch competition designed to help undergraduate students explore the entrepreneurial potential of their synthetic biology projects. We facilitated this competition to provide teams with a platform to present their ideas to industry professionals and academics, refine their business strategies, and receive valuable feedback on commercialization. Through organizing this event, we contributed to building a bridge between synthetic biology research and real-world applications, empowering teams to think beyond the lab and consider how their work can create tangible, marketable solutions in biotechnology. Our judges’ feedback from this event offers insights and strategies that can guide paticipating teams in commercializing their projects            
+            </p>
             </>
           )
         },
@@ -241,7 +262,7 @@ const CardSection: React.FC = () => {
                 {section.subsections.map((subsection, subsectionIndex) => (
                   <div key={subsectionIndex}>
                     <h3 id={`section-${sectionIndex}-part-${subsectionIndex}`}>{subsection.subtitle}</h3>
-                    <Card.Text>{subsection.description}</Card.Text>
+                    <Card.Text style={{marginRight:'-10rem'}}>{subsection.description}</Card.Text>
                   </div>
                 ))}
               </Col>
