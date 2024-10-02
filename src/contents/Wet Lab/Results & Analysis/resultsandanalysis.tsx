@@ -40,7 +40,7 @@ const Sidebar: React.FC = () => {
     { name: 'KLK6 Expression and Purification', image: 'https://static.igem.wiki/teams/5079/rose-logo.png', content: ['PCR Amplification of Insert', 'Induction Trials', 'Large Scale Purification'] },
     { name: 'A-synuclein Expression and Purification', image: 'https://static.igem.wiki/teams/5079/rose-logo.png', content: ['PCR Amplification','Cloning','Transformation','Large Scale Purification'] },
     { name: 'Molecular Switch Expression and Purification', image: 'https://static.igem.wiki/teams/5079/rose-logo.png', content: ['PCR Amplification','Cloning','Transformation','Large Scale Purification'] },
-    { name: 'RISK MANAGEMENT', image: 'https://static.igem.wiki/teams/5079/rose-logo.png', content: ['Identifying Project Risks', 'Anticipating Future Risks', 'Managing Risks'] },
+    { name: 'Enzymatic Tests', image: 'https://static.igem.wiki/teams/5079/rose-logo.png', content: [''] },
   ];
 
   const [openSection, setOpenSection] = useState<number | null>(null);
@@ -191,7 +191,7 @@ const CardSection: React.FC = () => {
                     borderRadius: "10px",
                   }}
                 />
-                <p>=
+                <p>
             Figure 2. LB-Agar plates. Successful colony growth was observed till the 10-5 dilution. The sterility and negative control plates were clean.  
 
             To verify that the sequence of the cloned product was correct, the transformations of KLK6 underwent colony screening. If cloning was successful, the agarose results from colony screening would be expected to show an amplified band of around 1321 bp. 
