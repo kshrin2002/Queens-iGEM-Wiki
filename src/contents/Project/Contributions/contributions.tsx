@@ -146,7 +146,7 @@ const CardSection: React.FC = () => {
             <>
             <p>
             We developed a GROMACS protocol that allows teams to perform advanced molecular dynamics simulations. This tool enables researchers to study biomolecular interactions, specifically protein-protein complexes and protein-ligand complexes,  at the atomic level. By sharing this protocol, we aimed to support future iGEM teams in incorporating computational methods into their wet lab experiments, thereby streamlining their workflow and improving the efficiency of biomolecular research. 
-
+            <iframe src="https://static.igem.wiki/teams/5079/writeups/contributions/gromacs-protocol-write-up.pdf" style={{height:'700px',width:'500px',marginLeft:'5rem',}}></iframe>
             </p>
             </>
           ),
