@@ -1,76 +1,50 @@
-import { useEffect } from 'react';
+import { useEffect, useState } from 'react';
 import { tsParticles } from "@tsparticles/engine";
 import { loadAll } from "@tsparticles/all";
 import './home.css';
 
 export function Home() {
+  const [scrollY, setScrollY] = useState(0);
+
   useEffect(() => {
     const loadParticles = async (options: any) => {
       await loadAll(tsParticles);
       await tsParticles.load({ id: "tsparticles", options });
     };
 
-    // Scroll event listener for moving the cover halves
     const handleScroll = () => {
-      const scrollPosition = window.scrollY; // Get current scroll position
-      const maxScroll = 500; // Define how much scroll is required to fully open the covers
-      const leftCover = document.getElementById("left-cover");
-      const rightCover = document.getElementById("right-cover");
-
-      if (leftCover && rightCover) {
-        // Calculate how far the covers should move based on the scroll position
-        const scrollPercentage = Math.min(scrollPosition / maxScroll, 1); // Normalize between 0 and 1
-        const coverMovement = scrollPercentage * 50; // Maximum 50% movement (left and right)
-
-        leftCover.style.transform = `translateX(-${coverMovement}%)`;
-        rightCover.style.transform = `translateX(${coverMovement}%)`;
-      }
+      setScrollY(window.scrollY); // Update scroll position in state
     };
 
     window.addEventListener("scroll", handleScroll);
 
     const configs = {
       particles: {
-        number: {
-          value: 100,
-        },
-        color: {
-          value: "#ffffff",
-        },
-        links: {
-          enable: true,
-          distance: 200,
-        },
-        shape: {
-          type: "circle",
-        },
-        opacity: {
-          value: 1,
-        },
-        size: {
-          value: {
-            min: 4,
-            max: 6,
-          },
-        },
-        move: {
-          enable: true,
-          speed: 2,
-        },
+        number: { value: 100 },
+        color: { value: "#ffffff" },
+        links: { enable: true, distance: 200 },
+        shape: { type: "circle" },
+        opacity: { value: 1 },
+        size: { value: { min: 4, max: 6 } },
+        move: { enable: true, speed: 2 },
       },
-      poisson: {
-        enable: true,
-      },
+      poisson: { enable: true },
     };
 
     loadParticles(configs);
+
+    return () => window.removeEventListener("scroll", handleScroll);
   }, []);
+
+  // Calculate petal position and swaying effect based on scroll position
+  const petalStyle = {
+    transform: `translateX(${Math.sin(scrollY * 0.08) * 50}px) translateY(${scrollY * 0.2}px) rotate(${Math.sin(scrollY * 0.05) * 15}deg)`, // Sway, fall, and rotate effect
+  };
 
   return (
     <>
       <div className="home-container">
         <div id="tsparticles" className="particles-area"></div>
-
         <div className="centered-image-container">
           <img
             src="https://static.igem.wiki/teams/5079/main-synaxis-logo.png"
@@ -78,6 +52,13 @@ export function Home() {
             className="centered-image"
           />
         </div>
+        {/* Flower Petal */}
+        <img
+          src="https://static.igem.wiki/teams/5079/writeups/home/img-0437.png"
+          alt="Falling Petal"
+          className="petal"
+          style={petalStyle} // Dynamically adjust position based on scroll
+        />
       </div>
 
       <div className="secondpart">
