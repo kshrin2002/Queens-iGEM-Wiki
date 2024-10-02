@@ -255,7 +255,6 @@ export function Judging() {
 }
 
 const ImplementationHeading: React.FC = () => {
-  // Function to handle scrolling to the specific section
   const scrollToSection = (sectionId: string) => {
     const sectionElement = document.getElementById(sectionId);
     if (sectionElement) {
@@ -278,7 +277,6 @@ const ImplementationHeading: React.FC = () => {
         Judging
       </h1>
 
-      {/* Red horizontal line */}
       <hr
         style={{
           border: "none",
@@ -288,7 +286,6 @@ const ImplementationHeading: React.FC = () => {
         }}
       />
 
-      {/* Image to be divided into clickable sections */}
       <div
         style={{
           position: "relative",
@@ -303,7 +300,6 @@ const ImplementationHeading: React.FC = () => {
           style={{ width: "100%", maxWidth: "800px" }}
         />
 
-        {/* Left section for Gold Medal */}
         <div
           onClick={() => scrollToSection("gold-medal-section")}
           style={{
@@ -313,11 +309,10 @@ const ImplementationHeading: React.FC = () => {
             width: "33.33%",
             height: "100%",
             cursor: "pointer",
-            backgroundColor: "rgba(0, 0, 0, 0)", // Invisible
+            backgroundColor: "rgba(0, 0, 0, 0)",
           }}
         ></div>
 
-        {/* Middle section for Silver Medal */}
         <div
           onClick={() => scrollToSection("silver-medal-section")}
           style={{
@@ -327,11 +322,10 @@ const ImplementationHeading: React.FC = () => {
             width: "33.33%",
             height: "100%",
             cursor: "pointer",
-            backgroundColor: "rgba(0, 0, 0, 0)", // Invisible
+            backgroundColor: "rgba(0, 0, 0, 0)",
           }}
         ></div>
 
-        {/* Right section for Bronze Medal */}
         <div
           onClick={() => scrollToSection("bronze-medal-section")}
           style={{
@@ -341,7 +335,7 @@ const ImplementationHeading: React.FC = () => {
             width: "33.33%",
             height: "100%",
             cursor: "pointer",
-            backgroundColor: "rgba(0, 0, 0, 0)", // Invisible
+            backgroundColor: "rgba(0, 0, 0, 0)",
           }}
         ></div>
       </div>
@@ -371,7 +365,7 @@ const Sidebar: React.FC<{ sections: any[] }> = ({ sections }) => {
               }}
             >
               <img
-                src="https://static.igem.wiki/teams/5079/rose-logo.png" // Image restored
+                src="https://static.igem.wiki/teams/5079/rose-logo.png"
                 alt={section.title}
                 style={{
                   marginRight: "8px",
@@ -472,13 +466,12 @@ const CardSection: React.FC<{ sections: any[] }> = ({ sections }) => {
           }
         >
           <Card.Body>
-            {/* Apply styles to the section title */}
             <Card.Title
               style={{
-                fontSize: "2.5em", // Make the title larger
-                fontWeight: "bold", // Make the title bold
-                color: "#a6262e", // Set the color to #a6262e
-                marginBottom: "20px", // Add spacing below the title
+                fontSize: "2.5em",
+                fontWeight: "bold",
+                color: "#a6262e",
+                marginBottom: "20px",
               }}
             >
               {section.title}
