@@ -14,8 +14,17 @@ const stagesData: { title: string; months: MonthlyUpdates[] }[] = [
     months: [
       {
         month: "Pitch Deck",
-        description:
-          "The SynAxis pitch deck was used in interviews for funding opportunities as well as to reach out to potential IHP interviewees. Our pitch deck outlines the key aspects of our business plan. This pitch deck allows us to effectively communicate our vision and company to potential investors, stakeholders etc. We utilized engaging visuals and a cohesive narrative to tell our SynAxis story. Through this pitch deck we convey our passion and commitment to our product.",
+        description: (
+          <>
+            <p>
+              The SynAxis pitch deck was used in interviews for funding opportunities as well as to reach out to potential IHP interviewees. Our pitch deck outlines the key aspects of our business plan. This pitch deck allows us to effectively communicate our vision and company to potential investors, stakeholders, etc. We utilized engaging visuals and a cohesive narrative to tell our SynAxis story. Through this pitch deck, we convey our passion and commitment to our product.
+            </p>
+            <iframe
+              src="https://static.igem.wiki/teams/5079/writeup/entrepreneurship/pitch-deck-final-2.pdf"
+              style={{ width: '100%', height: '800px', border: '3px solid var(--mexired)' }}
+            />
+          </>
+        ),
       },
       {
         month: "Market Analysis",
