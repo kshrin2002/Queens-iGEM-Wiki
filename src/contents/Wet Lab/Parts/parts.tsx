@@ -169,32 +169,32 @@ const Option = ({ text, image, sectionIndex, sectionPartIndex }: { text: string,
   );
 };
 
-// FOR WRIETUPS CHANGE TITLES AND DESCRIPTIONS AS NEEDED. SEE WETLAB/SAFETY FOR REFERENCE
 const CardSection: React.FC = () => {
   const sections = [
     {
       title: 'Molecular Switch Components',
+      image: 'https://static.igem.wiki/teams/5079/rose-logo.png', // Add image here
       subsections: [
         {
           subtitle: 'Basic parts',
           description: (
             <>
-            Below are our coding sequences including our 12 designed molecular switches, as well as their components - neurosin (KLK6) and cyclophilin D – and the input signal a-synculein. 
-            
-            <img
-                src="https://static.igem.wiki/teams/5079/writeups/wet-lab/table-1.png"
-                alt="Molecular Switch Components"
-                className="molecular-switch-image"
-                style={{ width: '100%', height: 'auto', marginTop: '20px' }}
-              />
-            
-            Below are the forward and reverse primers for alpha synuclein, KLK6, cyclophilin D into pET-28a vector as well as KLK6 into the pNH-TrxT vector. 
-            <img
-                src="https://static.igem.wiki/teams/5079/writeups/wet-lab/table-2.png"
-                alt="Molecular Switch Components"
-                className="molecular-switch-image"
-                style={{ width: '100%', height: 'auto', marginTop: '20px' }}
-              />
+              Below are our coding sequences including our 12 designed molecular switches, as well as their components - neurosin (KLK6) and cyclophilin D – and the input signal a-synculein. 
+              
+              <img
+                  src="https://static.igem.wiki/teams/5079/writeups/wet-lab/table-1.png"
+                  alt="Molecular Switch Components"
+                  className="molecular-switch-image"
+                  style={{ width: '100%', height: 'auto', marginTop: '20px' }}
+                />
+              
+              Below are the forward and reverse primers for alpha synuclein, KLK6, cyclophilin D into pET-28a vector as well as KLK6 into the pNH-TrxT vector. 
+              <img
+                  src="https://static.igem.wiki/teams/5079/writeups/wet-lab/table-2.png"
+                  alt="Molecular Switch Components"
+                  className="molecular-switch-image"
+                  style={{ width: '100%', height: 'auto', marginTop: '20px' }}
+                />
 
               Below are the forward and reverse primers for each of the designed molecular switches. All switches were cloned into pET-28a. Each switch description details at what residue KLK6 was inserted into cyclophilin D and if it was circularly permuted, and if so its corresponding location.
               Ex: N14_WT into pET-28a - Switch 1 (Fwd) 
@@ -205,31 +205,30 @@ const CardSection: React.FC = () => {
 
               More details about the design of our molecular switches can be found on the Design page. 
               <img
-                src="https://static.igem.wiki/teams/5079/writeups/wet-lab/table-3.png"
-                alt="Molecular Switch Components"
-                className="molecular-switch-image"
-                style={{ width: '100%', height: 'auto', marginTop: '20px' }}
-              />
+                  src="https://static.igem.wiki/teams/5079/writeups/wet-lab/table-3.png"
+                  alt="Molecular Switch Components"
+                  className="molecular-switch-image"
+                  style={{ width: '100%', height: 'auto', marginTop: '20px' }}
+                />
             </>
           ),
         },
       ],
     },
-
     {
       title: 'Spore Biotic Components',
+      image: 'https://static.igem.wiki/teams/5079/rose-logo.png', // Add image here
       subsections: [
         {
           subtitle: 'Basic Parts',
           description: (
             <>
-            <img
+              <img
                 src="https://static.igem.wiki/teams/5079/writeups/wet-lab/table-4.png"
                 alt="Molecular Switch Components"
                 className="molecular-switch-image"
                 style={{ width: '100%', height: 'auto', marginTop: '20px' }}
               />
-
             </>
           )
         },
@@ -237,7 +236,7 @@ const CardSection: React.FC = () => {
           subtitle: 'Composite Parts',
           description: (
             <>
-            <img
+              <img
                 src="https://static.igem.wiki/teams/5079/writeups/wet-lab/table-5.png"
                 alt="Molecular Switch Components"
                 className="molecular-switch-image"
@@ -249,7 +248,6 @@ const CardSection: React.FC = () => {
       ],
     },
   ];
-
 
   return (
     <Container fluid className="card-container-contribution">
@@ -267,7 +265,7 @@ const CardSection: React.FC = () => {
                 ))}
               </Col>
               <Col xs={4}>
-                <img src={section.image} alt='' style={{ width: '100%', height: 'auto' }} />
+                <img src={section.image} alt={section.title} style={{ width: '100%', height: 'auto' }} />
               </Col>
             </Row>
           </Card.Body>
@@ -276,7 +274,6 @@ const CardSection: React.FC = () => {
     </Container>
   );
 };
-
 
 const BackToTopButton: React.FC = () => {
   const [isVisible, setIsVisible] = useState(false);
