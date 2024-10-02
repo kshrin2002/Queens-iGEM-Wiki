@@ -189,7 +189,7 @@ const CardSection: React.FC = () => {
               
               Below are the forward and reverse primers for alpha synuclein, KLK6, cyclophilin D into pET-28a vector as well as KLK6 into the pNH-TrxT vector. 
               <img
-                  src="https://static.igem.wiki/teams/5079/writeups/wet-lab/table-2.png"
+                  src="https://static.igem.wiki/teams/5079/writeups/wet-lab/table-2-new.png"
                   alt="Molecular Switch Components"
                   className="molecular-switch-image"
                   style={{ width: '100%', height: 'auto', marginTop: '20px' }}
@@ -204,7 +204,7 @@ const CardSection: React.FC = () => {
 
               More details about the design of our molecular switches can be found on the Design page. 
               <img
-                  src="https://static.igem.wiki/teams/5079/writeups/wet-lab/table-3.png"
+                  src="https://static.igem.wiki/teams/5079/writeups/wet-lab/table-3-new.png"
                   alt="Molecular Switch Components"
                   className="molecular-switch-image"
                   style={{ width: '100%', height: 'auto', marginTop: '20px' }}
