@@ -4,9 +4,6 @@
     right: 0;
     margin-left: 15vw; /* Align to the right side */
 }
-p{
-    margin-right: -7rem;
-}
 
 .custom-card {
     border: 5px solid var(--mexired); /* Red border around the card */
