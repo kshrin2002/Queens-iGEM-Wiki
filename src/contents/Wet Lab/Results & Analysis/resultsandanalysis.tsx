@@ -67,9 +67,9 @@ const DesignHeading: React.FC = () => {
 // FOR WRITE UPS CHANGE TITLES AND SIBTITLES ON SIDEBAR AS NEEDED
 const Sidebar: React.FC = () => {
   const sections = [
-    { name: 'LAWS AND POLICIES', image: 'https://static.igem.wiki/teams/5079/rose-logo.png', content: ['iGEM Rules and Policies', 'Institutional Rules and Policies', 'National Rules and Policies'] },
-    { name: 'OUR LAB', image: 'https://static.igem.wiki/teams/5079/rose-logo.png', content: ['Our Lab'] },
-    { name: 'OUR PROJECT', image: 'https://static.igem.wiki/teams/5079/rose-logo.png', content: ['Our Project'] },
+    { name: 'KLK6 Expression and Purification', image: 'https://static.igem.wiki/teams/5079/rose-logo.png', content: ['PCR Amplification of Insert', 'Induction Trials', 'Large Scale Purification'] },
+    { name: 'A-synuclein Expression and Purification', image: 'https://static.igem.wiki/teams/5079/rose-logo.png', content: ['PCR Amplification','Cloning','Transformation','Large Scale Purification'] },
+    { name: 'Molecular Switch Expression and Purification', image: 'https://static.igem.wiki/teams/5079/rose-logo.png', content: ['PCR Amplification','Cloning','Transformation','Large Scale Purification'] },
     { name: 'RISK MANAGEMENT', image: 'https://static.igem.wiki/teams/5079/rose-logo.png', content: ['Identifying Project Risks', 'Anticipating Future Risks', 'Managing Risks'] },
   ];
 
