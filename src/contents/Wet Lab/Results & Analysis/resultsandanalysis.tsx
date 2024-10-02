@@ -38,7 +38,7 @@ const DesignHeading: React.FC = () => {
 const Sidebar: React.FC = () => {
   const sections = [
     { name: 'KLK6 Expression and Purification', image: 'https://static.igem.wiki/teams/5079/rose-logo.png', content: ['PCR Amplification of Insert', 'Induction Trials', 'Large Scale Purification'] },
-    { name: 'A-synuclein Expression and Purification', image: 'https://static.igem.wiki/teams/5079/rose-logo.png', content: ['PCR Amplification','Cloning','Transformation','Large Scale Purification'] },
+    { name: 'A-synuclein Expression and Purification', image: 'https://static.igem.wiki/teams/5079/rose-logo.png', content: ['PCR Amplification','Cloning','Transformation'] },
     { name: 'Molecular Switch Expression and Purification', image: 'https://static.igem.wiki/teams/5079/rose-logo.png', content: ['PCR Amplification','Cloning','Transformation','Large Scale Purification'] },
     { name: 'Enzymatic Tests', image: 'https://static.igem.wiki/teams/5079/rose-logo.png', content: [''] },
   ];
