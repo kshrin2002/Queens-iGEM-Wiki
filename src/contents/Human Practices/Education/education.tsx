@@ -238,17 +238,21 @@ const CardSection: React.FC = () => {
           description: (
             <>
               <p>
-                Lorem Ipsum is simply dummy text of the printing and typesetting
-                industry. Lorem Ipsum has been the industry's standard dummy
-                text ever since the 1500s, when an unknown printer took a galley
-                of type and scrambled it to make a type specimen book. It has
-                survived not only five centuries, but also the leap into
-                electronic typesetting, remaining essentially unchanged. It was
-                popularised in the 1960s with the release of Letraset sheets
-                containing Lorem Ipsum passages, and more recently with desktop
-                publishing software like Aldus PageMaker including versions of
-                Lorem Ipsum
+              QGEM had the privilege of partnering with QSEA (Queen’s Summer Education Academy with Connections Engineering) and Science Quest to deliver educational workshops to children in grades 4- 12. A goal of SynAxis was to provide consistent and quality educational opportunities for younger students in the Kingston community. 
+              Our workshops allowed our team to connect with students in the local community and inspire them about the wonderful world of STEM (science, technology, engineering and math). SynAxis fosters a community of positive collaboration and mentorship.  
+              This summer we delivered 3 unique workshops to students of various science interests and ages. Based on previous QGEM teams from the past, this was our sixth year working with Science Quest and our third year working with Connections Engineering.  
               </p>
+
+              <p>
+              Workshop 1: Science Quest- InnovateHers (Grades 4-8) 
+              In this workshop we utilized the enzyme catalase found naturally in potatoes. Catalase is an enzyme that breaks down hydrogen peroxide (H2O2), which is a harmful but natural compound in living organisms. This enzymatic reaction undergoes the breakdown of hydrogen peroxide to water and oxygen. This means when catalase is added to hydrogen peroxide, bubbles start to form rapidly as H2O2 is being broken down into oxygen. We tested the function of the enzyme catalase at different pHs and different temperatures to find which environment works best! In the picture you can see some of the lovely observations these girls made. We emphasized the importance of documentation in science and labs.  
+              </p>
+
+              <p>
+              Workshop 2: QSEA Senior-Engineering the Human Potential (Grades 9 -11) 
+              In this workshop we explored different types of pills. We taught the students about immediate, delayed and extended release of pills. Delayed pills were the star of the show, they allow drugs to be released where necessary. For example: a pill that is designed for the small intestine may become inactive in the stomach due to the acidic PH. Using a delayed release mechanism would allow the design of the drug to not activate in the stomach and allow the drug to take full effect in the small intestine. We challenged the students to create a delayed release pill with multiple active ingredients that are each released at different times. In the picture you see the students hard at work testing their materials.  
+              </p>
+              
 
               <div
                 style={{
@@ -294,25 +298,34 @@ const CardSection: React.FC = () => {
                     color: "white",
                     marginTop: "35px",
                     marginLeft: "10px",
-                    marginRight: "10px",
+                    marginRight: "300px",
                   }}
                 >
-                  Lorem Ipsum is simply dummy text of the printing and
-                  typesetting industry. Lorem Ipsum has been the industry's
-                  standard dummy text ever since the 1500s, when an unknown
-                  printer took a galley of type and scrambled it to make a type
-                  specimen book.
+                  Workshop 3: Science Quest- Leaders in Training (LIT) Program (Grades 9 -11) 
+                  In this workshop we explored the use of primers in PCR and their importance. Polymerase chain reaction (PCR) is a way to make many copies of a sequence of DNA. This is done in a lab, using an enzyme called DNA polymerase. It is called chain reaction because the result of one cycle is used immediately for the next cycle. We used magnets to demonstrate binding. In the photo it is clear that this student's primer has mismatched pairs which weakens it. 
+                </p>
+
+                <p
+                  style={{
+                    textAlign: "left",
+                    color: "white",
+                    marginTop: "35px",
+                    marginLeft: "10px",
+                    marginRight: "300px",
+                  }}
+                >
+                  QGEM is deeply grateful for all the students and camps that we worked with. We reached the goal of SynAxis, we provided consistent and quality educational opportunities for younger students in the Kingston community. We hope that we have inspired you and the next generation of scientists.  
                 </p>
 
                 <img
-                  src="https://via.placeholder.com/100"
-                  alt="Placeholder"
+                  src="https://static.igem.wiki/teams/5079/writeups/education/apsc/workshop-3.jpg"
+                  alt="Child carrying their experiment from workshop 3"
                   style={{
                     position: "absolute",
-                    bottom: "10px",
+                    bottom: "25px",
                     right: "10px",
-                    width: "200px",
-                    height: "200px",
+                    width: "250px",
+                    height: "250px",
                     borderRadius: "10px",
                   }}
                 />
@@ -323,7 +336,8 @@ const CardSection: React.FC = () => {
         {
           subtitle: "APSC 103",
           description: (
-            <p>
+            <>
+              <p>
               ASPC 103 is the Queen’s University Engineering Design Course that
               partners undergraduate students with clients within the local
               community. This course is centered on a team-based project where
@@ -334,11 +348,30 @@ const CardSection: React.FC = () => {
               worked with the Faculty of Engineering and Applied Science as a
               client to develop a goal for participating undergraduate
               engineering students.
-            </p>
+              </p>
+
+              {/* Embedded PDF centered with top and bottom margins */}
+              <div
+                style={{
+                  display: "flex",
+                  justifyContent: "center",
+                  marginTop: "40px",
+                  marginBottom: "40px",
+                }}
+              >
+                <iframe
+                  src="https://static.igem.wiki/teams/5079/writeups/education/apsc/apsc-103-project-proposal-template-w25.pdf"
+                  width="80%"
+                  height="600px"
+                  style={{ border: "none" }}
+                  title="APSC Project Proposal"
+                ></iframe>
+              </div>
+            </>
           ),
         },
         {
-          subtitle: "Experiencial Learning",
+          subtitle: "Experiential Learning",
           description: (
             <div
               style={{
@@ -371,7 +404,7 @@ const CardSection: React.FC = () => {
               </p>
               <img
                 src="https://static.igem.wiki/teams/5079/headshots/hp/lily-chen.jpg"
-                alt="Placeholder"
+                alt="Lily Chen Headshot"
                 style={{
                   width: "300px",
                   height: "300px",
