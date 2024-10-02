@@ -32,16 +32,9 @@ const OverviewSection = () => {
       >
       <h2>Overview</h2>
       <p>
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-        Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure
-        dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-        proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-      </p>
-      <p>
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-        Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure
-        dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-        proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+      Protein switches are created by fusing protein domains in a way that links their activities. These fusions exhibit switch-like behavior, which is controlled by the presence of a specific ligand (e.g., alpha-synuclein). In this context, the switch comprises an input domain (cyclophilin D) that binds to alpha-synuclein and an output domain (neurosin) whose activity is regulated in response to the binding event in the input domain.  
+      In order to deliver our therapeutic, our team has developed a proof of concept for a spore biotic delivery system. This delivery system brings the molecular switch to the target Enteroendocrine Cells (EECs) in the lumen of the duodenum where the spore will lyse, thereby releasing our molecular switch to our target cells. 
+      Here we present the registry parts associated with our project, that compose our designed switches as well as our theoretical delivery system, through a spore biotic. For more information on the design and mechanisms of action of these parts, please refer to the Design and Engineering pages. 
       </p>
     </section>
   );
@@ -66,10 +59,8 @@ const DesignHeading: React.FC = () => {
 // FOR WRITE UPS CHANGE TITLES AND SIBTITLES ON SIDEBAR AS NEEDED
 const Sidebar: React.FC = () => {
   const sections = [
-    { name: 'LAWS AND POLICIES', image: 'https://static.igem.wiki/teams/5079/rose-logo.png', content: ['iGEM Rules and Policies', 'Institutional Rules and Policies', 'National Rules and Policies'] },
-    { name: 'OUR LAB', image: 'https://static.igem.wiki/teams/5079/rose-logo.png', content: ['Our Lab'] },
-    { name: 'OUR PROJECT', image: 'https://static.igem.wiki/teams/5079/rose-logo.png', content: ['Our Project'] },
-    { name: 'RISK MANAGEMENT', image: 'https://static.igem.wiki/teams/5079/rose-logo.png', content: ['Identifying Project Risks', 'Anticipating Future Risks', 'Managing Risks'] },
+    { name: 'MOLECULAR SWITCH COMPONENTS', image: 'https://static.igem.wiki/teams/5079/rose-logo.png', content: ['Basic parts'] },
+    { name: 'SPORE BIOTIC COMPONENTS', image: 'https://static.igem.wiki/teams/5079/rose-logo.png', content: ['Basic parts','Composite parts'] },
   ];
 
   const [openSection, setOpenSection] = useState<number | null>(null);
@@ -80,11 +71,11 @@ const Sidebar: React.FC = () => {
         {sections.map((section, index) => (
           <li key={index}>
             <div onClick={() => setOpenSection(openSection === index ? null : index)} style={{ cursor: 'pointer', display: 'flex', alignItems: 'center' }}>
-              <img src={section.image} alt={section.name} className="section-image" style={{ marginRight: '8px', width: '40px', height: '40px', objectFit: 'cover' }} />
+              <img src={section.image} alt={section.name} className="section-image" style={{ marginRight: '8px' }} />
               <span>{section.name}</span>
             </div>
             {openSection === index && (
-              <StaggeredDropDown options={section.content} image={section.image} sectionIndex={index} />
+              <StaggeredDropDown options={section.content} sectionIndex={index} />
             )}
           </li>
         ))}
@@ -93,8 +84,7 @@ const Sidebar: React.FC = () => {
   );
 };
 
-
-const StaggeredDropDown = ({ options, image, sectionIndex }: { options: string[]; image: string; sectionIndex: number }) => {
+const StaggeredDropDown = ({ options, sectionIndex }: { options: string[]; sectionIndex: number }) => {
   return (
     <motion.ul
       style={{
@@ -110,7 +100,6 @@ const StaggeredDropDown = ({ options, image, sectionIndex }: { options: string[]
         <Option
           key={index}
           text={option}
-          image={image}
           sectionIndex={sectionIndex}
           sectionPartIndex={index}
         />
@@ -119,7 +108,7 @@ const StaggeredDropDown = ({ options, image, sectionIndex }: { options: string[]
   );
 };
 
-const Option = ({ text, image, sectionIndex, sectionPartIndex }: { text: string, image: string, sectionIndex: number, sectionPartIndex: number }) => {
+const Option = ({ text, sectionIndex, sectionPartIndex }: { text: string, sectionIndex: number, sectionPartIndex: number }) => {
   const handleClick = () => {
     const sectionId = `section-${sectionIndex}-part-${sectionPartIndex}`;
     const sectionElement = document.getElementById(sectionId);
@@ -134,44 +123,33 @@ const Option = ({ text, image, sectionIndex, sectionPartIndex }: { text: string,
     <li
       className="flex items-center gap-2 w-full p-2 text-xs font-medium whitespace-nowrap rounded-md hover:bg-indigo-100 text-slate-700 hover:text-indigo-500 transition-colors cursor-pointer"
       onClick={handleClick}
-      style={{ display: 'flex', alignItems: 'center' }}
     >
-      <img src={image} alt="icon" style={{ marginRight: '8px', width: '30px', height: '30px', objectFit: 'cover' }} />
+      <FiEdit />
       <span>{text}</span>
     </li>
   );
 };
 
-
 // FOR WRIETUPS CHANGE TITLES AND DESCRIPTIONS AS NEEDED. SEE WETLAB/SAFETY FOR REFERENCE
 const CardSection: React.FC = () => {
   const sections = [
     {
-      title: 'TITLE 1',
+      title: 'Molecular Switch Components',
       subsections: [
         {
-          subtitle: 'SUBTITLE 1',
+          subtitle: 'Basic parts',
           description: (
             <>
-
+            Below are our coding sequences including our 12 designed molecular switches, as well as their components - neurosin (KLK6) and cyclophilin D – and the input signal a-synculein. 
+            
+            <img
+                src="https://static.igem.wiki/teams/5079/wet-lab/table_1.png"
+                alt="Molecular Switch Components"
+                className="molecular-switch-image"
+                style={{ width: '100%', height: 'auto', marginTop: '20px' }}
+              />
             </>
           ),
-        },
-        {
-          subtitle: 'SUBTITLE 2',
-          description: (
-            <>
-
-            </>
-          ),
-        },
-        {
-          subtitle: 'SUBTITLE 3',
-          description: (
-            <>
-
-            </>
-          )
         },
       ],
     },
@@ -259,6 +237,7 @@ const CardSection: React.FC = () => {
     </Container>
   );
 };
+
 
 const BackToTopButton: React.FC = () => {
   const [isVisible, setIsVisible] = useState(false);
