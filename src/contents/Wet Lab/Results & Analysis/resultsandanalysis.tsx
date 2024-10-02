@@ -164,7 +164,7 @@ const CardSection: React.FC = () => {
                     height: "400px",
                     bottom: "25px",
                     right: "10px",
-                    width: "500px",
+                    width: "700px",
                     borderRadius: "10px",
                   }}
                 />
@@ -200,7 +200,7 @@ const CardSection: React.FC = () => {
                     height: "400px",
                     bottom: "25px",
                     right: "10px",
-                    width: "500px",
+                    width: "700px",
                     borderRadius: "10px",
                   }}
                 />
@@ -266,7 +266,7 @@ const CardSection: React.FC = () => {
                     height: "400px",
                     bottom: "25px",
                     right: "10px",
-                    width: "500px",
+                    width: "700px",
                     borderRadius: "10px",
                   }}
                 />
@@ -347,7 +347,7 @@ const CardSection: React.FC = () => {
                     height: "400px",
                     bottom: "25px",
                     right: "10px",
-                    width: "500px",
+                    width: "700px",
                     borderRadius: "10px",
                   }}
                 />
@@ -385,7 +385,7 @@ const CardSection: React.FC = () => {
                     height: "400px",
                     bottom: "25px",
                     right: "10px",
-                    width: "500px",
+                    width: "700px",
                     borderRadius: "10px",
                   }}
                 />
@@ -486,7 +486,7 @@ const CardSection: React.FC = () => {
                     height: "400px",
                     bottom: "25px",
                     right: "10px",
-                    width: "500px",
+                    width: "700px",
                     borderRadius: "10px",
                   }}
                 />
@@ -521,7 +521,7 @@ const CardSection: React.FC = () => {
                     height: "400px",
                     bottom: "25px",
                     right: "10px",
-                    width: "500px",
+                    width: "700px",
                     borderRadius: "10px",
                   }}
                 />
@@ -624,17 +624,23 @@ const CardSection: React.FC = () => {
 
             Accordingly, MS 2, MS 9, MS 11, and MS 12 did not show any detectable levels of a-synuclein fragments. This absence could be related to the retention of Cyp-D function within these switches; leading to a steric hindrance effect that prevents C-terminal cleavage. NAC domain cleavage products would have run off the gel – due to the use of a 10% resolving layer. Imaging diffuculties also further hindered fragment detection. We understand that it is possible for some of the switches to have lost their output domain function and thereby their catalytic cleavage properties. However, in this specific case – the absence of fragments is unlikely to reflect a lack of proteolytic activity but rather technical limitations. Future assays before the competition will focus on optimizing gel conditions to address these limitations and improve fragment detection.  
 
-            References:
-
-            Dada, S. T., Toprakcioglu, Z., Cali, M. P., Röntgen, A., Hardenberg, M. C., Morris, O. M., Mrugalla, L. K., Knowles, T. P. J., & Vendruscolo, M. (2024, May 7). Pharmacological inhibition of α-synuclein aggregation within liquid condensates. Nature News. https://www.nature.com/articles/s41467-024-47585-x#:~:text=Expression%20and%20purification%20of%20%CE%B1-synuclein%20The 
-            
-            Powers, A. E., & Patel, D. S. (1970, January 1). Expression and purification of untagged α-synuclein. SpringerLink. https://link.springer.com/protocol/10.1007/978-1-4939-9124-2_20#:~:text=The%20study%20of%20the%20molecular%20events 
-
-            Stephens, A. D., Matak-Vinkovic, D., Fernandez-Villegas, A., & Kaminski Schierle, G. S. (2020, December 8). Purification of recombinant α-synuclein: A comparison of commonly used protocols. Biochemistry. https://www.ncbi.nlm.nih.gov/pmc/articles/PMC7818547/#:~:text=Here,%20we%20compare%20four%20commonly%20used 
-
             </>
           )
         },
+        {
+          subtitle:'References',
+          description:(
+            <>
+            References:
+
+            Dada, S. T., Toprakcioglu, Z., Cali, M. P., Röntgen, A., Hardenberg, M. C., Morris, O. M., Mrugalla, L. K., Knowles, T. P. J., & Vendruscolo, M. (2024, May 7). Pharmacological inhibition of α-synuclein aggregation within liquid condensates. Nature News. https://www.nature.com/articles/s41467-024-47585-x#:~:text=Expression%20and%20purification%20of%20%CE%B1-synuclein%20The 
+
+            Powers, A. E., & Patel, D. S. (1970, January 1). Expression and purification of untagged α-synuclein. SpringerLink. https://link.springer.com/protocol/10.1007/978-1-4939-9124-2_20#:~:text=The%20study%20of%20the%20molecular%20events 
+
+            Stephens, A. D., Matak-Vinkovic, D., Fernandez-Villegas, A., & Kaminski Schierle, G. S. (2020, December 8). Purification of recombinant α-synuclein: A comparison of commonly used protocols. Biochemistry. https://www.ncbi.nlm.nih.gov/pmc/articles/PMC7818547/#:~:text=Here,%20we%20compare%20four%20commonly%20used 
+            </>
+          )
+        }
       ],
     },
   ];
