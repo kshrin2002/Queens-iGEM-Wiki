@@ -525,7 +525,7 @@ export function Entrepreneurship() {
                   </div>
                   <MonthDetails
                     month={selectedMonths[stageIndex]}
-                    description={monthData.description}
+                    description={selectedMonths[description]}
                     active={selectedMonths[stageIndex] === monthData.month}
                   />
                 </div>
