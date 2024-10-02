@@ -154,25 +154,75 @@ const JudgingHeading: React.FC = () => {
 
 const Sidebar: React.FC = () => {
   const sections = [
-    { name: 'Subtitle 1', image: 'https://static.igem.wiki/teams/5079/rose-logo.png', content: ['Section 1', 'Section 2'] },
-    { name: 'Subtitle 2', image: 'https://static.igem.wiki/teams/5079/rose-logo.png', content: ['Section 1', 'Section 2'] },
-    { name: 'Subtitle 3', image: 'https://static.igem.wiki/teams/5079/rose-logo.png', content: ['Section 1', 'Section 2'] },
-    { name: 'Subtitle 4', image: 'https://static.igem.wiki/teams/5079/rose-logo.png', content: ['Section 1', 'Section 2'] },
+    {
+      name: "Students",
+      image: "https://static.igem.wiki/teams/5079/rose-logo.png",
+      content: ["Summer Workshops", "ASPC 103"],
+    },
+    {
+      name: "Community",
+      image: "https://static.igem.wiki/teams/5079/rose-logo.png",
+      content: ["PD Canada Superwalk", "Social Media"],
+    },
+    {
+      name: "Researchers",
+      image: "https://static.igem.wiki/teams/5079/rose-logo.png",
+      content: ["Ethics Handbook"],
+    },
+    {
+      name: "RISK MANAGEMENT",
+      image: "https://static.igem.wiki/teams/5079/rose-logo.png",
+      content: [
+        "Identifying Project Risks",
+        "Anticipating Future Risks",
+        "Managing Risks",
+      ],
+    },
   ];
 
   const [openSection, setOpenSection] = useState<number | null>(null);
 
   return (
-    <div className="sidebar-judging">
+    <div
+      className="sidebar-contributions"
+      style={{
+        position: "sticky",
+        top: "150px",
+        alignSelf: "flex-start",
+      }}
+    >
       <ul>
         {sections.map((section, index) => (
           <li key={index}>
-            <div onClick={() => setOpenSection(openSection === index ? null : index)} style={{ cursor: 'pointer', display: 'flex', alignItems: 'center' }}>
-              <img src={section.image} alt={section.name} className="section-image-judging" style={{ marginRight: '8px' }} />
+            <div
+              onClick={() =>
+                setOpenSection(openSection === index ? null : index)
+              }
+              style={{
+                cursor: "pointer",
+                display: "flex",
+                alignItems: "center",
+              }}
+            >
+              <img
+                src={section.image}
+                alt={section.name}
+                className="section-image"
+                style={{
+                  marginRight: "8px",
+                  width: "40px",
+                  height: "40px",
+                  objectFit: "cover",
+                }}
+              />
               <span>{section.name}</span>
             </div>
             {openSection === index && (
-              <StaggeredDropDown options={section.content} sectionIndex={index} />
+              <StaggeredDropDown
+                options={section.content}
+                image={section.image}
+                sectionIndex={index}
+              />
             )}
           </li>
         ))}
@@ -181,7 +231,8 @@ const Sidebar: React.FC = () => {
   );
 };
 
-const StaggeredDropDown = ({ options, sectionIndex }: { options: string[]; sectionIndex: number }) => {
+
+const StaggeredDropDown = ({ options, image, sectionIndex }: { options: string[]; image: string; sectionIndex: number }) => {
   return (
     <motion.ul
       style={{
@@ -197,6 +248,7 @@ const StaggeredDropDown = ({ options, sectionIndex }: { options: string[]; secti
         <Option
           key={index}
           text={option}
+          image={image}
           sectionIndex={sectionIndex}
           sectionPartIndex={index}
         />
@@ -205,34 +257,30 @@ const StaggeredDropDown = ({ options, sectionIndex }: { options: string[]; secti
   );
 };
 
-const Option = ({ text, sectionIndex, sectionPartIndex }: { text: string, sectionIndex: number, sectionPartIndex: number }) => {
+
+const Option = ({ text, image, sectionIndex, sectionPartIndex }: { text: string, image: string, sectionIndex: number, sectionPartIndex: number }) => {
   const handleClick = () => {
-    // Logic to scroll to the specific section of the card
     const sectionId = `section-${sectionIndex}-part-${sectionPartIndex}`;
     const sectionElement = document.getElementById(sectionId);
     if (sectionElement) {
       const topPosition = sectionElement.getBoundingClientRect().top + window.scrollY;
-      window.scrollTo({ top: topPosition - 100, behavior: 'smooth' });
+      const offset = 100;
+      window.scrollTo({ top: topPosition - offset, behavior: 'smooth' });
     }
   };
 
   return (
-    <motion.li
+    <li
+      className="flex items-center gap-2 w-full p-2 text-xs font-medium whitespace-nowrap rounded-md hover:bg-indigo-100 text-slate-700 hover:text-indigo-500 transition-colors cursor-pointer"
       onClick={handleClick}
-      style={{
-        marginBottom: '10px',
-        cursor: 'pointer',
-        border: '1px solid black',
-        padding: '5px',
-        borderRadius: '5px',
-      }}
-      whileHover={{ scale: 1.05 }}
-      whileTap={{ scale: 0.95 }}
+      style={{ display: 'flex', alignItems: 'center' }}
     >
-      {text}
-    </motion.li>
+      <img src={image} alt="icon" style={{ marginRight: '8px', width: '30px', height: '30px', objectFit: 'cover' }} />
+      <span>{text}</span>
+    </li>
   );
 };
+
 
 const BackToTopButton = () => {
   const [isVisible, setIsVisible] = useState(false);

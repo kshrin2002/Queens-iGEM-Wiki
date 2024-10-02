@@ -77,11 +77,11 @@ const Sidebar: React.FC = () => {
         {sections.map((section, index) => (
           <li key={index}>
             <div onClick={() => setOpenSection(openSection === index ? null : index)} style={{ cursor: 'pointer', display: 'flex', alignItems: 'center' }}>
-              <img src={section.image} alt={section.name} className="section-image" style={{ marginRight: '8px' }} />
+              <img src={section.image} alt={section.name} className="section-image" style={{ marginRight: '8px', width: '40px', height: '40px', objectFit: 'cover' }} />
               <span>{section.name}</span>
             </div>
             {openSection === index && (
-              <StaggeredDropDown options={section.content} sectionIndex={index} />
+              <StaggeredDropDown options={section.content} image={section.image} sectionIndex={index} />
             )}
           </li>
         ))}
@@ -90,7 +90,8 @@ const Sidebar: React.FC = () => {
   );
 };
 
-const StaggeredDropDown = ({ options, sectionIndex }: { options: string[]; sectionIndex: number }) => {
+
+const StaggeredDropDown = ({ options, image, sectionIndex }: { options: string[]; image: string; sectionIndex: number }) => {
   return (
     <motion.ul
       style={{
@@ -106,6 +107,7 @@ const StaggeredDropDown = ({ options, sectionIndex }: { options: string[]; secti
         <Option
           key={index}
           text={option}
+          image={image}
           sectionIndex={sectionIndex}
           sectionPartIndex={index}
         />
@@ -114,7 +116,8 @@ const StaggeredDropDown = ({ options, sectionIndex }: { options: string[]; secti
   );
 };
 
-const Option = ({ text, sectionIndex, sectionPartIndex }: { text: string, sectionIndex: number, sectionPartIndex: number }) => {
+
+const Option = ({ text, image, sectionIndex, sectionPartIndex }: { text: string, image: string, sectionIndex: number, sectionPartIndex: number }) => {
   const handleClick = () => {
     const sectionId = `section-${sectionIndex}-part-${sectionPartIndex}`;
     const sectionElement = document.getElementById(sectionId);
@@ -129,12 +132,14 @@ const Option = ({ text, sectionIndex, sectionPartIndex }: { text: string, sectio
     <li
       className="flex items-center gap-2 w-full p-2 text-xs font-medium whitespace-nowrap rounded-md hover:bg-indigo-100 text-slate-700 hover:text-indigo-500 transition-colors cursor-pointer"
       onClick={handleClick}
+      style={{ display: 'flex', alignItems: 'center' }}
     >
-      <FiEdit />
+      <img src={image} alt="icon" style={{ marginRight: '8px', width: '30px', height: '30px', objectFit: 'cover' }} />
       <span>{text}</span>
     </li>
   );
 };
+
 
 const CardSection: React.FC = () => {
   const sections = [
