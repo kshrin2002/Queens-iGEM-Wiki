@@ -5,7 +5,7 @@ import Carousel from "react-bootstrap/Carousel";
 
 interface MonthlyUpdates {
   month: string;
-  description: string;
+  description:  JSX.Element;
 }
 
 const stagesData: { title: string; months: MonthlyUpdates[] }[] = [
