@@ -286,5 +286,14 @@
     object-fit: cover;
     border-radius: 10px;
   }
+
+  .stage-summary {
+    font-size: 1.2em;
+    margin-bottom: 50px;
+    color: #a6262e;
+    margin-right: 100px;
+    margin-left: 100px;
+  }
+  
   
   
