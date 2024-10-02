@@ -345,7 +345,7 @@ const CardSection: React.FC = () => {
       image: '',
       subsections: [
         {
-          subtitle: 'PCR Amplification',
+          subtitle: 'PCR Amplification for A-syn expression',
           description: (
             <>
             A PCR reaction for a-synuclein was performed with the following conditions: 
