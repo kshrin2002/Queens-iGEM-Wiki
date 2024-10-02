@@ -200,7 +200,7 @@ const timelineData: TimelineItem[] = [
   {
     id: 1,
     name: "Andrew Ashby",
-    image: "https://static.igem.wiki/teams/5079/headshots/hp/andrew-ashby.jpg",
+    image: "https://static.igem.wiki/teams/5079/headshots/hp/12.png",
     description: (
       <>
       <h1 style={{fontSize: '20px', color:'red'}}>Relevance & Objective</h1>
@@ -288,8 +288,8 @@ const timelineData: TimelineItem[] = [
   },
   {
     id: 4,
-    name: "Ben Strecher",
-    image: "https://static.igem.wiki/teams/5079/headshots/hp/ben-stecher-photo-1.jpg",
+    name: "Ben Stecher",
+    image: "https://static.igem.wiki/teams/5079/headshots/hp/11.png",
     description: (
       <>
       <p>
@@ -483,7 +483,7 @@ const timelineData: TimelineItem[] = [
   {
     id: 10,
     name: "Dr Perter Davies",
-    image: "https://static.igem.wiki/teams/5079/headshots/hp/dr-peter-davies.jpg",
+    image: "https://static.igem.wiki/teams/5079/headshots/hp/13.png",
     description: (
       <>
       <h1 style={{fontSize: '20px', color:'red'}}>Relevance & Objective</h1>
@@ -589,7 +589,7 @@ const timelineData: TimelineItem[] = [
   {
     id: 14,
     name: "Graeme Howe",
-    image: "https://static.igem.wiki/teams/5079/headshots/hp/graeme-howe.webp",
+    image: "https://static.igem.wiki/teams/5079/headshots/hp/14.png",
     description: (
       <>
       <h1 style={{fontSize: '20px', color:'red'}}>Relevance & Objective</h1>
@@ -937,6 +937,96 @@ insights also led us to further investigate REM sleep disorder / loss of smell a
 
 indicators of sporadic PD development. 
       </p>
+      </>
+    )
+  },
+  {
+    id: 24,
+    name: "Naila Kuhlmann",
+    image: "https://static.igem.wiki/teams/5079/headshots/hp/naila-kuhlmann-photo.webp",
+    description: (
+      <>
+      <p>
+      Naila is a postdoctoral student at McGill focusing on an arts-based knowledge translation of Parkinson’s disease. She obtained her Ph.D. in Neuroscience from the University of British Columbia, in which she studied the neurobiology of Parkinson's disease in a genetic mouse model. In meeting with, Naila, we discussed her research in Parkinson’s disease both the mouse model and knowledge translation.  
+      </p>
+      <h1 style={{fontSize: '20px', color:'red'}}>Relevance & Objective</h1>
+      <p>
+      We met with Naila to learn about her Parkinson’s research, specifically her knowledge translation. With how complicated our project is, we thought it would be beneficial to learn from her to ensure we have effective communication.  
+      </p>
+      <h1 style={{fontSize: '20px', color:'red'}}>Stakeholder Insights</h1>
+      <p>During the interview, Naila described how she felt disconnected from the human aspect of Parkinson’s disease. She wanted to find a way to incorporate patient perspective in her work. Her work combines science and emotional lived experiences. </p>
+
+<p>After explaining our project to Naila she helped us to brainstorm ways we could better communicate our findings. Some of the ideas we came up with were using dance, using cartoons and making our website easier for Parkinson’s patients to use. Overall Naila helped us to tailor our project findings to all people, not just scientists.  </p>
+      <h1 style={{fontSize: '20px', color:'red'}}>Application Insights</h1> 
+      <p>
+      We incorporated Naila’s insights into our plans for how we would present our findings. We made it a goal of ours to incorporate patient perspective. Based on Naila’s advice, we began to research how to make our website more accessible for Parkinson's patients
+      </p>
+      <h1 style={{fontSize: '20px', color:'red'}}>Future Directions</h1>
+      <p>
+      From this interview, we made it a goal to look at other ways to utilize art to communicate. We came across Barbara Salsberg Matthews in our research who will be discussed in future interviews! 
+      </p>
+      </>
+    )
+  },
+  {
+    id: 25,
+    name: "",
+    image: "https://static.igem.wiki/teams/5079/headshots/hp/10.png",
+    description: (
+      <>
+      <p>
+      Kevin is the CEO and co-founder of Hyasynth Bio, an iGEM startup focused on opening up the potential of cannabis-derived medicine, by replacing plant growth with engineered microorganisms. This meeting aimed to gain insights on the viability and commercialization of SynAxis and advice for launching a synthetic biology startup, as an iGEM team. 
+      </p>
+      <h1 style={{fontSize: '20px', color:'red'}}>Relevance & Objective</h1>
+      <p>
+      Kevin’s expertise in synthetic biology and experience in building Hyasynth Bio from the lab to the market is highly relevant to QGEM and SynAxis. The objective is to understand the potential market for synthetic biology products, steps for commercialization, and strategies for scaling the production of SynAxis while maintaining accessibility and affordability for PD patients. 
+      </p>
+      <h1 style={{fontSize: '20px', color:'red'}}>Stakeholder Insights</h1>
+      <p>Kevin emphasized the importance of thorough market research when considering the commercialization of SynAxis. He discussed the complexities of the current market for synthetic biology products, particularly for diseases like PD, where patients often require multiple medications. A detailed market analysis should consider factors like patient demographics, the income structures of individuals affected by PD, and the healthcare systems in different countries. It’s crucial to understand how SynAxis fits within the broader medication regimen for PD patients and whether it will be a standalone treatment or used alongside other therapies. Understanding these elements is key to assessing the product's market potential and positioning it for success. </p>
+
+<p>Regarding the challenges of launching a synthetic biology startup, Kevin highlighted that every stage presents significant obstacles, from fundraising to committing to a solution. He noted that raising capital is often less challenging than staying committed to the process of bringing a product to market. One of the primary hurdles is building the right expertise and assembling a team with the necessary skills. Startups must decide whether to develop capabilities in-house or outsource them to external partners, especially in areas like intellectual property, where the patenting process is ongoing and requires a deep understanding of international regulations. Kevin stressed the importance of working with experienced IP lawyers to protect the product globally. </p>
+
+<p>In terms of manufacturing strategy, Kevin explained that bringing a synthetic biology product from lab to market can take several years. It involves understanding the scalability of the product and ensuring that the manufacturing process can be optimized for patient accessibility, particularly in lower- and middle-income countries. He advised that startups begin with high-level assumptions about their ideal manufacturing process and adjust based on real-world scalability assessments. The goal is to make the therapeutic accessible to as many patients as possible while keeping production costs manageable. </p>
+
+<p>Kevin also encouraged QGEM team to incorporate creativity and storytelling into their work, emphasizing the importance of making the project stand out both in the competition and in the marketplace. Kevin suggested that engaging patients through innovative methods, such as art or lived experience, could create a deeper connection with the PD community. He, then referred to us to his friend, Naila Kuhlmann, a researcher who works with patients using arts-based knowledge translation. </p>
+      <h1 style={{fontSize: '20px', color:'red'}}>Application Insights</h1> 
+      <p>SynAxis should focus on a thorough market analysis, considering patient demographics and affordability. Developing a detailed pitch for investors is also essential, including financial projections and cost analysis for the therapeutic. </p>
+
+<p>A manufacturing plan will start with high-level assumptions and be refined based on scalability. QGEM will consider both low- and middle-income country accessibility when designing the production process. </p>
+
+<p>Incorporating more innovative, patient-centered approaches, such as art and lived experience, could increase SynAxis's impact. </p>
+      <h1 style={{fontSize: '20px', color:'red'}}>Future Directions</h1>
+      <p>Continue market research to refine SynAxis’s commercialization strategy. </p>
+
+<p>Explore collaborations with social impact organizations to build a more patient-centered approach. </p>
+
+<p>Conduct scalability assessments early to optimize manufacturing for cost-effective, widespread distribution. </p>
+      </>
+    )
+  },
+  {
+    id: 26,
+    name: "Dr Martin McKowen",
+    image: "/api/placeholder/100/100",
+    description: (
+      <>
+      <h1 style={{fontSize: '20px', color:'red'}}>Relevance & Objective</h1>
+      <h1 style={{fontSize: '20px', color:'red'}}>Stakeholder Insights</h1>
+      <h1 style={{fontSize: '20px', color:'red'}}>Application Insights</h1> 
+      <h1 style={{fontSize: '20px', color:'red'}}>Future Directions</h1>
+      </>
+    )
+  },
+  {
+    id: 27,
+    name: "Dr Martin McKowen",
+    image: "/api/placeholder/100/100",
+    description: (
+      <>
+      <h1 style={{fontSize: '20px', color:'red'}}>Relevance & Objective</h1>
+      <h1 style={{fontSize: '20px', color:'red'}}>Stakeholder Insights</h1>
+      <h1 style={{fontSize: '20px', color:'red'}}>Application Insights</h1> 
+      <h1 style={{fontSize: '20px', color:'red'}}>Future Directions</h1>
       </>
     )
   },
