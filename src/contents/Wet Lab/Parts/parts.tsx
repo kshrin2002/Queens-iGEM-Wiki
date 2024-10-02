@@ -173,7 +173,6 @@ const CardSection: React.FC = () => {
   const sections = [
     {
       title: 'Molecular Switch Components',
-      image: 'https://static.igem.wiki/teams/5079/rose-logo.png', // Add image here
       subsections: [
         {
           subtitle: 'Basic parts',
@@ -217,7 +216,6 @@ const CardSection: React.FC = () => {
     },
     {
       title: 'Spore Biotic Components',
-      image: 'https://static.igem.wiki/teams/5079/rose-logo.png', // Add image here
       subsections: [
         {
           subtitle: 'Basic Parts',
