@@ -486,17 +486,14 @@ const CardSection: React.FC = () => {
       title: 'Molecular Switch Expression and Purification',
       subsections: [
         {
+
+          subtitle: 'PCR Amplification',
           description: (
             <>
             The cloning strategy for the switches was identical to KLK6 – which showed us great success in the past. The sequence for all 12 of the molecular switches (MS) were obtained as a gene fragment with no prefix or suffix portions.  Despite our previous experiments with KLK6 showing no expression within the pET-28a vector, we still decided to clone all MS sequences into the MCS of the pET-28a vector upstream to a C-terminal His-tag. We believed that the Cyclophilin D component of the MS would act as a soluble tag, like Trxt, and allows time for correct folding of the KLK6 domain – thereby increasing expression of the switch.  
 
             Despite the 5’ and 3’ nucleotides of each MS being derived from Cyclophilin D, due to codon optimization the sequence of each MS differed from each other (even though the amino acid sequence was identical for the first and last 10 amino acids). Therefore, we could not use the same forward and reverse primers for each MS. As such, we designed 24 primers (forward and reverse) to introduce specific overhangs onto the sequence of each MS for subsequent HiFi cloning. The length of the genomic sequence portion of the primers ranged from 15-22 nucleotides (nt) and the melting temperatures ranged from 58°C - 66°C. The melting temperatures were specific for the Q5 polymerase – which we intended to use for our PCR experiments. 
-            </>
-          ),
-
-          subtitle: 'PCR Amplification',
-          description: (
-            <>
+            
             A PCR reaction for the MS was performed with the following conditions: 
 
             <img
