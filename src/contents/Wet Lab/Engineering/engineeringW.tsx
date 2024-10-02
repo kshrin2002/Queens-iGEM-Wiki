@@ -53,6 +53,14 @@ const pageContent: PageSet = {
         </>
       ),
     },
+    {
+      title: "References",
+      content: (
+        <>
+        <p>References Go here</p>
+        </>
+      )
+    }
   ],
   1: [
     {
@@ -207,6 +215,14 @@ const pageContent: PageSet = {
         </>
       ),
     },
+    {
+      title: "References",
+      content: (
+        <>
+        <p>References Go here</p>
+        </>
+      )
+    }
   ],
   2: [
     {
@@ -285,6 +301,14 @@ const pageContent: PageSet = {
         </>
       ),
     },
+    {
+      title: "References",
+      content: (
+        <>
+        <p>References Go here</p>
+        </>
+      )
+    }
   ],
   3: [
     {
@@ -382,6 +406,14 @@ const pageContent: PageSet = {
         </>
       ),
     },
+    {
+      title: "References",
+      content: (
+        <>
+        <p>References Go here</p>
+        </>
+      )
+    }
   ],
   4: [
     {
@@ -441,6 +473,14 @@ const pageContent: PageSet = {
         </>
       ),
     },
+    {
+      title: "References",
+      content: (
+        <>
+        <p>References Go here</p>
+        </>
+      )
+    }
   ],
 };
 
@@ -451,11 +491,11 @@ export function EngineeringW() {
   const [scrollDirection, setScrollDirection] = useState<'top' | 'bottom'>('bottom');
 
   const pageSets = [
-    { id: 0, totalPages: 2, label: 'Section 1' },
-    { id: 1, totalPages: 8, label: 'Section 2' },
-    { id: 2, totalPages: 4, label: 'Section 3' },
-    { id: 3, totalPages: 5, label: 'Section 4' },
-    { id: 4, totalPages: 3, label: 'Section 5' },
+    { id: 0, totalPages: 3, label: 'Section 1' },
+    { id: 1, totalPages: 9, label: 'Section 2' },
+    { id: 2, totalPages: 5, label: 'Section 3' },
+    { id: 3, totalPages: 6, label: 'Section 4' },
+    { id: 4, totalPages: 4, label: 'Section 5' },
   ];
 
   const totalPages = pageContent[currentPageSet].length;

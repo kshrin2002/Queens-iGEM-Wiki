@@ -1,0 +1,36 @@
+.stories-wrapper{
+    margin: 2rem;
+}
+
+.story{
+    max-width: 60vw;
+    padding: 2rem;
+    color: var(--venetianred)
+}
+
+.story-title{
+    color: var(--mexired);
+}
+
+.story-1, .story-2{
+    display: flex;
+}
+
+.quote-container{
+    display: flex;
+    flex-direction: column;
+}
+.quote-container img{
+    margin-top: 3rem;
+    height: 500px;
+    border-radius: 5px;
+}
+
+.quote{
+    text-align: center;
+    padding-top: 2rem;
+}
+
+.conclusion-ps{
+    padding: 5rem;
+}

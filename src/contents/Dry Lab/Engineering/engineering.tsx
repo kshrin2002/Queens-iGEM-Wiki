@@ -53,6 +53,14 @@ const pageContent: PageSet = {
         </>
       ),
     },
+    {
+      title: "References",
+      content: (
+        <>
+        <p>References Go here</p>
+        </>
+      )
+    }
   ],
   1: [
     {
@@ -207,6 +215,14 @@ const pageContent: PageSet = {
         </>
       ),
     },
+    {
+      title: "References",
+      content: (
+        <>
+        <p>References Go here</p>
+        </>
+      )
+    }
   ],
   2: [
     {
@@ -285,6 +301,14 @@ const pageContent: PageSet = {
         </>
       ),
     },
+    {
+      title: "References",
+      content: (
+        <>
+        <p>References Go here</p>
+        </>
+      )
+    }
   ],
   3: [
     {
@@ -382,6 +406,14 @@ const pageContent: PageSet = {
         </>
       ),
     },
+    {
+      title: "References",
+      content: (
+        <>
+        <p>References Go here</p>
+        </>
+      )
+    }
   ],
   4: [
     {
@@ -441,6 +473,14 @@ const pageContent: PageSet = {
         </>
       ),
     },
+    {
+      title: "References",
+      content: (
+        <>
+        <p>References Go here</p>
+        </>
+      )
+    }
   ],
 };
 
