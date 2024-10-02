@@ -95,9 +95,12 @@
   background-color: #f0f0f0; 
   border: solid;
   border-width: 5px;
+  padding: 1rem;
+  font-size: 20px;
   border-radius: 20px;
   border-color: var(--venetianred);
   display: flex;
+  flex-direction: column;
   transition: transform 0.3s ease; 
 }
 
