@@ -1,248 +1,368 @@
-import React, { useState } from 'react';
-import { Button } from 'react-bootstrap';
+import React, { useState, useEffect } from "react";
+import "./entrepreneurship.css";
+import Button from "react-bootstrap/esm/Button";
+import Carousel from "react-bootstrap/Carousel";
+
+interface MonthlyUpdates {
+  month: string;
+  description: string;
+}
+
+const stagesData: { title: string; months: MonthlyUpdates[] }[] = [
+  {
+    title: "Pre-Seed Stage",
+    months: [
+      {
+        month: "Pitch Deck",
+        description:
+          "A detailed presentation to showcase your business idea to potential investors.",
+      },
+      {
+        month: "Market Analysis",
+        description:
+          "An analysis of market trends, customer needs, and potential competitors.",
+      },
+      {
+        month: "Competitor Landscape Matrix",
+        description:
+          "A matrix that maps out competitors and their relative strengths.",
+      },
+      {
+        month: "Skill Gap Analysis",
+        description:
+          "Identifying key skills needed in your team and areas for improvement.",
+      },
+      {
+        month: "Advisory Board Profiles",
+        description:
+          "Profiles of potential advisors to help guide your business.",
+      },
+      {
+        month: "PESTEL Analysis",
+        description:
+          "A framework to analyze the Political, Economic, Social, Technological, Environmental, and Legal factors.",
+      },
+      {
+        month: "SWOT Analysis",
+        description:
+          "An analysis of your business’s Strengths, Weaknesses, Opportunities, and Threats.",
+      },
+    ],
+  },
+  {
+    title: "Seed Stage",
+    months: [
+      {
+        month: "Lean Canvas",
+        description:
+          "A one-page business plan template focusing on problems, solutions, and metrics.",
+      },
+      {
+        month: "Business Plan",
+        description:
+          "A detailed plan covering strategy, financials, and operational forecasts.",
+      },
+      {
+        month: "IP Protection Strategy",
+        description: "A strategy for protecting your intellectual property.",
+      },
+      {
+        month: "Risk Analysis Report",
+        description:
+          "A report that outlines potential risks and mitigation strategies.",
+      },
+    ],
+  },
+  {
+    title: "Early Stage",
+    months: [
+      {
+        month: "Preclinical Development Plan",
+        description:
+          "A plan for the preclinical testing phases of drug development.",
+      },
+    ],
+  },
+  {
+    title: "Growth Stage",
+    months: [
+      {
+        month: "Clinical Timeline Trials",
+        description: "The projected timeline for conducting clinical trials.",
+      },
+      {
+        month: "Regulatory Strategy Roadmap",
+        description:
+          "A roadmap for obtaining regulatory approval in various markets.",
+      },
+    ],
+  },
+  {
+    title: "Late Stage",
+    months: [
+      {
+        month: "EManufacturing Plan",
+        description: "A detailed plan for scaling manufacturing operations.",
+      },
+      {
+        month: "Projected Financial Statements",
+        description:
+          "Financial projections showing expected revenue and costs.",
+      },
+    ],
+  },
+];
 
 export function Entrepreneurship() {
+  const [selectedMonths, setSelectedMonths] = useState<(string | null)[]>(
+    Array(stagesData.length).fill(null)
+  );
+
+  const [isModalVisible, setModalVisible] = useState(false);
+
+  const handleMonthClick = (stageIndex: number, month: string) => {
+    setSelectedMonths((prevSelectedMonths) =>
+      prevSelectedMonths.map((selectedMonth, index) =>
+        index === stageIndex
+          ? selectedMonth === month
+            ? null
+            : month
+          : selectedMonth
+      )
+    );
+  };
+
+  const handleBioImpactClick = () => {
+    setModalVisible(true);
+  };
+
+  const closeModal = () => {
+    setModalVisible(false);
+  };
+
   return (
-    <>
-      <EntrepreneurshipHeading />
+    <div className="experiments-container">
+      <DesignHeading />
       <OverviewSection />
-      <Timeline />
-      <ReferenceSection />
+      <div className="content">
+        {stagesData.map((stage, stageIndex) => (
+          <div key={stage.title}>
+            <h2 className="pills-section-header">{stage.title}</h2>
+            <MonthList
+              monthsData={stage.months}
+              onMonthClick={(month) => handleMonthClick(stageIndex, month)}
+              selectedMonth={selectedMonths[stageIndex]}
+            />
+            <div className="month-list">
+              {stage.months.map((monthData) => (
+                <div
+                  key={monthData.month}
+                  className={`month-item ${selectedMonths[stageIndex] === monthData.month ? "active" : ""}`}
+                >
+                  <div
+                    className={`month-label ${selectedMonths[stageIndex] === monthData.month ? "active" : ""}`}
+                    onClick={() =>
+                      handleMonthClick(stageIndex, monthData.month)
+                    }
+                  >
+                    {monthData.month.toUpperCase()}
+                  </div>
+                  <MonthDetails
+                    month={selectedMonths[stageIndex]}
+                    description={monthData.description}
+                    active={selectedMonths[stageIndex] === monthData.month}
+                  />
+                </div>
+              ))}
+            </div>
+          </div>
+        ))}
+
+        {/* BioImpact Challenge Section */}
+        <div className="bioimpact-section">
+          <Button className="bioimpact-button" onClick={handleBioImpactClick}>
+            The BioImpact Challenge
+          </Button>
+        </div>
+
+        {/* Modal Component */}
+        {isModalVisible && (
+          <div className="modal-overlay">
+            <div className="bioimpact-modal">
+              <div className="modal-header">BioImpact Challenge</div>
+              <div className="modal-paragraph">
+                Welcome to the BioImpact Challenge! Here you will test your
+                knowledge in biotech innovation and learn new skills to help
+                scale your business.
+              </div>
+              {/* Photo Carousel */}
+              <Carousel>
+                <Carousel.Item>
+                  <img
+                    className="d-block w-100 carousel-img"
+                    src="https://via.placeholder.com/150"
+                    alt="First slide"
+                  />
+                  <Carousel.Caption>
+                    <h3>First slide label</h3>
+                    <p>
+                      Nulla vitae elit libero, a pharetra augue mollis interdum.
+                    </p>
+                  </Carousel.Caption>
+                </Carousel.Item>
+                <Carousel.Item>
+                  <img
+                    className="d-block w-100 carousel-img"
+                    src="https://via.placeholder.com/150"
+                    alt="Second slide"
+                  />
+                  <Carousel.Caption>
+                    <h3>Second slide label</h3>
+                    <p>
+                      Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                    </p>
+                  </Carousel.Caption>
+                </Carousel.Item>
+                <Carousel.Item>
+                  <img
+                    className="d-block w-100 carousel-img"
+                    src="https://via.placeholder.com/150"
+                    alt="Third slide"
+                  />
+                  <Carousel.Caption>
+                    <h3>Third slide label</h3>
+                    <p>
+                      Praesent commodo cursus magna, vel scelerisque nisl
+                      consectetur.
+                    </p>
+                  </Carousel.Caption>
+                </Carousel.Item>
+              </Carousel>
+
+              <Button className="close-button" onClick={closeModal}>
+                Close
+              </Button>
+            </div>
+          </div>
+        )}
+      </div>
       <BackToTopButton />
-    </>
+    </div>
   );
 }
 
-const OverviewSection = () => {
-  return (
-    <section
-      style={{
-        backgroundColor: '#FE9BA1',
-        color: 'white',
-        padding: '20px',
-        marginTop: '100px',
-        width: '100%',
-        height: '350px',
-        marginBottom: '100px',
-      }}
-    >
-      <h2>Overview</h2>
-      <p>
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
-        labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco
-        laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in
-        voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat
-        cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-      </p>
-      <p>
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
-        labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco
-        laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in
-        voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat
-        cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-      </p>
-    </section>
-  );
-};
+// Component for displaying the list of months
+interface MonthListProps {
+  monthsData: MonthlyUpdates[];
+  onMonthClick: (month: string) => void;
+  selectedMonth: string | null;
+}
 
-const EntrepreneurshipHeading: React.FC = () => {
+const MonthList: React.FC<MonthListProps> = ({
+  monthsData,
+  onMonthClick,
+  selectedMonth,
+}) => {
   return (
-    <div style={{ textAlign: 'center', marginTop: '138px' }}>
-      <h1 style={{ fontSize: '5em', color: '#590000', fontWeight: 'bold', letterSpacing: '2px' }}>
-        ENTREPRENEURSHIP
-      </h1>
+    <div className="left-bar">
+      <div className="simple-month-list">
+        {monthsData.map((monthData) => (
+          <div
+            key={monthData.month}
+            className={`simple-month-label ${selectedMonth === monthData.month ? "active" : ""}`}
+            onClick={() => onMonthClick(monthData.month)}
+          >
+            {monthData.month.toUpperCase()}
+          </div>
+        ))}
+      </div>
     </div>
   );
 };
 
-const Timeline: React.FC = () => {
-  const stages = [
-    'PRE-SEED STAGE',
-    'SEED STAGE',
-    'EARLY STAGE',
-    'GROWTH STAGE',
-    'LATE STAGE'
-  ];
+// Component for displaying details about a selected month
+interface MonthDetailsProps {
+  month: string | null;
+  description: string;
+  active: boolean;
+}
 
-  const [selectedStage, setSelectedStage] = useState<string | null>(null);
-  const [isAnimating, setIsAnimating] = useState(false);
-  const [boxStyle, setBoxStyle] = useState({
-    width: '150px',
-    height: '50px',
-    padding: '5px',
-  });
-  const [boxPosition, setBoxPosition] = useState<'left' | 'right'>('right'); // Track left or right
-
-  const handleStageClick = (stage: string) => {
-    if (isAnimating) return;
-
-    const index = stages.indexOf(stage);
-    const isEvenStage = index % 2 === 1; // Even stage check (1-based index)
-    const position = isEvenStage ? 'left' : 'right';
-
-    if (selectedStage && selectedStage !== stage) {
-      setIsAnimating(true);
-      setBoxStyle(prev => ({ ...prev, height: '80px', padding: '5px' }));
-      setTimeout(() => {
-        setBoxStyle(prev => ({ ...prev, width: '80px' }));
-        setTimeout(() => {
-          openBox(stage, position);
-        }, 300);
-      }, 300);
-    } else if (selectedStage === stage) {
-      closeBox();
-    } else {
-      openBox(stage, position);
-    }
-  };
-
-  const openBox = (stage: string, position: 'left' | 'right') => {
-    setSelectedStage(stage);
-    setIsAnimating(true);
-    setBoxPosition(position); // Set box to open on the left or right side
-
-    // Reverting back to the original box size
-    setBoxStyle(prev => ({ ...prev, width: '150px', height: '50px' })); 
-    setTimeout(() => {
-      setBoxStyle(prev => ({ ...prev, width: '300px', height: '100px' })); // Updated width and height
-      setTimeout(() => setIsAnimating(false), 300);
-    }, 300);
-  };
-
-  const closeBox = () => {
-    setIsAnimating(true);
-    setBoxStyle(prev => ({ ...prev, height: '30px', padding: '5px' }));
-    setTimeout(() => {
-      setBoxStyle(prev => ({ ...prev, width: '80px' }));
-      setTimeout(() => {
-        setSelectedStage(null);
-        setIsAnimating(false);
-      }, 300);
-    }, 300);
-  };
-
+const MonthDetails: React.FC<MonthDetailsProps> = ({
+  description,
+  active,
+}) => {
   return (
-    <div style={{ position: 'relative', height: '100vh' }}>
-      <div style={{ position: 'relative', display: 'flex', justifyContent: 'center', alignItems: 'center', marginBottom: '20px' }}>
-        <h1 style={{ fontSize: '3.5em', margin: '0', color: '#590000' }}>Timeline</h1>
-        <div
-          style={{
-            position: 'absolute',
-            top: '50%',
-            left: 'calc(50% + 120px)',
-            right: '0',
-            height: '6px',
-            backgroundColor: '#590000',
-            transform: 'translateY(-50%)',
-          }}
-        />
-      </div>
-
-      <div
-        style={{
-          position: 'absolute',
-          left: '50%',
-          transform: 'translateX(-50%)',
-          top: '12vh',
-          width: '6px',
-          height: '90vh',
-          backgroundColor: '#590000',
-        }}
-      >
-        {stages.map((stage, index) => (
-          <button
-            key={index}
-            onClick={() => handleStageClick(stage)}
-            style={{
-              position: 'absolute',
-              left: '50%',
-              transform: 'translateX(-50%)',
-              top: `${index * 20}vh`, // Adjust the spacing based on the number of stages
-              backgroundColor: selectedStage === stage ? '#a00000' : '#590000',
-              color: '#fff',
-              padding: '10px 30px', // Adjusted padding for a larger button
-              borderRadius: '25px',
-              fontSize: '1.5em', // Adjusted font size
-              fontWeight: 'bold',
-              textAlign: 'center',
-              width: '120px', // Adjusted width
-              border: 'none',
-              cursor: 'pointer',
-            }}
-          >
-            {stage}
-          </button>
-        ))}
-      </div>
-
-      {selectedStage && (
-        <div
-          style={{
-            position: 'absolute',
-            top: '20vh',
-            // Set box on the left or right of the timeline based on the stage
-            left: boxPosition === 'right' ? 'calc(50% + 120px)' : 'auto',
-            right: boxPosition === 'left' ? 'calc(50% + 120px)' : 'auto',
-            backgroundColor: '#fff',
-            border: '2px solid #590000',
-            borderRadius: '8px',
-            boxShadow: '0px 4px 12px rgba(0, 0, 0, 0.1)',
-            overflow: 'hidden',
-            ...boxStyle,
-            transition: 'width 0.3s ease, height 0.3s ease, padding 0.3s ease',
-            zIndex: 2,
-          }}
-        >
-          <h2 style={{ margin: '0', color: '#590000' }}>{selectedStage}</h2>
-          <p>Details about {selectedStage} go here.</p>
-          <button onClick={closeBox} style={{ marginTop: '10px', backgroundColor: '#590000', color: '#fff', border: 'none', padding: '10px 20px', cursor: 'pointer' }}>Close</button>
+    <div className="month-details">
+      {active ? (
+        <div className="month-details-card">
+          <p>{description}</p>
         </div>
+      ) : (
+        <div className="no-updates">No updates available.</div>
       )}
     </div>
   );
 };
 
-const ReferenceSection = () => {
-  return (
-    <section
-      style={{
-        backgroundColor: '#FE9BA1',
-        color: 'white',
-        padding: '20px',
-        marginTop: '100px',
-        width: '100%',
-        height: '350px',
-        marginBottom: '100px',
-      }}
-    >
-      <h2>References</h2>
-    </section>
-  );
-};
-
+// Back to Top Button Component
 const BackToTopButton: React.FC = () => {
-  const scrollToTop = () => {
-    window.scrollTo({
-      top: 0,
-      behavior: 'smooth',
-    });
+  const [isVisible, setIsVisible] = useState(false);
+  const handleScroll = () => {
+    setIsVisible(window.scrollY > 300);
   };
-
+  useEffect(() => {
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
+  const scrollToTop = () => {
+    window.scrollTo({ top: 0, behavior: "smooth" });
+  };
   return (
     <Button
+      className={`button ${isVisible ? "visible" : ""}`}
+      variant="custom"
       onClick={scrollToTop}
-      style={{
-        position: 'fixed',
-        bottom: '20px',
-        right: '20px',
-        backgroundColor: '#590000',
-        color: '#fff',
-      }}
     >
-      Back to Top
+      ↑
     </Button>
   );
 };
 
+// Overview and Design Heading Components
+const OverviewSection = () => (
+  <section
+    style={{
+      backgroundColor: "#FE9BA1",
+      color: "white",
+      padding: "20px",
+      marginTop: "100px",
+      width: "100%",
+      height: "350px",
+      marginBottom: "100px",
+    }}
+  >
+    <h2>Overview</h2>
+    <p>
+      Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod
+      tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim
+      veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
+      commodo consequat.
+    </p>
+  </section>
+);
+
+const DesignHeading = () => (
+  <div
+    style={{
+      color: "#590000",
+      fontWeight: "bold",
+      letterSpacing: "2px",
+      textAlign: "center",
+      marginTop: "100px",
+    }}
+  >
+    <h1 style={{ fontSize: "9em" }}>Entrepreneurship</h1>
+  </div>
+);
 
 export default Entrepreneurship;
