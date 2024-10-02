@@ -286,6 +286,7 @@ const CardSection: React.FC = () => {
                   specimen book.
                 </p>
 
+                {/* Photo at the bottom-right of the rectangle */}
                 <img
                   src="https://via.placeholder.com/100"
                   alt="Placeholder"
@@ -316,25 +317,25 @@ const CardSection: React.FC = () => {
             <div
               style={{
                 display: "flex",
-                justifyContent: "space-between",
+                justifyContent: "space-between", // Align text and image
               }}
             >
               <p
                 style={{
-                  maxWidth: "calc(100% - 170px)",
-                  marginRight: "20px",
+                  maxWidth: "calc(100% - 170px)", // Prevent text from exceeding 170px from right
+                  marginRight: "20px", // Add a little spacing between text and image
                 }}
               >
                 QGEM partnered with Queen’s University's Smith School of Business to provide their students with an experiential learning experience as part of their step towards a Certificate in Social Impact. This certificate aims to provide undergraduate Queen’s University Commerce students with the networks and knowledge needed to be a leader in modern business, teaching them about social innovation, entrepreneurship, environmental sustainability, social finance, impact investing, and impact measurement.
                 The goal of this program is to produce business leaders who are conscientious and committed to social impact. QGEM collaborated with undergraduate student, Lily Chen, to produce the 2024 SynAxis Business Plan. Through weekly meetings, the human practices team provided feedback to Lily on the business plan and worked together to identify what deliverables needed to be met in order to realize SynAxis’ full entrepreneurial potential. 
               </p>
               <img
-                src="https://static.igem.wiki/teams/5079/headshots/hp/lily-chen.jpg"
+                src="https://static.igem.wiki/teams/5079/headshots/hp/lily-chen.jpg" // Replace with actual image URL
                 alt="Placeholder"
                 style={{
                   width: "300px",
                   height: "300px",
-                  borderRadius: "15px",
+                  borderRadius: "15px", // Optional: to slightly round the corners
                 }}
               />
             </div>
@@ -351,6 +352,7 @@ const CardSection: React.FC = () => {
           ),
         },
 
+        // Another photo carousel placed after the Social Media section
         {
           description: (
             <Carousel
@@ -365,33 +367,33 @@ const CardSection: React.FC = () => {
               <Carousel.Item>
                 <img
                   className="d-block"
-                  src="https://static.igem.wiki/teams/5079/writeups/education/tea-room/cinapple-cider-poster.png"
+                  src="https://static.igem.wiki/teams/5079/writeups/education/tea-room/cinapple-cider-poster.png" // Adjust the size here
                   alt="First slide"
-                  style={{ maxWidth: "80%", height: "auto", margin: "0 auto" }}
+                  style={{ maxWidth: "80%", height: "auto", margin: "0 auto" }} // Smaller size with centered alignment
                 />
               </Carousel.Item>
               <Carousel.Item>
                 <img
                   className="d-block"
-                  src="https://static.igem.wiki/teams/5079/writeups/education/tea-room/synaxis-poster.png"
+                  src="https://static.igem.wiki/teams/5079/writeups/education/tea-room/synaxis-poster.png" // Adjust the size here
                   alt="First slide"
-                  style={{ maxWidth: "80%", height: "auto", margin: "0 auto" }}
+                  style={{ maxWidth: "80%", height: "auto", margin: "0 auto" }} // Smaller size with centered alignment
                 />
               </Carousel.Item>
               <Carousel.Item>
                 <img
                   className="d-block"
-                  src="https://static.igem.wiki/teams/5079/writeups/education/tea-room/what-is-qgem-2024.png"
+                  src="https://static.igem.wiki/teams/5079/writeups/education/tea-room/what-is-qgem-2024.png" // Adjust the size here
                   alt="Second slide"
-                  style={{ maxWidth: "80%", height: "auto", margin: "0 auto" }}
+                  style={{ maxWidth: "80%", height: "auto", margin: "0 auto" }} // Smaller size with centered alignment
                 />
               </Carousel.Item>
               <Carousel.Item>
                 <img
                   className="d-block"
-                  src="https://static.igem.wiki/teams/5079/writeups/education/tea-room/img-7726.jpg"
+                  src="https://static.igem.wiki/teams/5079/writeups/education/tea-room/img-7726.jpg" // Adjust the size here
                   alt="Third slide"
-                  style={{ maxWidth: "80%", height: "auto", margin: "0 auto" }}
+                  style={{ maxWidth: "80%", height: "auto", margin: "0 auto" }} // Smaller size with centered alignment
                 />
               </Carousel.Item>
             </Carousel>
@@ -414,6 +416,7 @@ const CardSection: React.FC = () => {
           ),
         },
 
+        // Photo carousel placed between the subsections, with margins
         {
           description: (
             <Carousel
@@ -428,49 +431,49 @@ const CardSection: React.FC = () => {
               <Carousel.Item>
                 <img
                   className="d-block"
-                  src="https://static.igem.wiki/teams/5079/writeups/education/superwalk/img-7313-2.jpg"
+                  src="https://static.igem.wiki/teams/5079/writeups/education/superwalk/img-7313-2.jpg" // Adjust the size here
                   alt="First slide"
-                  style={{ maxWidth: "80%", height: "auto", margin: "0 auto" }}
+                  style={{ maxWidth: "80%", height: "auto", margin: "0 auto" }} // Smaller size with centered alignment
                 />
               </Carousel.Item>
               <Carousel.Item>
                 <img
                   className="d-block"
-                  src="https://static.igem.wiki/teams/5079/writeups/education/superwalk/img-7314-2.jpg"
+                  src="https://static.igem.wiki/teams/5079/writeups/education/superwalk/img-7314-2.jpg" // Adjust the size here
                   alt="First slide"
-                  style={{ maxWidth: "80%", height: "auto", margin: "0 auto" }}
+                  style={{ maxWidth: "80%", height: "auto", margin: "0 auto" }} // Smaller size with centered alignment
                 />
               </Carousel.Item>
               <Carousel.Item>
                 <img
                   className="d-block"
-                  src="https://static.igem.wiki/teams/5079/writeups/education/superwalk/img-7319-2.jpg"
+                  src="https://static.igem.wiki/teams/5079/writeups/education/superwalk/img-7319-2.jpg" // Adjust the size here
                   alt="First slide"
-                  style={{ maxWidth: "80%", height: "auto", margin: "0 auto" }}
+                  style={{ maxWidth: "80%", height: "auto", margin: "0 auto" }} // Smaller size with centered alignment
                 />
               </Carousel.Item>
               <Carousel.Item>
                 <img
                   className="d-block"
-                  src="https://static.igem.wiki/teams/5079/writeups/education/superwalk/img-7324.jpg"
+                  src="https://static.igem.wiki/teams/5079/writeups/education/superwalk/img-7324.jpg" // Adjust the size here
                   alt="Second slide"
-                  style={{ maxWidth: "80%", height: "auto", margin: "0 auto" }}
+                  style={{ maxWidth: "80%", height: "auto", margin: "0 auto" }} // Smaller size with centered alignment
                 />
               </Carousel.Item>
               <Carousel.Item>
                 <img
                   className="d-block"
-                  src="https://static.igem.wiki/teams/5079/writeups/education/superwalk/img-7327.jpg"
+                  src="https://static.igem.wiki/teams/5079/writeups/education/superwalk/img-7327.jpg" // Adjust the size here
                   alt="First slide"
-                  style={{ maxWidth: "80%", height: "auto", margin: "0 auto" }}
+                  style={{ maxWidth: "80%", height: "auto", margin: "0 auto" }} // Smaller size with centered alignment
                 />
               </Carousel.Item>
               <Carousel.Item>
                 <img
                   className="d-block"
-                  src="https://static.igem.wiki/teams/5079/writeups/education/superwalk/img-7337-2.jpg"
+                  src="https://static.igem.wiki/teams/5079/writeups/education/superwalk/img-7337-2.jpg" // Adjust the size here
                   alt="Third slide"
-                  style={{ maxWidth: "80%", height: "auto", margin: "0 auto" }}
+                  style={{ maxWidth: "80%", height: "auto", margin: "0 auto" }} // Smaller size with centered alignment
                 />
               </Carousel.Item>
             </Carousel>
@@ -487,6 +490,7 @@ const CardSection: React.FC = () => {
           ),
         },
 
+        // Another photo carousel placed after the Social Media section
         {
           description: (
             <Carousel
@@ -501,25 +505,25 @@ const CardSection: React.FC = () => {
               <Carousel.Item>
                 <img
                   className="d-block"
-                  src="https://static.igem.wiki/teams/5079/writeups/education/social/1.png"
+                  src="https://static.igem.wiki/teams/5079/writeups/education/social/1.png" // Adjust the size here
                   alt="First slide"
-                  style={{ maxWidth: "80%", height: "auto", margin: "0 auto" }}
+                  style={{ maxWidth: "80%", height: "auto", margin: "0 auto" }} // Smaller size with centered alignment
                 />
               </Carousel.Item>
               <Carousel.Item>
                 <img
                   className="d-block"
-                  src="https://static.igem.wiki/teams/5079/writeups/education/social/2.png"
+                  src="https://static.igem.wiki/teams/5079/writeups/education/social/2.png" // Adjust the size here
                   alt="Second slide"
-                  style={{ maxWidth: "80%", height: "auto", margin: "0 auto" }}
+                  style={{ maxWidth: "80%", height: "auto", margin: "0 auto" }} // Smaller size with centered alignment
                 />
               </Carousel.Item>
               <Carousel.Item>
                 <img
                   className="d-block"
-                  src="https://static.igem.wiki/teams/5079/writeups/education/social/screen-shot-2024-09-30-at-12-46-47-pm.png"
+                  src="https://static.igem.wiki/teams/5079/writeups/education/social/screen-shot-2024-09-30-at-12-46-47-pm.png" // Adjust the size here
                   alt="Third slide"
-                  style={{ maxWidth: "80%", height: "auto", margin: "0 auto" }}
+                  style={{ maxWidth: "80%", height: "auto", margin: "0 auto" }} // Smaller size with centered alignment
                 />
               </Carousel.Item>
             </Carousel>
@@ -538,8 +542,8 @@ const CardSection: React.FC = () => {
                 style={{
                   display: "flex",
                   justifyContent: "center",
-                  marginTop: "40px",
-                  marginBottom: "40px",
+                  marginTop: "40px", // Adjust margin as needed
+                  marginBottom: "40px", // Adjust margin as needed
                 }}
               >
                 <iframe
@@ -565,8 +569,8 @@ const CardSection: React.FC = () => {
                 style={{
                   display: "flex",
                   justifyContent: "center",
-                  marginTop: "40px",
-                  marginBottom: "40px",
+                  marginTop: "40px", // Adjust margin as needed
+                  marginBottom: "40px", // Adjust margin as needed
                 }}
               >
                 <iframe
@@ -649,8 +653,8 @@ const CardSection: React.FC = () => {
                 style={{
                   display: "flex",
                   justifyContent: "center",
-                  marginTop: "40px",
-                  marginBottom: "40px",
+                  marginTop: "40px", // Adjust margin as needed
+                  marginBottom: "40px", // Adjust margin as needed
                 }}
               >
                 <iframe
@@ -686,57 +690,57 @@ const CardSection: React.FC = () => {
                 <Carousel.Item>
                   <img
                     className="d-block"
-                    src="https://static.igem.wiki/teams/5079/writeups/education/pitch-comp/1b6a4311.jpg"
+                    src="https://static.igem.wiki/teams/5079/writeups/education/pitch-comp/1b6a4311.jpg" // Adjust the size here
                     alt="First slide"
-                    style={{ maxWidth: "80%", height: "auto", margin: "0 auto" }}
+                    style={{ maxWidth: "80%", height: "auto", margin: "0 auto" }} // Smaller size with centered alignment
                   />
                 </Carousel.Item>
                 <Carousel.Item>
                   <img
                     className="d-block"
-                    src="https://static.igem.wiki/teams/5079/writeups/education/pitch-comp/1b6a4347.jpg"
+                    src="https://static.igem.wiki/teams/5079/writeups/education/pitch-comp/1b6a4347.jpg" // Adjust the size here
                     alt="First slide"
-                    style={{ maxWidth: "80%", height: "auto", margin: "0 auto" }}
+                    style={{ maxWidth: "80%", height: "auto", margin: "0 auto" }} // Smaller size with centered alignment
                   />
                 </Carousel.Item>
                 <Carousel.Item>
                   <img
                     className="d-block"
-                    src="https://static.igem.wiki/teams/5079/writeups/education/pitch-comp/1b6a4360.jpg"
+                    src="https://static.igem.wiki/teams/5079/writeups/education/pitch-comp/1b6a4360.jpg" // Adjust the size here
                     alt="First slide"
-                    style={{ maxWidth: "80%", height: "auto", margin: "0 auto" }}
+                    style={{ maxWidth: "80%", height: "auto", margin: "0 auto" }} // Smaller size with centered alignment
                   />
                 </Carousel.Item>
                 <Carousel.Item>
                   <img
                     className="d-block"
-                    src="https://static.igem.wiki/teams/5079/writeups/education/pitch-comp/1b6a4363.jpg"
+                    src="https://static.igem.wiki/teams/5079/writeups/education/pitch-comp/1b6a4363.jpg" // Adjust the size here
                     alt="First slide"
-                    style={{ maxWidth: "80%", height: "auto", margin: "0 auto" }}
+                    style={{ maxWidth: "80%", height: "auto", margin: "0 auto" }} // Smaller size with centered alignment
                   />
                 </Carousel.Item>
                 <Carousel.Item>
                   <img
                     className="d-block"
-                    src="https://static.igem.wiki/teams/5079/writeups/education/pitch-comp/1b6a4364.jpg"
+                    src="https://static.igem.wiki/teams/5079/writeups/education/pitch-comp/1b6a4364.jpg" // Adjust the size here
                     alt="First slide"
-                    style={{ maxWidth: "80%", height: "auto", margin: "0 auto" }}
+                    style={{ maxWidth: "80%", height: "auto", margin: "0 auto" }} // Smaller size with centered alignment
                   />
                 </Carousel.Item>
                 <Carousel.Item>
                   <img
                     className="d-block"
-                    src="https://static.igem.wiki/teams/5079/writeups/education/pitch-comp/img-7604.jpg"
+                    src="https://static.igem.wiki/teams/5079/writeups/education/pitch-comp/img-7604.jpg" // Adjust the size here
                     alt="Second slide"
-                    style={{ maxWidth: "80%", height: "auto", margin: "0 auto" }}
+                    style={{ maxWidth: "80%", height: "auto", margin: "0 auto" }} // Smaller size with centered alignment
                   />
                 </Carousel.Item>
                 <Carousel.Item>
                   <img
                     className="d-block"
-                    src="https://static.igem.wiki/teams/5079/writeups/education/pitch-comp/img-7615.jpg"
+                    src="https://static.igem.wiki/teams/5079/writeups/education/pitch-comp/img-7615.jpg" // Adjust the size here
                     alt="Third slide"
-                    style={{ maxWidth: "80%", height: "auto", margin: "0 auto" }}
+                    style={{ maxWidth: "80%", height: "auto", margin: "0 auto" }} // Smaller size with centered alignment
                   />
                 </Carousel.Item>
               </Carousel>
