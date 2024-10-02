@@ -4,7 +4,6 @@ import {
 
 // Wet Lab Folder
 import {Design} from "./contents/Wet Lab/Design/design";
-import {Experiments} from "./contents/Wet Lab/Experiments/experiments";
 import {EngineeringW} from "./contents/Wet Lab/Engineering/engineeringW";
 import {Safety} from "./contents/Wet Lab/Safety/safety";
 import {Parts} from "./contents/Wet Lab/Parts/parts";
@@ -118,13 +117,6 @@ const Pages: (Page | Folder)[] = [
           title: "Parts",
           path: "/parts",
           component: Parts,
-          lead: "test 123",
-        },
-        {
-          name: "Experiments",
-          title: "Experiments",
-          path: "/experiments",
-          component: Experiments,
           lead: "test 123",
         },
         {

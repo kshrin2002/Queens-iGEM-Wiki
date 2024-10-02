@@ -63,7 +63,7 @@
 
 /* Slide the placeholder to the left when the navbar is visible */
 .navbar-placeholder.slide-left {
-    transform: translateX(-33vw);   
+    transform: translateX(-43vw);   
 }
 
 /* Return the placeholder to the center when the navbar is hidden */
@@ -71,10 +71,5 @@
     transform: translateX(-48vw);   
 }
 
-/* Media Query for Small Screens */
-@media (max-width: 1200px) {
-    /* Adjust placeholder visibility and position when in hamburger mode */
-    .navbar-placeholder.slide-left{
-        transform: translateX(-100vw); /* Move out of view */
-    }
-}
+
+

@@ -141,11 +141,11 @@ export function Home() {
         <div className="ninth-textbox">
           <p>How did We Make It Happen?</p>
           <div className='brain-links'>
-            <a href="https://2024.igem.wiki/queens-canada/engineering">Dry Lab</a>
-            <a href="https://2024.igem.wiki/queens-canada/design">Wet Lab</a>
-            <a href="https://2024.igem.wiki/queens-canada/human-practices">Human Practices</a>
-            <a href="https://2024.igem.wiki/queens-canada/Members">Team</a>
-            <a href="https://2024.igem.wiki/queens-canada/description">Project</a>
+            <a className='link1' href="https://2024.igem.wiki/queens-canada/engineering">Dry Lab</a>
+            <a className='link2' href="https://2024.igem.wiki/queens-canada/design">Wet Lab</a>
+            <a className='link3' href="https://2024.igem.wiki/queens-canada/human-practices">Human Practices</a>
+            <a className='link4' href="https://2024.igem.wiki/queens-canada/Members">Team</a>
+            <a  className='link5' href="https://2024.igem.wiki/queens-canada/description">Project</a>
           </div>       
           <img src="https://static.igem.wiki/teams/5079/writeups/home/7bddbb9ef38f472d4aaeac5cda18b020.png" alt="" className='ninthimg'/>
         </div>
