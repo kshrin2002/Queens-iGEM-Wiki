@@ -73,7 +73,7 @@ export function Home() {
 
         <div className="centered-image-container">
           <img
-            src="https://static.igem.wiki/teams/5079/main-synaxis-logo.png"
+            src="https://static.igem.wiki/teams/5079/synaxis-logo-slogan.png"
             alt="Centered Graphic"
             className="centered-image"
           />

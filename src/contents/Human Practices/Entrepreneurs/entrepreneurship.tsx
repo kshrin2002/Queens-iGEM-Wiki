@@ -8,9 +8,11 @@ interface MonthlyUpdates {
   description: JSX.Element;
 }
 
-const stagesData: { title: string; months: MonthlyUpdates[] }[] = [
+const stagesData: { title: string; summary: string; months: MonthlyUpdates[] }[] = [
   {
     title: "Pre-Seed Stage",
+    summary:
+      "QGEM is currently in the pre-seed development stage of commercializing SynAxis. In this stage, we are primarily focused on perfecting our research to a usable product, as well as establishing our strengths and weaknesses as a company. This stage involved reflecting on the founding members of our team and advisory board, the existing market, and the advantages and disadvantages available to us. This stage of research began in May and proceeded until the beginning of June. To illustrate our findings, we authored several documents and graphics including Pitch Deck slides, a Market Analysis Report, Competitor Landscape Matrix, a Skills Gap Analysis, an Advisory Board Profile, a PESTLE Analysis, and a SWOT Analysis. The research conducted in this section was utilized to show our investors and stakeholders that that despite the weaknesses and disadvantages that we identified, SynAxis is a viable product.",
     months: [
       {
         month: "Pitch Deck",
@@ -206,6 +208,8 @@ const stagesData: { title: string; months: MonthlyUpdates[] }[] = [
   },
   {
     title: "Seed Stage",
+    summary:
+      "The seed stage of establishing a start-up is typically considered the riskiest as companies are at their youngest and least established. In this stage, the idea has been developed into at least its first iteration of a usable product, and a start-up begins to pursue commercialization. Given that it is the next step for SynAxis, our team has diligently begun to prepare foundational documents such that we are adequately prepared when we begin to pursue integration into the market space. As the riskiest stage, our team has begun to identify potential issues that may arise during both the continued development of the project, as well as during the regulatory process. We’ve compiled these risks into our analysis report alongside a list of contingencies to mitigate these risks. QGEM has also begun looking into the patent application process for provisional and nonprovisional patenting in Canada and the United States in order to ensure that our project remains intellectually protected. Our largest document in this stage is our Business plan, an expanded upon version of our Lean Canvas graphic, detailing our future plans and strategies for ensuring the success of SynAxis in our target market. This document lays the groundwork for our next three stages.  ",
     months: [
       {
         month: "Lean Canvas",
@@ -319,6 +323,8 @@ const stagesData: { title: string; months: MonthlyUpdates[] }[] = [
   },
   {
     title: "Early Stage",
+    summary:
+      "The early-stage development stage involves the preclinical development plan. This stage focuses on our exploration and experimentation of our drug. Preclinical trials utilize laboratory animal models and help determine if a drug would be safe and effective to use in humans. The goal of early-stage development is to address the safety and efficacy of our SynAxis product. This will allow us in the future to properly allocate resources and identify any possible challenges that we may face down the road. The research conducted in this stage will shape the future for our business and drug development. This stage helps us to define a viable product for development. Once we pass this stage it is onto clinical trials and manufacturing.  ",
     months: [
       {
         month: "Preclinical Development Plan",
@@ -351,6 +357,8 @@ const stagesData: { title: string; months: MonthlyUpdates[] }[] = [
   },
   {
     title: "Growth Stage",
+    summary:
+      "The growth stage is pivotal as it transitions our earlier research into clinical trials and regulations. To illustrate our findings, we authored several documents and graphics including a regulatory strategy roadmap and clinical trials plan. The regulatory roadmap ensures regulatory compliance is followed when pursuing commercialization. SynAxis being a therapeutic designed for human intake, needs to undergo vigorous preclinical and clinical trials. The research conducted in this section will ensure that SynAxis delivers a safe and effective therapeutic for human use through positive clinical trials with compliance with regulations.  ",
     months: [
       {
         month: "Clinical Timeline Trials",
@@ -410,6 +418,8 @@ const stagesData: { title: string; months: MonthlyUpdates[] }[] = [
   },
   {
     title: "Late Stage",
+    summary:
+      "The late stage of drug development is involved with supporting the transition to commercialization. To illustrate our findings, we authored several documents and graphics including projected financial statement and manufacturing plan. The projected financial statements allow us to plan funding efforts and costs effectively. The manufaturing plan allows us to plan efficiently for the development of our therapeutic. The research conducted in this section will allow SynAxis to successfully enter the market and commercialize our product. By utilizing the above documents, we ensure we protect ourselves from any financial and manufacturing threats. Overall, this stage sets up SynAxis for success and sustainable growth in the market.  ",
     months: [
       {
         month: "EManufacturing Plan",
@@ -504,6 +514,7 @@ export function Entrepreneurship() {
         {stagesData.map((stage, stageIndex) => (
           <div key={stage.title}>
             <h2 className="pills-section-header">{stage.title}</h2>
+            <p className="stage-summary">{stage.summary}</p> {/* Move the summary here */}
             <MonthList
               monthsData={stage.months}
               onMonthClick={(month) => handleMonthClick(stageIndex, month)}
@@ -547,54 +558,16 @@ export function Entrepreneurship() {
             <div className="bioimpact-modal">
               <div className="modal-header">BioImpact Challenge</div>
               <div className="modal-paragraph">
-                Welcome to the BioImpact Challenge! Here you will test your
-                knowledge in biotech innovation and learn new skills to help
-                scale your business.
+                <p>
+                One of QGEM’s main goals this season has been to uplift future innovators, providing them with a platform from which to launch their first venture. Through the entrepreneurial deliverables that we have completed, we have learned that the path for startups is incredibly difficult. With funding being limited and competitive, we wanted to provide Queen’s University undergraduate students with an opportunity to get their foot in the door.  
+                </p>
+                <p>
+                We established QGEM’s first ever pitch competition under the theme of BioImpact. This pitch competition opened the floor to allow Queen's students to showcase their innovations and receive feedback and advice from judges. This challenge is focused on promoting innovative biotechnological solutions that have the power to make a remarkable impact on society. We want to support young minds and their groundbreaking ideas that utilize biology to solve global challenges and drive scientific advancement for the betterment of society.   
+                </p>
+                <p>
+                For this event, we had a panel of three judges including Dr. Sharon Regan, Dr. George diCenzo, and Dr. Michael Wells. To provide more information on environmental research and policy, we invited speakers, Dr. Warren Mabee, and Dr. Kevin de France. 
+                </p>
               </div>
-              {/* Photo Carousel */}
-              <Carousel>
-                <Carousel.Item>
-                  <img
-                    className="d-block w-100 carousel-img"
-                    src="https://via.placeholder.com/150"
-                    alt="First slide"
-                  />
-                  <Carousel.Caption>
-                    <h3>First slide label</h3>
-                    <p>
-                      Nulla vitae elit libero, a pharetra augue mollis interdum.
-                    </p>
-                  </Carousel.Caption>
-                </Carousel.Item>
-                <Carousel.Item>
-                  <img
-                    className="d-block w-100 carousel-img"
-                    src="https://via.placeholder.com/150"
-                    alt="Second slide"
-                  />
-                  <Carousel.Caption>
-                    <h3>Second slide label</h3>
-                    <p>
-                      Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                    </p>
-                  </Carousel.Caption>
-                </Carousel.Item>
-                <Carousel.Item>
-                  <img
-                    className="d-block w-100 carousel-img"
-                    src="https://via.placeholder.com/150"
-                    alt="Third slide"
-                  />
-                  <Carousel.Caption>
-                    <h3>Third slide label</h3>
-                    <p>
-                      Praesent commodo cursus magna, vel scelerisque nisl
-                      consectetur.
-                    </p>
-                  </Carousel.Caption>
-                </Carousel.Item>
-              </Carousel>
-
               <Button className="close-button" onClick={closeModal}>
                 Close
               </Button>
