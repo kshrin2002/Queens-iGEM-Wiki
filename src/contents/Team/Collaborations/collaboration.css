@@ -59,7 +59,7 @@
   border-radius: 20px; /* Rounded corners */
   padding: 20px;
   width: 80vw; /* Make it 80% of the viewport width */
-  height: 70vh; /* Increase the height */
+  height: auto; /* Increase the height */
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow */
   overflow: hidden;
   border: 5px solid #ff9ca5; /* Thicker border with the color #ff9ca5 */
