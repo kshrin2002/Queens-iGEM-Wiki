@@ -12,7 +12,7 @@ import {ProofOfConcepts} from "./contents/Wet Lab/Proof of Concepts/proofofconce
 import {Results} from "./contents/Wet Lab/Results & Analysis/resultsandanalysis";
 
 // Dry Lab Folder
-import {Engineering} from "./contents/Dry Lab/Engineering/engineering";
+// import {Engineering} from "./contents/Dry Lab/Engineering/engineering";
 import {Model} from "./contents/Dry Lab/Model/model";
 
 // Team Folder
@@ -169,7 +169,7 @@ const Pages: (Page | Folder)[] = [
         name: "Engineering",
         title: "Engineering",
         path: "/engineering",
-        component: Engineering,
+        component: EngineeringW,
         lead: "test 123",
       },
     ],
