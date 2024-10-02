@@ -164,7 +164,7 @@ const CardSection: React.FC = () => {
                     height: "400px",
                     bottom: "25px",
                     right: "10px",
-                    width: "250px",
+                    width: "500px",
                     borderRadius: "10px",
                   }}
                 />
@@ -176,7 +176,7 @@ const CardSection: React.FC = () => {
                     height: "400px",
                     bottom: "25px",
                     right: "10px",
-                    width: "250px",
+                    width: "500px",
                     borderRadius: "10px",
                   }}
                 />
@@ -200,7 +200,7 @@ const CardSection: React.FC = () => {
                     height: "400px",
                     bottom: "25px",
                     right: "10px",
-                    width: "250px",
+                    width: "500px",
                     borderRadius: "10px",
                   }}
                 />
@@ -215,7 +215,7 @@ const CardSection: React.FC = () => {
                     height: "400px",
                     bottom: "25px",
                     right: "10px",
-                    width: "250px",
+                    width: "500px",
                     borderRadius: "10px",
                   }}
                 />
@@ -230,7 +230,7 @@ const CardSection: React.FC = () => {
                     height: "400px",
                     bottom: "25px",
                     right: "10px",
-                    width: "250px",
+                    width: "500px",
                     borderRadius: "10px",
                   }}
                 />
@@ -245,7 +245,7 @@ const CardSection: React.FC = () => {
                     height: "400px",
                     bottom: "25px",
                     right: "10px",
-                    width: "250px",
+                    width: "500px",
                     borderRadius: "10px",
                   }}
                 />
