@@ -343,10 +343,9 @@ const OverviewSection = () => (
   >
     <h2>Overview</h2>
     <p>
-      Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod
-      tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim
-      veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
-      commodo consequat.
+    Scientific innovation often has the potential to address pressing challenges in healthcare, environmental sustainability, and technology. Throughout the development of SynAxis, QGEM has seen a necessity for a Parkinson’s Disease therapeutic that targets symptoms more permanently than current market-available treatments. Due to this, it has been one of our main goals to bring SynAxis to the world stage as a usable and commercialized product to bring relief to millions of Parkinson’s Disease patients all over the world. However, to do this, our team understands that adopting a structured approach is necessary to move from the lab to the marketplace. 
+    Over the course of this summer, our human practices team has been dedicated to conducting thorough market research, building a business model, regulatory strategy roadmap, risk analysis, product analyses, and manufacturing plans. We have connected with relevant professionals at every step to ensure that SynAxis is on its way to entrepreneurial success.   
+    Each of the above documents listed are available below as separate and more thorough PDFs. In addition to this, our team has produced a comprehensive business plan outlining our market analysis, team and advisory board profiles, product, intellectual property protection, marketing and sales strategies, operations plans, financial plans, and our contingency plans. This business plan was produced in collaboration with the Smith School of Business as a part of their Certificate in Social Impact program. This program provides undergraduate students with the necessary skills to become leaders in modern business. QGEM is currently in pre-seed development stage, however, we are incredibly confident in our ability to pursue the commercialization of SynAxis.  
     </p>
   </section>
 );
