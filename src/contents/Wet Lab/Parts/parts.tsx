@@ -59,28 +59,14 @@ const DesignHeading: React.FC = () => {
 const Sidebar: React.FC = () => {
   const sections = [
     {
-      name: "Students",
+      name: "MOLECULAR SWITCH COMPONENTS",
       image: "https://static.igem.wiki/teams/5079/rose-logo.png",
-      content: ["Summer Workshops", "ASPC 103"],
+      content: ["Basic parts"],
     },
     {
-      name: "Community",
+      name: "SPORE BIOTIC COMPONENTS",
       image: "https://static.igem.wiki/teams/5079/rose-logo.png",
-      content: ["PD Canada Superwalk", "Social Media"],
-    },
-    {
-      name: "Researchers",
-      image: "https://static.igem.wiki/teams/5079/rose-logo.png",
-      content: ["Ethics Handbook"],
-    },
-    {
-      name: "RISK MANAGEMENT",
-      image: "https://static.igem.wiki/teams/5079/rose-logo.png",
-      content: [
-        "Identifying Project Risks",
-        "Anticipating Future Risks",
-        "Managing Risks",
-      ],
+      content: ["Basic Parts", "Composite Parts"],
     },
   ];
 
@@ -196,7 +182,7 @@ const CardSection: React.FC = () => {
             Below are our coding sequences including our 12 designed molecular switches, as well as their components - neurosin (KLK6) and cyclophilin D – and the input signal a-synculein. 
             
             <img
-                src="https://static.igem.wiki/teams/5079/writeups/wet-lab/table_1.png"
+                src="https://static.igem.wiki/teams/5079/writeups/wet-lab/table-1.png"
                 alt="Molecular Switch Components"
                 className="molecular-switch-image"
                 style={{ width: '100%', height: 'auto', marginTop: '20px' }}
