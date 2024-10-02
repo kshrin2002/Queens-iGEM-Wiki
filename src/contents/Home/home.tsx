@@ -135,7 +135,6 @@ export function Home() {
       {/* New Eighth part */}
       <div className="eighthpart">
         <div className="eighth-textbox">
-          <p>We aim to target Parkinson’s at the earliest possible stage by focusing on gut pathology.</p>
         </div>
       </div>
       <div className="ninthpart">

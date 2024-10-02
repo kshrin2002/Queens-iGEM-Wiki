@@ -4,7 +4,7 @@ import { BsArrowUpCircleFill, BsArrowDownCircleFill } from "react-icons/bs";
 
 export function Model() {
   const [currentPage, setCurrentPage] = useState(0);
-  const totalPages = 5; // Total number of pages
+  const totalPages = 6; // Total number of pages
   const containerRef = useRef<HTMLDivElement>(null);
   const [scrollDirection, setScrollDirection] = useState<"top" | "bottom">(
     "bottom"
@@ -50,44 +50,47 @@ export function Model() {
 
   const pageData = [
     {
-      header: "Collaborations Overview",
+      header: "Determining Cyclophilin D Insertion Residues ",
       text: [
-        "On this page, we provide a summary of our team collaborations.",
-        "We worked with multiple teams to achieve the goals of our project.",
+        "To identify optimal insertion sites in Cyclophilin D (CypD), residues are selected based on thermodynamic stability, structural compatibility, and functional impact. Sites are evaluated for stability using Gibbs free energy, where favorable insertions show negative ΔG values, indicating increased stability. Structural compatibility focuses on solvent-exposed loops that can accommodate modifications without disrupting the native fold. Molecular dynamics simulations further assess protein flexibility to ensure functional integrity is maintained. ",
+
+        <iframe
+          title="Queens-Canada: Gromacs_Asyn+Cypd (2024)"
+          width="560"
+          height="315"
+          src="https://video.igem.org/videos/embed/e312063d-ab73-421e-9449-37c4deb915b8"
+          frameborder="0"
+          allowfullscreen
+          sandbox="allow-same-origin allow-scripts allow-popups allow-forms"
+        ></iframe>,
       ],
-      image: "https://example.com/image1.jpg", // Unique image for page 1
     },
     {
-      header: "International Collaborations",
+      header: "Solvent-Accessible Residue Identification ",
       text: [
         "Our international collaborations span across several continents.",
         "Working with teams from Europe, Asia, and the Americas, we fostered global connections.",
       ],
-      image: "https://example.com/image2.jpg", // Unique image for page 2
     },
     {
-      header: "Research Partnerships",
+      header: "Cross-Referencing Insertion Sites ",
       text: [
-        "We partnered with research institutions to enhance the scientific rigor of our work.",
-        "Collaborations in research helped validate key components of our project.",
+        "The final CypD insertion sites are determined by cross-referencing solvent-accessible area (SASA) and root mean square fluctuation (RMSF) data. Key residues identified include N14, K45, P85, and K155, which exhibit optimal stability and flexibility, making them prime candidates for molecular switch design. ",
       ],
-      image: "https://example.com/image3.jpg", // Unique image for page 3
     },
     {
-      header: "Outreach Collaborations",
+      header: "Circular Permutants in KLK6 ",
       text: [
-        "Our outreach efforts involved collaborations with local communities and educational institutions.",
-        "These efforts helped us increase public awareness and engagement in synthetic biology.",
+        "Circular permutation (CP) is used to rewire KLK6, altering the termini to create new regulatory dynamics while maintaining function. CP enhances flexibility, allosteric control, and interaction interfaces, enabling the design of a molecular switch that activates proteolytic function under specific conditions. This approach is valuable for therapeutic designs in neurodegenerative diseases like Parkinson’s, where controlled enzymatic activity is critical. ",
       ],
-      image: "https://example.com/image4.jpg", // Unique image for page 4
     },
     {
-      header: "Final Reflections",
+      header: "Determining Circular Permutation Sites ",
       text: [
-        "In our final reflections, we emphasize the importance of teamwork and collaboration.",
-        "These collaborations were critical to the success of our project, enabling us to achieve more together.",
+        "Creating circular permutants of KLK6 through computational analysis involves a methodical approach that combines solvent accessibility, multiple sequence alignment (MSA),  and secondary structure stability to modify the protein’s structure while preserving its function. The process begins by identifying solvent-accessible loops in KLK6 using 3D structural tools such as PyMOL. These loops are exposed and more flexible, making them ideal candidates for repositioning the protein’s N- and C-termini through circular permutation. Because these loops are less likely to disrupt the core structure, they are more tolerant of rearrangements, allowing researchers to redesign the protein without compromising its stability or activity. ",
+        "Next, multiple sequence alignment (MSA) is performed to compare KLK6 with  trypsin. MSA highlights conserved regions and variable loops, helping researchers pinpoint less critical areas for permutation. By targeting regions that are not highly conserved, the core functions of KLK6—like its catalytic activity—remain intact. This ensures that the permutant retains its essential proteolytic function, even with the structural modifications introduced by circular permutation. ",
+        "Trypsin serves as a comparative model in this process due to its structural and functional similarities to KLK6. By studying trypsin’s circular permutants, we can gain insights into how changes might impact KLK6’s activity. This comparison helps ensure that cleavage sites and other critical regions remain functional post-permutation, guiding the design of new termini that do not interfere with the protease’s catalytic mechanisms. Additionally, secondary structure analysis using PyMol to asses the overall fold of the permutated protein. By ensuring that α-helices and β-sheets are maintained after permutation, researchers can prioritize designs that minimize disruption to the protein’s native structure. ",
       ],
-      image: "https://example.com/image5.jpg", // Unique image for page 5
     },
   ];
 
@@ -119,23 +122,22 @@ export function Model() {
                   allowFullScreen
                   allow="autoplay; encrypted-media"
                   sandbox="allow-same-origin allow-scripts allow-popups allow-forms"
-                  style={{ pointerEvents: "none", width: "100%", height: "100%" }} // Full width & height, unclickable
+                  style={{
+                    pointerEvents: "none",
+                    width: "100%",
+                    height: "100%",
+                  }} // Full width & height, unclickable
                 ></iframe>
               </div>
             ) : (
               <div className="rounded-box">
                 <div className="text-section">
-                  <h3 className="rounded-box-header">{pageData[index - 1].header}</h3>
+                  <h3 className="rounded-box-header">
+                    {pageData[index - 1].header}
+                  </h3>
                   {pageData[index - 1].text.map((paragraph, i) => (
                     <p key={i}>{paragraph}</p>
                   ))}
-                </div>
-                <div className="image-section">
-                  <img
-                    src={pageData[index - 1].image} // Unique image for each section
-                    alt="Section Image"
-                    className="rounded-box-image"
-                  />
                 </div>
               </div>
             )}
