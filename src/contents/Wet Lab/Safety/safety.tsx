@@ -1,6 +1,5 @@
 import React from 'react';
 import { Card, Row, Col, Container, Button } from 'react-bootstrap';
-import { FiEdit } from "react-icons/fi";
 import { motion } from "framer-motion";
 import { useEffect, useState } from 'react';
 
