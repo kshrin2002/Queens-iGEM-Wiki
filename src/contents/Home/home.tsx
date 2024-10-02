@@ -36,9 +36,9 @@ export function Home() {
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
-  // Calculate petal position and swaying effect based on scroll position
+  // Smoother calculations for sway and rotation
   const petalStyle = {
-    transform: `translateX(${Math.sin(scrollY * 0.08) * 50}px) translateY(${scrollY * 0.2}px) rotate(${Math.sin(scrollY * 0.05) * 15}deg)`, // Sway, fall, and rotate effect
+    transform: `translateX(${Math.sin(scrollY * 0.02) * 50}px) translateY(${scrollY * 0.3}px) rotate(${Math.sin(scrollY * 0.02) * 10}deg)`, // Sway, fall, and rotate effect
   };
 
   return (
@@ -57,6 +57,12 @@ export function Home() {
           src="https://static.igem.wiki/teams/5079/writeups/home/img-0437.png"
           alt="Falling Petal"
           className="petal"
+          style={petalStyle} // Dynamically adjust position based on scroll
+        />
+        <img
+          src="https://static.igem.wiki/teams/5079/writeups/home/img-0437.png"
+          alt="Falling Petal"
+          className="petal-1"
           style={petalStyle} // Dynamically adjust position based on scroll
         />
       </div>
@@ -130,6 +136,19 @@ export function Home() {
       <div className="eighthpart">
         <div className="eighth-textbox">
           <p>We aim to target Parkinson’s at the earliest possible stage by focusing on gut pathology.</p>
+        </div>
+      </div>
+      <div className="ninthpart">
+        <div className="ninth-textbox">
+          <p>How did We Make It Happen?</p>
+          <div className='brain-links'>
+            <a href="https://2024.igem.wiki/queens-canada/engineering">Dry Lab</a>
+            <a href="https://2024.igem.wiki/queens-canada/design">Wet Lab</a>
+            <a href="https://2024.igem.wiki/queens-canada/human-practices">Human Practices</a>
+            <a href="https://2024.igem.wiki/queens-canada/Members">Team</a>
+            <a href="https://2024.igem.wiki/queens-canada/description">Project</a>
+          </div>       
+          <img src="https://static.igem.wiki/teams/5079/writeups/home/7bddbb9ef38f472d4aaeac5cda18b020.png" alt="" className='ninthimg'/>
         </div>
       </div>
     </>

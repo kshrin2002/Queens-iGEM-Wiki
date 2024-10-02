@@ -3,7 +3,17 @@
     top: 0;
     left: 10%;
     transform: translateX(-50%);
-    width: 100px;
+    width: 150px;
+    z-index: 10;
+    transition: transform 0.2s linear; /* Smooth movement */
+  }
+.petal-1 {
+    position: fixed;
+    top: 0;
+    left: 13%;
+    rotate: 45deg;
+    transform: translateX(-50%);
+    width: 150px;
     z-index: 10;
     transition: transform 0.3s linear; /* Smooth movement */
   }
@@ -221,4 +231,23 @@
     color: #a6262e;
     max-width: 60%;
     font-weight: bold;
+}
+
+.ninthpart{
+    display: flex;
+    justify-content: center;
+}
+
+.ninth-textbox{
+    font-size: 2em;
+    text-align: center;
+    color: #a6262e;
+    max-width: 60%;
+    font-weight: bold;
+}
+
+.brain-links a{
+    display: flex;
+    flex-direction: column;
+    color: var(--venetianred);
 }
