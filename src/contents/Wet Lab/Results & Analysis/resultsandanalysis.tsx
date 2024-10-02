@@ -263,11 +263,10 @@ const CardSection: React.FC = () => {
                   src="https://static.igem.wiki/teams/5079/writeups/wet-lab/results-6.png"
                   alt="Table 3"
                   style={{
-                    position: "absolute",
+                    height: "400px",
                     bottom: "25px",
                     right: "10px",
-                    width: "250px",
-                    height: "250px",
+                    width: "500px",
                     borderRadius: "10px",
                   }}
                 />
@@ -276,11 +275,10 @@ const CardSection: React.FC = () => {
                   src="https://static.igem.wiki/teams/5079/writeups/wet-lab/results-7.png"
                   alt="Figure 5 and 6"
                   style={{
-                    position: "absolute",
+                    height: "400px",
                     bottom: "25px",
                     right: "10px",
-                    width: "250px",
-                    height: "250px",
+                    width: "500px",
                     borderRadius: "10px",
                   }}
                 />
@@ -292,11 +290,10 @@ const CardSection: React.FC = () => {
                   src="https://static.igem.wiki/teams/5079/writeups/wet-lab/results-8.png"
                   alt="Figure 7"
                   style={{
-                    position: "absolute",
+                    height: "400px",
                     bottom: "25px",
                     right: "10px",
-                    width: "250px",
-                    height: "250px",
+                    width: "500px",
                     borderRadius: "10px",
                   }}
                 />
@@ -317,11 +314,10 @@ const CardSection: React.FC = () => {
                   src="https://static.igem.wiki/teams/5079/writeups/wet-lab/results-9.png"
                   alt="Figure 8"
                   style={{
-                    position: "absolute",
+                    height: "400px",
                     bottom: "25px",
                     right: "10px",
-                    width: "250px",
-                    height: "250px",
+                    width: "500px",
                     borderRadius: "10px",
                   }}
                 />
@@ -348,11 +344,10 @@ const CardSection: React.FC = () => {
                   src="https://static.igem.wiki/teams/5079/writeups/wet-lab/results-10.png"
                   alt="Table 4"
                   style={{
-                    position: "absolute",
+                    height: "400px",
                     bottom: "25px",
                     right: "10px",
-                    width: "250px",
-                    height: "250px",
+                    width: "500px",
                     borderRadius: "10px",
                   }}
                 />
@@ -372,11 +367,10 @@ const CardSection: React.FC = () => {
                   src="https://static.igem.wiki/teams/5079/writeups/wet-lab/results-11.png"
                   alt="Figure 7"
                   style={{
-                    position: "absolute",
+                    height: "400px",
                     bottom: "25px",
                     right: "10px",
-                    width: "250px",
-                    height: "250px",
+                    width: "500px",
                     borderRadius: "10px",
                   }}
                 />
@@ -388,11 +382,10 @@ const CardSection: React.FC = () => {
                   src="https://static.igem.wiki/teams/5079/writeups/wet-lab/results-12.png"
                   alt="Table 5"
                   style={{
-                    position: "absolute",
+                    height: "400px",
                     bottom: "25px",
                     right: "10px",
-                    width: "250px",
-                    height: "250px",
+                    width: "500px",
                     borderRadius: "10px",
                   }}
                 />
@@ -411,11 +404,10 @@ const CardSection: React.FC = () => {
                   src="https://static.igem.wiki/teams/5079/writeups/wet-lab/results-13.png"
                   alt="Figure 8"
                   style={{
-                    position: "absolute",
+                    height: "400px",
                     bottom: "25px",
                     right: "10px",
-                    width: "250px",
-                    height: "250px",
+                    width: "500px",
                     borderRadius: "10px",
                   }}
                 />
@@ -426,11 +418,10 @@ const CardSection: React.FC = () => {
                   src="https://static.igem.wiki/teams/5079/writeups/wet-lab/results-14.png"
                   alt="Figure 9"
                   style={{
-                    position: "absolute",
+                    height: "400px",
                     bottom: "25px",
                     right: "10px",
-                    width: "250px",
-                    height: "250px",
+                    width: "500px",
                     borderRadius: "10px",
                   }}
                 />
@@ -442,11 +433,10 @@ const CardSection: React.FC = () => {
                   src="https://static.igem.wiki/teams/5079/writeups/wet-lab/results-15.png"
                   alt="Figure 7"
                   style={{
-                    position: "absolute",
+                    height: "400px",
                     bottom: "25px",
                     right: "10px",
-                    width: "250px",
-                    height: "250px",
+                    width: "500px",
                     borderRadius: "10px",
                   }}
                 />
@@ -458,11 +448,10 @@ const CardSection: React.FC = () => {
                   src="https://static.igem.wiki/teams/5079/writeups/wet-lab/results-16.png"
                   alt="Figure 11"
                   style={{
-                    position: "absolute",
+                    height: "400px",
                     bottom: "25px",
                     right: "10px",
-                    width: "250px",
-                    height: "250px",
+                    width: "500px",
                     borderRadius: "10px",
                   }}
                 />
@@ -494,11 +483,10 @@ const CardSection: React.FC = () => {
                   src="https://static.igem.wiki/teams/5079/writeups/wet-lab/results-17.png"
                   alt="Table 6"
                   style={{
-                    position: "absolute",
+                    height: "400px",
                     bottom: "25px",
                     right: "10px",
-                    width: "250px",
-                    height: "250px",
+                    width: "500px",
                     borderRadius: "10px",
                   }}
                 />
@@ -508,11 +496,10 @@ const CardSection: React.FC = () => {
                   src="https://static.igem.wiki/teams/5079/writeups/wet-lab/results-18.png"
                   alt="Figure 1"
                   style={{
-                    position: "absolute",
+                    height: "400px",
                     bottom: "25px",
                     right: "10px",
-                    width: "250px",
-                    height: "250px",
+                    width: "500px",
                     borderRadius: "10px",
                   }}
                 />
@@ -531,11 +518,10 @@ const CardSection: React.FC = () => {
                   src="https://static.igem.wiki/teams/5079/writeups/wet-lab/results-19.png"
                   alt="Table 7"
                   style={{
-                    position: "absolute",
+                    height: "400px",
                     bottom: "25px",
                     right: "10px",
-                    width: "250px",
-                    height: "250px",
+                    width: "500px",
                     borderRadius: "10px",
                   }}
                 />
@@ -558,11 +544,10 @@ const CardSection: React.FC = () => {
                   src="https://static.igem.wiki/teams/5079/writeups/wet-lab/results-20.png"
                   alt="Figure 2"
                   style={{
-                    position: "absolute",
+                    height: "400px",
                     bottom: "25px",
                     right: "10px",
-                    width: "250px",
-                    height: "250px",
+                    width: "500px",
                     borderRadius: "10px",
                   }}
                 />
@@ -572,11 +557,10 @@ const CardSection: React.FC = () => {
                   src="https://static.igem.wiki/teams/5079/writeups/wet-lab/results-21.png"
                   alt="Figure 4"
                   style={{
-                    position: "absolute",
+                    height: "400px",
                     bottom: "25px",
                     right: "10px",
-                    width: "250px",
-                    height: "250px",
+                    width: "500px",
                     borderRadius: "10px",
                   }}
                 />
@@ -596,11 +580,10 @@ const CardSection: React.FC = () => {
                   src="https://static.igem.wiki/teams/5079/writeups/wet-lab/results-22.png"
                   alt="Figure 5"
                   style={{
-                    position: "absolute",
+                    height: "400px",
                     bottom: "25px",
                     right: "10px",
-                    width: "250px",
-                    height: "250px",
+                    width: "500px",
                     borderRadius: "10px",
                   }}
                 />
@@ -628,11 +611,10 @@ const CardSection: React.FC = () => {
                   src="https://static.igem.wiki/teams/5079/writeups/wet-lab/results-23.png"
                   alt="Figure 15"
                   style={{
-                    position: "absolute",
+                    height: "400px",
                     bottom: "25px",
                     right: "10px",
-                    width: "250px",
-                    height: "250px",
+                    width: "500px",
                     borderRadius: "10px",
                   }}
                 />
