@@ -69,42 +69,45 @@
 
 /* Keep each piece's position and size as is */
 .piece-1 { 
-    top: -675px;
-    left: 90px;
-    height: 315px;
-    width: 300px;
+    top: -68.2vh;
+    left: 4.8vw;
+    height: 32vh;
+    width: 16vw;
 }
 
 .piece-2 {
-    top: -687px;
-    left: 325px;
-    height: 325px;
-    width: 250px;
+    top: -69.8vh;
+    left: 33vh;
+    height: 34vh;
+    width: 13vw;
 }
 
 .piece-3 {
-    top: -433px;
-    left: 560px;
-    width: 312px;
+    top: -44vh;
+    left: 30vw;
+    height: 24vh;
+    width: 16.5vw;
 }
 
 .piece-4 {
-    top: -693px;
-    left: 515px;
-    width: 340px;
+    top: -70.1vh;
+    left: 27.3vw;
+    width: 18vw;
+    height: 34vh;
 }
 
 .piece-5 {
-    top: -435px;
-    left: 285px;
-    width: 337px;
+    top: -43.1vh;
+    left: 15.2vw;
+    height: 22.9vh;
+    width: 18vw;
 }
 
 .piece-6 {
-    top: -807px;
-    left: 325px;
-    height: 190px;
-    width: 246px;
+    top: -82vh;
+    left: 16.5vw;
+    height: 19vh;
+    width: 14vw;
 }
 
 /* On click, scale the piece smoothly */
