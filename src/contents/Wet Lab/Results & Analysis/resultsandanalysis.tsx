@@ -7,7 +7,6 @@ export function Results() {
   return (
     <>
       <DesignHeading />
-      <OverviewSection />
       <div className="main-content">
         <Sidebar />
         <CardSection />
