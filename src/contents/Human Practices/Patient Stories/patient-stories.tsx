@@ -21,6 +21,71 @@ const VideoSection = () => {
     <div className="video-container" style={{display:'flex', justifyContent:'center'}}>
     <iframe title="Queens-Canada: Shortened Patient Comp (2024) [English]" width="560" height="315" src="https://video.igem.org/videos/embed/e648f41e-bff7-4818-9622-592f11842f32"  sandbox="allow-same-origin allow-scripts allow-popups allow-forms"></iframe>
     </div>
+    <div className='intro-paragraph'>
+      <h1 style={{ fontSize: '5em', color: '#590000', fontWeight: 'bold', letterSpacing: '2px', marginBottom: '2rem'}}>
+          Intro
+        </h1>
+        <p>
+        We sought to speak with patients to ensure that our therapeutic design is not only scientifically sound but also deeply aligned with the lived experiences of those it aims to help. While lab-based research and theoretical frameworks provide crucial insights into disease mechanisms and potential treatments, it is the patients who offer the most personal and practical perspective on how a therapeutic could impact their daily lives. Speaking with patients gave us a better understanding of their struggles, priorities, and concerns—things that may not always be obvious from clinical or scientific data alone. 
+       
+      
+       <p>For example, we wanted to learn directly from patients how they feel about current treatments, what gaps exist in their care, and how they perceive new, experimental solutions like the therapeutic we are developing. By listening to their experiences, we hoped to uncover key factors such as ease of use, accessibility, and potential side effects, which might not have been fully considered during the early stages of our design. This patient feedback would help ensure that our solution is not only effective at a biological level but also practical and relevant to their everyday realities. </p>
+       
+        
+       
+       <p>By telling these stories we hope to not only learn from the patients but advocate for them by telling their stories. Each one is a unique and truly inspiring individual. We have a lot to learn from each of them. </p>
+       
+        
+       
+       <ul>
+         <li>We asked each person the following questions:</li>
+         
+         <li>How does Parkinson’s disease affect your daily routine?</li>
+         
+         <li>What is the most difficult part about living with Parkinson’s Disease</li>
+         
+         <li>What was the diagnosis process like for you?</li>
+         
+         <li>Are you currently on any treatments?</li>
+         
+         <li>How has Parkinson's Disease changed your life?</li>
+         
+         <li>What symptoms do you experience most frequently, and how do they affect you?</li>
+         
+         <li>How has Parkinson's influenced your relationships with friends, family, and caregivers?</li>
+         
+         <li>Are there any activities or hobbies you've had to adapt due to Parkinson's disease?</li>
+         
+         <li>What support systems have you found most helpful in managing Parkinson's?</li>
+         
+         <li>Can you describe any misconceptions or stereotypes about Parkinson's disease that you've encountered?</li>
+         
+         <li>How do you prioritize your physical and mental well-being while living with Parkinson's?</li>
+         
+         <li>Are there any resources or communities that have been particularly valuable to you in your journey with Parkinson's?</li>
+         
+         <li>What advice would you give to someone newly diagnosed with Parkinson's disease?</li>
+         
+         <li>Have you participated in any clinical trials or experimental treatments for Parkinson's disease? If so, what was your experience like?</li>
+         
+         <li>Have you experienced any stigma or discrimination because of your Parkinson's diagnosis?</li>
+         
+         <li>Have you encountered any barriers in accessing healthcare services or support for Parkinson's disease?</li>
+         
+         <li>What are your current hobbies?</li>
+         
+         <li>What is something on your bucket list?</li>
+         
+         <li>What is something positive that you are looking forward to?</li>
+         
+         <li>What is a current goal of yours that you are striving for?</li>
+       </ul>
+       
+        
+       
+       <p>The art on this page has been illustrated by Barbara Salsberg Mathews. This is a sneak peek into a larger project she is working on with Parkinson’s Europe called “What Parkinson’s Feels Like: A collection of illustrations by Barbara Salsberg Mathews”. Barbara is creating an illustration to quotes submitted people with Parkinson’s disease. It was our pleasure to be able to combine our patient network with this exciting project. Thank you Barbara and Parkinson’s Europe for allowing us to display this beautiful artwork! </p>
+        </p>
+    </div>
     </div>
   )
 }
@@ -39,7 +104,7 @@ const PatientStoriesHeading: React.FC = () => {
 const PatientInfoSection: React.FC = () => {
   return (
     <div className="stories-wrapper">
-      <h1 style={{marginBottom: '4rem', marginLeft:'4rem'}}>DESCRIPTION OF ART + THANKS</h1>
+      <h1 style={{marginBottom: '4rem', marginLeft:'1rem'}}>DESCRIPTION OF ART + THANKS</h1>
       <h1 className="story-title">Barbara Salsberg Mathews</h1>
       <div className="story-1">
         <p className="story">
