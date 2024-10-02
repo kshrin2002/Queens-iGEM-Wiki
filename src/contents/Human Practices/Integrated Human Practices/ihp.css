@@ -226,11 +226,17 @@
     transform: translate(-13vw);
   }
 
+  @media screen and (max-width:1440px){
+    .timeline-item.even{
+        transform: translate(-5vw);
+      }
+  }
+
   
   .card {
     background-color: white;
     border: 2px solid var(--mexired);
-    width: 40vw;
+    width: 31vw;
     border-radius: 8px;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     cursor: pointer;
@@ -245,13 +251,16 @@
     transform: scale(1.05);
     width: 35vw;
   }
+
   
   .card-image {
     width: 30vw;
     border-radius: 50%;
     margin: 0 auto 10px;
     display: block;
+    overflow: hidden;
   }
+
   
   .card-title {
     font-size: 1.2rem;
@@ -264,6 +273,7 @@
     max-height: 0;
     overflow: hidden;
     transition: max-height 0.3s ease-in-out;
+    margin: 2rem;
   }
   
   .card-description.show {
