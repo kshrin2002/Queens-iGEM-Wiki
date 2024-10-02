@@ -191,10 +191,11 @@ const CardSection: React.FC = () => {
                     borderRadius: "10px",
                   }}
                 />
+                <p>=
             Figure 2. LB-Agar plates. Successful colony growth was observed till the 10-5 dilution. The sterility and negative control plates were clean.  
 
             To verify that the sequence of the cloned product was correct, the transformations of KLK6 underwent colony screening. If cloning was successful, the agarose results from colony screening would be expected to show an amplified band of around 1321 bp. 
-
+            </p>
             <img
                   src="https://static.igem.wiki/teams/5079/writeups/wet-lab/results-4.png"
                   alt="Figure 3"
@@ -206,10 +207,11 @@ const CardSection: React.FC = () => {
                     borderRadius: "10px",
                   }}
                 />
+                <p>
             Figure 3. Sequence Length of pNH-Trxt/KLK6. There are 1321 nucleotides between the T7 promoter and the T7 terminator. 
 
             Results of colony screening for pNH-Trxt/KLK6 in figure 6, showed a drop-out of the expected size. Therefore, our team proceeded to purify the molecularly cloned cells by mini-prep and then transform into chemically competent E. Coli BL21 DE3 cells. 
-
+            </p>
             <img
                   src="https://static.igem.wiki/teams/5079/writeups/wet-lab/results-5.png"
                   alt="Figure 4"
@@ -221,7 +223,9 @@ const CardSection: React.FC = () => {
                     borderRadius: "10px",
                   }}
                 />
+              <p>
             Figure 4. Colony PCR Results for pNH-Trxt/KLK6. A 1 kb ladder was used as reference.  
+            </p>
             </>
           ),
         },
@@ -254,10 +258,11 @@ const CardSection: React.FC = () => {
                     borderRadius: "10px",
                   }}
                 />
+                <p>
             Figure 5. SDS Gel Results for IPTG Induction runs of soluble and insoluble fractions of pET-28a/KLK6. A total of four SDS-PAGE gels were ran - one for each fraction and temperature combination.  
 
             Figure 6 indicates that KLK6 is expressing in the insoluble fraction with nearly no soluble expression. There is not much difference in the expression between 18 C overnight and 37 C for 4 hours for the insoluble fraction. One of the main reasons our team believed we were getting inclusion bodies is that KLK6 was being overly expressed and produced by the cell. This is evident in our engineering cycle. We hypothesized that the cell could not handle the amount of protein being produced, causing KLK6 to crash out of the soluble fraction. As such based on prior knowledge, we attempted to add a low percentage (2%) of glucose along with IPTG during cell induction. Glucose is a negative catabolic repressor of the lac operon (IPTG or allolactose are positive catabolic repressors). Therefore, a low percentage of it serves to stop basal and overexpression of KLK6, possibly preventing it from crashing out of the soluble fraction into the IB. Lane 6 in figure 9 shows an IPTG induction trial with 1 mM IPTG and 2% glucose. The SDS-PAGE showed large amounts of our POI.   
-            
+            </p>
             <img
                   src="https://static.igem.wiki/teams/5079/writeups/wet-lab/results-8.png"
                   alt="Figure 7"
@@ -269,8 +274,9 @@ const CardSection: React.FC = () => {
                     borderRadius: "10px",
                   }}
                 />
+                <p>
             Figure 7. SDS Gel Results for elution fractions from large-scale purification of pNH-trxt/KLK6. From right to left, the lanes represent: Flow-through; Wash-fraction; Elution-fraction 1; Elution-fraction 2; Elution-fraction 3; IPTG induction trial of soluble fraction with 1 mM IPTG and 2% glucose 
-            
+            </p>
             </>
           )
         },
@@ -293,10 +299,11 @@ const CardSection: React.FC = () => {
                     borderRadius: "10px",
                   }}
                 />
+                <p>
             Figure 8. SDS Gel Results for elution fractions of KLK6 after induction at 2% glucose and 1 mM IPTG. From left to right, the lanes represent: Precision plus protein dual color standards ladder; KLK6 flow-through; KLK6 wash-fraction; KLK6 elution-fraction 1; KLK6 elution-fraction 2; KLK6 elution-fraction 3; Cyclophilin-D flow-through; Cyclophilin-D wash-fraction; Cyclophilin-D elution-fraction 1; Cyclophilin-D elution-fraction 2; Cyclophilin-D elution-fraction 3.
 
             There is a significant amount of KLK6 in elution fraction 3. Elution fraction 3 was diafiltrated to replace the imidazole with 200 uL of PBS. The concentration of the diafiltrated solution was determined by nanodrop spectrophotometry. The A280 value was 0.01 A. The concentration was high enough for our initial enzymatic tests. In the future, we would hope to perform a large-scale purification with a 1 L culture, using the same conditions, to obtain more soluble KLK6 protein. 
-            
+            </p>
             </>
           )
         },
@@ -346,10 +353,11 @@ const CardSection: React.FC = () => {
                     borderRadius: "10px",
                   }}
                 />
+                <p>
             Figure 7. Cloning Workflow for a-synuclein insertion into pET-28a 
 
             The a-synuclein insert was cloned into column-purified pET-28a vector using the following conditions:   
-            
+            </p>
             <img
                   src="https://static.igem.wiki/teams/5079/writeups/wet-lab/results-12.png"
                   alt="Table 5"
@@ -383,9 +391,11 @@ const CardSection: React.FC = () => {
                     borderRadius: "10px",
                   }}
                 />
+                <p>
           Figure 8. Sequence Length of pET-28a/a-synuclein between BamHi and EcoRV restriction enzyme sites. 
 
           Results of colony screening for a-synuclein showed a significantly broad band at the size of the linearized vector (single digested). This was likely a result of the EcoRV restriction enzyme digest not going to completion. The EcoRV restriction enzyme had been used many times in the past – being freeze-thawed on multiple occasions by our lab. Regardless, the double digested vector band was at the expected size, as was the drop out band.  
+          </p>
           <img
                   src="https://static.igem.wiki/teams/5079/writeups/wet-lab/results-14.png"
                   alt="Figure 9"
@@ -397,10 +407,11 @@ const CardSection: React.FC = () => {
                     borderRadius: "10px",
                   }}
                 />
+                <p>
           Figure 9. Restriction Digest Results for pET-28a/a-synuclein. A 1 kb ladder was used as reference. A control vector was run as a control to compare. 
 
           The purified plasmid was sent for whole plasmid sequencing. Results for the cloned product were screened against the predicted sequence of the cloned product by NEB. It was found that the sequencing results had 4 less bp than the computationally assembled products. There was a "TAT" codon deletion in the bom sequence of the pET-28a vector (responsible for plasmid transfer during bacterial conjugation). This TAT deletion is not present in any of the official sequences for pET-28a (which were used for the snap gene analyses), but it is correct. There is also a single bp deletion at the end of the F1 origin in the real sequence of pET-28a that are also not in the "official" sequence.  
-          
+          </p>
           <img
                   src="https://static.igem.wiki/teams/5079/writeups/wet-lab/results-15.png"
                   alt="Figure 7"
@@ -412,10 +423,11 @@ const CardSection: React.FC = () => {
                     borderRadius: "10px",
                   }}
                 />
+                <p>
           Figure 7. Whole Plasmid Sequencing results for pET-28a/a-synuclein aligned against the assembled construct of pET-28a/a-synuclein on Snapgene.  
 
           Favorable induction conditions for a-synuclein expression have been well documented in the literature as 37°C for 4 hours at a 1mM IPTG concentration (Stephens et al., 2020)(Powers et al., 1970)(Dada et al., 2024). Following induction, cells were harvested by centrifugation at 4000 x g for 30 minutes and then the supernatant decanted. The pellet was frozen at -20°C overnight, and then resuspended in 3 mL lysis buffer (20 mM tris-HCl, 5 M NaCl, 10% glycerol, and 1 mM phenylmethylsulfonyl fluoride (PMSF)). The buffer was specifically developed to decrease aggregation of a-synuclein during purification. The resuspended cells were then sonicated at 40% for 5 intervals of 30 seconds on; 1 minute rest. The cell lysate was centrifuged at 16,000 x g for 20 minutes and then filter sterilized. The sterilized solution was run on an SDS-PAGE gel.
-          
+          </p>
           <img
                   src="https://static.igem.wiki/teams/5079/writeups/wet-lab/results-16.png"
                   alt="Figure 11"
@@ -427,11 +439,11 @@ const CardSection: React.FC = () => {
                     borderRadius: "10px",
                   }}
                 />
-          
+          <p>
           Figure 11. SDS Gel Results for elution fractions from large-scale purification of pET-28a/a-synuclein. From right to left, the lanes represent: a-synuclein Flow-through; KLK6 IB IPTG Induction Trial; a-synuclein Wash-fraction; a-synuclein Elution-fraction 1; a-synuclein Elution-fraction 2; a-synuclein Elution-fraction 3 
 
           The results from Figure 11 indicate that a large concentration of a-synuclein (16 kDa with His-tag) is present in elution fraction 2. Elution fraction 2 was diafiltrated to replace the imidazole with 200 uL of PBS. The concentration of the diafiltrated solution was determined by nanodrop spectrophotometry to be 65.31 ng/uL.  
-
+          </p>
           </>
           )
         },
@@ -475,8 +487,9 @@ const CardSection: React.FC = () => {
                     borderRadius: "10px",
                   }}
                 />
+                <p>
             Figure 1. Agarose Gel results of the first PCR reaction for all MS. From left to right, the lanes represent: NEB 1 kb Plus DNA Ladder; MS 1-12. PCR amplification for all MS were successful except 4. The PCR reaction for these MS were repeated and successful amplification was observed (reported in engineering cycle). 
-
+            </p>
             </>
           )
         },
@@ -523,8 +536,9 @@ const CardSection: React.FC = () => {
                     borderRadius: "10px",
                   }}
                 />
+                <p>
             Results of colony screening showed an amplified sequence of the excepted size for MS 6, and 8-12 in the first round of colony screening. No band was observed for the remaining MS. A second round of colony screening was performed with additional transformed colonies with MS-1, 2, 5 and 7. We hypothesized that for these switches – colonies apart from the ones tested in round 1 may have our cloned product. If cloning was successful, the agarose results from colony screening would be expected to show an amplified band of around 1200 bp. 
-
+            </p>
             <img
                   src="https://static.igem.wiki/teams/5079/writeups/wet-lab/results-21.png"
                   alt="Figure 4"
@@ -536,9 +550,11 @@ const CardSection: React.FC = () => {
                     borderRadius: "10px",
                   }}
                 />
+                <p>
             Figure 4. Colony Screening Results for pET-28a/MS-1, 2, 5 and 7. A 1 kb ladder was used as reference. From right to left, the lanes represent: NEB 1 kb Plus DNA Ladder; MS 1.1-1.3 colonies; MS 2.1-2.3 colonies; MS 5.1-5.3 colonies; MS 7.1-7.3 colonies. Results demonstrated that viable constructs are present in colonies: 1.1, 2.1, 2.2 5.1 and 7.3. 
             
             Similar colony screening results to Figure 4. were found for MS 3 and MS 4. After successful cloning of all MS, the cloned products were purified by mini prep from the molecularly cloned cells and then transformed into chemically competent E. Coli BL21 DE3 cells. All transformations into BL21 DE3 cells were successful except for MS 1, 3, and 4. Our team did not have time to re-do these transformations. 
+            </p>
             </>
           ),
         },
@@ -559,12 +575,13 @@ const CardSection: React.FC = () => {
                     borderRadius: "10px",
                   }}
                 />
-              
+              <p>
               Figure 5. SDS Gel Results for elution fractions from large-scale purification of pET-28a/MS 1-2,5-12. Gel 1 from left to right, the lanes represent: precision plus protein dual color standards ladder; MS 2 EF1; MS 2 E2; MS 2 E3; MS 2 W; MS 8 E1; MS8 E2; MS 8 E3; MS 8 W. Gel 2 from left to right, the lanes represent: MS 5 E1; MS 5 E2; MS 5 E3; MS 5 W; MS 6 E1; MS 6 E2; MS 6 E3; MS 6 W. Gel 3 from left to right, the lanes represent: MS 7 E1; MS 7 E2; MS 7 E3; MS 7 W; MS9 E1; MS 9 E2; MS 9 E3; MS 9 W; MS 10 E1; MS 10 E2. Gel 4 from left to right, the lanes represent: MS 10 E3; MS 10 W; MS 11 E1; MS 11 E2; MS 11 E3; MS 11 W; MS 12 E1; MS 12 E2; MS 12 E3; MS 12 W. Abbreviations: E, elution fraction; W, wash fraction 
 
               Successful expression in figure 5 was noted in MS 2 E2, MS 5 E1, MS 6 E1, MS 7 E2, MS 8 E1, MS 9 E2, MS 10 E2, MS 11 E2, MS 12 E2. Large scale purification of MS 1, 3, and 4 which failed transformation into E. Coli BL21 cells will be done before the competition.  
 
               The successful expression of the protein switches in the soluble fraction is particularly significant, as it suggests that the in-silico design of the circular permutations and residue insertion sites was precise enough to maintain the structural integrity of both the input and output domains. Solubility is often a direct indicator of proper protein folding, as misfolded or aggregated proteins typically express as inclusion bodies. Therefore, our successful expression implies that the modifications we introduced—whether circular permutations or insertions—likely did not disrupt the native folding pathways of the separate domains. 
+              </p>
             </>
           ),
         }
@@ -590,12 +607,13 @@ const CardSection: React.FC = () => {
                     borderRadius: "10px",
                   }}
                 />
+                <p>
             It is important to note that a 10% FastCast gel was employed for SDS-PAGE due to time constraints. The low porosity of the resolving layer resulted in significant amounts of the smaller α-synuclein fragments migrating off the gel, which contributed to false-negative outcomes for several of the switch variants. This limitation must be considered when interpreting the results, as it may underestimate the actual proteolytic activity of the constructs. 
 
             Visible a-synuclein fragments of kDa could be observed for KLK6 (as expected), and MS 5-8. For MS 5, 7-8; fragments were observed during both trials, while for MS 6; fragments were only observed during the first trial due to difficulties in gel imaging. The generated fragments correspond to C-terminal cleavage at D115 or N122. This is reasonable for these switches, as their insertion site (K45) is a conserved residue within Cyp-D. Insertion of KLK6 at this residue likely perturbed the binding affinity of Cyp-D for its substrates. If Cyp-D is unable to bind to a-synuclein; while KLK6 function is conserved - C-terminal cleavage products would be expected.  
 
             Accordingly, MS 2, MS 9, MS 11, and MS 12 did not show any detectable levels of a-synuclein fragments. This absence could be related to the retention of Cyp-D function within these switches; leading to a steric hindrance effect that prevents C-terminal cleavage. NAC domain cleavage products would have run off the gel – due to the use of a 10% resolving layer. Imaging diffuculties also further hindered fragment detection. We understand that it is possible for some of the switches to have lost their output domain function and thereby their catalytic cleavage properties. However, in this specific case – the absence of fragments is unlikely to reflect a lack of proteolytic activity but rather technical limitations. Future assays before the competition will focus on optimizing gel conditions to address these limitations and improve fragment detection.  
-
+            </p>
             </>
           )
         },
