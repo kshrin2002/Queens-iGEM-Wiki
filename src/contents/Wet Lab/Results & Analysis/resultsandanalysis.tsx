@@ -588,7 +588,7 @@ const CardSection: React.FC = () => {
       ],
     },
     {
-      title: 'Part 5',
+      title: 'Enzymatic Testing',
       subsections: [
         {
           subtitle: 'Enzymatic Tests',
