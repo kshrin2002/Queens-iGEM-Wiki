@@ -1,7 +1,6 @@
 import React, { useState, useEffect } from "react";
 import "./entrepreneurship.css";
 import Button from "react-bootstrap/esm/Button";
-import Carousel from "react-bootstrap/Carousel";
 
 interface MonthlyUpdates {
   month: string;
