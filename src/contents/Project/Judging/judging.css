@@ -1,11 +1,11 @@
-.card-container-judging {
+.card-container-implementation {
     width: 100%; /* Make the card container 60% of the screen width */
     position: relative;
     right: 0;
     margin-left: 15vw; /* Align to the right side */
 }
 
-.custom-card-judging {
+.custom-card-implementation {
     border: 5px solid var(--mexired); /* Red border around the card */
     border-radius: 20px;
     margin-bottom: 20px; /* Space between the cards */
@@ -14,26 +14,26 @@
     transition: transform 0.3s ease; /* Smooth transition for the hover effect */
 }
 
-.custom-card-judging:hover {
+.custom-card-implementation:hover {
     transform: translateX(-10px);
 }
 
-.center-title-judging {
+.center-title-implementation {
     text-align: center; /* Center the card title */
     margin-bottom: 20px; /* Add some space below the title */
 }
 
-.text-container-judging {
+.text-container-implementation {
     display: flex;
     justify-content: center; /* Vertically center the text */
     align-items: center;
 }
 
-.card-wrapper-judging {
+.card-wrapper-implementation {
     position: relative;
 }
 
-.scroll-arrow-judging {
+.scroll-arrow-implementation {
     text-align: center;
     font-size: 2em;
     cursor: pointer;
@@ -41,11 +41,11 @@
     margin-top: 10px;
 }
 
-.scroll-arrow-judging:hover {
+.scroll-arrow-implementation:hover {
     color: #000;
 }
 
-.button-judging {
+.button-implementation {
     position: fixed;
     bottom: 20px;
     left: 20px; /* Adjust left value to align with the sidebar */
@@ -63,17 +63,17 @@
     }
 }
 
-.button.visible-judging {
+.button.visible-implementation {
     opacity: 1; /* Fully visible */
     transform: translateY(0); /* Move to original position */
 }
 
-.main-content-judging {
+.main-content-implementation {
     display: flex; /* Use flex to position sidebar and card section */
     margin-top: 100px; /* Space for the overview section */
 }
 
-.sidebar-contributions-judging {
+.sidebar-implementation {
     position: sticky; /* Keep sidebar fixed */
     top: 300px; /* Align with the overview section */
     left: 0; /* Align to the left */
@@ -83,12 +83,12 @@
     overflow-y: auto; 
 }
 
-.sidebar-contributions-judging ul {
+.sidebar-implementation ul {
     list-style: none; /* Remove default list styles */
     padding: 0;
 }
 
-.sidebar-judging li {
+.sidebar-implementation li {
     cursor: pointer; /* Change cursor to pointer on hover */
     margin: 5px 0; /* Spacing between items */
     padding: 10px; /* Add some padding for clickable area */
@@ -99,40 +99,86 @@
     position: relative; /* Position relative for dropdown */
 }
 
-.sidebar-judging li:hover {
+.sidebar-implementation li:hover {
     border-color: var(--mexired); /* Change border color on hover */
 }
 
-.sidebar-judging li span {
+.sidebar-implementation li span {
     margin-left: 10px; /* Space between icon and text */
 }
 
-.sidebar-judging img {
+.sidebar-implementation img {
     width: 30px;
     height: 30px;
 }
 
-.motion-judging-ul {
-    display: block; /* Ensure it's displayed as a block */
-    width: 100%; /* Full width for dropdown */
-    margin-top: 0; /* Remove margin to avoid extra spacing */
-    position: absolute; /* Position absolute for dropdown */
-    left: 0; /* Align dropdown to the left */
-    padding: 0; /* Remove default padding */
-    z-index: 1; /* Ensure it's on top of other content */
-    background-color: white; /* Background color for dropdown */
-    border-radius: 5px; /* Slightly round corners */
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); /* Add shadow for depth */
+.motion-implementation-ul {
+    display: block;
+    width: 100%;
+    margin-top: 0;
+    position: absolute;
+    left: 0;
+    padding: 0;
+    z-index: 1;
+    background-color: white;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
 }
 
-.motion-judging-li {
-    display: block; /* Ensure items are block-level */
-    margin: 0; /* Reset margins */
-    padding: 10px; /* Padding for clickable area */
-    cursor: pointer; /* Pointer cursor for hover effect */
-    transition: background-color 0.3s; /* Smooth transition for hover */
+.motion-implementation-li {
+    display: block;
+    margin: 0;
+    padding: 10px;
+    cursor: pointer;
+    transition: background-color 0.3s;
 }
 
-.motion-judging-li:hover {
-    background-color: var(--pinksalmon); /* Change background on hover */
+.motion-implementation-li:hover {
+    background-color: var(--pinksalmon);
+}
+
+.flex-table-header,
+.flex-table-row {
+  display: flex;
+  width: 100%;
+  padding: 10px 0;
+  border-bottom: 1px solid #ddd;
+}
+
+.table-column {
+  padding: 10px;
+  text-align: left;
+}
+
+.table-column:nth-child(1),
+.table-column:nth-child(2) {
+  flex: 0 0 25%;
+}
+
+.table-column:nth-child(3) {
+  flex: 0 0 50%;
+}
+
+.flex-table-header {
+  font-weight: bold;
+  background-color: #f8f9fa;
+}
+
+
+.flex-table-row {
+  background-color: #fff;
+}
+
+.table-column {
+  flex: 1;
+  padding: 10px;
+  text-align: center;
+}
+
+.table-column:first-child {
+  text-align: left;
+}
+
+.flex-table-row:hover {
+  background-color: #f1f1f1;
 }
