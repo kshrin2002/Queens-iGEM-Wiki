@@ -5,7 +5,7 @@ import Carousel from "react-bootstrap/Carousel";
 
 interface MonthlyUpdates {
   month: string;
-  description:  JSX.Element;
+  description: JSX.Element;
 }
 
 const stagesData: { title: string; months: MonthlyUpdates[] }[] = [
@@ -525,7 +525,7 @@ export function Entrepreneurship() {
                   </div>
                   <MonthDetails
                     month={selectedMonths[stageIndex]}
-                    description={selectedMonths[description]}
+                    description={monthData.description}
                     active={selectedMonths[stageIndex] === monthData.month}
                   />
                 </div>
@@ -639,7 +639,7 @@ const MonthList: React.FC<MonthListProps> = ({
 // Component for displaying details about a selected month
 interface MonthDetailsProps {
   month: string | null;
-  description: string;
+  description: JSX.Element;
   active: boolean;
 }
 
