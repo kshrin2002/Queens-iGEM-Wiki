@@ -2,6 +2,7 @@ import React from 'react';
 import { Card, Row, Col, Container, Button } from 'react-bootstrap';
 import { motion } from "framer-motion";
 import { useEffect, useState } from 'react';
+import '../Design/design.css'
 
 export function Safety() {
   return (
