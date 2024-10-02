@@ -55,6 +55,7 @@ export function Model() {
         "On this page, we provide a summary of our team collaborations.",
         "We worked with multiple teams to achieve the goals of our project.",
       ],
+      image: "https://example.com/image1.jpg", // Unique image for page 1
     },
     {
       header: "International Collaborations",
@@ -62,6 +63,7 @@ export function Model() {
         "Our international collaborations span across several continents.",
         "Working with teams from Europe, Asia, and the Americas, we fostered global connections.",
       ],
+      image: "https://example.com/image2.jpg", // Unique image for page 2
     },
     {
       header: "Research Partnerships",
@@ -69,6 +71,7 @@ export function Model() {
         "We partnered with research institutions to enhance the scientific rigor of our work.",
         "Collaborations in research helped validate key components of our project.",
       ],
+      image: "https://example.com/image3.jpg", // Unique image for page 3
     },
     {
       header: "Outreach Collaborations",
@@ -76,6 +79,7 @@ export function Model() {
         "Our outreach efforts involved collaborations with local communities and educational institutions.",
         "These efforts helped us increase public awareness and engagement in synthetic biology.",
       ],
+      image: "https://example.com/image4.jpg", // Unique image for page 4
     },
     {
       header: "Final Reflections",
@@ -83,6 +87,7 @@ export function Model() {
         "In our final reflections, we emphasize the importance of teamwork and collaboration.",
         "These collaborations were critical to the success of our project, enabling us to achieve more together.",
       ],
+      image: "https://example.com/image5.jpg", // Unique image for page 5
     },
   ];
 
@@ -109,7 +114,7 @@ export function Model() {
                 <h2 className="Model-title">Model</h2>
                 <iframe
                   title="Queens-Canada: Gromacs_Asyn+Cypd (2024)"
-                  src="https://video.igem.org/videos/embed/e312063d-ab73-421e-9449-37c4deb915b8?loop=1&autoplay=1&muted=1&title=0&warningTitle=0&controlBar=0&peertubeLink=0"
+                  src="https://video.igem.org/videos/embed/c7b24860-47ee-46bb-9373-684310fcf0a5?loop=1&amp;autoplay=1&amp;title=0&amp;warningTitle=0&amp;controlBar=0&amp;peertubeLink=0"
                   frameBorder="0"
                   allowFullScreen
                   allow="autoplay; encrypted-media"
@@ -127,8 +132,8 @@ export function Model() {
                 </div>
                 <div className="image-section">
                   <img
-                    src="https://via.placeholder.com/150"
-                    alt="Placeholder Image"
+                    src={pageData[index - 1].image} // Unique image for each section
+                    alt="Section Image"
                     className="rounded-box-image"
                   />
                 </div>
