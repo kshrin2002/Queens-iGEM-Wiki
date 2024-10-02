@@ -25,7 +25,7 @@ const stagesData: { title: string; months: MonthlyUpdates[] }[] = [
       {
         month: "Competitor Landscape Matrix",
         description:
-          "A matrix that maps out competitors and their relative strengths.",
+          "A competitor landscape matrix is a visual method of analyzing the leading competitors in a specific market. We included pharmaceutical companies producing both novel and existing therapeutics for Parkinson’s disease in our matrix. We evaluated the performance of these companies across five critical success factors — pipeline strength, efficacy, patient quality of life, innovation, research and development investment, and equity — and assigned a rating from 1 to 5 for each factor. These categories are roughly split between assessing the quality of the pharmaceutical products and the success of the company overall, reflecting the importance of both aspects. Analyzing competitors using a competitor landscape matrix is crucial for a business, as it allows the business to compare competitors to each other and to itself. As a result, we can determine where our business may be lacking and where we are succeeding relative to the industry.",
       },
       {
         month: "Skill Gap Analysis",
