@@ -59,8 +59,8 @@ export function Model() {
           width="560"
           height="315"
           src="https://video.igem.org/videos/embed/e312063d-ab73-421e-9449-37c4deb915b8"
-          frameborder="0"
-          allowfullscreen
+          frameBorder="0"
+          allowFullScreen
           sandbox="allow-same-origin allow-scripts allow-popups allow-forms"
         ></iframe>,
       ],
