@@ -262,9 +262,6 @@ const CardSection: React.FC = () => {
                   </div>
                 ))}
               </Col>
-              <Col xs={4}>
-                <img src={section.image} alt={section.title} style={{ width: '100%', height: 'auto' }} />
-              </Col>
             </Row>
           </Card.Body>
         </Card>
