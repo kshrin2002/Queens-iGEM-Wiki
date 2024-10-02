@@ -59,28 +59,14 @@ const DesignHeading: React.FC = () => {
 const Sidebar: React.FC = () => {
   const sections = [
     {
-      name: "Students",
+      name: "MOLECULAR SWITCH COMPONENTS",
       image: "https://static.igem.wiki/teams/5079/rose-logo.png",
-      content: ["Summer Workshops", "ASPC 103"],
+      content: ["Basic parts"],
     },
     {
-      name: "Community",
+      name: "SPORE BIOTIC COMPONENTS",
       image: "https://static.igem.wiki/teams/5079/rose-logo.png",
-      content: ["PD Canada Superwalk", "Social Media"],
-    },
-    {
-      name: "Researchers",
-      image: "https://static.igem.wiki/teams/5079/rose-logo.png",
-      content: ["Ethics Handbook"],
-    },
-    {
-      name: "RISK MANAGEMENT",
-      image: "https://static.igem.wiki/teams/5079/rose-logo.png",
-      content: [
-        "Identifying Project Risks",
-        "Anticipating Future Risks",
-        "Managing Risks",
-      ],
+      content: ["Basic Parts", "Composite Parts"],
     },
   ];
 
@@ -183,7 +169,6 @@ const Option = ({ text, image, sectionIndex, sectionPartIndex }: { text: string,
   );
 };
 
-// FOR WRIETUPS CHANGE TITLES AND DESCRIPTIONS AS NEEDED. SEE WETLAB/SAFETY FOR REFERENCE
 const CardSection: React.FC = () => {
   const sections = [
     {
@@ -193,77 +178,74 @@ const CardSection: React.FC = () => {
           subtitle: 'Basic parts',
           description: (
             <>
-            Below are our coding sequences including our 12 designed molecular switches, as well as their components - neurosin (KLK6) and cyclophilin D – and the input signal a-synculein. 
-            
-            <img
-                src="https://static.igem.wiki/teams/5079/writeups/wet-lab/table_1.png"
-                alt="Molecular Switch Components"
-                className="molecular-switch-image"
-                style={{ width: '100%', height: 'auto', marginTop: '20px' }}
-              />
+              Below are our coding sequences including our 12 designed molecular switches, as well as their components - neurosin (KLK6) and cyclophilin D – and the input signal a-synculein. 
+              
+              <img
+                  src="https://static.igem.wiki/teams/5079/writeups/wet-lab/table-1.png"
+                  alt="Molecular Switch Components"
+                  className="molecular-switch-image"
+                  style={{ width: '100%', height: 'auto', marginTop: '20px' }}
+                />
+              
+              Below are the forward and reverse primers for alpha synuclein, KLK6, cyclophilin D into pET-28a vector as well as KLK6 into the pNH-TrxT vector. 
+              <img
+                  src="https://static.igem.wiki/teams/5079/writeups/wet-lab/table-2-new.png"
+                  alt="Molecular Switch Components"
+                  className="molecular-switch-image"
+                  style={{ width: '100%', height: 'auto', marginTop: '20px' }}
+                />
+
+              Below are the forward and reverse primers for each of the designed molecular switches. All switches were cloned into pET-28a. Each switch description details at what residue KLK6 was inserted into cyclophilin D and if it was circularly permuted, and if so its corresponding location.
+              Ex: N14_WT into pET-28a - Switch 1 (Fwd) 
+              This is the forward primer for Switch 1. Switch 1 was not circularly permuted and was inserted into cyclophilin D at residue N14. 
+
+              Ex: K45_CP_P95 Switch primers into pET-28a – Switch 7 (Rev) 
+              This is the reverse primer for Switch 7. Switch 7 was circularly permuted at residue P95 and was inserted into cyclophilin D at residue K45. 
+
+              More details about the design of our molecular switches can be found on the Design page. 
+              <img
+                  src="https://static.igem.wiki/teams/5079/writeups/wet-lab/table-3-new.png"
+                  alt="Molecular Switch Components"
+                  className="molecular-switch-image"
+                  style={{ width: '100%', height: 'auto', marginTop: '20px' }}
+                />
             </>
           ),
         },
       ],
     },
     {
-      title: 'TITLE 2',
-      image: '',
+      title: 'Spore Biotic Components',
       subsections: [
         {
-          subtitle: '',
+          subtitle: 'Basic Parts',
           description: (
             <>
-
-            </>
-          )
-        },
-      ],
-    },
-    {
-      title: 'TITLE 3',
-      subsections: [
-        {
-          subtitle: '',
-          description: (
-            <>
-
-            </>
-          )
-        },
-      ],
-    },
-    {
-      title: 'TITLE 4',
-      subsections: [
-        {
-          subtitle: 'SUBTITLE 1',
-          description: (
-            <>
-
+              <img
+                src="https://static.igem.wiki/teams/5079/writeups/wet-lab/table-4.png"
+                alt="Molecular Switch Components"
+                className="molecular-switch-image"
+                style={{ width: '100%', height: 'auto', marginTop: '20px' }}
+              />
             </>
           )
         },
         {
-          subtitle: 'SUBTITLE 2',
+          subtitle: 'Composite Parts',
           description: (
             <>
-
-            </>
-          )
-        },
-        {
-          subtitle: 'SUBTITLE 3',
-          description:(
-            <>
-
+              <img
+                src="https://static.igem.wiki/teams/5079/writeups/wet-lab/table-5.png"
+                alt="Molecular Switch Components"
+                className="molecular-switch-image"
+                style={{ width: '100%', height: 'auto', marginTop: '20px' }}
+              />
             </>
           )
         },
       ],
     },
   ];
-
 
   return (
     <Container fluid className="card-container-contribution">
@@ -281,7 +263,7 @@ const CardSection: React.FC = () => {
                 ))}
               </Col>
               <Col xs={4}>
-                <img src={section.image} alt='' style={{ width: '100%', height: 'auto' }} />
+                <img src={section.image} alt={section.title} style={{ width: '100%', height: 'auto' }} />
               </Col>
             </Row>
           </Card.Body>
@@ -290,7 +272,6 @@ const CardSection: React.FC = () => {
     </Container>
   );
 };
-
 
 const BackToTopButton: React.FC = () => {
   const [isVisible, setIsVisible] = useState(false);

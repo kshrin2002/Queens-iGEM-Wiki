@@ -99,39 +99,39 @@ Each category displays the unique roles and contributions of that area of expert
         <img src="https://static.igem.wiki/teams/5079/brainpuzzle/brain-puzzle.png" alt="brain" className="brain-shell" />
         <div className="pieces">
           <div onClick={() => handlePieceClick("piece-1")} className={`piece piece-1 ${enlargedPiece === "piece-1" ? "enlarged" : ""}`}>
-            <img src="https://static.igem.wiki/teams/5079/brainpuzzle/piece1.png" alt="Piece 1" />
+            <img src="https://static.igem.wiki/teams/5079/brainpuzzle/piece1-n.png" alt="Piece 1" />
             <div className="piece-content">
-              {enlargedPiece === "piece-1" ? "Text for Piece 1" : "Researchers"}
+              {enlargedPiece === "piece-1" ? "experts dedicated to studying various fields of research" : "Researchers"}
             </div>
           </div>
           <div onClick={() => handlePieceClick("piece-2")} className={`piece piece-2 ${enlargedPiece === "piece-2" ? "enlarged" : ""}`}>
-            <img src="https://static.igem.wiki/teams/5079/brainpuzzle/piece2.png" alt="Piece 2" />
+            <img src="https://static.igem.wiki/teams/5079/brainpuzzle/piece2-n.png" alt="Piece 2" />
             <div className="piece-content">
-              {enlargedPiece === "piece-2" ? "Text for Piece 2" : "Patientsand Advocates"}
+              {enlargedPiece === "piece-2" ? "experts who share their lived experiences with Parkinson’s disease and experts who advocate for those with Parkinson’s." : "Patients and Advocates"}
             </div>
           </div>
           <div onClick={() => handlePieceClick("piece-3")} className={`piece piece-3 ${enlargedPiece === "piece-3" ? "enlarged" : ""}`}>
-            <img src="https://static.igem.wiki/teams/5079/brainpuzzle/piece3.png" alt="Piece 3" />
+            <img src="https://static.igem.wiki/teams/5079/brainpuzzle/piece3-n.png" alt="Piece 3" />
             <div className="piece-content">
-              {enlargedPiece === "piece-3" ? "Text for Piece 3" : "Movement Disorder Neurologists"}
+              {enlargedPiece === "piece-3" ? "physicians, specifically neurologists that specialize their work in movement disorders with research focusing on treatment, prognosis, diagnosis etc." : "Movement Disorder Neurologists"}
             </div>
           </div>
           <div onClick={() => handlePieceClick("piece-4")} className={`piece piece-4 ${enlargedPiece === "piece-4" ? "enlarged" : ""}`}>
-            <img src="https://static.igem.wiki/teams/5079/brainpuzzle/piece4.png" alt="Piece 4" />
+            <img src="https://static.igem.wiki/teams/5079/brainpuzzle/piece4-n.png" alt="Piece 4" />
             <div className="piece-content">
-              {enlargedPiece === "piece-4" ? "Text for Piece 4" : "Ethicists"}
+              {enlargedPiece === "piece-4" ? "experts who evaluate ethical considerations surrounding research." : "Ethicists"}
             </div>
           </div>
           <div onClick={() => handlePieceClick("piece-5")} className={`piece piece-5 ${enlargedPiece === "piece-5" ? "enlarged" : ""}`}>
-            <img src="https://static.igem.wiki/teams/5079/brainpuzzle/piece5.png" alt="Piece 5" />
+            <img src="https://static.igem.wiki/teams/5079/brainpuzzle/piece5-n.png" alt="Piece 5" />
             <div className="piece-content">
-              {enlargedPiece === "piece-5" ? "Text for Piece 5" : "Clinical Development Experts"}
+              {enlargedPiece === "piece-5" ? "experts who specialize in the development from lab to clinical trials and manufacturing " : "Clinical Development Experts"}
             </div>
           </div>
           <div onClick={() => handlePieceClick("piece-6")} className={`piece piece-6 ${enlargedPiece === "piece-6" ? "enlarged" : ""}`}>
-            <img src="https://static.igem.wiki/teams/5079/brainpuzzle/piece6.png" alt="Piece 6" />
+            <img src="https://static.igem.wiki/teams/5079/brainpuzzle/piece6-n.png" alt="Piece 6" />
             <div className="piece-content">
-              {enlargedPiece === "piece-6" ? "Text for Piece 6" : "Investors and Entrepreneurs"}
+              {enlargedPiece === "piece-6" ? "experts with a background in business and entrepreneurship" : "Investors and Entrepreneurs"}
             </div>
           </div>
         </div>
