@@ -151,8 +151,10 @@ const CardSection: React.FC = () => {
                     borderRadius: "10px",
                   }}
                 />
-              Figure 1. Agarose Gel results of the first PCR reaction for KLK6 as well as its substrate a-synuclein. 
-              The agarose gel results showed non-specific amplification of KLK6 that resulted in a smaller DNA fragment. However, a DNA fragment of the correct size (approximately 700 bp) was also noticeable and was the predominant band. Due to the mechanism by which HiFi works and its efficiency, our team concluded that some non-specific amplification will not harm our cloning process. 
+              <p>
+                Figure 1. Agarose Gel results of the first PCR reaction for KLK6 as well as its substrate a-synuclein.
+                The agarose gel results showed non-specific amplification of KLK6 that resulted in a smaller DNA fragment. However, a DNA fragment of the correct size (approximately 700 bp) was also noticeable and was the predominant band. Due to the mechanism by which HiFi works and its efficiency, our team concluded that some non-specific amplification will not harm our cloning process.
+              </p>
             </>
           ),
         },
