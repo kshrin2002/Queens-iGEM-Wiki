@@ -187,6 +187,29 @@ const CardSection: React.FC = () => {
                 className="molecular-switch-image"
                 style={{ width: '100%', height: 'auto', marginTop: '20px' }}
               />
+            
+            Below are the forward and reverse primers for alpha synuclein, KLK6, cyclophilin D into pET-28a vector as well as KLK6 into the pNH-TrxT vector. 
+            <img
+                src="https://static.igem.wiki/teams/5079/writeups/wet-lab/table-2.png"
+                alt="Molecular Switch Components"
+                className="molecular-switch-image"
+                style={{ width: '100%', height: 'auto', marginTop: '20px' }}
+              />
+
+              Below are the forward and reverse primers for each of the designed molecular switches. All switches were cloned into pET-28a. Each switch description details at what residue KLK6 was inserted into cyclophilin D and if it was circularly permuted, and if so its corresponding location.
+              Ex: N14_WT into pET-28a - Switch 1 (Fwd) 
+              This is the forward primer for Switch 1. Switch 1 was not circularly permuted and was inserted into cyclophilin D at residue N14. 
+
+              Ex: K45_CP_P95 Switch primers into pET-28a – Switch 7 (Rev) 
+              This is the reverse primer for Switch 7. Switch 7 was circularly permuted at residue P95 and was inserted into cyclophilin D at residue K45. 
+
+              More details about the design of our molecular switches can be found on the Design page. 
+              <img
+                src="https://static.igem.wiki/teams/5079/writeups/wet-lab/table-3.png"
+                alt="Molecular Switch Components"
+                className="molecular-switch-image"
+                style={{ width: '100%', height: 'auto', marginTop: '20px' }}
+              />
             </>
           ),
         },
