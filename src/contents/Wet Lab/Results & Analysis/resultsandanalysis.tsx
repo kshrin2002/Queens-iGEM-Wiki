@@ -191,7 +191,7 @@ const CardSection: React.FC = () => {
                     borderRadius: "10px",
                   }}
                 />
-                <p>=
+                <p>
             Figure 2. LB-Agar plates. Successful colony growth was observed till the 10-5 dilution. The sterility and negative control plates were clean.  
 
             To verify that the sequence of the cloned product was correct, the transformations of KLK6 underwent colony screening. If cloning was successful, the agarose results from colony screening would be expected to show an amplified band of around 1321 bp. 
